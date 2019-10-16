@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>SID streamer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="skrypt.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-size: 6px 6px !important;
+        background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0) 46%, coral 49%, coral 51%, rgba(0, 0, 0, 0) 55%);
+        background-color: white;
+        padding-top: 60px;
+      }
+
+      .audio-player {
+        width: 470px;
+        padding: 35px 20px;
+        margin: auto;
+        background-color: white;
+        border: 1px solid black;
+      }
+
+      .audio-player .player-controls {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .audio-player #radioIcon {
+        width: 30px;
+        height: 30px;
+        background: url("https://image.flaticon.com/icons/svg/149/149429.svg") no-repeat center;
+      }
+
+      .audio-player #playAudio {
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        width: 30px;
+        height: 30px;
+        background: url("https://image.flaticon.com/icons/svg/149/149125.svg") no-repeat center;
+        background-size: contain;
+      }
+
+      .audio-player #playAudio.pause {
+        background: url("https://image.flaticon.com/icons/svg/149/149127.svg") no-repeat center;
+        background-size: contain;
+      }
+
+      .audio-player p {
+        margin: 0 0 0 5px;
+        line-height: 1;
+        display: inline-flex;
+      }
+
+      .audio-player p small {
+        font-size: 20px;
+      }
+
+      .audio-player #seekObjContainer {
+        position: relative;
+        width: 300px;
+        margin: 0 5px;
+        height: 5px;
+      }
+
+      .audio-player #seekObjContainer #seekObj {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #e3e3e3;
+        border: 1px solid black;
+      }
+
+      .audio-player #seekObjContainer #seekObj #percentage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: coral;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="audio-player">
+
+      <audio id="audio">
+        <source src="http://localhost:8099/api/v1/audio" type="audio/wav">
+      </audio>
+
+      <div class="player-controls">
+
+        <div id="radioIcon"></div>
+
+        <button id="playAudio"></button>
+
+        <!-- <div id="seekObjContainer">
+          <div id="seekObj">
+            <div id="percentage"></div>
+          </div>
+        </div> -->
+
+        <p><small id="currentTime">00:00</small></p>
+
+      </div>
+    </div>
+
+    <script>
+
+      function $(id) { return document.getElementById(id); };
+      const media = document.getElementById('audio');
+
+      let ui = {
+        play: 'playAudio',
+        audio: 'audio',
+        percentage: 'percentage',
+        seekObj: 'seekObj',
+        currentTime: 'currentTime'
+      };
+
+      function togglePlay() {
+        if (media.paused === false) {
+          media.pause();
+          $(ui.play).classList.remove('pause');
+        } else {
+          media.play();
+          $(ui.play).classList.add('pause');
+        }
+      }
+
+      function calculatePercentPlayed() {
+        let percentage = (media.currentTime / media.duration).toFixed(2) * 100;
+        $(ui.percentage).style.width = `${percentage}%`;
+      }
+
+      function calculateCurrentValue(currentTime) {
+        const currentMinute = parseInt(currentTime / 60) % 60;
+        const currentSecondsLong = currentTime % 60;
+        const currentSeconds = currentSecondsLong.toFixed();
+        const currentTimeFormatted = `${currentMinute < 10 ? `0${currentMinute}` : currentMinute}:${
+          currentSeconds < 10 ? `0${currentSeconds}` : currentSeconds
+          }`;
+
+        return currentTimeFormatted;
+      }
+
+      function initProgressBar() {
+        const currentTime = calculateCurrentValue(media.currentTime);
+        $(ui.currentTime).innerHTML = currentTime;
+        $(ui.seekObj).addEventListener('click', seek);
+
+        media.onended = () => {
+          $(ui.play).classList.remove('pause');
+          $(ui.percentage).style.width = 0;
+          $(ui.currentTime).innerHTML = '00:00';
+        };
+
+        function seek(e) {
+          const percent = e.offsetX / this.offsetWidth;
+          media.currentTime = percent * media.duration;
+        }
+
+        calculatePercentPlayed();
+      }
+
+      $(ui.play).addEventListener('click', togglePlay)
+      $(ui.audio).addEventListener('timeupdate', initProgressBar)
+
+    </script>
+
+  </body>
+
+</html>
