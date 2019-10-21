@@ -51,11 +51,8 @@ func AudioGet(c *gin.Context) {
 	c.Header("Connection", "Keep-Alive")
 	c.Header("Transfer-Encoding", "chunked")
 
-	var err = os.Remove("music.wav")
-	ErrCheck(err)
-
-	cmd := exec.Command("sidplayfp/sidplayfp.exe", "-wmusic", "-t600", "sidplayfp/Incoherent_Nightmare_tune_3.sid")
-	err = cmd.Start()
+	cmd := exec.Command("sidplayfp/sidplayfp.exe", "-wmusic", "-t600", "music.sid")
+	err := cmd.Start()
 	ErrCheck(err)
 
 	// defer func() {
@@ -67,7 +64,7 @@ func AudioGet(c *gin.Context) {
 
 	time.Sleep(1 * time.Second)
 
-	const bufferSize = 4096
+	const bufferSize = 1024
 
 	var offset int64
 	p := make([]byte, bufferSize)
@@ -88,9 +85,7 @@ func AudioGet(c *gin.Context) {
 		// }
 
 		f, _ := os.Open("music.wav")
-		// defer func() {
-		// 	f.Close()
-		// }()
+		defer f.Close()
 
 		readed, _ := f.ReadAt(p, offset)
 		f.Close()
@@ -115,8 +110,8 @@ func AudioGet(c *gin.Context) {
 // ========================================================
 func AudioPost(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
-	c.Header("Connection", "Keep-Alive")
-	c.Header("Transfer-Encoding", "chunked")
+	// c.Header("Connection", "Keep-Alive")
+	// c.Header("Transfer-Encoding", "chunked")
 
 	// Ściągnięcie pliku SID
 
@@ -125,12 +120,15 @@ func AudioPost(c *gin.Context) {
 	err := DownloadFile("music.sid", sidURL)
 	ErrCheck(err)
 
+	err = os.Remove("music.wav")
+	ErrCheck(err)
+
 	c.JSON(http.StatusOK, "Odebrałem: "+sidURL)
 
-	// var err = os.Remove("music.wav")
+	// err = os.Remove("music.wav")
 	// ErrCheck(err)
 
-	// cmd := exec.Command("sidplayfp/sidplayfp.exe", "-wmusic", "-t600", "sidplayfp/Incoherent_Nightmare_tune_3.sid")
+	// cmd := exec.Command("sidplayfp/sidplayfp.exe", "-wmusic", "-t600", "music.sid")
 	// err = cmd.Start()
 	// ErrCheck(err)
 	// time.Sleep(1 * time.Second)
@@ -186,8 +184,8 @@ func main() {
 
 	r.Use(Options)
 
-	r.POST("/api/v1/audio", AudioPost)
 	r.GET("/api/v1/audio", AudioGet)
+	r.POST("/api/v1/audio", AudioPost)
 
 	// Listen and Server in 0.0.0.0:8080
 	r.Run(":8099")
