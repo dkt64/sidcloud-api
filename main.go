@@ -6,10 +6,19 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"strconv"
 	"time"
 
 	"github.com/gin-gonic/gin"
 )
+
+// GlobalFileCnt - numer pliku
+// ========================================================
+var GlobalFileCnt int
+
+// Finish - numer pliku
+// ========================================================
+var Finish bool
 
 // ErrCheck - obsługa błedów
 // ========================================================
@@ -23,6 +32,7 @@ func ErrCheck(errNr error) bool {
 
 // DownloadFile will download a url to a local file. It's efficient because it will
 // write as it downloads and not load the whole file into memory.
+// ========================================================
 func DownloadFile(filepath string, url string) error {
 
 	// Get the data
@@ -48,43 +58,46 @@ func DownloadFile(filepath string, url string) error {
 // ========================================================
 func AudioGet(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
-	c.Header("Connection", "Keep-Alive")
-	c.Header("Transfer-Encoding", "chunked")
+	// c.Header("Connection", "Keep-Alive")
+	// c.Header("Transfer-Encoding", "chunked")
 
-	cmd := exec.Command("sidplayfp/sidplayfp.exe", "-wmusic", "-t600", "music.sid")
+	Finish = true
+
+	GlobalFileCnt++
+	name := "music" + strconv.Itoa(GlobalFileCnt)
+	paramName := "-w" + name
+	filename := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
+
+	cmd := exec.Command("sidplayfp/sidplayfp.exe", paramName, "-t600", "music.sid")
 	err := cmd.Start()
 	ErrCheck(err)
-
-	// defer func() {
-	// cmd.Wait()
-	// var err = os.Remove("music.wav")
-	// ErrCheck(err)
-	// 	fmt.Println("kasowanie pliku")
-	// }()
 
 	time.Sleep(1 * time.Second)
 
 	const bufferSize = 1024
-
 	var offset int64
 	p := make([]byte, bufferSize)
 
 	// done := false
-	// notify := c.Done()
+	// notify := c.Request.Context().Done()
 
 	// go func() {
 	// 	<-notify
 	// 	done = true
 	// }()
 
-	// os.Create("music.wav")
+	Finish = false
 
 	for {
-		// if done {
+		// if Finish {
 		// 	break
 		// }
 
-		f, _ := os.Open("music.wav")
+		if c.Request.Context() == nil {
+			break
+		}
+
+		f, _ := os.Open(filename)
 		defer f.Close()
 
 		readed, _ := f.ReadAt(p, offset)
@@ -104,6 +117,7 @@ func AudioGet(c *gin.Context) {
 		c.Data(http.StatusOK, "audio/wav", p)
 	}
 
+	c.JSON(http.StatusOK, "Connection lost.")
 }
 
 // AudioPost - Granie utworu wysłanego
@@ -118,9 +132,6 @@ func AudioPost(c *gin.Context) {
 	sidURL := c.Query("sid_url")
 
 	err := DownloadFile("music.sid", sidURL)
-	ErrCheck(err)
-
-	err = os.Remove("music.wav")
 	ErrCheck(err)
 
 	c.JSON(http.StatusOK, "Odebrałem: "+sidURL)
