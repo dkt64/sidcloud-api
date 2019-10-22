@@ -66,8 +66,6 @@ func AudioGet(c *gin.Context) {
 	err := cmd.Start()
 	ErrCheck(err)
 
-	defer cmd.Process.Kill()
-
 	time.Sleep(1 * time.Second)
 
 	const bufferSize = 1024
@@ -81,7 +79,11 @@ func AudioGet(c *gin.Context) {
 		}
 
 		f, _ := os.Open(filename)
-		defer f.Close()
+		defer func() {
+			f.Close()
+			cmd.Process.Kill()
+			os.Remove(filename)
+		}()
 
 		readed, _ := f.ReadAt(p, offset)
 		f.Close()
