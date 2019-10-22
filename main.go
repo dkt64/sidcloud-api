@@ -16,10 +16,6 @@ import (
 // ========================================================
 var GlobalFileCnt int
 
-// Finish - numer pliku
-// ========================================================
-var Finish bool
-
 // ErrCheck - obsługa błedów
 // ========================================================
 func ErrCheck(errNr error) bool {
@@ -61,8 +57,6 @@ func AudioGet(c *gin.Context) {
 	// c.Header("Connection", "Keep-Alive")
 	// c.Header("Transfer-Encoding", "chunked")
 
-	Finish = true
-
 	GlobalFileCnt++
 	name := "music" + strconv.Itoa(GlobalFileCnt)
 	paramName := "-w" + name
@@ -72,26 +66,15 @@ func AudioGet(c *gin.Context) {
 	err := cmd.Start()
 	ErrCheck(err)
 
+	defer cmd.Process.Kill()
+
 	time.Sleep(1 * time.Second)
 
 	const bufferSize = 1024
 	var offset int64
 	p := make([]byte, bufferSize)
 
-	// done := false
-	// notify := c.Request.Context().Done()
-
-	// go func() {
-	// 	<-notify
-	// 	done = true
-	// }()
-
-	Finish = false
-
 	for {
-		// if Finish {
-		// 	break
-		// }
 
 		if c.Request.Context() == nil {
 			break
@@ -104,20 +87,15 @@ func AudioGet(c *gin.Context) {
 		f.Close()
 
 		offset += bufferSize
-		// if err == io.EOF {
-		// 	break
-		// }
+
 		if readed < bufferSize {
-			time.Sleep(1 * time.Second)
-		}
-		if readed > bufferSize {
 			time.Sleep(1 * time.Second)
 		}
 
 		c.Data(http.StatusOK, "audio/wav", p)
 	}
 
-	c.JSON(http.StatusOK, "Connection lost.")
+	// c.JSON(http.StatusOK, "Connection lost.")
 }
 
 // AudioPost - Granie utworu wysłanego
@@ -135,37 +113,6 @@ func AudioPost(c *gin.Context) {
 	ErrCheck(err)
 
 	c.JSON(http.StatusOK, "Odebrałem: "+sidURL)
-
-	// err = os.Remove("music.wav")
-	// ErrCheck(err)
-
-	// cmd := exec.Command("sidplayfp/sidplayfp.exe", "-wmusic", "-t600", "music.sid")
-	// err = cmd.Start()
-	// ErrCheck(err)
-	// time.Sleep(1 * time.Second)
-
-	// const bufferSize = 4096
-
-	// var offset int64
-	// p := make([]byte, bufferSize)
-
-	// for {
-
-	// 	f, _ := os.Open("music.wav")
-
-	// 	readed, _ := f.ReadAt(p, offset)
-	// 	f.Close()
-
-	// 	offset += bufferSize
-	// 	if readed < bufferSize {
-	// 		time.Sleep(1 * time.Second)
-	// 	}
-	// 	if readed > bufferSize {
-	// 		time.Sleep(1 * time.Second)
-	// 	}
-
-	// 	c.Data(http.StatusOK, "audio/wav", p)
-	// }
 
 }
 
