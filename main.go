@@ -54,21 +54,21 @@ func DownloadFile(filepath string, url string) error {
 // ========================================================
 func AudioGet(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
-	// c.Header("Connection", "Keep-Alive")
-	// c.Header("Transfer-Encoding", "chunked")
+	c.Header("Connection", "Keep-Alive")
+	c.Header("Transfer-Encoding", "chunked")
 
-	GlobalFileCnt++
 	name := "music" + strconv.Itoa(GlobalFileCnt)
 	paramName := "-w" + name
-	filename := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
+	filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
+	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
 
-	cmd := exec.Command("sidplayfp/sidplayfp.exe", paramName, "-t600", "music.sid")
+	cmd := exec.Command("sidplayfp/sidplayfp.exe", paramName, "-t600", filenameSID)
 	err := cmd.Start()
 	ErrCheck(err)
 
 	time.Sleep(1 * time.Second)
 
-	const bufferSize = 1024
+	const bufferSize = 4096
 	var offset int64
 	p := make([]byte, bufferSize)
 
@@ -78,11 +78,12 @@ func AudioGet(c *gin.Context) {
 			break
 		}
 
-		f, _ := os.Open(filename)
+		f, _ := os.Open(filenameWAV)
 		defer func() {
 			f.Close()
 			cmd.Process.Kill()
-			os.Remove(filename)
+			os.Remove(filenameSID)
+			os.Remove(filenameWAV)
 		}()
 
 		readed, _ := f.ReadAt(p, offset)
@@ -107,11 +108,14 @@ func AudioPost(c *gin.Context) {
 	// c.Header("Connection", "Keep-Alive")
 	// c.Header("Transfer-Encoding", "chunked")
 
+	GlobalFileCnt++
+	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
+
 	// Ściągnięcie pliku SID
 
 	sidURL := c.Query("sid_url")
 
-	err := DownloadFile("music.sid", sidURL)
+	err := DownloadFile(filenameSID, sidURL)
 	ErrCheck(err)
 
 	c.JSON(http.StatusOK, "Odebrałem: "+sidURL)
