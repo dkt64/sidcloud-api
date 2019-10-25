@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"runtime"
 	"strconv"
 	"time"
 
@@ -62,7 +63,15 @@ func AudioGet(c *gin.Context) {
 	filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
 	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
 
-	cmd := exec.Command("sidplayfp/sidplayfp.exe", paramName, "-t600", filenameSID)
+	var cmdName string
+
+	if runtime.GOOS == "windows" {
+		cmdName = "sidplayfp/sidplayfp.exe"
+	} else {
+		cmdName = "sidplayfp/sidplayfp"
+	}
+
+	cmd := exec.Command(cmdName, paramName, "-t600", filenameSID)
 	err := cmd.Start()
 	ErrCheck(err)
 
