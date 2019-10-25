@@ -157,9 +157,16 @@ func main() {
 
 	r.Use(Options)
 
+	r.LoadHTMLGlob("./dist/*.html")
+
+	r.StaticFS("/css", http.Dir("./dist/css"))
+	r.StaticFS("/js", http.Dir("./dist/js"))
+
+	r.StaticFile("/", "./dist/index.html")
+
 	r.GET("/api/v1/audio", AudioGet)
 	r.POST("/api/v1/audio", AudioPost)
 
 	// Listen and Server in 0.0.0.0:8080
-	r.Run(":8099")
+	r.Run(":80")
 }
