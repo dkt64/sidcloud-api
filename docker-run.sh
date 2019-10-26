@@ -1,1 +1,1 @@
-docker run -p 80:80 sidcloud
+docker run --name sidcloud -p 80:80 sidcloud
