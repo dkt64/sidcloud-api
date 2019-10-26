@@ -68,12 +68,13 @@ func AudioGet(c *gin.Context) {
 	if runtime.GOOS == "windows" {
 		cmdName = "sidplayfp/sidplayfp.exe"
 	} else {
-		cmdName = "sidplayfp/sidplayfp"
+		cmdName = "./sidplayfp/sidplayfp"
 	}
 
 	cmd := exec.Command(cmdName, paramName, "-t600", filenameSID)
 	err := cmd.Start()
 	ErrCheck(err)
+	defer cmd.Process.Kill()
 
 	time.Sleep(1 * time.Second)
 
@@ -87,12 +88,17 @@ func AudioGet(c *gin.Context) {
 			break
 		}
 
-		f, _ := os.Open(filenameWAV)
+		f, fileErr := os.Open(filenameWAV)
+		if fileErr != nil {
+			time.Sleep(1 * time.Second)
+			f, _ = os.Open(filenameWAV)
+		}
+
 		defer func() {
 			f.Close()
-			cmd.Process.Kill()
 			os.Remove(filenameSID)
 			os.Remove(filenameWAV)
+			c.JSON(http.StatusOK, "Connection pipe broken.")
 		}()
 
 		readed, _ := f.ReadAt(p, offset)
@@ -107,7 +113,6 @@ func AudioGet(c *gin.Context) {
 		c.Data(http.StatusOK, "audio/wav", p)
 	}
 
-	// c.JSON(http.StatusOK, "Connection lost.")
 }
 
 // AudioPost - Granie utworu wysłanego
@@ -126,9 +131,11 @@ func AudioPost(c *gin.Context) {
 
 	err := DownloadFile(filenameSID, sidURL)
 	ErrCheck(err)
-
-	c.JSON(http.StatusOK, "Odebrałem: "+sidURL)
-
+	if err != nil {
+		c.JSON(http.StatusOK, "Error downloading file: "+sidURL)
+	} else {
+		c.JSON(http.StatusOK, "Downloaded file: "+sidURL)
+	}
 }
 
 // Options - Obsługa request'u OPTIONS (CORS)
