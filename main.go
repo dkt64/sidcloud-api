@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"os"
 	"os/exec"
@@ -16,6 +17,16 @@ import (
 // GlobalFileCnt - numer pliku
 // ========================================================
 var GlobalFileCnt int
+
+// fileExists - sprawdzenie czy plik istnieje
+// ========================================================
+func fileExists(filename string) bool {
+	info, err := os.Stat(filename)
+	if os.IsNotExist(err) {
+		return false
+	}
+	return !info.IsDir()
+}
 
 // ErrCheck - obsługa błedów
 // ========================================================
@@ -75,12 +86,20 @@ func AudioGet(c *gin.Context) {
 	err := cmd.Start()
 	ErrCheck(err)
 	defer cmd.Process.Kill()
+	defer os.Remove(filenameSID)
+	defer os.Remove(filenameWAV)
 
-	time.Sleep(1 * time.Second)
+	// czekamy aż plik wav powstanie
+	for !fileExists(filenameWAV) {
+		time.Sleep(200 * time.Millisecond)
+	}
+	log.Println(filenameWAV + " created.")
 
-	const bufferSize = 4096
+	const bufferSize = 1024
 	var offset int64
 	p := make([]byte, bufferSize)
+
+	log.Println("Sending...")
 
 	for {
 
@@ -88,29 +107,31 @@ func AudioGet(c *gin.Context) {
 			break
 		}
 
-		f, fileErr := os.Open(filenameWAV)
-		if fileErr != nil {
-			time.Sleep(1 * time.Second)
-			f, _ = os.Open(filenameWAV)
-		}
-
-		defer func() {
-			f.Close()
-			os.Remove(filenameSID)
-			os.Remove(filenameWAV)
-			c.JSON(http.StatusOK, "Connection pipe broken.")
-		}()
+		f, errOpen := os.Open(filenameWAV)
+		ErrCheck(errOpen)
+		defer f.Close()
+		defer cmd.Process.Kill()
+		defer os.Remove(filenameSID)
+		defer os.Remove(filenameWAV)
 
 		readed, _ := f.ReadAt(p, offset)
+		// f.ReadAt(p, offset)
 		f.Close()
 
-		offset += bufferSize
+		offset += int64(readed)
 
-		if readed < bufferSize {
-			time.Sleep(1 * time.Second)
+		if readed > 0 {
+			c.Data(http.StatusOK, "audio/wav", p)
+			// log.Print(".")
 		}
 
-		c.Data(http.StatusOK, "audio/wav", p)
+		if readed < bufferSize {
+			time.Sleep(200 * time.Millisecond)
+		}
+
+		// defer func() {
+		// 	c.JSON(http.StatusOK, "Connection pipe broken.")
+		// }()
 	}
 
 }
