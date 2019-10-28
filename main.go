@@ -65,16 +65,22 @@ func DownloadFile(filepath string, url string) error {
 // AudioGet - granie utworu do testów
 // ========================================================
 func AudioGet(c *gin.Context) {
+
+	// Typ połączania
 	c.Header("Access-Control-Allow-Origin", "*")
 	c.Header("Connection", "Keep-Alive")
 	c.Header("Transfer-Encoding", "chunked")
 
+	// Info o wejściu do GET
 	log.Println("AudioGet start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 
+	// Przygotowanie nazw plików
 	name := "music" + strconv.Itoa(GlobalFileCnt)
 	paramName := "-w" + name
 	filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
 	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
+
+	// Odpalenie sidplayfp
 
 	var cmdName string
 
@@ -88,60 +94,72 @@ func AudioGet(c *gin.Context) {
 	log.Println("Starting sidplayfp... cmdName(" + cmdName + ", paramName: " + paramName + ", filenameSID: " + filenameSID + ")")
 	err := cmd.Start()
 	ErrCheck(err)
+
+	// Gdyby cos poszło nie tak to zamykamy sidplayfp i kasujemy pliki
 	defer cmd.Process.Kill()
 	defer os.Remove(filenameSID)
 	defer os.Remove(filenameWAV)
 
-	// czekamy aż plik wav powstanie
+	// czekamy aż plik wav powstanie - dodać TIMEOUT
 	for !fileExists(filenameWAV) {
 		time.Sleep(200 * time.Millisecond)
 	}
 	log.Println(filenameWAV + " created.")
 
-	const bufferSize = 4096 * 2
+	// Przygotowanie bufora do streamingu
+	const bufferSize = 1024 * 64
 	var offset int64
 	p := make([]byte, bufferSize)
 
 	log.Println("Sending...")
 
+	// Streaming LOOP...
+
 	for {
 
+		// Wysyłamy pakiet co 500 ms
+		time.Sleep(500 * time.Millisecond)
+
+		// Jeżeli doszliśmy w pliku do 50MB to koniec
 		if offset > 50000000 {
 			log.Println("EOF (50MB).")
 			break
 		}
 
+		// Jeżeli straciimy kontekst to wychodzimy
 		if c.Request.Context() == nil {
 			log.Println("c.Request.Context() == nil")
 			break
 		}
 
-		f, errOpen := os.Open(filenameWAV)
-		ErrCheck(errOpen)
+		// Otwieraamy plik - bez sprawdzania błędów
+		f, _ := os.Open(filenameWAV)
+		// ErrCheck(errOpen)
+
+		// Gdyby cos poszło nie tak zamykamy plik, zamykamy sidplayfp i kasujemy pliki
 		defer f.Close()
 		defer cmd.Process.Kill()
 		defer os.Remove(filenameSID)
 		defer os.Remove(filenameWAV)
 
+		// Czytamy z pliku kolejne dane do bufora
 		readed, _ := f.ReadAt(p, offset)
-		// f.ReadAt(p, offset)
+		// ErrCheck(err)
 		f.Close()
 
-		offset += int64(readed)
-
+		// Jeżeli coś odczytaliśmy to wysyłamy
 		if readed > 0 {
 			c.Data(http.StatusOK, "audio/wav", p)
+			offset += int64(readed)
 			// log.Print(".")
-		}
-
-		if readed < bufferSize {
-			time.Sleep(200 * time.Millisecond)
 		}
 
 		// defer func() {
 		// 	c.JSON(http.StatusOK, "Connection pipe broken.")
 		// }()
 	}
+
+	// Feedback gdybyśmy wyszli z LOOP
 	c.JSON(http.StatusOK, "Loop ended.")
 	log.Println("Loop ended.")
 
@@ -208,6 +226,7 @@ func main() {
 	r.StaticFS("/js", http.Dir("./dist/js"))
 
 	r.StaticFile("/", "./dist/index.html")
+	r.StaticFile("favicon.ico", "./dist/favicon.ico")
 
 	r.GET("/api/v1/audio", AudioGet)
 	r.POST("/api/v1/audio", AudioPost)
