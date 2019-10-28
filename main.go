@@ -98,7 +98,7 @@ func AudioGet(c *gin.Context) {
 	}
 	log.Println(filenameWAV + " created.")
 
-	const bufferSize = 1024
+	const bufferSize = 4096 * 2
 	var offset int64
 	p := make([]byte, bufferSize)
 
