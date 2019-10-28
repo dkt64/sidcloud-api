@@ -69,7 +69,7 @@ func AudioGet(c *gin.Context) {
 	c.Header("Connection", "Keep-Alive")
 	c.Header("Transfer-Encoding", "chunked")
 
-	log.Println("AudioGet start with GlobalFileCnt = " strconv.Itoa(GlobalFileCnt))
+	log.Println("AudioGet start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 
 	name := "music" + strconv.Itoa(GlobalFileCnt)
 	paramName := "-w" + name
@@ -154,7 +154,7 @@ func AudioPost(c *gin.Context) {
 	// c.Header("Connection", "Keep-Alive")
 	// c.Header("Transfer-Encoding", "chunked")
 
-	log.Println("AudioPost start with GlobalFileCnt = " strconv.Itoa(GlobalFileCnt))
+	log.Println("AudioPost start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 
 	GlobalFileCnt++
 	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
@@ -166,14 +166,14 @@ func AudioPost(c *gin.Context) {
 	err := DownloadFile(filenameSID, sidURL)
 	ErrCheck(err)
 	if err != nil {
-		log.Println("Error downloading file: "+sidURL)
+		log.Println("Error downloading file: " + sidURL)
 		c.JSON(http.StatusOK, "Error downloading file: "+sidURL)
 	} else {
-		log.Println("Downloaded file: "+sidURL)
+		log.Println("Downloaded file: " + sidURL)
 		c.JSON(http.StatusOK, "Downloaded file: "+sidURL)
 	}
 
-	log.Println("AudioPost end with GlobalFileCnt = " strconv.Itoa(GlobalFileCnt))
+	log.Println("AudioPost end with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 }
 
 // Options - Obsługa request'u OPTIONS (CORS)
