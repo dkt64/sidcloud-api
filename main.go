@@ -69,6 +69,8 @@ func AudioGet(c *gin.Context) {
 	c.Header("Connection", "Keep-Alive")
 	c.Header("Transfer-Encoding", "chunked")
 
+	log.Println("AudioGet start with GlobalFileCnt = " strconv.Itoa(GlobalFileCnt))
+
 	name := "music" + strconv.Itoa(GlobalFileCnt)
 	paramName := "-w" + name
 	filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
@@ -83,6 +85,7 @@ func AudioGet(c *gin.Context) {
 	}
 
 	cmd := exec.Command(cmdName, paramName, "-t600", filenameSID)
+	log.Println("Starting sidplayfp... cmdName(" + cmdName + ", paramName: " + paramName + ", filenameSID: " + filenameSID + ")")
 	err := cmd.Start()
 	ErrCheck(err)
 	defer cmd.Process.Kill()
@@ -109,6 +112,7 @@ func AudioGet(c *gin.Context) {
 		}
 
 		if c.Request.Context() == nil {
+			log.Println("c.Request.Context() == nil")
 			break
 		}
 
@@ -139,6 +143,8 @@ func AudioGet(c *gin.Context) {
 		// }()
 	}
 	c.JSON(http.StatusOK, "Loop ended.")
+	log.Println("Loop ended.")
+
 }
 
 // AudioPost - Granie utworu wysłanego
@@ -147,6 +153,8 @@ func AudioPost(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
 	// c.Header("Connection", "Keep-Alive")
 	// c.Header("Transfer-Encoding", "chunked")
+
+	log.Println("AudioPost start with GlobalFileCnt = " strconv.Itoa(GlobalFileCnt))
 
 	GlobalFileCnt++
 	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
@@ -158,10 +166,14 @@ func AudioPost(c *gin.Context) {
 	err := DownloadFile(filenameSID, sidURL)
 	ErrCheck(err)
 	if err != nil {
+		log.Println("Error downloading file: "+sidURL)
 		c.JSON(http.StatusOK, "Error downloading file: "+sidURL)
 	} else {
+		log.Println("Downloaded file: "+sidURL)
 		c.JSON(http.StatusOK, "Downloaded file: "+sidURL)
 	}
+
+	log.Println("AudioPost end with GlobalFileCnt = " strconv.Itoa(GlobalFileCnt))
 }
 
 // Options - Obsługa request'u OPTIONS (CORS)
