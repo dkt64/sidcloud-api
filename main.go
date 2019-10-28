@@ -103,6 +103,11 @@ func AudioGet(c *gin.Context) {
 
 	for {
 
+		if offset > 50000000 {
+			log.Println("EOF (50MB).")
+			break
+		}
+
 		if c.Request.Context() == nil {
 			break
 		}
@@ -133,7 +138,7 @@ func AudioGet(c *gin.Context) {
 		// 	c.JSON(http.StatusOK, "Connection pipe broken.")
 		// }()
 	}
-
+	c.JSON(http.StatusOK, "Loop ended.")
 }
 
 // AudioPost - Granie utworu wysłanego
