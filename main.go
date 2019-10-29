@@ -1,5 +1,14 @@
 // ================================================================================================
-// Sidcloud API by DKT/Samar
+// Sidcloud by DKT/Samar
+// ================================================================================================
+// TODO:
+// Android/Chrome wielokrotne GET i przerwanie pipe
+// dodać obsługę PRG
+// sprawdzać rodzaj pliku i inne błędy
+// zwracać info z SID
+// używać czasu trwania z pliku i dać możliwość ustawienia
+// wyświetlać w kontrolce poprawny czas
+// używanie ID poprzez Cookies
 // ================================================================================================
 
 package main
@@ -87,6 +96,7 @@ func AudioGet(c *gin.Context) {
 		paramName := "-w" + name
 		filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
 		filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
+		czas := "-t600"
 
 		// Odpalenie sidplayfp
 
@@ -98,8 +108,8 @@ func AudioGet(c *gin.Context) {
 			cmdName = "./sidplayfp/sidplayfp"
 		}
 
-		cmd := exec.Command(cmdName, paramName, "-t600", filenameSID)
-		log.Println("Starting sidplayfp... cmdName(" + cmdName + ", paramName: " + paramName + ", filenameSID: " + filenameSID + ")")
+		cmd := exec.Command(cmdName, paramName, czas, filenameSID)
+		log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + paramName + " " + czas + " " + filenameSID + ")")
 		err := cmd.Start()
 		ErrCheck(err)
 
