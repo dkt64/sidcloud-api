@@ -110,8 +110,8 @@ func AudioGet(c *gin.Context) {
 			cmdName = "./sidplayfp/sidplayfp"
 		}
 
-		cmd := exec.Command(cmdName, paramName, czas, bits, freq, filenameSID)
-		log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + paramName + " " + czas + " " + filenameSID + ")")
+		log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + bits + " " + freq + " " + paramName + " " + filenameSID + ")")
+		cmd := exec.Command(cmdName, czas, freq, paramName, filenameSID)
 		err := cmd.Start()
 		ErrCheck(err)
 
