@@ -1,3 +1,7 @@
+// ================================================================================================
+// Sidcloud API by DKT/Samar
+// ================================================================================================
+
 package main
 
 import (
@@ -15,11 +19,12 @@ import (
 )
 
 // GlobalFileCnt - numer pliku
-// ========================================================
+// ================================================================================================
 var GlobalFileCnt int
+var posted bool
 
 // fileExists - sprawdzenie czy plik istnieje
-// ========================================================
+// ================================================================================================
 func fileExists(filename string) bool {
 	info, err := os.Stat(filename)
 	if os.IsNotExist(err) {
@@ -29,7 +34,7 @@ func fileExists(filename string) bool {
 }
 
 // ErrCheck - obsługa błedów
-// ========================================================
+// ================================================================================================
 func ErrCheck(errNr error) bool {
 	if errNr != nil {
 		fmt.Println(errNr)
@@ -40,7 +45,7 @@ func ErrCheck(errNr error) bool {
 
 // DownloadFile will download a url to a local file. It's efficient because it will
 // write as it downloads and not load the whole file into memory.
-// ========================================================
+// ================================================================================================
 func DownloadFile(filepath string, url string) error {
 
 	// Get the data
@@ -63,118 +68,124 @@ func DownloadFile(filepath string, url string) error {
 }
 
 // AudioGet - granie utworu do testów
-// ========================================================
+// ================================================================================================
 func AudioGet(c *gin.Context) {
 
-	// Typ połączania
-	c.Header("Access-Control-Allow-Origin", "*")
-	c.Header("Connection", "Keep-Alive")
-	c.Header("Transfer-Encoding", "chunked")
+	if posted {
+		posted = false
 
-	// Info o wejściu do GET
-	log.Println("AudioGet start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
+		// Typ połączania
+		c.Header("Access-Control-Allow-Origin", "*")
+		c.Header("Connection", "Keep-Alive")
+		c.Header("Transfer-Encoding", "chunked")
 
-	// Przygotowanie nazw plików
-	name := "music" + strconv.Itoa(GlobalFileCnt)
-	paramName := "-w" + name
-	filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
-	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
+		// Info o wejściu do GET
+		log.Println("AudioGet start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 
-	// Odpalenie sidplayfp
+		// Przygotowanie nazw plików
+		name := "music" + strconv.Itoa(GlobalFileCnt)
+		paramName := "-q -w" + name
+		filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
+		filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
 
-	var cmdName string
+		// Odpalenie sidplayfp
 
-	if runtime.GOOS == "windows" {
-		cmdName = "sidplayfp/sidplayfp.exe"
-	} else {
-		cmdName = "./sidplayfp/sidplayfp"
-	}
+		var cmdName string
 
-	cmd := exec.Command(cmdName, paramName, "-t600", filenameSID)
-	log.Println("Starting sidplayfp... cmdName(" + cmdName + ", paramName: " + paramName + ", filenameSID: " + filenameSID + ")")
-	err := cmd.Start()
-	ErrCheck(err)
-
-	// Gdyby cos poszło nie tak to zamykamy sidplayfp i kasujemy pliki
-	defer cmd.Process.Kill()
-	defer os.Remove(filenameSID)
-	defer os.Remove(filenameWAV)
-
-	// czekamy aż plik wav powstanie - dodać TIMEOUT
-	for !fileExists(filenameWAV) {
-		time.Sleep(200 * time.Millisecond)
-	}
-	log.Println(filenameWAV + " created.")
-
-	// Przygotowanie bufora do streamingu
-	const bufferSize = 1024 * 64
-	var offset int64
-	p := make([]byte, bufferSize)
-
-	log.Println("Sending...")
-
-	// Streaming LOOP...
-
-	for {
-
-		// Wysyłamy pakiet co 500 ms
-		time.Sleep(500 * time.Millisecond)
-
-		// Jeżeli doszliśmy w pliku do 50MB to koniec
-		if offset > 50000000 {
-			log.Println("EOF (50MB).")
-			break
+		if runtime.GOOS == "windows" {
+			cmdName = "sidplayfp/sidplayfp.exe"
+		} else {
+			cmdName = "./sidplayfp/sidplayfp"
 		}
 
-		// Jeżeli straciimy kontekst to wychodzimy
-		if c.Request.Context() == nil {
-			log.Println("c.Request.Context() == nil")
-			break
-		}
+		cmd := exec.Command(cmdName, paramName, "-t600", filenameSID)
+		log.Println("Starting sidplayfp... cmdName(" + cmdName + ", paramName: " + paramName + ", filenameSID: " + filenameSID + ")")
+		err := cmd.Start()
+		ErrCheck(err)
 
-		// Otwieraamy plik - bez sprawdzania błędów
-		f, _ := os.Open(filenameWAV)
-		// ErrCheck(errOpen)
-
-		// Gdyby cos poszło nie tak zamykamy plik, zamykamy sidplayfp i kasujemy pliki
-		defer f.Close()
+		// Gdyby cos poszło nie tak to zamykamy sidplayfp i kasujemy pliki
 		defer cmd.Process.Kill()
 		defer os.Remove(filenameSID)
 		defer os.Remove(filenameWAV)
 
-		// Czytamy z pliku kolejne dane do bufora
-		readed, _ := f.ReadAt(p, offset)
-		// ErrCheck(err)
-		f.Close()
+		// czekamy aż plik wav powstanie - dodać TIMEOUT
+		for !fileExists(filenameWAV) {
+			time.Sleep(200 * time.Millisecond)
+		}
+		log.Println(filenameWAV + " created.")
 
-		// Jeżeli coś odczytaliśmy to wysyłamy
-		if readed > 0 {
-			c.Data(http.StatusOK, "audio/wav", p)
-			offset += int64(readed)
-			// log.Print(".")
+		// Przygotowanie bufora do streamingu
+		const bufferSize = 1024 * 64
+		var offset int64
+		p := make([]byte, bufferSize)
+
+		log.Println("Sending...")
+
+		// Streaming LOOP...
+		// ----------------------------------------------------------------------------------------------
+
+		for {
+
+			// Wysyłamy pakiet co 500 ms
+			time.Sleep(500 * time.Millisecond)
+
+			// Jeżeli doszliśmy w pliku do 50MB to koniec
+			if offset > 50000000 {
+				log.Println("ERR! EOF (50MB).")
+				break
+			}
+
+			// Jeżeli straciimy kontekst to wychodzimy
+			if c.Request.Context() == nil {
+				log.Println("ERR! c.Request.Context() == nil")
+				break
+			}
+
+			// Otwieraamy plik - bez sprawdzania błędów
+			f, _ := os.Open(filenameWAV)
+			// ErrCheck(errOpen)
+
+			// Gdyby cos poszło nie tak zamykamy plik, zamykamy sidplayfp i kasujemy pliki
+			defer f.Close()
+			defer cmd.Process.Kill()
+			defer os.Remove(filenameSID)
+			defer os.Remove(filenameWAV)
+
+			// Czytamy z pliku kolejne dane do bufora
+			readed, _ := f.ReadAt(p, offset)
+			// ErrCheck(err)
+			f.Close()
+
+			// Jeżeli coś odczytaliśmy to wysyłamy
+			if readed > 0 {
+				c.Data(http.StatusOK, "audio/wav", p)
+				offset += int64(readed)
+				// log.Print(".")
+			}
+
 		}
 
-		// defer func() {
-		// 	c.JSON(http.StatusOK, "Connection pipe broken.")
-		// }()
+		// Feedback gdybyśmy wyszli z LOOP
+		c.JSON(http.StatusOK, "Loop ended.")
+		log.Println("Loop ended.")
+
+	} else {
+
+		// Przy powturzonym Get
+		c.JSON(http.StatusOK, "ERR! Repeated GET.")
+		log.Println("ERR! Repeated GET.")
 	}
-
-	// Feedback gdybyśmy wyszli z LOOP
-	c.JSON(http.StatusOK, "Loop ended.")
-	log.Println("Loop ended.")
-
 }
 
 // AudioPost - Odernanie linka do SID lub PRG
-// ========================================================
+// ================================================================================================
 func AudioPost(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
-	// c.Header("Connection", "Keep-Alive")
-	// c.Header("Transfer-Encoding", "chunked")
 
 	log.Println("AudioPost start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 
 	GlobalFileCnt++
+	posted = true
 	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
 
 	// Ściągnięcie pliku SID
@@ -184,8 +195,8 @@ func AudioPost(c *gin.Context) {
 	err := DownloadFile(filenameSID, sidURL)
 	ErrCheck(err)
 	if err != nil {
-		log.Println("Error downloading file: " + sidURL)
-		c.JSON(http.StatusOK, "Error downloading file: "+sidURL)
+		log.Println("ERR! Error downloading file: " + sidURL)
+		c.JSON(http.StatusOK, "ERR! Error downloading file: "+sidURL)
 	} else {
 		log.Println("Downloaded file: " + sidURL)
 		c.JSON(http.StatusOK, "Downloaded file: "+sidURL)
@@ -195,12 +206,9 @@ func AudioPost(c *gin.Context) {
 }
 
 // AudioPut - Odebranie pliku SID lub PRG
-// ========================================================
+// ================================================================================================
 func AudioPut(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
-	// c.Header("Content-Type", "multipart/form-data")
-	// c.Header("Connection", "Keep-Alive")
-	// c.Header("Transfer-Encoding", "chunked")
 
 	log.Println("AudioPut start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 
@@ -209,6 +217,7 @@ func AudioPut(c *gin.Context) {
 	log.Println("Odebrałem plik " + file.Filename)
 
 	GlobalFileCnt++
+	posted = true
 	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
 
 	// Zapis SID'a
@@ -221,7 +230,7 @@ func AudioPut(c *gin.Context) {
 }
 
 // Options - Obsługa request'u OPTIONS (CORS)
-// ========================================================
+// ================================================================================================
 func Options(c *gin.Context) {
 	if c.Request.Method != "OPTIONS" {
 		c.Next()
@@ -235,12 +244,10 @@ func Options(c *gin.Context) {
 	}
 }
 
+// ================================================================================================
 // MAIN()
-// ========================================================
+// ================================================================================================
 func main() {
-
-	// var err = os.Remove("music.wav")
-	// ErrCheck(err)
 
 	r := gin.Default()
 
@@ -258,6 +265,5 @@ func main() {
 	r.POST("/api/v1/audio", AudioPost)
 	r.PUT("/api/v1/audio", AudioPut)
 
-	// Listen and Server in 0.0.0.0:8080
 	r.Run(":80")
 }
