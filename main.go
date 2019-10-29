@@ -165,7 +165,7 @@ func AudioGet(c *gin.Context) {
 
 }
 
-// AudioPost - Granie utworu wysłanego
+// AudioPost - Odernanie linka do SID lub PRG
 // ========================================================
 func AudioPost(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
@@ -192,6 +192,32 @@ func AudioPost(c *gin.Context) {
 	}
 
 	log.Println("AudioPost end with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
+}
+
+// AudioPut - Odebranie pliku SID lub PRG
+// ========================================================
+func AudioPut(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+	// c.Header("Content-Type", "multipart/form-data")
+	// c.Header("Connection", "Keep-Alive")
+	// c.Header("Transfer-Encoding", "chunked")
+
+	log.Println("AudioPut start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
+
+	file, fileErr := c.FormFile("file")
+	ErrCheck(fileErr)
+	log.Println("Odebrałem plik " + file.Filename)
+
+	GlobalFileCnt++
+	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
+
+	// Zapis SID'a
+	saveErr := c.SaveUploadedFile(file, filenameSID)
+	ErrCheck(saveErr)
+
+	c.JSON(http.StatusOK, "Got the file: "+file.Filename)
+
+	log.Println("AudioPut end with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 }
 
 // Options - Obsługa request'u OPTIONS (CORS)
@@ -230,6 +256,7 @@ func main() {
 
 	r.GET("/api/v1/audio", AudioGet)
 	r.POST("/api/v1/audio", AudioPost)
+	r.PUT("/api/v1/audio", AudioPut)
 
 	// Listen and Server in 0.0.0.0:8080
 	r.Run(":80")
