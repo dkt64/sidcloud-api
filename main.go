@@ -84,7 +84,7 @@ func AudioGet(c *gin.Context) {
 
 		// Przygotowanie nazw plików
 		name := "music" + strconv.Itoa(GlobalFileCnt)
-		paramName := "-q -w" + name
+		paramName := "-w" + name
 		filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
 		filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
 
