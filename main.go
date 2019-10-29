@@ -97,6 +97,8 @@ func AudioGet(c *gin.Context) {
 		filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
 		filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
 		czas := "-t600"
+		bits := "-p32"
+		freq := "-f44100"
 
 		// Odpalenie sidplayfp
 
@@ -108,7 +110,7 @@ func AudioGet(c *gin.Context) {
 			cmdName = "./sidplayfp/sidplayfp"
 		}
 
-		cmd := exec.Command(cmdName, paramName, czas, filenameSID)
+		cmd := exec.Command(cmdName, paramName, czas, bits, freq, filenameSID)
 		log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + paramName + " " + czas + " " + filenameSID + ")")
 		err := cmd.Start()
 		ErrCheck(err)
