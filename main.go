@@ -14,6 +14,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"io"
 	"log"
@@ -22,6 +23,7 @@ import (
 	"os/exec"
 	"runtime"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -73,7 +75,47 @@ func DownloadFile(filepath string, url string) error {
 
 	// Write the body to file
 	_, err = io.Copy(out, resp.Body)
+	ErrCheck(err)
+	out.Close()
+
+	// Sprawdzzamy rozmiar pliku
+	fi, err := os.Stat(filepath)
+	if err != nil {
+		return err
+	}
+	// get the size
+	size := fi.Size()
+	log.Println("Rozmiar pliku " + strconv.Itoa(int(size)))
+
+	if size < 8 || size > 65535 {
+		err := errors.New("Rozmiar pliku niewłaściwy")
+		return err
+	}
+	// Odczytujemy 4 pierwsze bajty żeby sprawdzić czy to SID
+	p := make([]byte, 4)
+
+	f, err := os.Open(filepath)
+	ErrCheck(err)
+	_, err = f.Read(p)
+	ErrCheck(err)
+	f.Close()
+
+	// log.Println("Sprawdzanie pliku " + strconv.Itoa(n))
+
+	var newName string
+
+	if p[1] == 0x53 && p[2] == 0x49 && p[3] == 0x44 {
+		newName = filepath + ".sid"
+		err := os.Rename(filepath, newName)
+		ErrCheck(err)
+	} else {
+		newName = filepath + ".prg"
+		err := os.Rename(filepath, newName)
+		ErrCheck(err)
+	}
+
 	return err
+
 }
 
 // AudioGet - granie utworu do testów
@@ -95,10 +137,20 @@ func AudioGet(c *gin.Context) {
 		name := "music" + strconv.Itoa(GlobalFileCnt)
 		paramName := "-w" + name
 		filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
+
 		filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
+		filenamePRG := "music" + strconv.Itoa(GlobalFileCnt) + ".prg"
+
+		var filename = ""
+		if fileExists(filenameSID) {
+			filename = filenameSID
+		} else if fileExists(filenamePRG) {
+			filename = filenamePRG
+		}
+
 		czas := "-t600"
-		bits := "-p32"
-		freq := "-f44100"
+		// bits := "-p16"
+		// freq := "-f44100"
 
 		// Odpalenie sidplayfp
 
@@ -110,14 +162,15 @@ func AudioGet(c *gin.Context) {
 			cmdName = "./sidplayfp/sidplayfp"
 		}
 
-		log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + bits + " " + freq + " " + paramName + " " + filenameSID + ")")
-		cmd := exec.Command(cmdName, czas, freq, paramName, filenameSID)
+		log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + paramName + " " + filename + ")")
+		cmd := exec.Command(cmdName, czas, paramName, filename)
 		err := cmd.Start()
 		ErrCheck(err)
 
 		// Gdyby cos poszło nie tak to zamykamy sidplayfp i kasujemy pliki
 		defer cmd.Process.Kill()
 		defer os.Remove(filenameSID)
+		defer os.Remove(filenamePRG)
 		defer os.Remove(filenameWAV)
 
 		// czekamy aż plik wav powstanie - dodać TIMEOUT
@@ -161,6 +214,7 @@ func AudioGet(c *gin.Context) {
 			defer f.Close()
 			defer cmd.Process.Kill()
 			defer os.Remove(filenameSID)
+			defer os.Remove(filenamePRG)
 			defer os.Remove(filenameWAV)
 
 			// Czytamy z pliku kolejne dane do bufora
@@ -198,13 +252,19 @@ func AudioPost(c *gin.Context) {
 
 	GlobalFileCnt++
 	posted = true
-	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
 
-	// Ściągnięcie pliku SID
+	var filename = ""
 
 	sidURL := c.Query("sid_url")
 
-	err := DownloadFile(filenameSID, sidURL)
+	filename = "music" + strconv.Itoa(GlobalFileCnt)
+
+	// Ściągnięcie pliku SID
+
+	// Gdy to nie link do SID albo PRG można podejrzewać skrypt
+	// Trzeba sprawdzić zawartość pliku
+	err := DownloadFile(filename, sidURL)
+
 	ErrCheck(err)
 	if err != nil {
 		log.Println("ERR! Error downloading file: " + sidURL)
@@ -230,13 +290,27 @@ func AudioPut(c *gin.Context) {
 
 	GlobalFileCnt++
 	posted = true
-	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
 
-	// Zapis SID'a
-	saveErr := c.SaveUploadedFile(file, filenameSID)
-	ErrCheck(saveErr)
+	var properExtension = false
+	var filenameSID = ""
 
-	c.JSON(http.StatusOK, "Got the file: "+file.Filename)
+	if strings.HasSuffix(file.Filename, ".sid") {
+		filenameSID = "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
+		properExtension = true
+	}
+	if strings.HasSuffix(file.Filename, ".prg") {
+		filenameSID = "music" + strconv.Itoa(GlobalFileCnt) + ".prg"
+		properExtension = true
+	}
+
+	if properExtension {
+		// Zapis SID'a
+		saveErr := c.SaveUploadedFile(file, filenameSID)
+		ErrCheck(saveErr)
+		c.JSON(http.StatusOK, "Got the file: "+file.Filename)
+	} else {
+		c.JSON(http.StatusOK, "Wrong file extension: "+file.Filename)
+	}
 
 	log.Println("AudioPut end with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 }
