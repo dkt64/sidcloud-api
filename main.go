@@ -3,12 +3,14 @@
 // ================================================================================================
 // TODO:
 // Android/Chrome wielokrotne GET i przerwanie pipe
-// dodać obsługę PRG
-// sprawdzać rodzaj pliku i inne błędy
 // zwracać info z SID
 // używać czasu trwania z pliku i dać możliwość ustawienia
 // wyświetlać w kontrolce poprawny czas
 // używanie ID poprzez Cookies
+// ================================================================================================
+// DONE:
+// dodać obsługę PRG
+// sprawdzać rodzaj pliku i inne błędy
 // ================================================================================================
 
 package main
@@ -18,6 +20,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"os/exec"
@@ -224,6 +227,31 @@ func AudioGet(c *gin.Context) {
 
 			// Jeżeli coś odczytaliśmy to wysyłamy
 			if readed > 0 {
+
+				if offset > 44 {
+					// log.Print("readed " + strconv.Itoa(readed))
+					var ix int
+					for ix = 0; ix < readed; ix = ix + 2 {
+						var valInt1 int16
+						valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
+
+						var valFloat float64
+						valFloat = float64(valInt1) * 1.25
+						if valFloat > 32766 {
+							valFloat = 32766
+						}
+						if valFloat < -32766 {
+							valFloat = -32766
+						}
+						var valInt2 int16
+						valInt2 = int16(math.Round(valFloat))
+						var valInt3 uint16
+						valInt3 = uint16(valInt2)
+
+						p[ix] = byte(valInt3 & 0xff)
+						p[ix+1] = byte((valInt3 & 0xff00) >> 8)
+					}
+				}
 				c.Data(http.StatusOK, "audio/wav", p)
 				offset += int64(readed)
 				// log.Print(".")
