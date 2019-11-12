@@ -19,6 +19,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
 	"math"
 	"net/http"
@@ -119,6 +120,48 @@ func DownloadFile(filepath string, url string) error {
 
 	return err
 
+}
+
+// CSDBGetLatestReleases - ostatnie release'y
+// ================================================================================================
+func CSDBGetLatestReleases(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+
+	resp, errGet := http.Get("https://csdb.dk/rss/latestreleases.php")
+	ErrCheck(errGet)
+
+	data, errRead := ioutil.ReadAll(resp.Body)
+	ErrCheck(errRead)
+
+	dataString := string(data)
+
+	// Info o wejściu do GET
+	// log.Println("CSDBGetLatestReleases")
+	// log.Println(dataString)
+
+	c.JSON(http.StatusOK, dataString)
+}
+
+// CSDBGetRelease - ostatnie release'y
+// ================================================================================================
+func CSDBGetRelease(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+
+	id := c.Query("id")
+
+	resp, errGet := http.Get("https://csdb.dk/webservice/?type=release&id=" + id)
+	ErrCheck(errGet)
+
+	data, errRead := ioutil.ReadAll(resp.Body)
+	ErrCheck(errRead)
+
+	dataString := string(data)
+
+	// Info o wejściu do GET
+	// log.Println("CSDBGetLatestReleases")
+	// log.Println(dataString)
+
+	c.JSON(http.StatusOK, dataString)
 }
 
 // AudioGet - granie utworu do testów
@@ -378,6 +421,8 @@ func main() {
 	r.GET("/api/v1/audio", AudioGet)
 	r.POST("/api/v1/audio", AudioPost)
 	r.PUT("/api/v1/audio", AudioPut)
+	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
+	r.POST("/api/v1/csdb_release", CSDBGetRelease)
 
 	r.Run(":80")
 }
