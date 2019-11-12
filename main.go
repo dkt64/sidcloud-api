@@ -2,6 +2,7 @@
 // Sidcloud by DKT/Samar
 // ================================================================================================
 // TODO:
+// Niepoprawnie odczytuje XML
 // Android/Chrome wielokrotne GET i przerwanie pipe
 // zwracać info z SID
 // używać czasu trwania z pliku i dać możliwość ustawienia
@@ -136,7 +137,7 @@ func CSDBGetLatestReleases(c *gin.Context) {
 	dataString := string(data)
 
 	// Info o wejściu do GET
-	// log.Println("CSDBGetLatestReleases")
+	log.Println("CSDBGetLatestReleases()")
 	// log.Println(dataString)
 
 	c.JSON(http.StatusOK, dataString)
@@ -158,8 +159,8 @@ func CSDBGetRelease(c *gin.Context) {
 	dataString := string(data)
 
 	// Info o wejściu do GET
-	// log.Println("CSDBGetLatestReleases")
-	// log.Println(dataString)
+	log.Println("CSDBGetRelease id=" + id)
+	log.Println(dataString)
 
 	c.JSON(http.StatusOK, dataString)
 }
