@@ -160,7 +160,7 @@ func CSDBGetRelease(c *gin.Context) {
 
 	// Info o wejściu do GET
 	log.Println("CSDBGetRelease id=" + id)
-	log.Println(dataString)
+	// log.Println(dataString)
 
 	c.JSON(http.StatusOK, dataString)
 }
