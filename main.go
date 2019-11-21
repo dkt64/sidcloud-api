@@ -169,6 +169,13 @@ func CSDBGetRelease(c *gin.Context) {
 // ================================================================================================
 func AudioGet(c *gin.Context) {
 
+	log.Println("file = " + c.Param("file"))
+
+	// nr, err := strconv.Atoi(c.Param("file"))
+	// if ErrCheck(err) {
+	// 	log.Println("file = " + strconv.Itoa(nr))
+	// }
+
 	if posted {
 		posted = false
 
@@ -342,8 +349,8 @@ func AudioPost(c *gin.Context) {
 		log.Println("ERR! Error downloading file: " + sidURL)
 		c.JSON(http.StatusOK, "ERR! Error downloading file: "+sidURL)
 	} else {
-		log.Println("Downloaded file: " + sidURL)
-		c.JSON(http.StatusOK, "Downloaded file: "+sidURL)
+		log.Println(filename)
+		c.JSON(http.StatusOK, filename)
 	}
 
 	log.Println("AudioPost end with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
@@ -419,7 +426,7 @@ func main() {
 	r.StaticFile("/", "./dist/index.html")
 	r.StaticFile("favicon.ico", "./dist/favicon.ico")
 
-	r.GET("/api/v1/audio", AudioGet)
+	r.GET("/api/v1/audio/:file", AudioGet)
 	r.POST("/api/v1/audio", AudioPost)
 	r.PUT("/api/v1/audio", AudioPut)
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
