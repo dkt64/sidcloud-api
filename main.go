@@ -169,14 +169,7 @@ func CSDBGetRelease(c *gin.Context) {
 // ================================================================================================
 func AudioGet(c *gin.Context) {
 
-	// log.Println("file = " + c.Param("file"))
-
-	// nr, err := strconv.Atoi(c.Param("file"))
-	// if ErrCheck(err) {
-	// 	log.Println("file = " + strconv.Itoa(nr))
-	// }
-
-	// if posted {
+	if posted {
 		posted = false
 
 		// Typ połączania
@@ -314,12 +307,12 @@ func AudioGet(c *gin.Context) {
 		c.JSON(http.StatusOK, "Loop ended.")
 		log.Println("Loop ended.")
 
-	// } else {
+	} else {
 
-	// 	// Przy powturzonym Get
-	// 	c.JSON(http.StatusOK, "ERR! Repeated GET.")
-	// 	log.Println("ERR! Repeated GET.")
-	// }
+		// Przy powturzonym Get
+		c.JSON(http.StatusOK, "ERR! Repeated GET.")
+		log.Println("ERR! Repeated GET.")
+	}
 }
 
 // AudioPost - Odernanie linka do SID lub PRG
@@ -349,8 +342,8 @@ func AudioPost(c *gin.Context) {
 		log.Println("ERR! Error downloading file: " + sidURL)
 		c.JSON(http.StatusOK, "ERR! Error downloading file: "+sidURL)
 	} else {
-		log.Println(filename)
-		c.JSON(http.StatusOK, filename)
+		log.Println("Downloaded file: " + sidURL)
+		c.JSON(http.StatusOK, "Downloaded file: "+sidURL)
 	}
 
 	log.Println("AudioPost end with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
@@ -426,7 +419,6 @@ func main() {
 	r.StaticFile("/", "./dist/index.html")
 	r.StaticFile("favicon.ico", "./dist/favicon.ico")
 
-	// r.GET("/api/v1/audio/:file", AudioGet)
 	r.GET("/api/v1/audio", AudioGet)
 	r.POST("/api/v1/audio", AudioPost)
 	r.PUT("/api/v1/audio", AudioPut)
