@@ -22,11 +22,9 @@ import (
 	"io"
 	"io/ioutil"
 	"log"
-	"math"
 	"net/http"
 	"os"
 	"os/exec"
-	"runtime"
 	"strconv"
 	"strings"
 	"time"
@@ -181,12 +179,23 @@ func AudioGet(c *gin.Context) {
 		log.Println("AudioGet start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 
 		// Przygotowanie nazw plików
-		name := "music" + strconv.Itoa(GlobalFileCnt)
-		paramName := "-w" + name
-		filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
+		// name := "music" + strconv.Itoa(GlobalFileCnt)
 
+		dir, _ := os.Getwd()
+		log.Println("Current working dir " + dir)
+
+		filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
 		filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
 		filenamePRG := "music" + strconv.Itoa(GlobalFileCnt) + ".prg"
+
+		paramName := "-jar jsidplay2_console-4.1.jar -a WAV -r " + filenameWAV
+
+		par1 := "-jar"
+		par2 := "jsidplay2_console-4.1.jar"
+		par3 := "-q"
+		par4 := "-a"
+		par5 := "WAV"
+		par6 := "-r"
 
 		var filename = ""
 		if fileExists(filenameSID) {
@@ -195,24 +204,51 @@ func AudioGet(c *gin.Context) {
 			filename = filenamePRG
 		}
 
-		czas := "-t600"
+		// czas := "-t600"
 		// bits := "-p16"
 		// freq := "-f44100"
 
 		// Odpalenie sidplayfp
 
 		var cmdName string
+		cmdName = "java"
 
-		if runtime.GOOS == "windows" {
-			cmdName = "sidplayfp/sidplayfp.exe"
-		} else {
-			cmdName = "./sidplayfp/sidplayfp"
+		// java -jar jsidplay2_console-4.1.jar -a WAV -r out.wav Alltime_Favourite_Nominee.sid
+
+		// if runtime.GOOS == "windows" {
+		// 	cmdName = "sidplayfp/sidplayfp.exe"
+		// } else {
+		// 	cmdName = "./sidplayfp/sidplayfp"
+		// }
+
+		// var out bytes.Buffer
+		// var stderr bytes.Buffer
+
+		log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + paramName + " " + filename + ")")
+		cmd := exec.Command(cmdName, par1, par2, par3, par4, par5, par6, filenameWAV, filenameSID)
+		// cmd := exec.Command(cmdName, par1, par2, filenameSID)
+		// cmd := exec.Command(cmdName, par1, par2, par3)
+		// cmd := exec.Command(cmdName, paramName, filename)
+		// cmd := exec.Command("java.exe", "-jar", "jsidplay2_console-4.1.jar")
+
+		// cmd.Stdout = &out
+		// cmd.Stderr = &stderr
+
+		// cmd.Dir = dir
+
+		log.Println("Path   = " + cmd.Path)
+
+		for i, arg := range cmd.Args {
+			log.Println("arg[" + strconv.Itoa(i) + "]=" + arg)
 		}
 
-		log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + paramName + " " + filename + ")")
-		cmd := exec.Command(cmdName, czas, paramName, filename)
 		err := cmd.Start()
 		ErrCheck(err)
+
+		// fmt.Println("Result: " + out.String())
+		// fmt.Println("Errors: " + stderr.String())
+
+		// log.Println("Dir    = " + cmd.Dir)
 
 		// Gdyby cos poszło nie tak to zamykamy sidplayfp i kasujemy pliki
 		defer cmd.Process.Kill()
@@ -221,6 +257,7 @@ func AudioGet(c *gin.Context) {
 		defer os.Remove(filenameWAV)
 
 		// czekamy aż plik wav powstanie - dodać TIMEOUT
+		log.Println(filenameWAV + " is creating...")
 		for !fileExists(filenameWAV) {
 			time.Sleep(200 * time.Millisecond)
 		}
@@ -272,30 +309,30 @@ func AudioGet(c *gin.Context) {
 			// Jeżeli coś odczytaliśmy to wysyłamy
 			if readed > 0 {
 
-				if offset > 44 {
-					// log.Print("readed " + strconv.Itoa(readed))
-					var ix int
-					for ix = 0; ix < readed; ix = ix + 2 {
-						var valInt1 int16
-						valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
+				// if offset > 44 {
+				// 	// log.Print("readed " + strconv.Itoa(readed))
+				// 	var ix int
+				// 	for ix = 0; ix < readed; ix = ix + 2 {
+				// 		var valInt1 int16
+				// 		valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
 
-						var valFloat float64
-						valFloat = float64(valInt1) * 1.25
-						if valFloat > 32766 {
-							valFloat = 32766
-						}
-						if valFloat < -32766 {
-							valFloat = -32766
-						}
-						var valInt2 int16
-						valInt2 = int16(math.Round(valFloat))
-						var valInt3 uint16
-						valInt3 = uint16(valInt2)
+				// 		var valFloat float64
+				// 		valFloat = float64(valInt1) * 1.25
+				// 		if valFloat > 32766 {
+				// 			valFloat = 32766
+				// 		}
+				// 		if valFloat < -32766 {
+				// 			valFloat = -32766
+				// 		}
+				// 		var valInt2 int16
+				// 		valInt2 = int16(math.Round(valFloat))
+				// 		var valInt3 uint16
+				// 		valInt3 = uint16(valInt2)
 
-						p[ix] = byte(valInt3 & 0xff)
-						p[ix+1] = byte((valInt3 & 0xff00) >> 8)
-					}
-				}
+				// 		p[ix] = byte(valInt3 & 0xff)
+				// 		p[ix+1] = byte((valInt3 & 0xff00) >> 8)
+				// 	}
+				// }
 				c.Data(http.StatusOK, "audio/wav", p)
 				offset += int64(readed)
 				// log.Print(".")
