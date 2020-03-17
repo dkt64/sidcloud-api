@@ -425,5 +425,5 @@ func main() {
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
 	r.POST("/api/v1/csdb_release", CSDBGetRelease)
 
-	r.Run(":80")
+	r.Run(":8080")
 }
