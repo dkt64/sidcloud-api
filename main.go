@@ -17,6 +17,7 @@
 package main
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
 	"io"
@@ -188,21 +189,26 @@ func AudioGet(c *gin.Context) {
 		filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
 		filenamePRG := "music" + strconv.Itoa(GlobalFileCnt) + ".prg"
 
-		paramName := "-jar jsidplay2_console-4.1.jar -a WAV -r " + filenameWAV
+		// paramName := "-jar jsidplay2_console-4.1.jar -a WAV -r " + filenameWAV
 
+		// par01 := "-cp"
+		// par02 := "."
 		par1 := "-jar"
 		par2 := "jsidplay2_console-4.1.jar"
+
+		// par3 := "-g"
+		// par4 := "0:10.000"
 		par3 := "-q"
 		par4 := "-a"
 		par5 := "WAV"
 		par6 := "-r"
 
-		var filename = ""
-		if fileExists(filenameSID) {
-			filename = filenameSID
-		} else if fileExists(filenamePRG) {
-			filename = filenamePRG
-		}
+		// var filename = ""
+		// if fileExists(filenameSID) {
+		// 	filename = filenameSID
+		// } else if fileExists(filenamePRG) {
+		// 	filename = filenamePRG
+		// }
 
 		// czas := "-t600"
 		// bits := "-p16"
@@ -221,18 +227,18 @@ func AudioGet(c *gin.Context) {
 		// 	cmdName = "./sidplayfp/sidplayfp"
 		// }
 
-		// var out bytes.Buffer
-		// var stderr bytes.Buffer
+		var out bytes.Buffer
+		var stderr bytes.Buffer
 
-		log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + paramName + " " + filename + ")")
+		// log.Println("cmdName = " + cmdName + " " + paramName + " " + filename)
 		cmd := exec.Command(cmdName, par1, par2, par3, par4, par5, par6, filenameWAV, filenameSID)
 		// cmd := exec.Command(cmdName, par1, par2, filenameSID)
 		// cmd := exec.Command(cmdName, par1, par2, par3)
 		// cmd := exec.Command(cmdName, paramName, filename)
-		// cmd := exec.Command("java.exe", "-jar", "jsidplay2_console-4.1.jar")
+		// cmd := exec.Command("play.bat")
 
-		// cmd.Stdout = &out
-		// cmd.Stderr = &stderr
+		cmd.Stdout = &out
+		cmd.Stderr = &stderr
 
 		// cmd.Dir = dir
 
@@ -242,11 +248,12 @@ func AudioGet(c *gin.Context) {
 			log.Println("arg[" + strconv.Itoa(i) + "]=" + arg)
 		}
 
+		log.Println("start cmd")
 		err := cmd.Start()
 		ErrCheck(err)
 
-		// fmt.Println("Result: " + out.String())
-		// fmt.Println("Errors: " + stderr.String())
+		log.Println("Result: " + out.String())
+		log.Println("Errors: " + stderr.String())
 
 		// log.Println("Dir    = " + cmd.Dir)
 
