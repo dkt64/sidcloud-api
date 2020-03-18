@@ -98,11 +98,11 @@ func DownloadFile(filepath string, url string) error {
 	// Odczytujemy 4 pierwsze bajty żeby sprawdzić czy to SID
 	p := make([]byte, 4)
 
-	f, err := os.Open(filepath)
+	logFileGin, err := os.Open(filepath)
 	ErrCheck(err)
-	_, err = f.Read(p)
+	_, err = logFileGin.Read(p)
 	ErrCheck(err)
-	f.Close()
+	logFileGin.Close()
 
 	// log.Println("Sprawdzanie pliku " + strconv.Itoa(n))
 
@@ -298,20 +298,20 @@ func AudioGet(c *gin.Context) {
 			}
 
 			// Otwieraamy plik - bez sprawdzania błędów
-			f, _ := os.Open(filenameWAV)
+			logFileGin, _ := os.Open(filenameWAV)
 			// ErrCheck(errOpen)
 
 			// Gdyby cos poszło nie tak zamykamy plik, zamykamy sidplayfp i kasujemy pliki
-			defer f.Close()
+			defer logFileGin.Close()
 			defer cmd.Process.Kill()
 			defer os.Remove(filenameSID)
 			defer os.Remove(filenamePRG)
 			defer os.Remove(filenameWAV)
 
 			// Czytamy z pliku kolejne dane do bufora
-			readed, _ := f.ReadAt(p, offset)
+			readed, _ := logFileGin.ReadAt(p, offset)
 			// ErrCheck(err)
-			f.Close()
+			logFileGin.Close()
 
 			// Jeżeli coś odczytaliśmy to wysyłamy
 			if readed > 0 {
@@ -450,6 +450,21 @@ func Options(c *gin.Context) {
 // MAIN()
 // ================================================================================================
 func main() {
+
+	// Logowanie do pliku
+	//
+	logFileApp, err := os.OpenFile("app.log", os.O_CREATE|os.O_APPEND|os.O_RDWR, 0666)
+	ErrCheck(err)
+	log.SetOutput(io.MultiWriter(os.Stdout, logFileApp))
+
+	gin.DisableConsoleColor()
+	logFileGin, err := os.OpenFile("gin.log", os.O_CREATE|os.O_APPEND|os.O_RDWR, 0666)
+	ErrCheck(err)
+	gin.DefaultWriter = io.MultiWriter(os.Stdout, logFileGin)
+
+	log.Println("=========================================")
+	log.Println("======          APP START        ========")
+	log.Println("=========================================")
 
 	r := gin.Default()
 

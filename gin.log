@@ -1,0 +1,94 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio             --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/03/18 - 10:09:10 | 304 |       999.8µs |             ::1 | GET      /
+[GIN] 2020/03/18 - 10:09:10 | 304 |      1.0013ms |             ::1 | GET      /js/chunk-vendors.2c8a644d.js
+[GIN] 2020/03/18 - 10:09:10 | 304 |            0s |             ::1 | GET      /js/app.fc667850.js
+[GIN] 2020/03/18 - 10:09:10 | 200 |     69.9968ms |             ::1 | GET      /css/app.3354ab7f.css
+[GIN] 2020/03/18 - 10:09:11 | 200 |            0s |             ::1 | GET      /favicon.ico
+[GIN] 2020/03/18 - 10:09:11 | 200 |    721.9948ms |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/03/18 - 10:09:11 | 200 |    132.9993ms |             ::1 | POST     /api/v1/csdb_release?id=188807&depth=2
+[GIN] 2020/03/18 - 10:09:12 | 200 |    390.9948ms |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/03/18 - 10:09:12 | 200 |    202.9994ms |             ::1 | POST     /api/v1/csdb_release?id=188774&depth=2
+[GIN] 2020/03/18 - 10:09:12 | 200 |    331.0373ms |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/03/18 - 10:09:12 | 200 |     124.999ms |             ::1 | POST     /api/v1/csdb_release?id=188764&depth=2
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- index.html
+	- 
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio             --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/03/18 - 10:10:58 | 304 |            0s |             ::1 | GET      /
+[GIN] 2020/03/18 - 10:10:58 | 304 |            0s |             ::1 | GET      /css/app.3354ab7f.css
+[GIN] 2020/03/18 - 10:10:58 | 304 |            0s |             ::1 | GET      /js/chunk-vendors.2c8a644d.js
+[GIN] 2020/03/18 - 10:10:58 | 304 |            0s |             ::1 | GET      /js/app.fc667850.js
+[GIN] 2020/03/18 - 10:10:59 | 200 |     67.9926ms |             ::1 | GET      /favicon.ico
+[GIN] 2020/03/18 - 10:11:00 | 200 |    957.9998ms |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/03/18 - 10:11:00 | 200 |     229.998ms |             ::1 | POST     /api/v1/csdb_release?id=188807&depth=2
+[GIN] 2020/03/18 - 10:11:01 | 200 |    721.4257ms |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/03/18 - 10:11:01 | 200 |    453.9263ms |             ::1 | POST     /api/v1/csdb_release?id=188774&depth=2
+[GIN] 2020/03/18 - 10:11:02 | 200 |    1.0188325s |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/03/18 - 10:11:02 | 200 |    314.0262ms |             ::1 | POST     /api/v1/csdb_release?id=188764&depth=2
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio             --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8080

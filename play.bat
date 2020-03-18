@@ -1,1 +1,1 @@
-java -cp . -jar jsidplay2_console-4.1.jar -q -g 0:59.999 -a WAV -r music1.wav music1.sid
+java -jar jsidplay2_console-4.1.jar -a WAV -r music1.wav music1.sid
