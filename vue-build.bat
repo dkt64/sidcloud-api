@@ -1,2 +1,2 @@
-cd c:\users\admin\vue\sidcloud
+cd %USERPROFILE%\vue\sidcloud
 npm run build
