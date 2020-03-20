@@ -13,3 +13,34 @@
 2020/03/18 10:12:43 =========================================
 2020/03/18 10:12:43 ======          APP START        ========
 2020/03/18 10:12:43 =========================================
+2020/03/19 17:27:24 =========================================
+2020/03/19 17:27:24 ======          APP START        ========
+2020/03/19 17:27:24 =========================================
+2020/03/19 17:27:37 CSDBGetLatestReleases()
+2020/03/19 17:27:39 CSDBGetRelease id=188807
+2020/03/19 17:27:40 CSDBGetLatestReleases()
+2020/03/19 17:27:43 CSDBGetRelease id=188774
+2020/03/19 17:27:44 CSDBGetLatestReleases()
+2020/03/19 17:27:44 CSDBGetRelease id=188764
+2020/03/19 17:27:56 AudioPost start with GlobalFileCnt = 0
+2020/03/19 17:28:00 Rozmiar pliku 3609
+2020/03/19 17:28:00 Downloaded file: http://csdb.dk/getinternalfile.php/196258/Runes_Of_Virtue.sid
+2020/03/19 17:28:00 AudioPost end with GlobalFileCnt = 1
+2020/03/19 17:28:00 AudioGet start with GlobalFileCnt = 1
+2020/03/19 17:28:00 Current working dir c:\Users\Bajtek\go\src\github.com\dkt64\sidcloud-api
+2020/03/19 17:28:00 Path   = C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+2020/03/19 17:28:00 arg[0]=java
+2020/03/19 17:28:00 arg[1]=-jar
+2020/03/19 17:28:00 arg[2]=jsidplay2_console-4.1.jar
+2020/03/19 17:28:00 arg[3]=-q
+2020/03/19 17:28:00 arg[4]=-a
+2020/03/19 17:28:00 arg[5]=WAV
+2020/03/19 17:28:00 arg[6]=-r
+2020/03/19 17:28:00 arg[7]=music1.wav
+2020/03/19 17:28:00 arg[8]=music1.sid
+2020/03/19 17:28:00 start cmd
+2020/03/19 17:28:00 Result: 
+2020/03/19 17:28:00 Errors: 
+2020/03/19 17:28:00 music1.wav is creating...
+2020/03/19 17:28:01 music1.wav created.
+2020/03/19 17:28:01 Sending...
