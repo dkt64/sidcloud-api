@@ -44,3 +44,403 @@
 2020/03/19 17:28:00 music1.wav is creating...
 2020/03/19 17:28:01 music1.wav created.
 2020/03/19 17:28:01 Sending...
+2020/03/20 09:25:20 =========================================
+2020/03/20 09:25:20 ======          APP START        ========
+2020/03/20 09:25:20 =========================================
+2020/03/20 09:26:03 CSDBGetLatestReleases()
+2020/03/20 09:26:03 CSDBGetRelease id=188936
+2020/03/20 09:26:03 CSDBGetLatestReleases()
+2020/03/20 09:26:03 CSDBGetRelease id=188923
+2020/03/20 09:27:24 CSDBGetLatestReleases()
+2020/03/20 09:27:24 CSDBGetRelease id=188936
+2020/03/20 09:27:24 CSDBGetLatestReleases()
+2020/03/20 09:27:24 CSDBGetRelease id=188923
+2020/03/20 09:29:46 CSDBGetLatestReleases()
+2020/03/20 09:29:46 CSDBGetRelease id=188936
+2020/03/20 09:29:47 CSDBGetLatestReleases()
+2020/03/20 09:29:47 CSDBGetRelease id=188923
+2020/03/20 09:33:30 CSDBGetLatestReleases()
+2020/03/20 09:33:30 CSDBGetRelease id=188936
+2020/03/20 09:33:30 CSDBGetLatestReleases()
+2020/03/20 09:33:30 CSDBGetRelease id=188923
+2020/03/20 09:34:18 CSDBGetLatestReleases()
+2020/03/20 09:34:19 CSDBGetRelease id=188936
+2020/03/20 09:34:19 CSDBGetLatestReleases()
+2020/03/20 09:34:19 CSDBGetRelease id=188923
+2020/03/20 09:35:10 CSDBGetLatestReleases()
+2020/03/20 09:35:10 CSDBGetRelease id=188936
+2020/03/20 09:35:11 CSDBGetLatestReleases()
+2020/03/20 09:35:11 CSDBGetRelease id=188923
+2020/03/20 09:37:10 CSDBGetLatestReleases()
+2020/03/20 09:37:13 CSDBGetLatestReleases()
+2020/03/20 09:37:13 CSDBGetRelease id=188936
+2020/03/20 09:37:13 CSDBGetLatestReleases()
+2020/03/20 09:37:13 CSDBGetRelease id=188923
+2020/03/20 09:37:27 CSDBGetLatestReleases()
+2020/03/20 09:37:27 CSDBGetRelease id=188936
+2020/03/20 09:37:28 CSDBGetLatestReleases()
+2020/03/20 09:37:28 CSDBGetRelease id=188923
+2020/03/20 09:37:36 CSDBGetLatestReleases()
+2020/03/20 09:37:36 CSDBGetRelease id=188936
+2020/03/20 09:37:37 CSDBGetLatestReleases()
+2020/03/20 09:37:37 CSDBGetRelease id=188923
+2020/03/20 09:37:44 AudioPost start with GlobalFileCnt = 0
+2020/03/20 09:37:45 Rozmiar pliku 2240
+2020/03/20 09:37:45 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 09:37:45 AudioPost end with GlobalFileCnt = 1
+2020/03/20 09:37:45 AudioGet start with GlobalFileCnt = 1
+2020/03/20 09:37:45 Current working dir C:\Users\admin\Go\src\github.com\dkt64\sidcloud-api
+2020/03/20 09:37:45 Path   = C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+2020/03/20 09:37:45 arg[0]=java
+2020/03/20 09:37:45 arg[1]=-jar
+2020/03/20 09:37:45 arg[2]=jsidplay2_console-4.1.jar
+2020/03/20 09:37:45 arg[3]=-q
+2020/03/20 09:37:45 arg[4]=-a
+2020/03/20 09:37:45 arg[5]=WAV
+2020/03/20 09:37:45 arg[6]=-r
+2020/03/20 09:37:45 arg[7]=music1.wav
+2020/03/20 09:37:45 arg[8]=music1.sid
+2020/03/20 09:37:45 start cmd
+2020/03/20 09:37:45 Result: 
+2020/03/20 09:37:45 Errors: 
+2020/03/20 09:37:45 music1.wav is creating...
+2020/03/20 09:37:45 music1.wav created.
+2020/03/20 09:37:45 Sending...
+2020/03/20 09:41:26 CSDBGetLatestReleases()
+2020/03/20 09:41:26 CSDBGetRelease id=188936
+2020/03/20 09:41:26 CSDBGetLatestReleases()
+2020/03/20 09:41:26 CSDBGetRelease id=188923
+2020/03/20 09:42:02 CSDBGetLatestReleases()
+2020/03/20 09:42:02 CSDBGetRelease id=188936
+2020/03/20 09:42:03 CSDBGetLatestReleases()
+2020/03/20 09:42:03 CSDBGetRelease id=188923
+2020/03/20 09:42:49 CSDBGetLatestReleases()
+2020/03/20 09:42:49 CSDBGetRelease id=188936
+2020/03/20 09:42:50 CSDBGetLatestReleases()
+2020/03/20 09:42:50 CSDBGetRelease id=188923
+2020/03/20 09:43:14 AudioPost start with GlobalFileCnt = 1
+2020/03/20 09:43:15 Rozmiar pliku 2240
+2020/03/20 09:43:15 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 09:43:15 AudioPost end with GlobalFileCnt = 2
+2020/03/20 09:43:29 CSDBGetLatestReleases()
+2020/03/20 09:43:29 CSDBGetRelease id=188936
+2020/03/20 09:43:30 CSDBGetLatestReleases()
+2020/03/20 09:43:30 CSDBGetRelease id=188923
+2020/03/20 09:44:25 CSDBGetLatestReleases()
+2020/03/20 09:44:25 CSDBGetRelease id=188936
+2020/03/20 09:44:25 CSDBGetLatestReleases()
+2020/03/20 09:44:25 CSDBGetRelease id=188923
+2020/03/20 09:44:42 CSDBGetLatestReleases()
+2020/03/20 09:44:42 CSDBGetRelease id=188936
+2020/03/20 09:44:43 CSDBGetLatestReleases()
+2020/03/20 09:44:43 CSDBGetRelease id=188923
+2020/03/20 09:45:21 CSDBGetLatestReleases()
+2020/03/20 09:45:21 CSDBGetRelease id=188936
+2020/03/20 09:45:21 CSDBGetLatestReleases()
+2020/03/20 09:45:21 CSDBGetRelease id=188923
+2020/03/20 09:45:55 CSDBGetLatestReleases()
+2020/03/20 09:45:56 CSDBGetRelease id=188936
+2020/03/20 09:45:56 CSDBGetLatestReleases()
+2020/03/20 09:45:56 CSDBGetRelease id=188923
+2020/03/20 09:46:01 CSDBGetLatestReleases()
+2020/03/20 09:46:01 CSDBGetRelease id=188936
+2020/03/20 09:46:01 CSDBGetLatestReleases()
+2020/03/20 09:46:01 CSDBGetRelease id=188923
+2020/03/20 09:46:08 AudioPost start with GlobalFileCnt = 2
+2020/03/20 09:46:09 Rozmiar pliku 2240
+2020/03/20 09:46:09 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 09:46:09 AudioPost end with GlobalFileCnt = 3
+2020/03/20 09:47:20 =========================================
+2020/03/20 09:47:20 ======          APP START        ========
+2020/03/20 09:47:20 =========================================
+2020/03/20 09:47:25 CSDBGetLatestReleases()
+2020/03/20 09:47:25 CSDBGetRelease id=188936
+2020/03/20 09:47:26 CSDBGetLatestReleases()
+2020/03/20 09:47:26 CSDBGetRelease id=188923
+2020/03/20 09:47:30 AudioPost start with GlobalFileCnt = 0
+2020/03/20 09:47:30 Rozmiar pliku 2240
+2020/03/20 09:47:30 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 09:47:31 AudioPost end with GlobalFileCnt = 1
+2020/03/20 09:48:28 CSDBGetLatestReleases()
+2020/03/20 09:48:28 CSDBGetRelease id=188936
+2020/03/20 09:48:28 CSDBGetLatestReleases()
+2020/03/20 09:48:29 CSDBGetRelease id=188923
+2020/03/20 09:48:30 AudioPost start with GlobalFileCnt = 1
+2020/03/20 09:48:31 Rozmiar pliku 2240
+2020/03/20 09:48:31 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 09:48:31 AudioPost end with GlobalFileCnt = 2
+2020/03/20 09:48:45 CSDBGetLatestReleases()
+2020/03/20 09:48:45 CSDBGetRelease id=188936
+2020/03/20 09:48:45 CSDBGetLatestReleases()
+2020/03/20 09:48:45 CSDBGetRelease id=188923
+2020/03/20 09:48:52 AudioPost start with GlobalFileCnt = 2
+2020/03/20 09:48:53 Rozmiar pliku 2240
+2020/03/20 09:48:53 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 09:48:53 AudioPost end with GlobalFileCnt = 3
+2020/03/20 09:50:23 CSDBGetLatestReleases()
+2020/03/20 09:50:23 CSDBGetRelease id=188936
+2020/03/20 09:50:24 CSDBGetLatestReleases()
+2020/03/20 09:50:24 CSDBGetRelease id=188923
+2020/03/20 09:50:34 CSDBGetLatestReleases()
+2020/03/20 09:50:35 CSDBGetRelease id=188936
+2020/03/20 09:50:35 CSDBGetLatestReleases()
+2020/03/20 09:50:35 CSDBGetRelease id=188923
+2020/03/20 09:50:42 AudioPost start with GlobalFileCnt = 3
+2020/03/20 09:50:42 Rozmiar pliku 2240
+2020/03/20 09:50:42 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 09:50:42 AudioPost end with GlobalFileCnt = 4
+2020/03/20 09:53:48 CSDBGetLatestReleases()
+2020/03/20 09:53:48 CSDBGetRelease id=188936
+2020/03/20 09:53:49 CSDBGetLatestReleases()
+2020/03/20 09:53:49 CSDBGetRelease id=188923
+2020/03/20 09:53:54 AudioPost start with GlobalFileCnt = 4
+2020/03/20 09:53:55 Rozmiar pliku 2240
+2020/03/20 09:53:55 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 09:53:55 AudioPost end with GlobalFileCnt = 5
+2020/03/20 09:53:58 AudioPost start with GlobalFileCnt = 5
+2020/03/20 09:53:58 Rozmiar pliku 2240
+2020/03/20 09:53:58 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 09:53:58 AudioPost end with GlobalFileCnt = 6
+2020/03/20 09:54:32 CSDBGetLatestReleases()
+2020/03/20 09:54:32 CSDBGetRelease id=188936
+2020/03/20 09:54:32 CSDBGetLatestReleases()
+2020/03/20 09:54:32 CSDBGetRelease id=188923
+2020/03/20 09:54:55 CSDBGetLatestReleases()
+2020/03/20 09:54:55 CSDBGetRelease id=188936
+2020/03/20 09:54:55 CSDBGetLatestReleases()
+2020/03/20 09:54:56 CSDBGetRelease id=188923
+2020/03/20 09:54:59 AudioPost start with GlobalFileCnt = 6
+2020/03/20 09:54:59 Rozmiar pliku 2240
+2020/03/20 09:54:59 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 09:54:59 AudioPost end with GlobalFileCnt = 7
+2020/03/20 09:55:04 AudioPost start with GlobalFileCnt = 7
+2020/03/20 09:55:04 Rozmiar pliku 2240
+2020/03/20 09:55:04 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 09:55:04 AudioPost end with GlobalFileCnt = 8
+2020/03/20 09:55:07 AudioPost start with GlobalFileCnt = 8
+2020/03/20 09:55:07 Rozmiar pliku 2240
+2020/03/20 09:55:07 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 09:55:07 AudioPost end with GlobalFileCnt = 9
+2020/03/20 10:00:41 CSDBGetLatestReleases()
+2020/03/20 10:00:41 CSDBGetRelease id=188936
+2020/03/20 10:00:41 CSDBGetLatestReleases()
+2020/03/20 10:00:41 CSDBGetRelease id=188923
+2020/03/20 10:02:09 CSDBGetLatestReleases()
+2020/03/20 10:02:09 CSDBGetRelease id=188936
+2020/03/20 10:02:09 CSDBGetLatestReleases()
+2020/03/20 10:02:09 CSDBGetRelease id=188923
+2020/03/20 10:02:18 CSDBGetLatestReleases()
+2020/03/20 10:02:18 CSDBGetRelease id=188936
+2020/03/20 10:02:18 CSDBGetLatestReleases()
+2020/03/20 10:02:18 CSDBGetRelease id=188923
+2020/03/20 10:02:39 CSDBGetLatestReleases()
+2020/03/20 10:02:40 CSDBGetRelease id=188936
+2020/03/20 10:02:40 CSDBGetLatestReleases()
+2020/03/20 10:02:40 CSDBGetRelease id=188923
+2020/03/20 10:02:48 CSDBGetLatestReleases()
+2020/03/20 10:02:49 CSDBGetRelease id=188936
+2020/03/20 10:02:49 CSDBGetLatestReleases()
+2020/03/20 10:02:49 CSDBGetRelease id=188923
+2020/03/20 10:02:59 CSDBGetLatestReleases()
+2020/03/20 10:03:00 CSDBGetRelease id=188936
+2020/03/20 10:03:00 CSDBGetLatestReleases()
+2020/03/20 10:03:00 CSDBGetRelease id=188923
+2020/03/20 10:03:29 CSDBGetLatestReleases()
+2020/03/20 10:03:29 CSDBGetRelease id=188936
+2020/03/20 10:03:29 CSDBGetLatestReleases()
+2020/03/20 10:03:29 CSDBGetRelease id=188923
+2020/03/20 10:03:31 AudioPost start with GlobalFileCnt = 9
+2020/03/20 10:03:31 Rozmiar pliku 2240
+2020/03/20 10:03:31 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:03:31 AudioPost end with GlobalFileCnt = 10
+2020/03/20 10:07:35 CSDBGetLatestReleases()
+2020/03/20 10:07:35 CSDBGetRelease id=188936
+2020/03/20 10:07:35 CSDBGetLatestReleases()
+2020/03/20 10:07:36 CSDBGetRelease id=188923
+2020/03/20 10:07:37 AudioPost start with GlobalFileCnt = 10
+2020/03/20 10:07:38 Rozmiar pliku 2240
+2020/03/20 10:07:38 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:07:38 AudioPost end with GlobalFileCnt = 11
+2020/03/20 10:20:24 =========================================
+2020/03/20 10:20:24 ======          APP START        ========
+2020/03/20 10:20:24 =========================================
+2020/03/20 10:20:32 CSDBGetLatestReleases()
+2020/03/20 10:20:32 CSDBGetRelease id=188936
+2020/03/20 10:20:32 CSDBGetLatestReleases()
+2020/03/20 10:20:32 CSDBGetRelease id=188923
+2020/03/20 10:20:36 AudioPost start with GlobalFileCnt = 0
+2020/03/20 10:20:36 Rozmiar pliku 2240
+2020/03/20 10:20:36 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:20:36 AudioPost end with GlobalFileCnt = 1
+2020/03/20 10:20:36 AudioGet start with GlobalFileCnt = 1
+2020/03/20 10:20:36 Starting sidplayfp... cmdName(sidplayfp/sidplayfp.exe -t600 -wmusic1 music1.sid)
+2020/03/20 10:20:36 music1.wav is creating...
+2020/03/20 10:20:36 music1.wav created.
+2020/03/20 10:20:36 Sending...
+2020/03/20 10:20:49 AudioPost start with GlobalFileCnt = 1
+2020/03/20 10:20:50 Rozmiar pliku 2240
+2020/03/20 10:20:50 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:20:50 AudioPost end with GlobalFileCnt = 2
+2020/03/20 10:20:50 AudioGet start with GlobalFileCnt = 2
+2020/03/20 10:20:50 Starting sidplayfp... cmdName(sidplayfp/sidplayfp.exe -t600 -wmusic2 music2.sid)
+2020/03/20 10:20:50 music2.wav is creating...
+2020/03/20 10:20:50 music2.wav created.
+2020/03/20 10:20:50 Sending...
+2020/03/20 10:21:27 AudioPost start with GlobalFileCnt = 2
+2020/03/20 10:21:27 Rozmiar pliku 2240
+2020/03/20 10:21:27 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:21:27 AudioPost end with GlobalFileCnt = 3
+2020/03/20 10:21:27 AudioGet start with GlobalFileCnt = 3
+2020/03/20 10:21:27 Starting sidplayfp... cmdName(sidplayfp/sidplayfp.exe -t600 -wmusic3 music3.sid)
+2020/03/20 10:21:27 music3.wav is creating...
+2020/03/20 10:21:27 music3.wav created.
+2020/03/20 10:21:27 Sending...
+2020/03/20 10:22:30 AudioPost start with GlobalFileCnt = 3
+2020/03/20 10:22:31 Rozmiar pliku 2240
+2020/03/20 10:22:31 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:22:31 AudioPost end with GlobalFileCnt = 4
+2020/03/20 10:22:31 AudioGet start with GlobalFileCnt = 4
+2020/03/20 10:22:31 Starting sidplayfp... cmdName(sidplayfp/sidplayfp.exe -t600 -wmusic4 music4.sid)
+2020/03/20 10:22:31 music4.wav is creating...
+2020/03/20 10:22:31 music4.wav created.
+2020/03/20 10:22:31 Sending...
+2020/03/20 10:22:34 AudioPost start with GlobalFileCnt = 4
+2020/03/20 10:22:35 Rozmiar pliku 2240
+2020/03/20 10:22:35 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:22:35 AudioPost end with GlobalFileCnt = 5
+2020/03/20 10:22:35 AudioGet start with GlobalFileCnt = 5
+2020/03/20 10:22:35 Starting sidplayfp... cmdName(sidplayfp/sidplayfp.exe -t600 -wmusic5 music5.sid)
+2020/03/20 10:22:35 music5.wav is creating...
+2020/03/20 10:22:35 music5.wav created.
+2020/03/20 10:22:35 Sending...
+2020/03/20 10:22:38 AudioPost start with GlobalFileCnt = 5
+2020/03/20 10:22:38 Rozmiar pliku 2240
+2020/03/20 10:22:38 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:22:38 AudioPost end with GlobalFileCnt = 6
+2020/03/20 10:22:38 AudioGet start with GlobalFileCnt = 6
+2020/03/20 10:22:38 Starting sidplayfp... cmdName(sidplayfp/sidplayfp.exe -t600 -wmusic6 music6.sid)
+2020/03/20 10:22:38 music6.wav is creating...
+2020/03/20 10:22:39 music6.wav created.
+2020/03/20 10:22:39 Sending...
+2020/03/20 10:24:20 CSDBGetLatestReleases()
+2020/03/20 10:24:20 CSDBGetRelease id=188942
+2020/03/20 10:24:20 CSDBGetLatestReleases()
+2020/03/20 10:24:20 CSDBGetRelease id=188936
+2020/03/20 10:24:20 CSDBGetLatestReleases()
+2020/03/20 10:24:21 CSDBGetRelease id=188923
+2020/03/20 10:25:14 CSDBGetLatestReleases()
+2020/03/20 10:25:14 CSDBGetRelease id=188942
+2020/03/20 10:25:15 CSDBGetLatestReleases()
+2020/03/20 10:25:15 CSDBGetRelease id=188936
+2020/03/20 10:25:15 CSDBGetLatestReleases()
+2020/03/20 10:25:15 CSDBGetRelease id=188923
+2020/03/20 10:25:37 CSDBGetLatestReleases()
+2020/03/20 10:25:37 CSDBGetRelease id=188942
+2020/03/20 10:25:38 CSDBGetLatestReleases()
+2020/03/20 10:25:38 CSDBGetRelease id=188936
+2020/03/20 10:25:38 CSDBGetLatestReleases()
+2020/03/20 10:25:38 CSDBGetRelease id=188923
+2020/03/20 10:26:21 CSDBGetLatestReleases()
+2020/03/20 10:26:21 CSDBGetRelease id=188942
+2020/03/20 10:26:22 CSDBGetLatestReleases()
+2020/03/20 10:26:22 CSDBGetRelease id=188936
+2020/03/20 10:26:22 CSDBGetLatestReleases()
+2020/03/20 10:26:22 CSDBGetRelease id=188923
+2020/03/20 10:27:37 CSDBGetLatestReleases()
+2020/03/20 10:27:37 CSDBGetRelease id=188942
+2020/03/20 10:27:38 CSDBGetLatestReleases()
+2020/03/20 10:27:38 CSDBGetRelease id=188936
+2020/03/20 10:27:38 CSDBGetLatestReleases()
+2020/03/20 10:27:38 CSDBGetRelease id=188923
+2020/03/20 10:27:40 AudioPost start with GlobalFileCnt = 6
+2020/03/20 10:27:40 Rozmiar pliku 2240
+2020/03/20 10:27:40 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:27:40 AudioPost end with GlobalFileCnt = 7
+2020/03/20 10:27:40 AudioGet start with GlobalFileCnt = 7
+2020/03/20 10:27:40 Starting sidplayfp... cmdName(sidplayfp/sidplayfp.exe -t600 -wmusic7 music7.sid)
+2020/03/20 10:27:40 music7.wav is creating...
+2020/03/20 10:27:41 music7.wav created.
+2020/03/20 10:27:41 Sending...
+2020/03/20 10:27:43 AudioPost start with GlobalFileCnt = 7
+2020/03/20 10:27:43 Rozmiar pliku 2240
+2020/03/20 10:27:43 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:27:43 AudioPost end with GlobalFileCnt = 8
+2020/03/20 10:27:43 AudioGet start with GlobalFileCnt = 8
+2020/03/20 10:27:43 Starting sidplayfp... cmdName(sidplayfp/sidplayfp.exe -t600 -wmusic8 music8.sid)
+2020/03/20 10:27:43 music8.wav is creating...
+2020/03/20 10:27:44 music8.wav created.
+2020/03/20 10:27:44 Sending...
+2020/03/20 10:27:47 AudioPost start with GlobalFileCnt = 8
+2020/03/20 10:27:47 Rozmiar pliku 2240
+2020/03/20 10:27:47 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:27:47 AudioPost end with GlobalFileCnt = 9
+2020/03/20 10:27:47 AudioGet start with GlobalFileCnt = 9
+2020/03/20 10:27:47 Starting sidplayfp... cmdName(sidplayfp/sidplayfp.exe -t600 -wmusic9 music9.sid)
+2020/03/20 10:27:47 music9.wav is creating...
+2020/03/20 10:27:47 music9.wav created.
+2020/03/20 10:27:47 Sending...
+2020/03/20 10:28:41 CSDBGetLatestReleases()
+2020/03/20 10:28:41 CSDBGetRelease id=188942
+2020/03/20 10:28:41 CSDBGetLatestReleases()
+2020/03/20 10:28:41 CSDBGetRelease id=188936
+2020/03/20 10:28:42 CSDBGetLatestReleases()
+2020/03/20 10:28:42 CSDBGetRelease id=188923
+2020/03/20 10:28:44 AudioPost start with GlobalFileCnt = 9
+2020/03/20 10:28:44 Rozmiar pliku 2240
+2020/03/20 10:28:44 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:28:44 AudioPost end with GlobalFileCnt = 10
+2020/03/20 10:28:44 AudioGet start with GlobalFileCnt = 10
+2020/03/20 10:28:44 Starting sidplayfp... cmdName(sidplayfp/sidplayfp.exe -t600 -wmusic10 music10.sid)
+2020/03/20 10:28:44 music10.wav is creating...
+2020/03/20 10:28:45 music10.wav created.
+2020/03/20 10:28:45 Sending...
+2020/03/20 10:29:23 CSDBGetLatestReleases()
+2020/03/20 10:29:23 CSDBGetRelease id=188942
+2020/03/20 10:29:23 CSDBGetLatestReleases()
+2020/03/20 10:29:24 CSDBGetRelease id=188936
+2020/03/20 10:29:24 CSDBGetLatestReleases()
+2020/03/20 10:29:24 CSDBGetRelease id=188923
+2020/03/20 10:29:32 AudioPost start with GlobalFileCnt = 10
+2020/03/20 10:29:33 Rozmiar pliku 2240
+2020/03/20 10:29:33 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:29:33 AudioPost end with GlobalFileCnt = 11
+2020/03/20 10:29:33 AudioGet start with GlobalFileCnt = 11
+2020/03/20 10:29:33 Starting sidplayfp... cmdName(sidplayfp/sidplayfp.exe -t600 -wmusic11 music11.sid)
+2020/03/20 10:29:33 music11.wav is creating...
+2020/03/20 10:29:33 music11.wav created.
+2020/03/20 10:29:33 Sending...
+2020/03/20 10:29:48 CSDBGetLatestReleases()
+2020/03/20 10:29:48 CSDBGetRelease id=188942
+2020/03/20 10:29:49 CSDBGetLatestReleases()
+2020/03/20 10:29:49 CSDBGetRelease id=188936
+2020/03/20 10:29:49 CSDBGetLatestReleases()
+2020/03/20 10:29:49 CSDBGetRelease id=188923
+2020/03/20 10:29:57 AudioPost start with GlobalFileCnt = 11
+2020/03/20 10:29:57 Rozmiar pliku 2240
+2020/03/20 10:29:57 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:29:57 AudioPost end with GlobalFileCnt = 12
+2020/03/20 10:29:57 AudioGet start with GlobalFileCnt = 12
+2020/03/20 10:29:57 music12.wav is creating...
+2020/03/20 10:29:58 music12.wav created.
+2020/03/20 10:29:58 Sending...
+2020/03/20 10:30:08 AudioPost start with GlobalFileCnt = 12
+2020/03/20 10:30:09 Rozmiar pliku 2240
+2020/03/20 10:30:09 Downloaded file: http://csdb.dk/getinternalfile.php/196433/Corona.sid
+2020/03/20 10:30:09 AudioPost end with GlobalFileCnt = 13
+2020/03/20 10:30:09 AudioGet start with GlobalFileCnt = 13
+2020/03/20 10:30:09 Starting sidplayfp... cmdName(sidplayfp/sidplayfp.exe -t600 -wmusic13 music13.sid)
+2020/03/20 10:30:09 music13.wav is creating...
+2020/03/20 10:30:09 music13.wav created.
+2020/03/20 10:30:09 Sending...
+2020/03/20 10:37:12 CSDBGetLatestReleases()
+2020/03/20 10:37:12 CSDBGetRelease id=188942
+2020/03/20 10:37:12 CSDBGetLatestReleases()
+2020/03/20 10:37:12 CSDBGetRelease id=188936
+2020/03/20 10:37:13 CSDBGetLatestReleases()
+2020/03/20 10:37:13 CSDBGetRelease id=188923
+2020/03/20 10:37:14 CSDBGetLatestReleases()
+2020/03/20 10:37:14 CSDBGetRelease id=188942
+2020/03/20 10:37:14 CSDBGetLatestReleases()
+2020/03/20 10:37:14 CSDBGetRelease id=188936
+2020/03/20 10:37:15 CSDBGetLatestReleases()
+2020/03/20 10:37:15 CSDBGetRelease id=188923

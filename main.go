@@ -17,7 +17,6 @@
 package main
 
 import (
-	"bytes"
 	"errors"
 	"fmt"
 	"io"
@@ -26,6 +25,7 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"runtime"
 	"strconv"
 	"strings"
 	"time"
@@ -164,7 +164,7 @@ func CSDBGetRelease(c *gin.Context) {
 	c.JSON(http.StatusOK, dataString)
 }
 
-// AudioGet - granie utworu do testów
+// AudioGet - granie utworu
 // ================================================================================================
 func AudioGet(c *gin.Context) {
 
@@ -179,86 +179,93 @@ func AudioGet(c *gin.Context) {
 		// Info o wejściu do GET
 		log.Println("AudioGet start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 
+		// dir, _ := os.Getwd()
+		// log.Println("Current working dir " + dir)
+
 		// Przygotowanie nazw plików
-		// name := "music" + strconv.Itoa(GlobalFileCnt)
-
-		dir, _ := os.Getwd()
-		log.Println("Current working dir " + dir)
-
 		filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
 		filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
 		filenamePRG := "music" + strconv.Itoa(GlobalFileCnt) + ".prg"
 
-		// paramName := "-jar jsidplay2_console-4.1.jar -a WAV -r " + filenameWAV
-
-		// par01 := "-cp"
-		// par02 := "."
-		par1 := "-jar"
-		par2 := "jsidplay2_console-4.1.jar"
-
-		// par3 := "-g"
-		// par4 := "0:10.000"
-		par3 := "-q"
-		par4 := "-a"
-		par5 := "WAV"
-		par6 := "-r"
-
-		// var filename = ""
-		// if fileExists(filenameSID) {
-		// 	filename = filenameSID
-		// } else if fileExists(filenamePRG) {
-		// 	filename = filenamePRG
-		// }
-
-		// czas := "-t600"
-		// bits := "-p16"
-		// freq := "-f44100"
-
-		// Odpalenie sidplayfp
-
-		var cmdName string
-		cmdName = "java"
-
-		// java -jar jsidplay2_console-4.1.jar -a WAV -r out.wav Alltime_Favourite_Nominee.sid
-
-		// if runtime.GOOS == "windows" {
-		// 	cmdName = "sidplayfp/sidplayfp.exe"
-		// } else {
-		// 	cmdName = "./sidplayfp/sidplayfp"
-		// }
-
-		var out bytes.Buffer
-		var stderr bytes.Buffer
-
-		// log.Println("cmdName = " + cmdName + " " + paramName + " " + filename)
-		cmd := exec.Command(cmdName, par1, par2, par3, par4, par5, par6, filenameWAV, filenameSID)
-		// cmd := exec.Command(cmdName, par1, par2, filenameSID)
-		// cmd := exec.Command(cmdName, par1, par2, par3)
-		// cmd := exec.Command(cmdName, paramName, filename)
-		// cmd := exec.Command("play.bat")
-
-		cmd.Stdout = &out
-		cmd.Stderr = &stderr
-
-		// cmd.Dir = dir
-
-		log.Println("Path   = " + cmd.Path)
-
-		for i, arg := range cmd.Args {
-			log.Println("arg[" + strconv.Itoa(i) + "]=" + arg)
+		var filename = ""
+		if fileExists(filenameSID) {
+			filename = filenameSID
+		} else if fileExists(filenamePRG) {
+			filename = filenamePRG
 		}
 
-		log.Println("start cmd")
-		err := cmd.Start()
-		ErrCheck(err)
+		// Odczytujemy parametr - typ playera
+		player := c.Param("player")
 
-		log.Println("Result: " + out.String())
-		log.Println("Errors: " + stderr.String())
+		// ==============================
+		// SIDPLAYFP
+		// ==============================
+		if player == "sidplayfp" {
 
-		// log.Println("Dir    = " + cmd.Dir)
+			name := "music" + strconv.Itoa(GlobalFileCnt)
+			paramName := "-w" + name
+
+			var cmdName string
+
+			czas := "-t600"
+			// bits := "-p16"
+			// freq := "-f44100"
+
+			// Odpalenie sidplayfp
+			if runtime.GOOS == "windows" {
+				cmdName = "sidplayfp/sidplayfp.exe"
+			} else {
+				cmdName = "sidplayfp" // zakładamy że jest zainstalowany
+			}
+
+			log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + paramName + " " + filename + ")")
+			cmd := exec.Command(cmdName, czas, paramName, filename)
+			err := cmd.Start()
+			ErrCheck(err)
+
+			defer cmd.Process.Kill()
+		}
+
+		// ==============================
+		// JSIDPLAY2
+		// ==============================
+		if player == "jsidplay2" {
+
+			par1 := "-jar"
+			par2 := "jsidplay2_console-4.1.jar"
+			par3 := "-q"
+			par4 := "-a"
+			par5 := "WAV"
+			par6 := "-r"
+
+			var cmdName string
+			cmdName = "java"
+
+			// var out bytes.Buffer
+			// var stderr bytes.Buffer
+
+			cmd := exec.Command(cmdName, par1, par2, par3, par4, par5, par6, filenameWAV, filename)
+
+			// cmd.Stdout = &out
+			// cmd.Stderr = &stderr
+
+			// log.Println("Path   = " + cmd.Path)
+
+			// for i, arg := range cmd.Args {
+			// 	log.Println("arg[" + strconv.Itoa(i) + "]=" + arg)
+			// }
+
+			// log.Println("start cmd")
+			err := cmd.Start()
+			ErrCheck(err)
+
+			// log.Println("Result: " + out.String())
+			// log.Println("Errors: " + stderr.String())
+
+			defer cmd.Process.Kill()
+		}
 
 		// Gdyby cos poszło nie tak to zamykamy sidplayfp i kasujemy pliki
-		defer cmd.Process.Kill()
 		defer os.Remove(filenameSID)
 		defer os.Remove(filenamePRG)
 		defer os.Remove(filenameWAV)
@@ -303,7 +310,6 @@ func AudioGet(c *gin.Context) {
 
 			// Gdyby cos poszło nie tak zamykamy plik, zamykamy sidplayfp i kasujemy pliki
 			defer logFileGin.Close()
-			defer cmd.Process.Kill()
 			defer os.Remove(filenameSID)
 			defer os.Remove(filenamePRG)
 			defer os.Remove(filenameWAV)
@@ -478,7 +484,7 @@ func main() {
 	r.StaticFile("/", "./dist/index.html")
 	r.StaticFile("favicon.ico", "./dist/favicon.ico")
 
-	r.GET("/api/v1/audio", AudioGet)
+	r.GET("/api/v1/audio/:player", AudioGet)
 	r.POST("/api/v1/audio", AudioPost)
 	r.PUT("/api/v1/audio", AudioPut)
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
