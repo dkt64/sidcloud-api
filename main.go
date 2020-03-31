@@ -17,12 +17,15 @@
 package main
 
 import (
+	"bytes"
+	"encoding/xml"
 	"errors"
 	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
 	"os/exec"
 	"runtime"
@@ -30,7 +33,10 @@ import (
 	"strings"
 	"time"
 
+	// "code.google.com/p/go-charset/charset"
+	// _ "code.google.com/p/go-charset/data" // Import charset configuration files
 	"github.com/gin-gonic/gin"
+	"golang.org/x/text/encoding/charmap"
 )
 
 // GlobalFileCnt - numer pliku
@@ -452,6 +458,119 @@ func Options(c *gin.Context) {
 	}
 }
 
+// RssItem - pojednyczy wpis w XML
+// ================================================================================================
+type RssItem struct {
+	XMLName     xml.Name `xml:"item"`
+	Title       string   `xml:"title"`
+	Link        string   `xml:"link"`
+	Description string   `xml:"description"`
+	GUID        string   `xml:"guid"`
+	PubDate     string   `xml:"pubDate"`
+}
+
+// RssFeed - tabela XML
+// ================================================================================================
+type RssFeed struct {
+	XMLName xml.Name  `xml:"rss"`
+	Items   []RssItem `xml:"channel>item"`
+}
+
+// Release - wydanie produkcji na csdb
+// ================================================================================================
+type Release struct {
+	ReleaseName       string `xml:"CSDbData>Release>Name"`
+	ReleaseType       string `xml:"CSDbData>Release>Type"`
+	ReleaseScreenShot string `xml:"CSDbData>Release>ScreenShot"`
+	ReleasedByGroup   string `xml:"CSDbData>Release>ReleasedBy>Group"`
+	ReleasedByHandle  string `xml:"CSDbData>Release>ReleasedBy>Handle"`
+}
+
+func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {
+	if charset == "ISO-8859-1" {
+		// Windows-1252 is a superset of ISO-8859-1, so should do here
+		return charmap.Windows1252.NewDecoder().Reader(input), nil
+	}
+	return nil, fmt.Errorf("Unknown charset: %s", charset)
+}
+
+// ReadLatestReleasesThread - Wątek odczygtujący dane z csdb
+// ================================================================================================
+func ReadLatestReleasesThread() {
+
+	defer func() {
+		fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Koniec watku ScannerThread !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+	}()
+
+	for {
+		netClient := &http.Client{Timeout: time.Second * 5}
+		resp, err := netClient.Get("https://csdb.dk/rss/latestreleases.php")
+
+		if ErrCheck(err) {
+			defer resp.Body.Close()
+			body, err := ioutil.ReadAll(resp.Body)
+			ErrCheck(err)
+			// fmt.Println(string(body))
+			resp.Body.Close()
+
+			// Przerobienie na strukturę
+
+			var latestReleases RssFeed
+			reader := bytes.NewReader(body)
+			decoder := xml.NewDecoder(reader)
+			decoder.CharsetReader = makeCharsetReader
+			// err = xml.Unmarshal([]byte(body), &latestReleases)
+			err = decoder.Decode(&latestReleases)
+			ErrCheck(err)
+
+			fmt.Println("Odebrano: ", latestReleases)
+
+			for _, rssItem := range latestReleases.Items {
+				fmt.Println(rssItem.Title)
+				url, err := url.Parse(rssItem.GUID)
+				ErrCheck(err)
+				q := url.Query()
+				fmt.Println(q.Get("id"))
+
+				resp, err := netClient.Get("https://csdb.dk/webservice/?type=release&id=" + q.Get("id"))
+
+				if ErrCheck(err) {
+					defer resp.Body.Close()
+					body, err := ioutil.ReadAll(resp.Body)
+					ErrCheck(err)
+					// fmt.Println(string(body))
+					resp.Body.Close()
+
+					// Przerobienie na strukturę
+
+					var entry Release
+					reader := bytes.NewReader(body)
+					decoder := xml.NewDecoder(reader)
+					decoder.CharsetReader = makeCharsetReader
+					// err = xml.Unmarshal([]byte(body), &latestReleases)
+					err = decoder.Decode(&entry)
+					ErrCheck(err)
+
+					fmt.Println("Nazwa: ", entry.ReleaseName)
+
+				} else {
+					fmt.Println("Błąd komunikacji z csdb.dk")
+				}
+			}
+
+		} else {
+			fmt.Println("Błąd komunikacji z csdb.dk")
+		}
+
+		//
+		// SLEEP
+		// ----------------------------------------------------------------------------------------
+		//
+		time.Sleep(60 * time.Second)
+	}
+
+}
+
 // ================================================================================================
 // MAIN()
 // ================================================================================================
@@ -489,6 +608,8 @@ func main() {
 	r.PUT("/api/v1/audio", AudioPut)
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
 	r.POST("/api/v1/csdb_release", CSDBGetRelease)
+
+	ReadLatestReleasesThread()
 
 	r.Run(":8080")
 }
