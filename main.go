@@ -461,37 +461,76 @@ func Options(c *gin.Context) {
 // RssItem - pojednyczy wpis w XML
 // ================================================================================================
 type RssItem struct {
-	XMLName     xml.Name `xml:"item"`
-	Title       string   `xml:"title"`
-	Link        string   `xml:"link"`
-	Description string   `xml:"description"`
-	GUID        string   `xml:"guid"`
-	PubDate     string   `xml:"pubDate"`
+	Title       string `xml:"title"`
+	Link        string `xml:"link"`
+	Description string `xml:"description"`
+	GUID        string `xml:"guid"`
+	PubDate     string `xml:"pubDate"`
 }
 
 // RssFeed - tabela XML
 // ================================================================================================
 type RssFeed struct {
-	XMLName xml.Name  `xml:"rss"`
-	Items   []RssItem `xml:"channel>item"`
+	Items []RssItem `xml:"channel>item"`
+}
+
+// Handle - kto jest autorem wydał
+// ================================================================================================
+type Handle struct {
+	ID     string `xml:"ID"`
+	Handle string `xml:"Handle"`
+}
+
+// Group - kto jest autorem wydał
+// ================================================================================================
+type Group struct {
+	ID   string `xml:"ID"`
+	Name string `xml:"Name"`
+}
+
+// ReleasedBy - kto wydał
+// ================================================================================================
+type ReleasedBy struct {
+	Handle []Handle `xml:"Handle"`
+	Group  []Group  `xml:"Group"`
+}
+
+// Credit - Credit za produkcję
+// ================================================================================================
+type Credit struct {
+	CreditType string `xml:"CreditType"`
+	Handle     Handle `xml:"Handle"`
 }
 
 // Release - wydanie produkcji na csdb
 // ================================================================================================
 type Release struct {
-	ReleaseName       string `xml:"CSDbData>Release>Name"`
-	ReleaseType       string `xml:"CSDbData>Release>Type"`
-	ReleaseScreenShot string `xml:"CSDbData>Release>ScreenShot"`
-	ReleasedByGroup   string `xml:"CSDbData>Release>ReleasedBy>Group"`
-	ReleasedByHandle  string `xml:"CSDbData>Release>ReleasedBy>Handle"`
+	ReleaseID         string     `xml:"Release>ID"`
+	ReleaseName       string     `xml:"Release>Name"`
+	ReleaseType       string     `xml:"Release>Type"`
+	ReleaseScreenShot string     `xml:"Release>ScreenShot"`
+	ReleasedBy        ReleasedBy `xml:"Release>ReleasedBy"`
+	Credits           []Credit   `xml:"Release>Credits>Credit"`
 }
 
+// makeCharsetReader - decode reader
+// ================================================================================================
 func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {
 	if charset == "ISO-8859-1" {
 		// Windows-1252 is a superset of ISO-8859-1, so should do here
 		return charmap.Windows1252.NewDecoder().Reader(input), nil
 	}
 	return nil, fmt.Errorf("Unknown charset: %s", charset)
+}
+
+// toUtf8 - konwersja kodowania
+// ================================================================================================
+func toUtf8(inputbuf []byte) string {
+	buf := make([]rune, len(inputbuf))
+	for i, b := range inputbuf {
+		buf[i] = rune(b)
+	}
+	return string(buf)
 }
 
 // ReadLatestReleasesThread - Wątek odczygtujący dane z csdb
@@ -502,72 +541,106 @@ func ReadLatestReleasesThread() {
 		fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Koniec watku ScannerThread !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 	}()
 
-	for {
-		netClient := &http.Client{Timeout: time.Second * 5}
-		resp, err := netClient.Get("https://csdb.dk/rss/latestreleases.php")
+	// for {
+	netClient := &http.Client{Timeout: time.Second * 5}
+	resp, err := netClient.Get("https://csdb.dk/rss/latestreleases.php")
 
-		if ErrCheck(err) {
-			defer resp.Body.Close()
-			body, err := ioutil.ReadAll(resp.Body)
+	if ErrCheck(err) {
+		defer resp.Body.Close()
+		body, err := ioutil.ReadAll(resp.Body)
+		ErrCheck(err)
+		// fmt.Println(string(body))
+		resp.Body.Close()
+
+		// Przerobienie na strukturę
+
+		var latestReleases RssFeed
+		reader := bytes.NewReader(body)
+		decoder := xml.NewDecoder(reader)
+		decoder.CharsetReader = makeCharsetReader
+		// err = xml.Unmarshal([]byte(body), &latestReleases)
+		err = decoder.Decode(&latestReleases)
+		ErrCheck(err)
+
+		// fmt.Println("Odebrano: ", latestReleases)
+		fmt.Println("===================================")
+		fmt.Println("Odebrano listę ostatnich realeases")
+		fmt.Println("===================================")
+
+		for index := 0; index < 20; index++ {
+			rssItem := latestReleases.Items[index]
+			// fmt.Println(rssItem.Title)
+			url, err := url.Parse(rssItem.GUID)
 			ErrCheck(err)
-			// fmt.Println(string(body))
-			resp.Body.Close()
+			q := url.Query()
+			// fmt.Println(q.Get("id"))
 
-			// Przerobienie na strukturę
+			resp, err := netClient.Get("https://csdb.dk/webservice/?type=release&id=" + q.Get("id"))
 
-			var latestReleases RssFeed
-			reader := bytes.NewReader(body)
-			decoder := xml.NewDecoder(reader)
-			decoder.CharsetReader = makeCharsetReader
-			// err = xml.Unmarshal([]byte(body), &latestReleases)
-			err = decoder.Decode(&latestReleases)
-			ErrCheck(err)
-
-			fmt.Println("Odebrano: ", latestReleases)
-
-			for _, rssItem := range latestReleases.Items {
-				fmt.Println(rssItem.Title)
-				url, err := url.Parse(rssItem.GUID)
+			if ErrCheck(err) {
+				defer resp.Body.Close()
+				body, err := ioutil.ReadAll(resp.Body)
 				ErrCheck(err)
-				q := url.Query()
-				fmt.Println(q.Get("id"))
+				// fmt.Println(string(body))
+				resp.Body.Close()
 
-				resp, err := netClient.Get("https://csdb.dk/webservice/?type=release&id=" + q.Get("id"))
+				// Przerobienie na strukturę
 
-				if ErrCheck(err) {
-					defer resp.Body.Close()
-					body, err := ioutil.ReadAll(resp.Body)
-					ErrCheck(err)
-					// fmt.Println(string(body))
-					resp.Body.Close()
+				var entry Release
+				reader := bytes.NewReader(body)
+				decoder := xml.NewDecoder(reader)
+				decoder.CharsetReader = makeCharsetReader
+				err = decoder.Decode(&entry)
+				ErrCheck(err)
 
-					// Przerobienie na strukturę
+				// var entry Release
+				// err = xml.Unmarshal([]byte(body), &entry)
+				// ErrCheck(err)
 
-					var entry Release
-					reader := bytes.NewReader(body)
-					decoder := xml.NewDecoder(reader)
-					decoder.CharsetReader = makeCharsetReader
-					// err = xml.Unmarshal([]byte(body), &latestReleases)
-					err = decoder.Decode(&entry)
-					ErrCheck(err)
-
-					fmt.Println("Nazwa: ", entry.ReleaseName)
-
-				} else {
-					fmt.Println("Błąd komunikacji z csdb.dk")
+				fmt.Println("Nazwa:  ", entry.ReleaseName)
+				fmt.Println("ID:     ", entry.ReleaseID)
+				fmt.Println("Typ:    ", entry.ReleaseType)
+				for _, group := range entry.ReleasedBy.Group {
+					fmt.Println("Group:  ", group.Name)
 				}
-			}
+				for _, handle := range entry.ReleasedBy.Handle {
+					fmt.Println("Handle: ", handle.Handle)
+				}
+				fmt.Println("-----------------------------------")
+				for _, credit := range entry.Credits {
 
-		} else {
-			fmt.Println("Błąd komunikacji z csdb.dk")
+					if credit.Handle.Handle == "" {
+						for _, releaseHandle := range entry.ReleasedBy.Handle {
+							if releaseHandle.ID == credit.Handle.ID {
+								fmt.Println(credit.CreditType + ": " + releaseHandle.Handle + " [" + releaseHandle.ID + "]")
+							}
+						}
+					} else {
+						fmt.Println(credit.CreditType + ": " + credit.Handle.Handle + " [" + credit.Handle.ID + "]")
+					}
+				}
+				fmt.Println("===================================")
+
+				// ReleaseType       string `xml:"CSDbData>Release>Type"`
+				// ReleaseScreenShot string `xml:"CSDbData>Release>ScreenShot"`
+				// ReleasedByGroup   string `xml:"CSDbData>Release>ReleasedBy>Group"`
+				// ReleasedByHandle  string `xml:"CSDbData>Release>ReleasedBy>Handle"`
+
+			} else {
+				fmt.Println("Błąd komunikacji z csdb.dk")
+			}
 		}
 
-		//
-		// SLEEP
-		// ----------------------------------------------------------------------------------------
-		//
-		time.Sleep(60 * time.Second)
+	} else {
+		fmt.Println("Błąd komunikacji z csdb.dk")
 	}
+
+	//
+	// SLEEP
+	// ----------------------------------------------------------------------------------------
+	//
+	// time.Sleep(60 * time.Second)
+	// }
 
 }
 
@@ -611,5 +684,5 @@ func main() {
 
 	ReadLatestReleasesThread()
 
-	r.Run(":8080")
+	// r.Run(":8080")
 }

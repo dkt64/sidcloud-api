@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSDbData>
+    <Release>
+        <ID>189420</ID>
+        <Name>Merge 64 +D</Name>
+        <Type>C64 Crack</Type>
+        <ReleaseDay>30</ReleaseDay>
+        <ReleaseMonth>3</ReleaseMonth>
+        <ReleaseYear>2020</ReleaseYear>
+        <ScreenShot>https://csdb.dk/gfx/releases/189000/189420.gif</ScreenShot>
+        <ReleasedBy>
+            <Group>
+                <ID>145</ID>
+                <Name>Laxity</Name>
+                <Short>LXT</Short>
+                <Trivia>[img]https://i.picasion.com/pic77/0ba671aa11a3984c1c491f3e65fd1395.gif[/img]
+[b]About the group name:[/b]
+Some people claim we took the name from the Musician &amp;lt;scener id="677"&amp;gt;. The name was selected completely independent from Thomas Petersen. The group was founded in 1991 without contact to the rest of the scene (which we got first contact in 1994). So noone even knew about someone else using this name. Even if it would have been different we would not have cared at all! We were just looking for a cool name and we liked the meaning of LAXITY. LXT was taken as short form because it sounds very similar to the full name.
+
+[b]Some facts from the groups history:[/b] (You may also read Didi's scroller in &amp;lt;release id="103506"&amp;gt; for group history.)
+* Laxity started in 1991 as local lame group linking intros made with intro makers or ripped from other groups and modified for own use.
+* In June 1993 the local groups &amp;lt;group id="6939"&amp;gt; and &amp;lt;group id="6943"&amp;gt; joined forces with Laxity.
+* In 1994 Laxity was close to dead because the founder Mister Magic was the only member left.
+* In 1994 Mister Magic got in contact with the scene and renamed to Didi.
+* 1994 was some kind of rebirth of the group and the first time we got known to the scene.
+* Throughout 1995 and 1996 we got known to the scene by releasing nearly every available game with increasing quality.
+* Since the end of 1996 we started NTSC fixing own cracks and later also for other groups making us even more competitive.
+* Our strongest time was 1997 to 2001, competing with the established old 'elites'.
+* 2002 the group went to sleep but was never dissolved.
+* 2008 &amp;lt;scener id=560&amp;gt; started doing some cracks again from time to time.
+* In November 2011 we were once again close to death, when &amp;lt;scener id=11313&amp;gt; wanted to give away all his C64 stuff on an internal Laxity meeting. But &amp;lt;scener id=560&amp;gt; could convince &amp;lt;scener id=11313&amp;gt; to become active again, so it became a rebirth instead of a farewell. (Read intro scroller of &amp;lt;release id=103304&amp;gt;.)
+* January 2012 also the old member &amp;lt;scener id=11316&amp;gt; came back.
+* &amp;lt;scener id=5194&amp;gt; joined in May 2012 as Original Supplier.
+* In December 2012 we also got &amp;lt;scener id=313&amp;gt; back to work.
+* Since 2014 we produce a quarterly released one-file diskmag about game and crack releases called [url=http://csdb.dk/search/?seinsel=releases&amp;search=game+corner]Game Corner[/url].
+* We are currently one of the most active cracking groups left on C64 and the leading group regarding first releases since several years.
+
+[b]Special happenings:[/b]
+* We shocked the cracking scene with the first release of &amp;lt;release id="16467"&amp;gt; with NTSC Fix by &amp;lt;scener id="547"&amp;gt;/&amp;lt;group id="250"&amp;gt;, which was expected to come from one of the big groups. We were faster with uploading our release to the major boards than &amp;lt;group id="215"&amp;gt;. Unfortunately a small fixfile was needed which came slightly too late so we finally lost the first release to &amp;lt;group id="215"&amp;gt;. It was later complained about the NTSC Fix not being 100% because of some flickers, but those also occured in the original at the same place. On the other hand the fix from &amp;lt;group id="215"&amp;gt; was suspicious because the sprite-sorter of the multiplexer only ran each 6th frame (while the spare frame of the slowed down music).
+* Also heavily discussed was our first release of the long awaited &amp;lt;release id="29107"&amp;gt; because noone knew where we got it and it was never discovered. &amp;lt;scener id=11316&amp;gt; was named as supplier so the discussion grew it could be a fake handle of a well known scener, but it was never proved.
+* Next discussion was the translated version of &amp;lt;release id="29105"&amp;gt; which was said to be made with a public available gamemaker and should not be counted as valid first release. The so said gamemaker was never used before nor after and was only available on request. But finally we just got 1 point for the translation without the game itself being counted. (The "gamemaker" was finally sold in 2014 as "D42-Adventure System" through [url=http://www.protovision-online.de]Protovision[/url] along with a special edition of the game.)
+* Also the release of &amp;lt;release id="54739"&amp;gt; caused some trouble because it was copied without permission at a party while the author was asleep. Besides the authors being very angry, the public release brought unwanted attention by the copyright owners of the Turrican series ([url=http://www.factor5.de/]Factor 5[/url]) towards the whole project which finally caused it to be cancelled.
+* Next big title was &amp;lt;release id="80198"&amp;gt; which was released as PAL only version nearly simultaneously by us and &amp;lt;group id=215&amp;gt;. But this time we won the race by getting our version NTSC fixed by &amp;lt;scener id=4138&amp;gt;/&amp;lt;group id=184&amp;gt; making it &amp;lt;release id=12250&amp;gt;. (Back then a PAL/NTSC fixed Firstrelease beated any PAL only release taking away the releasepoints completely.)
+* The last major release before the big sleep was &amp;lt;release id="55049"&amp;gt;, which was released before the paid versions were shipped (read review in &amp;lt;release id="11372"&amp;gt; (german)).
+
+Over the time we had some co-op releases with &amp;lt;group id=148"&amp;gt;, &amp;lt;group id="185"&amp;gt; and &amp;lt;group id="184"&amp;gt;.
+
+[b]Current headquarter:[/b]
+BBS: &amp;lt;bbs id="1119"&amp;gt;, Sysop: &amp;lt;scener id="2255"&amp;gt; (May 21th, 2016 - today) - [b]C64 only[/b]
+BBS: &amp;lt;bbs id="1161"&amp;gt;, Sysop: &amp;lt;scener id="18355"&amp;gt; (June 6th, 2017 - today) - [b]C64 only[/b]
+BBS: Fastline (telnet://fastline.nu:1541), Sysop: &amp;lt;scener id="3720"&amp;gt; (May 14th, 2016 - today) - [b]Multi platform[/b]
+
+[b]Former headquarters:[/b]
+BBS: &amp;lt;bbs id="88"&amp;gt;, Sysop: &amp;lt;scener id="722"&amp;gt;, LXT EHQ (March 1997 - June 1998)
+BBS: &amp;lt;bbs id="221"&amp;gt; , Sysop: &amp;lt;scener id="673"&amp;gt; (March - August 1998)
+FTP: Acid Nature, Maintainer: &amp;lt;scener id="28"&amp;gt; (February 1998 - October 1999)
+BBS: &amp;lt;bbs id="1023"&amp;gt;, Sysop: &amp;lt;scener id=18484&amp;gt; (February 22nd, 2014 - May 21st, 2016)</Trivia>
+                <BaseCountry>Germany</BaseCountry>
+                <FoundYear>1991</FoundYear>
+                <Rating>8.25</Rating>
+                <Grouptypes>
+                    <Grouptype>Cracker Group</Grouptype>
+                    <Grouptype>Demo Group</Grouptype>
+                    <Grouptype>Fixing Group</Grouptype>
+                    <Grouptype>Magazine Staff</Grouptype>
+                </Grouptypes>
+                <Slogan>The Right Way To Go!</Slogan>
+            </Group>
+        </ReleasedBy>
+        <Credits>
+            <Credit>
+                <CreditType>Docs</CreditType>
+                <Handle>
+                    <ID>11316</ID>
+                    <Handle>O'Dog</Handle>
+                    <HandleStory>Taken from the movie "Menace II Society" (1993).</HandleStory>
+                    <Scener>
+                        <ID>10182</ID>
+                        <Country>Austria</Country>
+                        <Handles>
+                            <Handle>
+                                <ID>11316</ID>
+                            </Handle>
+                        </Handles>
+                    </Scener>
+                </Handle>
+            </Credit>
+            <Credit>
+                <CreditType>Linking</CreditType>
+                <Handle>
+                    <ID>11316</ID>
+                </Handle>
+            </Credit>
+            <Credit>
+                <CreditType>Original Supply</CreditType>
+                <Handle>
+                    <ID>11316</ID>
+                </Handle>
+            </Credit>
+        </Credits>
+        <DownloadLinks>
+            <DownloadLink>
+                <Link>http://csdb.dk/getinternalfile.php/196971/Merge_64_%2BDocs_LAXITY.d64</Link>
+                <CounterLink>https://csdb.dk/release/download.php?id=234498</CounterLink>
+                <Downloads>102</Downloads>
+                <Status>Ok</Status>
+            </DownloadLink>
+        </DownloadLinks>
+    </Release>
+    <script/>
+</CSDbData>

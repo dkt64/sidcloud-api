@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<rss version="2.0" 
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>CSDb - Latest Releases</title>
+        <link>https://csdb.dk/latestreleases.php</link>
+        <description>The Commodore 64 Scene Database</description>
+        <language>en-us</language>
+        <pubDate>Tue, 31 Mar 2020 15:29:07 +0200</pubDate>
+        <generator>CSDb latest releases RSS generator V1.0</generator>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <ttl>60</ttl>
+        <image>
+            <url>https://csdb.dk/gfx/csdb-logo.gif</url>
+            <title>CSDb - Latest Releases</title>
+            <link>https://csdb.dk/latestreleases.php</link>
+        </image>
+        <item>
+            <title>Sabrina 2020</title>
+            <link>https://csdb.dk/release/?id=189483&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=10879">Algorithm</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=46">EasyFlash Release</a><br /><a href="https://csdb.dk/release/download.php?id=234575" title="http://csdb.dk/getinternalfile.php/197044/sabrina2020.zip">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189483&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189483&rss"><img alt="Sabrina 2020" src="https://csdb.dk/gfx/releases/189000/189483.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189483</guid>
+            <pubDate>Tue, 31 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>C0ACID-19</title>
+            <link>https://csdb.dk/release/?id=189481&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=1639">AMB</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234572" title="http://csdb.dk/getinternalfile.php/197041/C0ACID-19.sid">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189481&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189481&rss"><img alt="C0ACID-19" src="https://csdb.dk/gfx/releases/189000/189481.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189481</guid>
+            <pubDate>Tue, 31 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Tiny Quest Preview 2 +3</title>
+            <link>https://csdb.dk/release/?id=189473&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=145">Laxity</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234563" title="http://csdb.dk/getinternalfile.php/197032/Tiny_Quest_Preview_2_%2B3_LAXITY.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189473&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189473&rss"><img alt="Tiny Quest Preview 2 +3" src="https://csdb.dk/gfx/releases/189000/189473.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189473</guid>
+            <pubDate>Tue, 31 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Cramborona Infections</title>
+            <link>https://csdb.dk/release/?id=189456&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=396">Genesis Project</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234541" title="http://csdb.dk/getinternalfile.php/197012/Cramborona_Infections.sid">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189456&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189456&rss"><img alt="Cramborona Infections" src="https://csdb.dk/gfx/releases/189000/189456.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189456</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Smile</title>
+            <link>https://csdb.dk/release/?id=189455&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=6781">Delysid</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234538" title="http://csdb.dk/getinternalfile.php/197009/Mythus smile.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189455&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189455&rss"><img alt="Smile" src="https://csdb.dk/gfx/releases/189000/189455.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189455</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>I Am Einzig</title>
+            <link>https://csdb.dk/release/?id=189452&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=22684">SIDWAVE</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234535" title="http://csdb.dk/getinternalfile.php/197006/I_AM_EINZIG.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189452&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189452&rss"><img alt="I Am Einzig" src="https://csdb.dk/gfx/releases/189000/189452.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189452</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Dark Rainstorms in My Heart</title>
+            <link>https://csdb.dk/release/?id=189449&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=22684">SIDWAVE</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234532" title="http://csdb.dk/getinternalfile.php/197003/Dark_Rainstorms_in_My_Heart.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189449&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189449&rss"><img alt="Dark Rainstorms in My Heart" src="https://csdb.dk/gfx/releases/189000/189449.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189449</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>NOFPS</title>
+            <link>https://csdb.dk/release/?id=189445&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=114">Hitmen</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=2">C64 One-File Demo</a><br /><a href="https://csdb.dk/release/download.php?id=234528" title="http://csdb.dk/getinternalfile.php/196999/nofps.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189445&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189445&rss"><img alt="NOFPS" src="https://csdb.dk/gfx/releases/189000/189445.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189445</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Free Ammo!</title>
+            <link>https://csdb.dk/release/?id=189442&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=372">Burglar</a>, <a href="https://csdb.dk/scener/?id=8958">ChristopherJam</a>, <a href="https://csdb.dk/scener/?id=24193">Shine</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=2">C64 One-File Demo</a><br /><a href="https://csdb.dk/release/download.php?id=234524" title="http://csdb.dk/getinternalfile.php/196995/free-ammo.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189442&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189442&rss"><img alt="Free Ammo!" src="https://csdb.dk/gfx/releases/189000/189442.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189442</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Turrican - Rise of the Machine</title>
+            <link>https://csdb.dk/release/?id=189430&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=4121">Jason Page</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234509" title="http://csdb.dk/getinternalfile.php/196981/Turrican_ROTM.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189430&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189430&rss"><img alt="Turrican - Rise of the Machine" src="https://csdb.dk/gfx/releases/189000/189430.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189430</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Cosmic Balance</title>
+            <link>https://csdb.dk/release/?id=189429&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=1213">Grue</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=37">IDE64 Release</a><br /><a href="https://csdb.dk/release/download.php?id=234506" title="http://csdb.dk/getinternalfile.php/196979/cosmicb.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189429&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189429&rss"><img alt="Cosmic Balance" src="https://csdb.dk/gfx/releases/189000/189429.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189429</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Let's Make a C64 Game Preview V3</title>
+            <link>https://csdb.dk/release/?id=189426&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=184">Onslaught</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234504" title="http://csdb.dk/getinternalfile.php/196977/Let%27s Make a C64 Game Preview V3 ONSLAUGHT.zip">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189426&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189426&rss"><img alt="Let's Make a C64 Game Preview V3" src="https://csdb.dk/gfx/releases/189000/189426.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189426</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Merge 64 +D</title>
+            <link>https://csdb.dk/release/?id=189420&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=145">Laxity</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234498" title="http://csdb.dk/getinternalfile.php/196971/Merge_64_%2BDocs_LAXITY.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189420&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189420&rss"><img alt="Merge 64 +D" src="https://csdb.dk/gfx/releases/189000/189420.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189420</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Merge 64 +1H</title>
+            <link>https://csdb.dk/release/?id=189419&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=184">Onslaught</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234508" title="http://csdb.dk/getinternalfile.php/196970/Merge64 H ONSLAUGHT.zip">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189419&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189419&rss"><img alt="Merge 64 +1H" src="https://csdb.dk/gfx/releases/189000/189419.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189419</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Nostalgy RevB</title>
+            <link>https://csdb.dk/release/?id=189417&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=435">Hokuto Force</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=3">C64 Intro</a><br /><a href="https://csdb.dk/release/download.php?id=234494" title="http://csdb.dk/getinternalfile.php/196962/nostalgy.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189417&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189417&rss"><img alt="Nostalgy RevB" src="https://csdb.dk/gfx/releases/189000/189417.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189417</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Tested, Untested...</title>
+            <link>https://csdb.dk/release/?id=189416&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=240">Atlantis</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234493" title="http://csdb.dk/getinternalfile.php/196968/Tested_Untested.sid">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189416&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189416&rss"><img alt="Tested, Untested..." src="https://csdb.dk/gfx/releases/189000/189416.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189416</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>COVID-19</title>
+            <link>https://csdb.dk/release/?id=189396&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=282">Finnish Gold</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234471" title="http://csdb.dk/getinternalfile.php/196946/covid-19.sid">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189396&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189396&rss"><img alt="COVID-19" src="https://csdb.dk/gfx/releases/189000/189396.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189396</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Jeet Kune Do</title>
+            <link>https://csdb.dk/release/?id=189379&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=22684">SIDWAVE</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234452" title="http://csdb.dk/getinternalfile.php/196928/Jeet-Kune-Do.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189379&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189379&rss"><img alt="Jeet Kune Do" src="https://csdb.dk/gfx/releases/189000/189379.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189379</guid>
+            <pubDate>Sun, 29 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Lions in a Cage</title>
+            <link>https://csdb.dk/release/?id=189375&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=26786">Emarti</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234447" title="http://csdb.dk/getinternalfile.php/196923/lionsinacage.sid">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189375&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189375&rss"><img alt="Lions in a Cage" src="https://csdb.dk/gfx/releases/189000/189375.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189375</guid>
+            <pubDate>Sun, 29 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>PETSCII #03 - Pet in a Tomb</title>
+            <link>https://csdb.dk/release/?id=189353&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=203">XTRO</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=234423" title="http://csdb.dk/getinternalfile.php/196900/petscii %2303.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189353&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189353&rss"><img alt="PETSCII #03 - Pet in a Tomb" src="https://csdb.dk/gfx/releases/189000/189353.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189353</guid>
+            <pubDate>Sun, 29 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Sunny Spring</title>
+            <link>https://csdb.dk/release/?id=189341&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=282">Finnish Gold</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234409" title="http://csdb.dk/getinternalfile.php/196886/sunnyspring.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189341&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189341&rss"><img alt="Sunny Spring" src="https://csdb.dk/gfx/releases/189000/189341.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189341</guid>
+            <pubDate>Sun, 29 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Rhino 20</title>
+            <link>https://csdb.dk/release/?id=189340&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=8770">Cout Games</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=11">C64 Game</a><br /><a href="https://csdb.dk/release/download.php?id=234407" title="http://csdb.dk/getinternalfile.php/196884/RHINO20.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189340&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189340&rss"><img alt="Rhino 20" src="https://csdb.dk/gfx/releases/189000/189340.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189340</guid>
+            <pubDate>Sun, 29 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Quiltrex64 Preview</title>
+            <link>https://csdb.dk/release/?id=189338&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=154">Raiders of the Lost Empire</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234405" title="http://csdb.dk/getinternalfile.php/196882/quiltrex64prv%5Br%5D.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189338&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189338&rss"><img alt="Quiltrex64 Preview" src="https://csdb.dk/gfx/releases/189000/189338.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189338</guid>
+            <pubDate>Sat, 28 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Corona2020</title>
+            <link>https://csdb.dk/release/?id=189330&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=25711">Seanser</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=234397" title="http://csdb.dk/getinternalfile.php/196834/Corona2020%28v2%29.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189330&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189330&rss"><img alt="Corona2020" src="https://csdb.dk/gfx/releases/189000/189330.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189330</guid>
+            <pubDate>Sat, 28 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Lotek64 #60</title>
+            <link>https://csdb.dk/release/?id=189299&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=2064">Lotek64 Magazine Staff</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=26">C64 Papermag</a><br /><a href="https://csdb.dk/release/download.php?id=234384" title="http://csdb.dk/getinternalfile.php/196864/Lotek64_60.pdf">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189299&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189299&rss"><img alt="Lotek64 #60" src="https://csdb.dk/gfx/releases/189000/189299.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189299</guid>
+            <pubDate>Sat, 28 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>DKJ Game &amp; Watch +1D</title>
+            <link>https://csdb.dk/release/?id=189297&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=145">Laxity</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234358" title="http://csdb.dk/getinternalfile.php/196839/DKJ_-_Game_%26_Watch_%2B1D_LAXITY.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189297&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189297&rss"><img alt="DKJ Game &amp; Watch +1D" src="https://csdb.dk/gfx/releases/189000/189297.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189297</guid>
+            <pubDate>Sat, 28 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>City Bomber 4k</title>
+            <link>https://csdb.dk/release/?id=189295&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=473">Megastyle</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=35">C64 4K Game</a><br /><a href="https://csdb.dk/release/download.php?id=234356" title="http://csdb.dk/getinternalfile.php/196837/City Bomber 4k.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189295&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189295&rss"><img alt="City Bomber 4k" src="https://csdb.dk/gfx/releases/189000/189295.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189295</guid>
+            <pubDate>Sat, 28 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Quarantine 2020</title>
+            <link>https://csdb.dk/release/?id=189290&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=435">Hokuto Force</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=234350" title="http://csdb.dk/getinternalfile.php/196831/quarantine2020.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189290&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189290&rss"><img alt="Quarantine 2020" src="https://csdb.dk/gfx/releases/189000/189290.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189290</guid>
+            <pubDate>Sat, 28 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Corona2020</title>
+            <link>https://csdb.dk/release/?id=189278&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=25711">Seanser</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=234398" title="http://csdb.dk/getinternalfile.php/196821/Corona2020_.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189278&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189278&rss"><img alt="Corona2020" src="https://csdb.dk/gfx/releases/189000/189278.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189278</guid>
+            <pubDate>Fri, 27 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Covid19</title>
+            <link>https://csdb.dk/release/?id=189273&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=26786">Emarti</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234332" title="http://csdb.dk/getinternalfile.php/196817/covid19.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189273&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189273&rss"><img alt="Covid19" src="https://csdb.dk/gfx/releases/189000/189273.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189273</guid>
+            <pubDate>Fri, 27 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>I Miss a Woman I Don't Love</title>
+            <link>https://csdb.dk/release/?id=189271&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=197">Elysium</a>, <a href="https://csdb.dk/group/?id=1563">MultiStyle Labs</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234326" title="http://csdb.dk/getinternalfile.php/196811/i miss a woman i dont love.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189271&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189271&rss"><img alt="I Miss a Woman I Don't Love" src="https://csdb.dk/gfx/releases/189000/189271.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189271</guid>
+            <pubDate>Fri, 27 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Nuclear Intro</title>
+            <link>https://csdb.dk/release/?id=189246&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=3364">Scan</a>, <a href="https://csdb.dk/group/?id=652">Nuclear</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=3">C64 Intro</a><br /><a href="https://csdb.dk/release/download.php?id=234283" title="http://csdb.dk/getinternalfile.php/196771/nuclear_intro.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189246&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189246&rss"><img alt="Nuclear Intro" src="https://csdb.dk/gfx/releases/189000/189246.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189246</guid>
+            <pubDate>Fri, 27 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>C64 Snail Maze +</title>
+            <link>https://csdb.dk/release/?id=189247&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=396">Genesis Project</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234284" title="http://csdb.dk/getinternalfile.php/196772/C64SnailMaze%2B-GP.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189247&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189247&rss"><img alt="C64 Snail Maze +" src="https://csdb.dk/gfx/releases/189000/189247.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189247</guid>
+            <pubDate>Thu, 26 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>IK - Venice - Piazza San Marco - March 26th 2020</title>
+            <link>https://csdb.dk/release/?id=189237&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=1103">Wile Coyote</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=234276" title="http://csdb.dk/getinternalfile.php/196764/IK - Venice - Piazza San Marco -  March 26th 2020.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189237&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189237&rss"><img alt="IK - Venice - Piazza San Marco - March 26th 2020" src="https://csdb.dk/gfx/releases/189000/189237.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189237</guid>
+            <pubDate>Thu, 26 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Bonzai Logo Original</title>
+            <link>https://csdb.dk/release/?id=189205&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=1157">Avatar</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=234237" title="http://csdb.dk/getinternalfile.php/196727/Bonzai Logo Original By Malcom.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189205&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189205&rss"><img alt="Bonzai Logo Original" src="https://csdb.dk/gfx/releases/189000/189205.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189205</guid>
+            <pubDate>Wed, 25 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>The Curse of Rabenstein +DS</title>
+            <link>https://csdb.dk/release/?id=189204&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=154">Raiders of the Lost Empire</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234236" title="http://csdb.dk/getinternalfile.php/196726/rabenstein%2Bds.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189204&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189204&rss"><img alt="The Curse of Rabenstein +DS" src="https://csdb.dk/gfx/releases/189000/189204.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189204</guid>
+            <pubDate>Wed, 25 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Koekoek-Koekoek +D [dutch]</title>
+            <link>https://csdb.dk/release/?id=189178&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=4879">Cracker Force Nijmegen</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234212" title="http://csdb.dk/getinternalfile.php/196703/Koekoek-Koekoek%2BD%5BDutch%5D.D64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189178&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189178&rss"><img alt="Koekoek-Koekoek +D [dutch]" src="https://csdb.dk/gfx/releases/189000/189178.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189178</guid>
+            <pubDate>Wed, 25 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>RodMän V1.2 +3</title>
+            <link>https://csdb.dk/release/?id=189175&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=145">Laxity</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234208" title="http://csdb.dk/getinternalfile.php/196700/RodMan_V1.2_%2B3_LAXITY.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189175&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189175&rss"><img alt="RodM&auml;n V1.2 +3" src="https://csdb.dk/gfx/releases/189000/189175.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189175</guid>
+            <pubDate>Wed, 25 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Re(fresh)</title>
+            <link>https://csdb.dk/release/?id=189174&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=9788">Freshness</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=18">C64 1K Intro</a><br /><a href="https://csdb.dk/release/download.php?id=234207" title="http://csdb.dk/getinternalfile.php/196699/refresh.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189174&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189174&rss"><img alt="Re(fresh)" src="https://csdb.dk/gfx/releases/189000/189174.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189174</guid>
+            <pubDate>Wed, 25 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Meteor Strike +2</title>
+            <link>https://csdb.dk/release/?id=189171&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=9946">Swimmers</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234203" title="http://csdb.dk/getinternalfile.php/196695/meteor_strike_plus2_SWIMMERS.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189171&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189171&rss"><img alt="Meteor Strike +2" src="https://csdb.dk/gfx/releases/189000/189171.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189171</guid>
+            <pubDate>Wed, 25 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>#stayinside</title>
+            <link>https://csdb.dk/release/?id=189164&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=435">Hokuto Force</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=234196" title="http://csdb.dk/getinternalfile.php/196688/stayinside.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189164&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189164&rss"><img alt="#stayinside" src="https://csdb.dk/gfx/releases/189000/189164.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189164</guid>
+            <pubDate>Wed, 25 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Cubetro</title>
+            <link>https://csdb.dk/release/?id=189149&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=4874">The Seventh Sector</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=5">C64 Crack intro</a><br /><a href="https://csdb.dk/release/download.php?id=234178" title="http://csdb.dk/getinternalfile.php/196671/tss_cubetro.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189149&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189149&rss"><img alt="Cubetro" src="https://csdb.dk/gfx/releases/189000/189149.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189149</guid>
+            <pubDate>Tue, 24 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Tiny Quest Preview +</title>
+            <link>https://csdb.dk/release/?id=189148&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=4874">The Seventh Sector</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234177" title="http://csdb.dk/getinternalfile.php/196670/Tiny_Quest_Prv_%2B_TSS.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189148&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189148&rss"><img alt="Tiny Quest Preview +" src="https://csdb.dk/gfx/releases/189000/189148.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189148</guid>
+            <pubDate>Tue, 24 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Krill's Loader, Repository Version 184</title>
+            <link>https://csdb.dk/release/?id=189130&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=194">Plush</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=15">C64 Tool</a><br /><a href="https://csdb.dk/release/download.php?id=234156" title="http://csdb.dk/getinternalfile.php/196649/loader-v184.zip">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189130&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189130&rss"><img alt="Krill's Loader, Repository Version 184" src="https://csdb.dk/gfx/releases/189000/189130.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189130</guid>
+            <pubDate>Tue, 24 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Nucleo 448 [seuck]</title>
+            <link>https://csdb.dk/release/?id=189129&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=1364">The New Dimension</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=11">C64 Game</a><br /><a href="https://csdb.dk/release/download.php?id=234157" title="http://csdb.dk/getinternalfile.php/196650/Nucleo_448.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189129&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189129&rss"><img alt="Nucleo 448 [seuck]" src="https://csdb.dk/gfx/releases/189000/189129.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189129</guid>
+            <pubDate>Tue, 24 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Street of My Soul</title>
+            <link>https://csdb.dk/release/?id=189118&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=535">EXclusive ON</a>, <a href="https://csdb.dk/group/?id=1563">MultiStyle Labs</a>, <a href="https://csdb.dk/group/?id=201">Samar Productions</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234143" title="http://csdb.dk/getinternalfile.php/196637/StreetOfMySoul.sid">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189118&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189118&rss"><img alt="Street of My Soul" src="https://csdb.dk/gfx/releases/189000/189118.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189118</guid>
+            <pubDate>Tue, 24 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>64TASS 1.55.2176</title>
+            <link>https://csdb.dk/release/?id=189287&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=514">Singular</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=21">Other Platform C64 Tool</a><br /><a href="https://csdb.dk/release/download.php?id=234347" title="https://sourceforge.net/projects/tass64/files/binaries/64tass-1.55.2176.zip/download">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189287&entrytopic=1" title="Discuss this release">Discuss</a><br />]]></description>
+            <guid>https://csdb.dk/release/?id=189287</guid>
+            <pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Luma +FPD</title>
+            <link>https://csdb.dk/release/?id=189098&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=145">Laxity</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189098&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189098&rss"><img alt="Luma +FPD" src="https://csdb.dk/gfx/releases/189000/189098.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189098</guid>
+            <pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Day 6 in Kleve Hades</title>
+            <link>https://csdb.dk/release/?id=189096&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=1563">MultiStyle Labs</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234118" title="http://csdb.dk/getinternalfile.php/196612/Day6-in-Kleve-Hades.sid">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189096&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189096&rss"><img alt="Day 6 in Kleve Hades" src="https://csdb.dk/gfx/releases/189000/189096.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189096</guid>
+            <pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Luma +D</title>
+            <link>https://csdb.dk/release/?id=189093&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=185">Excess</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189093&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189093&rss"><img alt="Luma +D" src="https://csdb.dk/gfx/releases/189000/189093.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189093</guid>
+            <pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>UN Squadron +6DFGI</title>
+            <link>https://csdb.dk/release/?id=189086&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=435">Hokuto Force</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234108" title="http://csdb.dk/getinternalfile.php/196603/UN SQUADRON %2B6DFGI.D64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189086&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189086&rss"><img alt="UN Squadron +6DFGI" src="https://csdb.dk/gfx/releases/189000/189086.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189086</guid>
+            <pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Shadows (Lindsey Stirling C64 Version)</title>
+            <link>https://csdb.dk/release/?id=189061&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=184">Onslaught</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234081" title="http://csdb.dk/getinternalfile.php/196576/shadows.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189061&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189061&rss"><img alt="Shadows (Lindsey Stirling C64 Version)" src="https://csdb.dk/gfx/releases/189000/189061.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189061</guid>
+            <pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>The Forum64 18th Anniversary Party Intro</title>
+            <link>https://csdb.dk/release/?id=189206&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=154">Raiders of the Lost Empire</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=5">C64 Crack intro</a><br /><a href="https://csdb.dk/release/download.php?id=234238" title="http://csdb.dk/getinternalfile.php/196728/anni18fat.D64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189206&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189206&rss"><img alt="The Forum64 18th Anniversary Party Intro" src="https://csdb.dk/gfx/releases/189000/189206.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189206</guid>
+            <pubDate>Sun, 22 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Dragon Ninja +7D</title>
+            <link>https://csdb.dk/release/?id=189088&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=10733">Comos</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=37">IDE64 Release</a><br /><a href="https://csdb.dk/release/download.php?id=234110" title="http://csdb.dk/getinternalfile.php/196605/Dragon Ninja.zip">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189088&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189088&rss"><img alt="Dragon Ninja +7D" src="https://csdb.dk/gfx/releases/189000/189088.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189088</guid>
+            <pubDate>Sun, 22 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Chiller 2 Preview</title>
+            <link>https://csdb.dk/release/?id=189058&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=374">Cosine</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=19">C64 Game Preview</a><br /><a href="https://csdb.dk/release/download.php?id=234078" title="http://csdb.dk/getinternalfile.php/196573/chiller2_demo2.zip">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189058&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189058&rss"><img alt="Chiller 2 Preview" src="https://csdb.dk/gfx/releases/189000/189058.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189058</guid>
+            <pubDate>Sun, 22 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Slappin</title>
+            <link>https://csdb.dk/release/?id=189047&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=396">Genesis Project</a>, <a href="https://csdb.dk/group/?id=1563">MultiStyle Labs</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=234067" title="http://csdb.dk/getinternalfile.php/196562/Slappin-Psych858o-GP.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189047&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189047&rss"><img alt="Slappin" src="https://csdb.dk/gfx/releases/189000/189047.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189047</guid>
+            <pubDate>Sun, 22 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Chiller 2 Preview 2 +3H</title>
+            <link>https://csdb.dk/release/?id=189027&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=132">Triad</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234044" title="http://csdb.dk/getinternalfile.php/196541/Chiller2_preview_v2_plus_3hi_TRIAD.zip">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189027&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189027&rss"><img alt="Chiller 2 Preview 2 +3H" src="https://csdb.dk/gfx/releases/189000/189027.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189027</guid>
+            <pubDate>Sun, 22 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>The Curse of Rabenstein +D</title>
+            <link>https://csdb.dk/release/?id=189016&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=145">Laxity</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234030" title="http://csdb.dk/getinternalfile.php/196529/The_Curse_Of_Rabenstein_%2BD_LAXITY.D64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189016&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189016&rss"><img alt="The Curse of Rabenstein +D" src="https://csdb.dk/gfx/releases/189000/189016.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189016</guid>
+            <pubDate>Sun, 22 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Vanilla Sky</title>
+            <link>https://csdb.dk/release/?id=189015&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=1157">Avatar</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=234031" title="http://csdb.dk/getinternalfile.php/196530/vanilla sky By Malcom.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189015&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189015&rss"><img alt="Vanilla Sky" src="https://csdb.dk/gfx/releases/189000/189015.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189015</guid>
+            <pubDate>Sun, 22 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>The Arecibo Message</title>
+            <link>https://csdb.dk/release/?id=189009&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=17554">El Topo</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=234024" title="http://csdb.dk/getinternalfile.php/196523/el-topo_-_arecibo.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189009&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189009&rss"><img alt="The Arecibo Message" src="https://csdb.dk/gfx/releases/189000/189009.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189009</guid>
+            <pubDate>Sun, 22 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Petconvert-Win (BETA)</title>
+            <link>https://csdb.dk/release/?id=189267&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=33651">Woz</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=21">Other Platform C64 Tool</a><br /><a href="https://csdb.dk/release/download.php?id=234320" title="http://csdb.dk/getinternalfile.php/196807/petconvert_win_beta_6jan2020.zip">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189267&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189267&rss"><img alt="Petconvert-Win (BETA)" src="https://csdb.dk/gfx/releases/189000/189267.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189267</guid>
+            <pubDate>Sat, 21 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>PETscii</title>
+            <link>https://csdb.dk/release/?id=189013&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=2434">Logiker</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=234028" title="http://csdb.dk/getinternalfile.php/196527/PETscii.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189013&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189013&rss"><img alt="PETscii" src="https://csdb.dk/gfx/releases/189000/189013.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189013</guid>
+            <pubDate>Sat, 21 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>LogiTrumps VS (128)</title>
+            <link>https://csdb.dk/release/?id=189012&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=2434">Logiker</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=11">C64 Game</a><br /><a href="https://csdb.dk/release/download.php?id=234027" title="http://csdb.dk/getinternalfile.php/196526/LogiTrumps VS %5BC128 80%5D.7z">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189012&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189012&rss"><img alt="LogiTrumps VS (128)" src="https://csdb.dk/gfx/releases/189000/189012.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189012</guid>
+            <pubDate>Sat, 21 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>LogiTrumps (128)</title>
+            <link>https://csdb.dk/release/?id=189011&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=2434">Logiker</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=11">C64 Game</a><br /><a href="https://csdb.dk/release/download.php?id=234026" title="http://csdb.dk/getinternalfile.php/196525/LogiTrumps %5BC128 80%5D.7z">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189011&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189011&rss"><img alt="LogiTrumps (128)" src="https://csdb.dk/gfx/releases/189000/189011.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189011</guid>
+            <pubDate>Sat, 21 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>LogiTrumps</title>
+            <link>https://csdb.dk/release/?id=189010&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=2434">Logiker</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=11">C64 Game</a><br /><a href="https://csdb.dk/release/download.php?id=234025" title="http://csdb.dk/getinternalfile.php/196524/LogiTrumps %5BC64 80%5D.7z">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189010&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189010&rss"><img alt="LogiTrumps" src="https://csdb.dk/gfx/releases/189000/189010.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189010</guid>
+            <pubDate>Sat, 21 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Char Snake 64 +</title>
+            <link>https://csdb.dk/release/?id=188994&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=396">Genesis Project</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=234007" title="http://csdb.dk/getinternalfile.php/196507/CharSnake64%2B-GP.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188994&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188994&rss"><img alt="Char Snake 64 +" src="https://csdb.dk/gfx/releases/188000/188994.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188994</guid>
+            <pubDate>Sat, 21 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Sparkle V1.3</title>
+            <link>https://csdb.dk/release/?id=188991&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=9031">OMG</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=21">Other Platform C64 Tool</a><br /><a href="https://csdb.dk/release/download.php?id=234005" title="http://csdb.dk/getinternalfile.php/196505/Sparkle V1.3.zip">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188991&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188991&rss"><img alt="Sparkle V1.3" src="https://csdb.dk/gfx/releases/188000/188991.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188991</guid>
+            <pubDate>Sat, 21 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>IK Wuppertal 20200321</title>
+            <link>https://csdb.dk/release/?id=188974&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=7207">Larry</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=233986" title="http://csdb.dk/getinternalfile.php/196487/ik-w-tal20-03-21.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188974&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188974&rss"><img alt="IK Wuppertal 20200321" src="https://csdb.dk/gfx/releases/188000/188974.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188974</guid>
+            <pubDate>Sat, 21 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>IK - Venice - Piazza San Marco - March 21st 2020</title>
+            <link>https://csdb.dk/release/?id=188971&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=1103">Wile Coyote</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=233983" title="http://csdb.dk/getinternalfile.php/196484/IK - Venice - Piazza San Marco -  March 21st 2020.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188971&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188971&rss"><img alt="IK - Venice - Piazza San Marco - March 21st 2020" src="https://csdb.dk/gfx/releases/188000/188971.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188971</guid>
+            <pubDate>Sat, 21 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>City Bomber 4K +1H [cartridge]</title>
+            <link>https://csdb.dk/release/?id=188965&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=185">Excess</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188965&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188965&rss"><img alt="City Bomber 4K +1H [cartridge]" src="https://csdb.dk/gfx/releases/188000/188965.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188965</guid>
+            <pubDate>Fri, 20 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Wormhole +FD</title>
+            <link>https://csdb.dk/release/?id=188962&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=396">Genesis Project</a>, <a href="https://csdb.dk/group/?id=132">Triad</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188962&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188962&rss"><img alt="Wormhole +FD" src="https://csdb.dk/gfx/releases/188000/188962.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188962</guid>
+            <pubDate>Fri, 20 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Space Fire Preview +</title>
+            <link>https://csdb.dk/release/?id=188959&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=145">Laxity</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=233969" title="http://csdb.dk/getinternalfile.php/196471/Space_Fire_Preview_%2B_LAXITY.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188959&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188959&rss"><img alt="Space Fire Preview +" src="https://csdb.dk/gfx/releases/188000/188959.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188959</guid>
+            <pubDate>Fri, 20 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Talent - The Resurrection</title>
+            <link>https://csdb.dk/release/?id=188953&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=24193">Shine</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=9">C64 Graphics</a><br /><a href="https://csdb.dk/release/download.php?id=233961" title="http://csdb.dk/getinternalfile.php/196464/Talent_-_The_Resurrection.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188953&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188953&rss"><img alt="Talent - The Resurrection" src="https://csdb.dk/gfx/releases/188000/188953.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188953</guid>
+            <pubDate>Fri, 20 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>C64 Colour Changer</title>
+            <link>https://csdb.dk/release/?id=188952&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=8137">Cupid</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=21">Other Platform C64 Tool</a><br /><a href="https://csdb.dk/release/download.php?id=233958" title="http://csdb.dk/getinternalfile.php/196463/C64-colour-changer.zip">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188952&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188952&rss"><img alt="C64 Colour Changer" src="https://csdb.dk/gfx/releases/188000/188952.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188952</guid>
+            <pubDate>Fri, 20 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>30 Years of Violator</title>
+            <link>https://csdb.dk/release/?id=188950&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=10724">The Preservers</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=2">C64 One-File Demo</a><br /><a href="https://csdb.dk/release/download.php?id=233956" title="http://csdb.dk/getinternalfile.php/196462/violator 30 year.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188950&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188950&rss"><img alt="30 Years of Violator" src="https://csdb.dk/gfx/releases/188000/188950.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188950</guid>
+            <pubDate>Fri, 20 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Final Cartridge</title>
+            <link>https://csdb.dk/release/?id=188942&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=34063">aussiebj</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=2">C64 One-File Demo</a><br /><a href="https://csdb.dk/release/download.php?id=233944" title="http://csdb.dk/getinternalfile.php/196452/finalc.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188942&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188942&rss"><img alt="Final Cartridge" src="https://csdb.dk/gfx/releases/188000/188942.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188942</guid>
+            <pubDate>Fri, 20 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Flashback 20/20 Invitation</title>
+            <link>https://csdb.dk/release/?id=188936&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=6614">Desire</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=16">C64 Invitation</a><br /><a href="https://csdb.dk/release/download.php?id=233938" title="http://csdb.dk/getinternalfile.php/196446/fb2020.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188936&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188936&rss"><img alt="Flashback 20/20 Invitation" src="https://csdb.dk/gfx/releases/188000/188936.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188936</guid>
+            <pubDate>Fri, 20 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Netherworld USA +3</title>
+            <link>https://csdb.dk/release/?id=188932&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=1276">Underground Domain Inc.</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=233934" title="http://csdb.dk/getinternalfile.php/196442/netherwrld-udi.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188932&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188932&rss"><img alt="Netherworld USA +3" src="https://csdb.dk/gfx/releases/188000/188932.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188932</guid>
+            <pubDate>Thu, 19 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Freddy Hardest +2DF</title>
+            <link>https://csdb.dk/release/?id=188930&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=1276">Underground Domain Inc.</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=233933" title="http://csdb.dk/getinternalfile.php/196441/2020corona releases.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188930&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188930&rss"><img alt="Freddy Hardest +2DF" src="https://csdb.dk/gfx/releases/188000/188930.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188930</guid>
+            <pubDate>Thu, 19 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>911 Tiger Shark +2DF</title>
+            <link>https://csdb.dk/release/?id=188929&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=1276">Underground Domain Inc.</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=233932" title="http://csdb.dk/getinternalfile.php/196440/911ts-udi.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188929&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188929&rss"><img alt="911 Tiger Shark +2DF" src="https://csdb.dk/gfx/releases/188000/188929.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188929</guid>
+            <pubDate>Thu, 19 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Airwolf +2DF</title>
+            <link>https://csdb.dk/release/?id=188928&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=1276">Underground Domain Inc.</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=233931" title="http://csdb.dk/getinternalfile.php/196439/airwolf-udi.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188928&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188928&rss"><img alt="Airwolf +2DF" src="https://csdb.dk/gfx/releases/188000/188928.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188928</guid>
+            <pubDate>Thu, 19 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Corona</title>
+            <link>https://csdb.dk/release/?id=188923&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/scener/?id=25146">Saul Cross</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=7">C64 Music</a><br /><a href="https://csdb.dk/release/download.php?id=233925" title="http://csdb.dk/getinternalfile.php/196434/Corona.prg">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188923&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188923&rss"><img alt="Corona" src="https://csdb.dk/gfx/releases/188000/188923.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188923</guid>
+            <pubDate>Thu, 19 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>The Curse of Rabenstein +D</title>
+            <link>https://csdb.dk/release/?id=188889&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=145">Laxity</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=233877" title="http://csdb.dk/getinternalfile.php/196389/The_Curse_Of_Rabenstein_%2BD_LAXITY.d64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188889&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188889&rss"><img alt="The Curse of Rabenstein +D" src="https://csdb.dk/gfx/releases/188000/188889.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188889</guid>
+            <pubDate>Wed, 18 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>The Curse of Rabenstein +D</title>
+            <link>https://csdb.dk/release/?id=188872&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=435">Hokuto Force</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/release/download.php?id=233860" title="http://csdb.dk/getinternalfile.php/196373/THE CURSE OF RABENSTEIN %2BD.D64">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188872&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188872&rss"><img alt="The Curse of Rabenstein +D" src="https://csdb.dk/gfx/releases/188000/188872.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188872</guid>
+            <pubDate>Wed, 18 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>Quod Init Exit IIo Preview +4</title>
+            <link>https://csdb.dk/release/?id=188854&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=145">Laxity</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=20">C64 Crack</a><br /><a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=188854&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=188854&rss"><img alt="Quod Init Exit IIo Preview +4" src="https://csdb.dk/gfx/releases/188000/188854.gif" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=188854</guid>
+            <pubDate>Tue, 17 Mar 2020 00:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title>6502 JSON Parser V1.1.1</title>
+            <link>https://csdb.dk/release/?id=189014&amp;rss</link>
+            <description><![CDATA[Released by: <a href="https://csdb.dk/group/?id=6934">Commocore</a><br />Type: <a href="https://csdb.dk/search/advancedresult.php?form%5Bcategory%5D=releases&rrelease_type%5B%5D=21">Other Platform C64 Tool</a><br /><a href="https://csdb.dk/release/download.php?id=234029" title="http://csdb.dk/getinternalfile.php/196528/6502-json-parser-v1.1.1.zip">Download</a> | <a href="https://csdb.dk/forums/?csdbentrytype=release&csdbentry=189014&entrytopic=1" title="Discuss this release">Discuss</a><br /><a href="https://csdb.dk/release/?id=189014&rss"><img alt="6502 JSON Parser V1.1.1" src="https://csdb.dk/gfx/releases/189000/189014.png" /></a>]]></description>
+            <guid>https://csdb.dk/release/?id=189014</guid>
+            <pubDate>Fri, 14 Feb 2020 00:00:00 +0100</pubDate>
+        </item>
+    </channel>
+    <script/>
+</rss>

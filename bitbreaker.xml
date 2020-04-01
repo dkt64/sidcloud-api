@@ -1,0 +1,3961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSDbData><Handle><ID>1678</ID>
+<Handle>Bitbreaker</Handle>
+<AKA>Fäker, Faker</AKA>
+<Scener><ID>1666</ID>
+<Country>Germany</Country>
+<Trivia>Attention: I'm an asshole and most likely don't like that crap that you name art. Therefore i give bad votes, anonymously to cause more drama. However, feel free to think the same about my releases.
+
+First joined Climax but after the group and the HQ got very inactive and i arrived as the only member at The Party 4, i got rather pissed off. On the Party 94 i met with the guys from Metalvotze that have freshly founded (i knew Drago already before that) and so i joined them. Equinoxe was just an intermezzo due to being frustrated with Climax in the end. As Metalvotze meanwhile consists only of a few active members who do all the great releases, i thought i'd better share the fame with better groups, like Oxyron.</Trivia>
+<Handles><Handle><ID>8480</ID>
+<Handle>Bierkeule</Handle>
+<HandleStory>Hahahaha, nothing more to say except the slogan of Danzig: Bierkeule Du bist so eklig!</HandleStory>
+<Scener><ID>1666</ID>
+</Scener>
+</Handle>
+<Handle><ID>1678</ID>
+</Handle>
+</Handles>
+</Scener>
+<MemberOf><Group><ID>8937</ID>
+<Name>Performers</Name>
+<FoundDay>21</FoundDay>
+<FoundMonth>9</FoundMonth>
+<FoundYear>2016</FoundYear>
+<Rating>9.6</Rating>
+<Grouptypes><Grouptype>Demo Group</Grouptype>
+</Grouptypes>
+</Group>
+<Profession>Coder</Profession>
+<Profession>Graphician</Profession>
+<JoinDay>21</JoinDay>
+<JoinMonth>9</JoinMonth>
+<JoinYear>2016</JoinYear>
+<Status>active</Status>
+</MemberOf>
+<MemberOf><Group><ID>852</ID>
+<Name>Climax</Name>
+<AKA>Climax Ind.</AKA>
+<Short>CMX</Short>
+<BaseCountry>Germany</BaseCountry>
+<FoundYear>1990</FoundYear>
+<Grouptypes><Grouptype>Demo Group</Grouptype>
+</Grouptypes>
+<Slogan>Lazyness is our business!</Slogan>
+</Group>
+<Profession>Coder</Profession>
+<Profession>Graphician</Profession>
+<JoinYear>1991</JoinYear>
+<LeaveYear>1994</LeaveYear>
+<Status>ex</Status>
+</MemberOf>
+<MemberOf><Group><ID>7</ID>
+<Name>Oxyron</Name>
+<Short>OXY</Short>
+<Trivia>https://www.facebook.com/pages/Oxyron/424411205280</Trivia>
+<BaseCountry>Germany</BaseCountry>
+<FoundDay>7</FoundDay>
+<FoundMonth>12</FoundMonth>
+<FoundYear>1991</FoundYear>
+<Website>http://www.oxyron.de/</Website>
+<Rating>9.41</Rating>
+<Grouptypes><Grouptype>Demo Group</Grouptype>
+</Grouptypes>
+<Slogan>when salvation is near</Slogan>
+<Slogan>proud to be lame</Slogan>
+<Slogan>lameness since 1991</Slogan>
+<Slogan>fucker, vote a 10 or get lost</Slogan>
+</Group>
+<Profession>Coder</Profession>
+<Profession>Graphician</Profession>
+<JoinDay>21</JoinDay>
+<JoinMonth>5</JoinMonth>
+<JoinYear>2012</JoinYear>
+<Status>active</Status>
+</MemberOf>
+<MemberOf><Group><ID>147</ID>
+<Name>Equinoxe</Name>
+<Short>EQX</Short>
+<Trivia>Equinoxe was mainly active in the legal part of the scene, releasing two of the most successful disk magazines ("Ingenious Brain" and "Shout!" in cooperation with Fairlight), some tools and sometimes even some small demos (such as the megademo FUEL in 1993). There were some very few cracks from EQX, too, but the group pretty soon established itself on the legal market and put emphasis on high-quality diskmagazines.
+
+-
+
+The group was founded in October 1993 by wARp (at that time called Mr Warp) and Traitor. It was a merge of the dying rests of the groups Viper and Fantasia.
+
+
+Later on we released some small tools, and then finally, the first issue of our magazine Ingenious Brain (which got later replaced by Shout!), as well as our first megademo called Fuel.
+
+
+
+We gained more members and respect in the scene, and then in September 1994 we released the second issue of Ingenious Brain, which shot up into the charts immediately. We kept on releasing tools, small demos, and of course our magazine. Then, after we released issue 5 of Ingenious Brain, wARp got the offer to join Fairlight and produce Reformation with them. He refused and Fairlight went into magazine co-operation with Equinoxe to produce Shout!. Shout!#1 had a high quality, some people consider it as the best single issue of a magazine ever released, and that had effects on the charts.
+
+- 
+
+The "Ingenious Brain" magazine was hosted at "Red Board BBS", the German TRSI headquarters run by o.b./TRSI.</Trivia>
+<BaseCountry>Germany</BaseCountry>
+<FoundYear>1992</FoundYear>
+<DissolveDay>1</DissolveDay>
+<DissolveMonth>1</DissolveMonth>
+<DissolveYear>1996</DissolveYear>
+<Rating>8.09</Rating>
+<Grouptypes><Grouptype>Cracker Group</Grouptype>
+<Grouptype>Demo Group</Grouptype>
+<Grouptype>Magazine Staff</Grouptype>
+<Grouptype>Swapping Group</Grouptype>
+</Grouptypes>
+<Slogan>More than just a wonder!</Slogan>
+</Group>
+<Profession>Swapper</Profession>
+<Status>ex</Status>
+</MemberOf>
+<MemberOf><Group><ID>5100</ID>
+<Name>Nuance</Name>
+<Short>NCE</Short>
+<BaseCountry>Germany</BaseCountry>
+<FoundDay>16</FoundDay>
+<FoundMonth>11</FoundMonth>
+<FoundYear>1991</FoundYear>
+<Website>http://www.nuance-family.de</Website>
+<Grouptypes><Grouptype>Demo Group</Grouptype>
+</Grouptypes>
+<Slogan>Nuanssssee</Slogan>
+<Slogan>Gott/NUANCE ist da!</Slogan>
+</Group>
+<Profession>Coder</Profession>
+<Profession>Graphician</Profession>
+<Profession>Hardware-Guru</Profession>
+<JoinDay>20</JoinDay>
+<JoinMonth>6</JoinMonth>
+<JoinYear>2007</JoinYear>
+<Status>active</Status>
+</MemberOf>
+<MemberOf><Group><ID>623</ID>
+<Name>Metalvotze</Name>
+<Short>VOZ</Short>
+<Trivia>Drago zur Arbeit zwingen!</Trivia>
+<BaseCountry>Germany</BaseCountry>
+<FoundYear>1993</FoundYear>
+<Website>http://www.ihlaid.de</Website>
+<Rating>3.63</Rating>
+<Grouptypes><Grouptype>Demo Group</Grouptype>
+</Grouptypes>
+<Slogan>We have computers which can beat your computers!</Slogan>
+<Slogan>Seid gebenedeit!</Slogan>
+<Slogan>Willst Du ficken, kriegst Du ficken!</Slogan>
+</Group>
+<Profession>Coder</Profession>
+<Profession>Graphician</Profession>
+<Profession>Webmaster</Profession>
+<Profession>Diskmag Editor</Profession>
+<JoinDay>1</JoinDay>
+<JoinMonth>10</JoinMonth>
+<JoinYear>1993</JoinYear>
+<LeaveDay>14</LeaveDay>
+<LeaveMonth>5</LeaveMonth>
+<LeaveYear>2012</LeaveYear>
+<Status>ex</Status>
+</MemberOf>
+<MemberOf><Group><ID>3223</ID>
+<Name>Goldvotze</Name>
+<Short>GV</Short>
+<BaseCountry>Germany</BaseCountry>
+<FoundDay>25</FoundDay>
+<FoundMonth>10</FoundMonth>
+<FoundYear>2005</FoundYear>
+<DissolveDay>14</DissolveDay>
+<DissolveMonth>5</DissolveMonth>
+<DissolveYear>2012</DissolveYear>
+<Website>http://gv.metalvotze.de/</Website>
+<Grouptypes><Grouptype>Demo Group</Grouptype>
+</Grouptypes>
+</Group>
+<JoinDay>25</JoinDay>
+<JoinMonth>10</JoinMonth>
+<JoinYear>2005</JoinYear>
+<LeaveDay>14</LeaveDay>
+<LeaveMonth>5</LeaveMonth>
+<LeaveYear>2012</LeaveYear>
+<Status>ex</Status>
+</MemberOf>
+<MemberOf><Group><ID>159</ID>
+<Name>Arsenic</Name>
+<Short>ASC</Short>
+<Trivia>I was very astonished to see "arsenic" added to csdb - because it was an amiga group in 1996 and 1997 founded by yazoo and axis of oxyron (we became 2nd at mekka&amp;symposium 1997 with our demo "fear factory" - check it out http://www.pouet.net/prod.php?which=3782).     now we decided to kick some asses on c64 under the arsenic label.</Trivia>
+<BaseCountry>Germany</BaseCountry>
+<FoundMonth>8</FoundMonth>
+<FoundYear>1996</FoundYear>
+<Rating>9.31</Rating>
+<Grouptypes><Grouptype>Demo Group</Grouptype>
+</Grouptypes>
+<Slogan>...proud to be dead :D</Slogan>
+</Group>
+<Profession>Coder</Profession>
+<Profession>Graphician</Profession>
+<JoinDay>28</JoinDay>
+<JoinMonth>9</JoinMonth>
+<JoinYear>2012</JoinYear>
+<Status>active</Status>
+</MemberOf>
+<Founded><Group><ID>3223</ID>
+</Group>
+</Founded>
+<Organized><Event><ID>1038</ID>
+</Event>
+<Event><ID>1210</ID>
+<Name>Breakpoint 2007</Name>
+<EventType>Demo Party</EventType>
+<AKA>BP07</AKA>
+<Tagline>Demoscene through time and space</Tagline>
+<StartDay>6</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>2007</StartYear>
+<EndDay>9</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2007</EndYear>
+<Address>Nuits-Saint-Georges-Strasse</Address>
+<Zip>55411</Zip>
+<City>Bingen am Rhein</City>
+<Country>Germany</Country>
+<Website>http://breakpoint.untergrund.net/</Website>
+</Event>
+<Event><ID>1358</ID>
+<Name>Breakpoint 2008</Name>
+<EventType>Demo Party</EventType>
+<AKA>BP08</AKA>
+<StartDay>21</StartDay>
+<StartMonth>3</StartMonth>
+<StartYear>2008</StartYear>
+<EndDay>24</EndDay>
+<EndMonth>3</EndMonth>
+<EndYear>2008</EndYear>
+<Address>Nuits-Saint-Georges-Strasse</Address>
+<Zip>55411</Zip>
+<City>Bingen am Rhein</City>
+<Country>Germany</Country>
+<Website>http://breakpoint.untergrund.net/</Website>
+</Event>
+<Event><ID>1613</ID>
+</Event>
+<Event><ID>2137</ID>
+</Event>
+</Organized>
+<Attended><Event><ID>39</ID>
+</Event>
+<Event><ID>31</ID>
+<Name>X'2001</Name>
+<EventType>Demo Party</EventType>
+<EventType>C64 Only Party</EventType>
+<AKA>X01,X-2001,X2001</AKA>
+<Tagline>A C64 Odyssey</Tagline>
+<StartDay>23</StartDay>
+<StartMonth>11</StartMonth>
+<StartYear>2001</StartYear>
+<EndDay>25</EndDay>
+<EndMonth>11</EndMonth>
+<EndYear>2001</EndYear>
+<City>Hengelo</City>
+<State>Gelderland</State>
+<Country>Netherlands</Country>
+<Website>http://www.scs-trc.net</Website>
+</Event>
+<Event><ID>59</ID>
+</Event>
+<Event><ID>131</ID>
+</Event>
+<Event><ID>104</ID>
+<Name>Mekka &amp; Symposium 1999</Name>
+<EventType>Demo Party</EventType>
+<AKA>Mekka &amp; Symposium 2k-1, symmek, ms 99, ms99</AKA>
+<StartDay>2</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>1999</StartYear>
+<EndDay>5</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>1999</EndYear>
+<Address>Heidmarkhalle</Address>
+<City>Fallingbostel</City>
+<Country>Germany</Country>
+<Website>http://ms.demo.org/99/</Website>
+</Event>
+<Event><ID>28</ID>
+</Event>
+<Event><ID>8</ID>
+</Event>
+<Event><ID>250</ID>
+<Name>Mekka &amp; Symposium 2002</Name>
+<EventType>Demo Party</EventType>
+<AKA>ms02, ms2002, ms 2002, ms2k2, symmek 2002</AKA>
+<StartDay>29</StartDay>
+<StartMonth>3</StartMonth>
+<StartYear>2002</StartYear>
+<EndDay>1</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2002</EndYear>
+<Address>Heidmarkhalle</Address>
+<Zip>D-29683</Zip>
+<City>Fallingbostel</City>
+<Country>Germany</Country>
+<Website>http://ms.demo.org/2002/</Website>
+</Event>
+<Event><ID>254</ID>
+<Name>Symposium 1996</Name>
+<EventType>Demo Party</EventType>
+<StartDay>5</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>1996</StartYear>
+<EndDay>8</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>1996</EndYear>
+<City>Seevetal</City>
+<Country>Germany</Country>
+<Website>http://ms.demo.org/96/</Website>
+</Event>
+<Event><ID>265</ID>
+<Name>BlackBox Symposium 1995</Name>
+<EventType>Demo Party</EventType>
+<AKA>ms 95, symmek, mekka &amp; symposium</AKA>
+<Tagline>(MekkaSymposium 1995 was not a C64 party, but in 1996 it became one of the biggest)</Tagline>
+<StartDay>22</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>1995</StartYear>
+<EndDay>23</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>1995</EndYear>
+<Address>St.Marien-Gemeindezentrum</Address>
+<City>Hamburg-Harburg</City>
+<Country>Germany</Country>
+<Website>http://ms.demo.org/96/bbx95/bbx95.html</Website>
+</Event>
+<Event><ID>18</ID>
+</Event>
+<Event><ID>10</ID>
+</Event>
+<Event><ID>740</ID>
+<Name>0a000h 2004</Name>
+<EventType>Demo Party</EventType>
+<Tagline>the juxkopf democene experience</Tagline>
+<StartDay>27</StartDay>
+<StartMonth>2</StartMonth>
+<StartYear>2004</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>2</EndMonth>
+<EndYear>2004</EndYear>
+<Address>Gemeindehalle Jux</Address>
+<Zip>71579</Zip>
+<City>Spiegelberg / Jux</City>
+<Country>Germany</Country>
+<Website>http://www.0a000h.de</Website>
+</Event>
+<Event><ID>453</ID>
+</Event>
+<Event><ID>632</ID>
+<Name>Buenzli 12</Name>
+<EventType>Demo Party</EventType>
+<Tagline>Natural Born Sceners</Tagline>
+<StartDay>29</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2003</StartYear>
+<EndDay>31</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2003</EndYear>
+<Address>Liebestrasse 3</Address>
+<Zip>8400</Zip>
+<City>Winterthur</City>
+<Country>Switzerland</Country>
+<Website>http://bnz12.buenz.li</Website>
+</Event>
+<Event><ID>634</ID>
+</Event>
+<Event><ID>676</ID>
+</Event>
+<Event><ID>501</ID>
+<Name>Limburg Party 1995</Name>
+<EventType>C64 Only Party</EventType>
+<AKA>CF/DT Meeting 1995</AKA>
+<StartDay>28</StartDay>
+<StartMonth>7</StartMonth>
+<StartYear>1995</StartYear>
+<EndDay>30</EndDay>
+<EndMonth>7</EndMonth>
+<EndYear>1995</EndYear>
+<Address>Youth Hostel Limburg</Address>
+<City>Limburg</City>
+<Country>Germany</Country>
+</Event>
+<Event><ID>442</ID>
+<Name>tUM 2002</Name>
+<EventType>Demo Party</EventType>
+<AKA>tUM*o2, the Ultimate Meeting 2002</AKA>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2002</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2002</EndYear>
+<City>Mannheim (Rheinau)</City>
+<Country>Germany</Country>
+<Website>http://2002.tum-party.net/</Website>
+</Event>
+<Event><ID>700</ID>
+</Event>
+<Event><ID>802</ID>
+</Event>
+<Event><ID>795</ID>
+</Event>
+<Event><ID>884</ID>
+</Event>
+<Event><ID>933</ID>
+</Event>
+<Event><ID>999</ID>
+</Event>
+<Event><ID>973</ID>
+</Event>
+<Event><ID>25</ID>
+<Name>The Party 1996</Name>
+<EventType>Copy Party</EventType>
+<EventType>Demo Party</EventType>
+<AKA>TP6</AKA>
+<Tagline>End of an Era</Tagline>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>1996</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>1996</EndYear>
+<City>Aars</City>
+<Country>Denmark</Country>
+<Website>http://www.theparty.dk</Website>
+</Event>
+<Event><ID>1038</ID>
+</Event>
+<Event><ID>1112</ID>
+<Name>Evoke 2006</Name>
+<EventType>Demo Party</EventType>
+<StartDay>11</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2006</StartYear>
+<EndDay>13</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2006</EndYear>
+<Address>Vulkanhalle</Address>
+<City>Cologne</City>
+<Country>Germany</Country>
+</Event>
+<Event><ID>1099</ID>
+<Name>Buenzli 15</Name>
+<EventType>Demo Party</EventType>
+<Tagline>Explosive!</Tagline>
+<StartDay>18</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2006</StartYear>
+<EndDay>20</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2006</EndYear>
+<Address>Liebestrasse 3</Address>
+<Zip>8400</Zip>
+<City>Winterthur</City>
+<Country>Switzerland</Country>
+<Website>http://www.buenz.li</Website>
+</Event>
+<Event><ID>966</ID>
+</Event>
+<Event><ID>1165</ID>
+<Name>Geekcamp III</Name>
+<EventType>Demo Party</EventType>
+<AKA>Geek Camp III, GCIII, Geek Camp 2006</AKA>
+<Tagline>The Higher Experience</Tagline>
+<StartDay>19</StartDay>
+<StartMonth>10</StartMonth>
+<StartYear>2006</StartYear>
+<EndDay>22</EndDay>
+<EndMonth>10</EndMonth>
+<EndYear>2006</EndYear>
+<Address>Berghaus Birchweid</Address>
+<Zip>6460</Zip>
+<City>Altdorf</City>
+<Country>Switzerland</Country>
+<Website>http://www.geekcamp.net</Website>
+</Event>
+<Event><ID>1193</ID>
+<Name>tUM 2006</Name>
+<EventType>Demo Party</EventType>
+<AKA>tUM*o6, the Ultimate Meeting 2006</AKA>
+<Tagline>your favourite DISCO-Event</Tagline>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2006</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2006</EndYear>
+<Address>Durlacher Festhalle, Kanzlerstr. 13</Address>
+<Zip>76227</Zip>
+<City>Karlsruhe-Durlach</City>
+<Country>Germany</Country>
+<Website>http://2006.tum-party.net</Website>
+</Event>
+<Event><ID>1210</ID>
+</Event>
+<Event><ID>1318</ID>
+<Name>Evoke 2007</Name>
+<EventType>Demo Party</EventType>
+<StartDay>10</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2007</StartYear>
+<EndDay>12</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2007</EndYear>
+<Address>Lichtstrasse 43</Address>
+<City>Köln</City>
+<Country>Germany</Country>
+<Website>http://www.evoke.eu/10/</Website>
+</Event>
+<Event><ID>1307</ID>
+</Event>
+<Event><ID>1348</ID>
+</Event>
+<Event><ID>1358</ID>
+</Event>
+<Event><ID>1362</ID>
+<Name>X'2008</Name>
+<EventType>Demo Party</EventType>
+<AKA>X-2008 , X2008, X08, X-08, X'08</AKA>
+<Tagline>Mooooooooooooohhhhhhhhhhh</Tagline>
+<StartDay>24</StartDay>
+<StartMonth>10</StartMonth>
+<StartYear>2008</StartYear>
+<EndDay>26</EndDay>
+<EndMonth>10</EndMonth>
+<EndYear>2008</EndYear>
+<Address>Vierblokkenweg 3</Address>
+<Zip>7255 MZ</Zip>
+<City>Hengelo (Gelderland)</City>
+<State>Gelderland</State>
+<Country>Netherlands</Country>
+<Website>http://www.scs-trc.net/x2008</Website>
+</Event>
+<Event><ID>1452</ID>
+<Name>Buenzli 17</Name>
+<EventType>Demo Party</EventType>
+<StartDay>15</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2008</StartYear>
+<EndDay>17</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2008</EndYear>
+<Address>Liebestrasse 3</Address>
+<Zip>8400</Zip>
+<City>Winterthur</City>
+<Country>Switzerland</Country>
+<Website>http://www.buenz.li</Website>
+</Event>
+<Event><ID>1489</ID>
+<Name>0a000h 2008</Name>
+<EventType>Demo Party</EventType>
+<StartDay>5</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2008</StartYear>
+<EndDay>7</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2008</EndYear>
+<City>Jux-Spiegelberg</City>
+<Country>Germany</Country>
+<Website>http://www.0a000h.de</Website>
+</Event>
+<Event><ID>1501</ID>
+<Name>Breakpoint 2009</Name>
+<EventType>Demo Party</EventType>
+<AKA>Brokepoint 2009, bp 2009</AKA>
+<Tagline>everything is under control</Tagline>
+<StartDay>10</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>2009</StartYear>
+<EndDay>13</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2009</EndYear>
+<Address>Nuits-Saint-Georges-Strasse</Address>
+<Zip>55411</Zip>
+<City>Bingen am Rhein</City>
+<State>Rheinland-Pfalz</State>
+<Country>Germany</Country>
+<Website>http://breakpoint.untergrund.net/</Website>
+</Event>
+<Event><ID>1561</ID>
+<Name>Buenzli 18</Name>
+<EventType>Demo Party</EventType>
+<Tagline>Swiss Demoscene Festival</Tagline>
+<StartDay>14</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2009</StartYear>
+<EndDay>16</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2009</EndYear>
+<Address>Liebestrasse 3</Address>
+<Zip>8400</Zip>
+<City>Winterthur</City>
+<Country>Switzerland</Country>
+<Website>http://www.buenz.li</Website>
+</Event>
+<Event><ID>1598</ID>
+</Event>
+<Event><ID>1613</ID>
+</Event>
+<Event><ID>1610</ID>
+</Event>
+<Event><ID>1841</ID>
+<Name>Demodays 2011</Name>
+<EventType>Demo Party</EventType>
+<AKA>Buenzli 20</AKA>
+<Tagline>watch - create - compete</Tagline>
+<StartDay>26</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2011</StartYear>
+<EndDay>28</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2011</EndYear>
+<Address>Schützenmattweg 15</Address>
+<Zip>4603</Zip>
+<City>Olten</City>
+<Country>Switzerland</Country>
+<Website>http://www.demodays.org</Website>
+</Event>
+<Event><ID>1912</ID>
+</Event>
+<Event><ID>1934</ID>
+<Name>Revision 2012 </Name>
+<EventType>Demo Party</EventType>
+<Tagline>The Easterparty</Tagline>
+<StartDay>6</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>2012</StartYear>
+<EndDay>9</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2012</EndYear>
+<Country>Germany</Country>
+<Website>http://www.revision-party.de</Website>
+</Event>
+<Event><ID>1708</ID>
+</Event>
+<Event><ID>2080</ID>
+</Event>
+<Event><ID>2060</ID>
+</Event>
+<Event><ID>2137</ID>
+</Event>
+<Event><ID>2082</ID>
+</Event>
+<Event><ID>2188</ID>
+</Event>
+<Event><ID>2181</ID>
+</Event>
+<Event><ID>2208</ID>
+</Event>
+<Event><ID>2336</ID>
+</Event>
+<Event><ID>2270</ID>
+<Name>Under Construction 2014</Name>
+<EventType>Demo Party</EventType>
+<AKA>Ghettoscene</AKA>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2014</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2014</EndYear>
+<Country>Germany</Country>
+<Website>http://under-construction.scenedrama.com/</Website>
+</Event>
+<Event><ID>2464</ID>
+</Event>
+<Event><ID>2465</ID>
+<Name>Nordlicht 2016</Name>
+<EventType>Demo Party</EventType>
+<Tagline>now the same location as last year!</Tagline>
+<StartDay>1</StartDay>
+<StartMonth>7</StartMonth>
+<StartYear>2016</StartYear>
+<EndDay>3</EndDay>
+<EndMonth>7</EndMonth>
+<EndYear>2016</EndYear>
+<Address>Hermann-Prüser-Straße 4</Address>
+<Zip>28237</Zip>
+<City>Bremen</City>
+<Country>Germany</Country>
+<Website>https://nordlicht.demoparty.info</Website>
+</Event>
+<Event><ID>2399</ID>
+<Name>Under Construction 2015</Name>
+<EventType>Demo Party</EventType>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2015</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2015</EndYear>
+<Address>Georg-Schäfer-Platz 1</Address>
+<Zip>64579</Zip>
+<City>Gernsheim</City>
+<Country>Germany</Country>
+<Website>http://under-construction.tum-party.net/</Website>
+</Event>
+<Event><ID>2613</ID>
+</Event>
+<Event><ID>2602</ID>
+</Event>
+<Event><ID>2659</ID>
+</Event>
+<Event><ID>2687</ID>
+</Event>
+<Event><ID>2780</ID>
+</Event>
+<Event><ID>2890</ID>
+<Name>Under Construction 2019</Name>
+<EventType>Demo Party</EventType>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2019</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2019</EndYear>
+<Address>Old Deutsche Post Building, Hilpertstraße 31</Address>
+<Zip>64295</Zip>
+<City>Darmstadt</City>
+<Country>Germany</Country>
+<Website>http://under-construction.tum-party.net/</Website>
+</Event>
+<Event><ID>2918</ID>
+<Name>Revision 2020</Name>
+<EventType>Demo Party</EventType>
+<AKA>Revision Online</AKA>
+<Tagline>Welcome Home</Tagline>
+<StartDay>10</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>2020</StartYear>
+<EndDay>13</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2020</EndYear>
+<Address>On a sofa near you</Address>
+<Country>Germany</Country>
+<Website>https://2020.revision-party.net/</Website>
+</Event>
+</Attended>
+<Released><Release><ID>129574</ID>
+<Name>Doynamite 1.1</Name>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>10</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+</Release>
+<Release><ID>151374</ID>
+<Name>Happy Birthday AC</Name>
+<AKA>Happy Birthday Abyss Connection</AKA>
+<Type>C64 Graphics</Type>
+<GfxType>Advanced FLI</GfxType>
+<ReleaseDay>2</ReleaseDay>
+<ReleaseMonth>11</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<Rating>8.67</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/151000/151374.png</ScreenShot>
+</Release>
+<Release><ID>161133</ID>
+<Name>Harte Fakten</Name>
+<Type>C64 Graphics</Type>
+<GfxType>PETSCII</GfxType>
+<ReleaseDay>28</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2017</ReleaseYear>
+<ReleasedAt><Event><ID>2659</ID>
+<Name>Under Construction 2017</Name>
+<EventType>Demo Party</EventType>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2017</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2017</EndYear>
+<Address>Stadthalle Gernsheim</Address>
+<Zip>64579</Zip>
+<City>Gernsheim</City>
+<Country>Germany</Country>
+<Website>http://under-construction.tum-party.net</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>3</Place>
+</Achievement>
+<Rating>6.41</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/161000/161133.png</ScreenShot>
+</Release>
+<Release><ID>166708</ID>
+<Name>Spriteunfall</Name>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>21</ReleaseDay>
+<ReleaseMonth>7</ReleaseMonth>
+<ReleaseYear>2018</ReleaseYear>
+<ReleasedAt><Event><ID>2687</ID>
+<Name>Nordlicht 2018</Name>
+<EventType>Demo Party</EventType>
+<Tagline>now even smaller releases!</Tagline>
+<StartDay>20</StartDay>
+<StartMonth>7</StartMonth>
+<StartYear>2018</StartYear>
+<EndDay>22</EndDay>
+<EndMonth>7</EndMonth>
+<EndYear>2018</EndYear>
+<Address>Lichthaus Bremen</Address>
+<City>Bremen</City>
+<Country>Germany</Country>
+<Website>https://nordlicht.demoparty.info</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>WiLD Demo</Compo>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/166000/166708.png</ScreenShot>
+</Release>
+</Released>
+<Credits><Credit><CreditType>Code</CreditType>
+<Release><ID>848</ID>
+<Name>FICKEN</Name>
+<Type>C64 4K Intro</Type>
+<ReleaseDay>13</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>1998</ReleaseYear>
+<ReleasedAt><Event><ID>131</ID>
+<Name>Mekka &amp; Symposium 1998</Name>
+<EventType>Demo Party</EventType>
+<AKA>symmek 98, ms 1998, ms1998, ms 98, ms98</AKA>
+<StartDay>10</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>1998</StartYear>
+<EndDay>13</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>1998</EndYear>
+<Address>Heidmarkhalle</Address>
+<City>Fallingbostel</City>
+<Country>Germany</Country>
+<Website>http://ms.demo.org/98/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 4K Intro</Compo>
+<Place>8</Place>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/1/848.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>2786</ID>
+<Name>Dolphin!</Name>
+<Type>C64 Graphics</Type>
+<GfxType>MultiColor</GfxType>
+<ReleaseDay>31</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>1997</ReleaseYear>
+<ReleasedAt><Event><ID>59</ID>
+<Name>Mekka &amp; Symposium 1997</Name>
+<EventType>Demo Party</EventType>
+<AKA>symmek 97, ms 97, ms97, Symposium &amp; Mekka '97</AKA>
+<StartDay>28</StartDay>
+<StartMonth>3</StartMonth>
+<StartYear>1997</StartYear>
+<EndDay>31</EndDay>
+<EndMonth>3</EndMonth>
+<EndYear>1997</EndYear>
+<Address>Heidmarkhalle</Address>
+<City>Fallingbostel </City>
+<Country>Germany</Country>
+<Website>http://ms.demo.org/97/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>4</Place>
+</Achievement>
+<Rating>7.5</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/2000/2786.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>29593</ID>
+<Name>Breakpoint 2006 Invitation</Name>
+<Type>C64 Invitation</Type>
+<ReleaseDay>9</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2006</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/29000/29593.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Concept</CreditType>
+<Release><ID>29593</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Design</CreditType>
+<Release><ID>29593</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>29593</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Idea</CreditType>
+<Release><ID>29593</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Storyboard</CreditType>
+<Release><ID>29593</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Text</CreditType>
+<Release><ID>29593</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>14539</ID>
+<Name>Olympische Randsportarten</Name>
+<Type>C64 Fake Demo</Type>
+<ReleaseMonth>8</ReleaseMonth>
+<ReleaseYear>2004</ReleaseYear>
+<ReleasedAt><Event><ID>802</ID>
+<Name>Buenzli 13</Name>
+<EventType>Demo Party</EventType>
+<AKA>Buenzli 13(37)</AKA>
+<StartDay>20</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2004</StartYear>
+<EndDay>22</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2004</EndYear>
+<Address>Liebestrasse 3</Address>
+<Zip>8400</Zip>
+<City>Winterthur</City>
+<Country>Switzerland</Country>
+<Website>http://bnz13.buenz.li</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed</Compo>
+<Place>3</Place>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/14000/14539.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Concept</CreditType>
+<Release><ID>14539</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Design</CreditType>
+<Release><ID>14539</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>14539</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Idea</CreditType>
+<Release><ID>14539</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Storyboard</CreditType>
+<Release><ID>14539</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Text</CreditType>
+<Release><ID>14539</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>830</ID>
+<Name>Booze</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>13</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>1998</ReleaseYear>
+<ReleasedAt><Event><ID>131</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>9</Place>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/1/830.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>830</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>3250</ID>
+<Name>Hires World</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>13</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2001</ReleaseYear>
+<ReleasedAt><Event><ID>8</ID>
+<Name>Mekka &amp; Symposium 2001</Name>
+<EventType>Demo Party</EventType>
+<AKA>MS2K+1, MS2001, symmek 2k+1</AKA>
+<StartDay>13</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>2001</StartYear>
+<EndDay>16</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2001</EndYear>
+<Address>Heidmarkhalle</Address>
+<Zip>D-29683</Zip>
+<City>Fallingbostel</City>
+<Country>Germany</Country>
+<Website>http://ms.demo.org/2001/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>5</Place>
+</Achievement>
+<Rating>5.73</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/3000/3250.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>3250</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Design</CreditType>
+<Release><ID>3250</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>7167</ID>
+<Name>We Stir Our Poo Poo</Name>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>19</ReleaseDay>
+<ReleaseMonth>11</ReleaseMonth>
+<ReleaseYear>2000</ReleaseYear>
+<ReleasedAt><Event><ID>39</ID>
+<Name>X'2000</Name>
+<EventType>Demo Party</EventType>
+<EventType>C64 Only Party</EventType>
+<AKA>X-2000 X00 X'00</AKA>
+<Tagline>The Reunion</Tagline>
+<StartDay>17</StartDay>
+<StartMonth>11</StartMonth>
+<StartYear>2000</StartYear>
+<EndDay>19</EndDay>
+<EndMonth>11</EndMonth>
+<EndYear>2000</EndYear>
+<Country>Netherlands</Country>
+<Website>http://www.scs-trc.net</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/7000/7167.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>7167</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Idea</CreditType>
+<Release><ID>7167</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>2784</ID>
+<Name>Kotze Inside</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>31</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>1997</ReleaseYear>
+<ReleasedAt><Event><ID>59</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>3</Place>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/2000/2784.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>2784</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Idea</CreditType>
+<Release><ID>2784</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>7168</ID>
+<Name>Njuhskoolaplasma</Name>
+<Type>C64 4K Intro</Type>
+<ReleaseDay>24</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2000</ReleaseYear>
+<ReleasedAt><Event><ID>28</ID>
+<Name>Mekka &amp; Symposium 2000</Name>
+<EventType>Demo Party</EventType>
+<AKA>ms2k, ms2000, symmek 2k, Mekka &amp; Symposium 2k, ms 00, ms00</AKA>
+<StartDay>21</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>2000</StartYear>
+<EndDay>24</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2000</EndYear>
+<Address>Heidmarkhalle, An der Heidmarkhalle 1</Address>
+<Zip>29683</Zip>
+<City>Fallingbostel</City>
+<Country>Germany</Country>
+<Website>http://ms.demo.org/2000/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 4K Intro</Compo>
+<Place>13</Place>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/7000/7168.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>7164</ID>
+<Name>Bierheinzpowa</Name>
+<Type>C64 Graphics</Type>
+<GfxType>Interlaced FLI</GfxType>
+<ReleaseYear>2000</ReleaseYear>
+<ReleasedAt><Event><ID>28</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>20</Place>
+</Achievement>
+<Rating>6.69</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/7000/7164.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>7166</ID>
+<Name>AFLI Editor V1.1</Name>
+<Type>C64 Tool</Type>
+<ReleaseYear>2001</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/7000/7166.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>7165</ID>
+<Name>BMP/IFLI Converter V3.1</Name>
+<AKA>BMP&amp;gt;IFLI 3.1</AKA>
+<Type>C64 Tool</Type>
+<ReleaseYear>1999</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/7000/7165.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>8632</ID>
+<Name>Presswurst II Liquid Edition</Name>
+<Type>C64 Game</Type>
+<ReleaseDay>21</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2003</ReleaseYear>
+<ReleasedAt><Event><ID>453</ID>
+<Name>Breakpoint 2003</Name>
+<EventType>Demo Party</EventType>
+<StartDay>18</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>2003</StartYear>
+<EndDay>21</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2003</EndYear>
+<Address>Bundeswehrdepot</Address>
+<City>Bingen</City>
+<Country>Germany</Country>
+<Website>http://breakpoint.untergrund.net/2003/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Game</Compo>
+<Place>4</Place>
+</Achievement>
+<Rating>7.23</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/8000/8632.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>8632</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Concept</CreditType>
+<Release><ID>15290</ID>
+<Name>Tumor Pr0n</Name>
+<Type>C64 Graphics</Type>
+<ReleaseDay>24</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2004</ReleaseYear>
+<ReleasedAt><Event><ID>700</ID>
+<Name>X'2004</Name>
+<EventType>Demo Party</EventType>
+<EventType>C64 Only Party</EventType>
+<AKA>x04,X-2004,X2004</AKA>
+<Tagline>8 Bit Heaven</Tagline>
+<StartDay>22</StartDay>
+<StartMonth>10</StartMonth>
+<StartYear>2004</StartYear>
+<EndDay>24</EndDay>
+<EndMonth>10</EndMonth>
+<EndYear>2004</EndYear>
+<City>Hengelo</City>
+<State>Gelderland</State>
+<Country>Netherlands</Country>
+<Website>http://www.scs-trc.net</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>9</Place>
+</Achievement>
+<Rating>2.53</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/15000/15290.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Design</CreditType>
+<Release><ID>15290</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>15290</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Idea</CreditType>
+<Release><ID>15290</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>157489</ID>
+<Name>Modern Love Classics</Name>
+<Type>C64 Music Collection</Type>
+<ReleaseDay>23</ReleaseDay>
+<ReleaseMonth>7</ReleaseMonth>
+<ReleaseYear>2017</ReleaseYear>
+<ReleasedAt><Event><ID>2613</ID>
+<Name>Nordlicht 2017</Name>
+<EventType>Demo Party</EventType>
+<Tagline>we are still alive</Tagline>
+<StartDay>21</StartDay>
+<StartMonth>7</StartMonth>
+<StartYear>2017</StartYear>
+<EndDay>23</EndDay>
+<EndMonth>7</EndMonth>
+<EndYear>2017</EndYear>
+<Address>Hermann-Prüser-Straße 4</Address>
+<Zip>28237</Zip>
+<City>Bremen</City>
+<Country>Germany</Country>
+<Website>https://nordlicht.demoparty.info</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>WiLD Demo</Compo>
+<Place>4</Place>
+</Achievement>
+<Rating>9.85</Rating>
+<Website>https://multistylelabs.bandcamp.com/album/modern-love-classics</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/157000/157489.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>12790</ID>
+<Name>Have a shower with us!</Name>
+<Type>C64 Graphics</Type>
+<GfxType>FLI</GfxType>
+<ReleaseDay>12</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2004</ReleaseYear>
+<ReleasedAt><Event><ID>634</ID>
+<Name>Breakpoint 2004</Name>
+<EventType>Demo Party</EventType>
+<AKA>bp04, bp2004</AKA>
+<Tagline>The Code Inside</Tagline>
+<StartDay>9</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>2004</StartYear>
+<EndDay>12</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2004</EndYear>
+<City>Bingen</City>
+<Country>Germany</Country>
+<Website>http://breakpoint.untergrund.net/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>4</Place>
+</Achievement>
+<Rating>4.71</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/12000/12790.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>17605</ID>
+<Name>Der Bär Einer Votze</Name>
+<Type>C64 4K Intro</Type>
+<ReleaseDay>26</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2005</ReleaseYear>
+<ReleasedAt><Event><ID>884</ID>
+<Name>Breakpoint 2005</Name>
+<EventType>Demo Party</EventType>
+<Tagline>Aliens ate my demomaker</Tagline>
+<StartDay>25</StartDay>
+<StartMonth>3</StartMonth>
+<StartYear>2005</StartYear>
+<EndDay>28</EndDay>
+<EndMonth>3</EndMonth>
+<EndYear>2005</EndYear>
+<Address>Rundsporthalle Büdesheim, Nuits-Saint-Georges-Strasse</Address>
+<Zip>55411</Zip>
+<City>Bingen am Rhein</City>
+<Country>Germany</Country>
+<Website>http://breakpoint.untergrund.net</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 4K Intro</Compo>
+<Place>7</Place>
+</Achievement>
+<Rating>8.22</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/17000/17605.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>17626</ID>
+<Name>Pimmelakrobaten</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>28</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2005</ReleaseYear>
+<ReleasedAt><Event><ID>884</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Fast Intro</Compo>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/17000/17626.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Music</CreditType>
+<Release><ID>17605</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Interviewed</CreditType>
+<Release><ID>73983</ID>
+<Name>SCACOM Aktuell #9</Name>
+<Type>C64 Papermag</Type>
+<ReleaseDay>6</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2008</ReleaseYear>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>20011</ID>
+<Name>Jacubus the Serious Cube</Name>
+<Type>C64 Graphics</Type>
+<GfxType>MultiColor Interlace</GfxType>
+<ReleaseDay>20</ReleaseDay>
+<ReleaseMonth>8</ReleaseMonth>
+<ReleaseYear>2005</ReleaseYear>
+<ReleasedAt><Event><ID>933</ID>
+<Name>Buenzli 14</Name>
+<EventType>Demo Party</EventType>
+<Tagline>Demoscene Activist</Tagline>
+<StartDay>19</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2005</StartYear>
+<EndDay>21</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2005</EndYear>
+<City>Winterthur</City>
+<Country>Switzerland</Country>
+<Website>http://bnz14.buenz.li</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed</Compo>
+<Place>3</Place>
+</Achievement>
+<Rating>7.1</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/20000/20011.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Concept</CreditType>
+<Release><ID>20011</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>20011</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>143938</ID>
+<Name>Sample Blaster</Name>
+<AKA>SSDPCM2-MP - C64 Edition</AKA>
+<Type>C64 Demo</Type>
+<ReleaseDay>22</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2015</ReleaseYear>
+<Rating>9</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/143000/143938.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>22576</ID>
+<Name>Premium Firsttro Gold</Name>
+<Type>C64 Intro</Type>
+<ReleaseDay>30</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2005</ReleaseYear>
+<ReleasedAt><Event><ID>973</ID>
+<Name>Geekcamp II</Name>
+<EventType>Demo Party</EventType>
+<AKA>Geek Camp II, GCII, Geek Camp 2005</AKA>
+<StartDay>27</StartDay>
+<StartMonth>10</StartMonth>
+<StartYear>2005</StartYear>
+<EndDay>30</EndDay>
+<EndMonth>10</EndMonth>
+<EndYear>2005</EndYear>
+<Address>Berghaus Birchweid</Address>
+<Zip>6460</Zip>
+<City>Altdorf</City>
+<Country>Switzerland</Country>
+<Website>http://www.geekcamp.net/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed</Compo>
+<Place>3</Place>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/22000/22576.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>156958</ID>
+<Name>SSDPCM1-Super</Name>
+<AKA>AxelF</AKA>
+<Type>C64 Demo</Type>
+<ReleaseDay>28</ReleaseDay>
+<ReleaseMonth>6</ReleaseMonth>
+<ReleaseYear>2017</ReleaseYear>
+<Rating>9</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/156000/156958.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>156960</ID>
+<Name>Reluge 101%</Name>
+<AKA>Reluge</AKA>
+<Type>C64 Demo</Type>
+<ReleaseDay>28</ReleaseDay>
+<ReleaseMonth>6</ReleaseMonth>
+<ReleaseYear>2017</ReleaseYear>
+<Rating>9.19</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/156000/156960.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>26035</ID>
+<Name>Romantisches, feines Fräulein am Wasser</Name>
+<Type>C64 Graphics</Type>
+<GfxType>Interlaced FLI</GfxType>
+<ReleaseDay>28</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2005</ReleaseYear>
+<ReleasedAt><Event><ID>999</ID>
+<Name>tUM 2005</Name>
+<EventType>Demo Party</EventType>
+<AKA>tUM*o5, the Ultimate Meeting 2005</AKA>
+<Tagline>Pirates of the Demoscene</Tagline>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2005</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2005</EndYear>
+<Address>Durlacher Festhalle, Kanzlerstr. 13</Address>
+<Zip>76227</Zip>
+<City>Karlsruhe-Durlach</City>
+<Country>Germany</Country>
+<Website>http://2005.tum-party.net</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Graphics</Compo>
+<Place>3</Place>
+</Achievement>
+<Rating>8.04</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/26000/26035.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>141245</ID>
+<Name>Bitfire 0.4</Name>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>17</ReleaseDay>
+<ReleaseMonth>9</ReleaseMonth>
+<ReleaseYear>2015</ReleaseYear>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>32505</ID>
+<Name>Rumble in the Jungle</Name>
+<Type>C64 Graphics</Type>
+<ReleaseDay>16</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2006</ReleaseYear>
+<ReleasedAt><Event><ID>1038</ID>
+<Name>Breakpoint 2006</Name>
+<EventType>Demo Party</EventType>
+<Tagline>Rumble in the Jungle</Tagline>
+<StartDay>14</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>2006</StartYear>
+<EndDay>17</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2006</EndYear>
+<City>Bingen</City>
+<Country>Germany</Country>
+<Website>http://breakpoint.untergrund.net/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>2</Place>
+</Achievement>
+<Rating>4.64</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/32000/32505.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>12767</ID>
+<Name>Don't meet Crest</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>12</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2004</ReleaseYear>
+<ReleasedAt><Event><ID>634</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>5</Place>
+</Achievement>
+<Rating>7.9</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/12000/12767.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>12767</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Concept</CreditType>
+<Release><ID>33913</ID>
+<Name>C64-coding workshop, first steps</Name>
+<Type>C64 Misc.</Type>
+<ReleaseDay>15</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2006</ReleaseYear>
+<ReleasedAt><Event><ID>1038</ID>
+</Event>
+</ReleasedAt>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>94483</ID>
+<Name>Meatthing</Name>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>3</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2010</ReleaseYear>
+<ReleasedAt><Event><ID>1610</ID>
+<Name>X'2010</Name>
+<EventType>C64 Only Party</EventType>
+<AKA>X-2010,X10,X2010,X'10,X 2010</AKA>
+<Tagline>The Year We Make Contact / Tenth Edition</Tagline>
+<StartDay>1</StartDay>
+<StartMonth>10</StartMonth>
+<StartYear>2010</StartYear>
+<EndDay>3</EndDay>
+<EndMonth>10</EndMonth>
+<EndYear>2010</EndYear>
+<Address>De Hoof 18</Address>
+<Zip>5712 LM </Zip>
+<City>Someren</City>
+<Country>Netherlands</Country>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>15</Place>
+</Achievement>
+<Rating>5.89</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/94000/94483.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>57769</ID>
+<Name>Flick0r V1.1</Name>
+<Type>C64 Tool</Type>
+<ReleaseDay>2</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2007</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/57000/57769.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Idea</CreditType>
+<Release><ID>57769</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>55808</ID>
+<Name>Flick0r V1.0</Name>
+<Type>C64 Tool</Type>
+<ReleaseDay>22</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2007</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/55000/55808.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>55808</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Idea</CreditType>
+<Release><ID>55808</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>57951</ID>
+<Name>64net/2-rrnet V1.0</Name>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>5</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2007</ReleaseYear>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>60155</ID>
+<Name>When shit happens in fairytales ...</Name>
+<Type>C64 Graphics</Type>
+<GfxType>Interlaced FLI</GfxType>
+<ReleaseDay>28</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2007</ReleaseYear>
+<ReleasedAt><Event><ID>1348</ID>
+<Name>tUM 2007</Name>
+<EventType>Demo Party</EventType>
+<AKA>tUM*o7, the ultimate Meeting</AKA>
+<Tagline>for a fistful of Pixels</Tagline>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2007</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2007</EndYear>
+<Address>Durlacher Festhalle, Kanzlerstr. 13</Address>
+<Zip>76227</Zip>
+<City>Karlsruhe-Durlach</City>
+<Country>Germany</Country>
+<Website>http://2007.tum-party.net/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>2</Place>
+</Achievement>
+<Rating>7.48</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/60000/60155.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>66978</ID>
+<Name>Black &amp; White</Name>
+<Type>C64 One-File Demo</Type>
+<ScreenShot>https://csdb.dk/gfx/releases/66000/66978.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>66978</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>93314</ID>
+<Name>Mufflon V1.0</Name>
+<AKA>MUIFLI/NUFLI Converter</AKA>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>14</ReleaseDay>
+<ReleaseMonth>8</ReleaseMonth>
+<ReleaseYear>2010</ReleaseYear>
+<Rating>9.74</Rating>
+<Website>http://twinbirds.com/mufflon</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/93000/93314.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>51955</ID>
+<Name>Fette Jahre</Name>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>18</ReleaseDay>
+<ReleaseMonth>8</ReleaseMonth>
+<ReleaseYear>2007</ReleaseYear>
+<ReleasedAt><Event><ID>1307</ID>
+<Name>Buenzli 16</Name>
+<EventType>Demo Party</EventType>
+<Tagline>The Sky Is The Limit</Tagline>
+<StartDay>17</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2007</StartYear>
+<EndDay>19</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2007</EndYear>
+<Address>Liebestrasse 3</Address>
+<Zip>8400</Zip>
+<City>Winterthur</City>
+<Country>Switzerland</Country>
+<Website>http://bnz16.buenz.li</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed</Compo>
+<Place>4</Place>
+</Achievement>
+<Rating>3.45</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/51000/51955.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>51955</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>41472</ID>
+<Name>Junglefut</Name>
+<Type>C64 Graphics</Type>
+<GfxType>PETSCII</GfxType>
+<ReleaseDay>14</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2006</ReleaseYear>
+<ReleasedAt><Event><ID>966</ID>
+<Name>X'2006</Name>
+<EventType>Demo Party</EventType>
+<AKA>X06 - X'06 - X-06 - X-2006 - X2006</AKA>
+<Tagline>Got Cow ?</Tagline>
+<StartDay>13</StartDay>
+<StartMonth>10</StartMonth>
+<StartYear>2006</StartYear>
+<EndDay>15</EndDay>
+<EndMonth>10</EndMonth>
+<EndYear>2006</EndYear>
+<Country>Netherlands</Country>
+<Website>http://www.scs-trc.net</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>16</Place>
+</Achievement>
+<Rating>4.11</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/41000/41472.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>5073</ID>
+<Name>Final Climax</Name>
+<AKA>Climax Erotic, Climax - Erotic Pure</AKA>
+<Type>C64 Graphics Collection</Type>
+<ReleaseDay>27</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>1994</ReleaseYear>
+<ReleasedAt><Event><ID>18</ID>
+<Name>The Party 1994</Name>
+<EventType>Demo Party</EventType>
+<AKA>The Party 4, TP4, The Party IV, TP IV, TP94</AKA>
+<Tagline>Don't Try This At Home</Tagline>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>1994</StartYear>
+<EndDay>30</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>1994</EndYear>
+<Address>Herning Messecenter</Address>
+<City>Herning</City>
+<Country>Denmark</Country>
+<Website>http://www.theparty.dk/</Website>
+</Event>
+</ReleasedAt>
+<ScreenShot>https://csdb.dk/gfx/releases/5000/5073.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>5073</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>16155</ID>
+<Name>Malstunde Mit Widdy Und Fakerle</Name>
+<Type>C64 4K Intro</Type>
+<ReleaseDay>29</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2004</ReleaseYear>
+<ReleasedAt><Event><ID>795</ID>
+<Name>tUM 2004</Name>
+<EventType>Demo Party</EventType>
+<AKA>tUM*o4, the Ultimate Meeting 2004</AKA>
+<Tagline>christmas with your *real* family</Tagline>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2004</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2004</EndYear>
+<Address>Hans-Michel-Halle, Huettenfelder strasse 44</Address>
+<Zip>69502</Zip>
+<City>Hemsbach</City>
+<Country>Germany</Country>
+<Website>http://2004.tum-party.net/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 4K Intro</Compo>
+<Place>3</Place>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/16000/16155.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>76406</ID>
+<Name>Brotkaestchen</Name>
+<AKA>fr-051: brotkaestchen</AKA>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>17</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2006</ReleaseYear>
+<ReleasedAt><Event><ID>1038</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>WiLD Demo</Compo>
+<Place>6</Place>
+</Achievement>
+<Website>http://www.farbrausch.de/</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/76000/76406.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>81153</ID>
+<Name>Crest Slide Story 90%</Name>
+<AKA>deflick0r, show me yours and I'll show you mine</AKA>
+<Type>C64 Graphics Collection</Type>
+<ReleaseDay>18</ReleaseDay>
+<ReleaseMonth>7</ReleaseMonth>
+<ReleaseYear>2009</ReleaseYear>
+<ReleasedAt><Event><ID>1506</ID>
+<Name>LCP 2009</Name>
+<EventType>Copy Party</EventType>
+<EventType>Demo Party</EventType>
+<EventType>8 bit Party</EventType>
+<AKA>Little Computer People 2009</AKA>
+<Tagline>Obey the Machine!</Tagline>
+<StartDay>17</StartDay>
+<StartMonth>7</StartMonth>
+<StartYear>2009</StartYear>
+<EndDay>19</EndDay>
+<EndMonth>7</EndMonth>
+<EndYear>2009</EndYear>
+<Address>Bragegatan 15 at "Skånes Konstförening"</Address>
+<City>Malmö</City>
+<Country>Sweden</Country>
+<Website>http://lcp.c64.org</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>7</Place>
+</Achievement>
+<Rating>9.79</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/81000/81153.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>4757</ID>
+<Name>Partyworx</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>10</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>1994</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/4000/4757.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Text</CreditType>
+<Release><ID>4757</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>7158</ID>
+<Name>Antinationale #2</Name>
+<AKA>ATN</AKA>
+<Type>C64 Diskmag</Type>
+<ReleaseDay>15</ReleaseDay>
+<ReleaseMonth>6</ReleaseMonth>
+<ReleaseYear>1995</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/7000/7158.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>7158</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Text</CreditType>
+<Release><ID>7158</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>7160</ID>
+<Name>Antinationale #3</Name>
+<AKA>ATN</AKA>
+<Type>C64 Diskmag</Type>
+<ReleaseDay>11</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>1995</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/7000/7160.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>7160</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Text</CreditType>
+<Release><ID>7160</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>7161</ID>
+<Name>Antinationale #4</Name>
+<AKA>ATN</AKA>
+<Type>C64 Diskmag</Type>
+<ReleaseYear>1996</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/7000/7161.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>7161</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Text</CreditType>
+<Release><ID>7161</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>7162</ID>
+<Name>Antinationale #5</Name>
+<AKA>ATN</AKA>
+<Type>C64 Diskmag</Type>
+<ReleaseMonth>11</ReleaseMonth>
+<ReleaseYear>1996</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/7000/7162.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>7162</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Text</CreditType>
+<Release><ID>7162</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>7163</ID>
+<Name>Antinationale #6</Name>
+<AKA>ATN</AKA>
+<Type>C64 Diskmag</Type>
+<ReleaseYear>1997</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/7000/7163.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>7163</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Text</CreditType>
+<Release><ID>7163</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>66981</ID>
+<Name>Police Suxx</Name>
+<Type>C64 Basic Demo</Type>
+<ReleaseDay>31</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>1997</ReleaseYear>
+<ReleasedAt><Event><ID>59</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Fast Intro</Compo>
+<Place>8</Place>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/66000/66981.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>66981</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>85940</ID>
+<Name>Tittelbild</Name>
+<Type>C64 Graphics</Type>
+<GfxType>Interlaced FLI</GfxType>
+<ReleaseDay>29</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2009</ReleaseYear>
+<ReleasedAt><Event><ID>1598</ID>
+<Name>tUM 2009</Name>
+<EventType>Demo Party</EventType>
+<AKA>the Ultimate Meeting - ten year anniversary</AKA>
+<Tagline>We are very old</Tagline>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2009</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2009</EndYear>
+<Address>Kanzlerstrasse 13</Address>
+<Zip>76227</Zip>
+<City>Karlsruhe-Durlach</City>
+<Country>Germany</Country>
+<Website>http://2009.tum-party.net/start</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Graphics</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>8.12</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/85000/85940.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>11356</ID>
+<Name>The Thirsty Clowns</Name>
+<Type>C64 Fake Demo</Type>
+<ReleaseDay>29</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2003</ReleaseYear>
+<ReleasedAt><Event><ID>676</ID>
+<Name>tUM 2003</Name>
+<EventType>Demo Party</EventType>
+<AKA>tUM*o3, the Ultimate Meeting 2003</AKA>
+<Tagline>The Party is over</Tagline>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2003</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2003</EndYear>
+<Address>Hans-Michel-Halle, Hüttenfelder-Strasse 44</Address>
+<Zip>69502</Zip>
+<City>Hemsbach</City>
+<Country>Germany</Country>
+<Website>http://tum-home.de</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>3</Place>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/11000/11356.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>11356</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>90344</ID>
+<Name>BluREU</Name>
+<Type>REU Release</Type>
+<ReleaseDay>4</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2010</ReleaseYear>
+<ReleasedAt><Event><ID>1613</ID>
+<Name>Breakpoint 2010</Name>
+<EventType>Demo Party</EventType>
+<AKA>bp 2010</AKA>
+<Tagline>Like There's No Tomorrow</Tagline>
+<StartDay>2</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>2010</StartYear>
+<EndDay>5</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2010</EndYear>
+<Address>Nuits-Saint-Georges-Strasse</Address>
+<Zip>55411</Zip>
+<City>Bingen am Rhein</City>
+<State>Rheinland-Pfalz</State>
+<Country>Germany</Country>
+<Website>http://breakpoint.untergrund.net/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>WiLD Demo</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>9.32</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/90000/90344.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>94488</ID>
+<Name>16 Years Metalvotze </Name>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>3</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2010</ReleaseYear>
+<ReleasedAt><Event><ID>1610</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>11</Place>
+</Achievement>
+<Rating>6</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/94000/94488.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>97095</ID>
+<Name>BMP/IFLI Converter V3.3</Name>
+<AKA>BMP&amp;gt;IFLI 3.3b</AKA>
+<Type>C64 Tool</Type>
+<ReleaseYear>2000</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/97000/97095.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>100099</ID>
+<Name>64netNG-0.1</Name>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>18</ReleaseDay>
+<ReleaseMonth>5</ReleaseMonth>
+<ReleaseYear>2011</ReleaseYear>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>103913</ID>
+<Name>Ächzzeit</Name>
+<AKA>Ächzzeitkulturbeutel , Aechzzeit </AKA>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>28</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2011</ReleaseYear>
+<ReleasedAt><Event><ID>1912</ID>
+<Name>the Ultimate Meeting 2011</Name>
+<EventType>Demo Party</EventType>
+<AKA>tUM 2011</AKA>
+<Tagline>Superhero vs Supervillain</Tagline>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2011</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2011</EndYear>
+<Address>Kanzlerstraße 13</Address>
+<Zip>76227</Zip>
+<City>Karlsruhe/Durlach</City>
+<Country>Germany</Country>
+<Website>http://2011.tum-party.net/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Demo</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>8.93</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/103000/103913.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>103913</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>31369</ID>
+<Name>Partypic</Name>
+<AKA>Compopic</AKA>
+<Type>C64 Graphics</Type>
+<GfxType>FLI</GfxType>
+<ReleaseDay>29</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>1995</ReleaseYear>
+<ReleasedAt><Event><ID>10</ID>
+<Name>The Party 1995</Name>
+<EventType>Demo Party</EventType>
+<AKA>TP5, TP95, TPV, The Party V</AKA>
+<Tagline>5th Anniversary</Tagline>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>1995</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>1995</EndYear>
+<Address>Vester Ringvej 101 (Dronning Margrethe Hallen)</Address>
+<Zip>7000</Zip>
+<City>Fredericia</City>
+<Country>Denmark</Country>
+<Website>http://www.theparty.dk/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+</Achievement>
+<Rating>6.44</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/31000/31369.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>31369</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>111244</ID>
+<Name>Above &amp; Beyond #01</Name>
+<AKA>onefiler mag, making of, scene accomplishments</AKA>
+<Type>C64 Diskmag</Type>
+<ReleaseDay>11</ReleaseDay>
+<ReleaseMonth>9</ReleaseMonth>
+<ReleaseYear>2012</ReleaseYear>
+<Rating>9.22</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/111000/111244.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Interviewed</CreditType>
+<Release><ID>111244</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>111491</ID>
+<Name>Antinational #1 [english]</Name>
+<Type>C64 Diskmag</Type>
+<ReleaseDay>30</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>1994</ReleaseYear>
+<ReleasedAt><Event><ID>18</ID>
+</Event>
+</ReleasedAt>
+<ScreenShot>https://csdb.dk/gfx/releases/111000/111491.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>111491</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>4439</ID>
+<Name>Antinationale #1</Name>
+<Type>C64 Diskmag</Type>
+<ReleaseDay>25</ReleaseDay>
+<ReleaseMonth>11</ReleaseMonth>
+<ReleaseYear>1994</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/4000/4439.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>4439</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>112378</ID>
+<Name>Coma Light 13</Name>
+<AKA>Another Demo / ??? - Disk found at the Info-Desk ;-) (thanks Burglar)</AKA>
+<Type>C64 Demo</Type>
+<ReleaseDay>28</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2012</ReleaseYear>
+<ReleasedAt><Event><ID>1708</ID>
+<Name>X'2012</Name>
+<EventType>C64 Only Party</EventType>
+<AKA>X-2012,X12,X2012,X'12,X 2012</AKA>
+<StartDay>26</StartDay>
+<StartMonth>10</StartMonth>
+<StartYear>2012</StartYear>
+<EndDay>28</EndDay>
+<EndMonth>10</EndMonth>
+<EndYear>2012</EndYear>
+<Address>De Hoof 18</Address>
+<Zip>5712 LM </Zip>
+<City>Someren</City>
+<Country>Netherlands</Country>
+<Website>http://www.scs-trc.net/x2012</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>9.66</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/112000/112378.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>112378</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>112422</ID>
+<Name>Cause of Death</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>28</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2012</ReleaseYear>
+<ReleasedAt><Event><ID>1708</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>4</Place>
+</Achievement>
+<Rating>8.25</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/112000/112422.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Test</CreditType>
+<Release><ID>114680</ID>
+<Name>HermIRES 1.25</Name>
+<AKA>C64 hires graphic editor</AKA>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>15</ReleaseDay>
+<ReleaseMonth>1</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<Rating>9.44</Rating>
+<Website>http://hermit.netne.net</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/114000/114680.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Test</CreditType>
+<Release><ID>115605</ID>
+<Name>HermIRES 1.26</Name>
+<AKA>C64 hires graphic editor</AKA>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>7</ReleaseDay>
+<ReleaseMonth>2</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<Website>http://hermit.netne.net</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/115000/115605.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>115680</ID>
+<Name>Flickerless flickor</Name>
+<Type>C64 Graphics</Type>
+<GfxType>HiRes</GfxType>
+<ReleaseDay>10</ReleaseDay>
+<ReleaseMonth>2</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<Rating>8.33</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/115000/115680.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Help</CreditType>
+<Release><ID>115758</ID>
+<Name>Bongo Cruncher</Name>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>13</ReleaseDay>
+<ReleaseMonth>2</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/115000/115758.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Test</CreditType>
+<Release><ID>116748</ID>
+<Name>HermIRES 1.28</Name>
+<AKA>HermIRES with AFLI</AKA>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>15</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<Rating>10</Rating>
+<Website>http://sourceforge.net/projects/hermires/</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/116000/116748.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Help</CreditType>
+<Release><ID>117165</ID>
+<Name>Bongo Linking Engine</Name>
+<AKA>Bongotime</AKA>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>25</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<Rating>9.63</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/117000/117165.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>117382</ID>
+<Name>Nordlicht 2013 Invitation</Name>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>30</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<ReleasedAt><Event><ID>2081</ID>
+<Name>Revision 2013</Name>
+<EventType>Demo Party</EventType>
+<Tagline>The Easterparty</Tagline>
+<StartDay>29</StartDay>
+<StartMonth>3</StartMonth>
+<StartYear>2013</StartYear>
+<EndDay>1</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2013</EndYear>
+<Address>E WERK, Dr.-Tietz-Str. 14</Address>
+<Zip>66115</Zip>
+<City>Saarbrücken</City>
+<Country>Germany</Country>
+<Website>http://2013.revision-party.net/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Demo</Compo>
+<Place>10</Place>
+</Achievement>
+<Rating>8.5</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/117000/117382.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>117589</ID>
+<Name>Mermaid</Name>
+<Type>C64 Graphics</Type>
+<GfxType>HiRes</GfxType>
+<ReleaseDay>5</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<ReleasedAt><Event><ID>2087</ID>
+<Name>C64pixels.com Double Screen Compo 2013</Name>
+<EventType>Standalone Compo</EventType>
+<AKA>C64 Double Screen Compo 2013</AKA>
+<Tagline>2sc</Tagline>
+<StartDay>13</StartDay>
+<StartMonth>1</StartMonth>
+<StartYear>2013</StartYear>
+<EndDay>5</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2013</EndYear>
+<Website>http://compo.c64pixels.com/doublescreen</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>7</Place>
+</Achievement>
+<Rating>7.96</Rating>
+<Website>http://compo.c64pixels.com/doublescreen/entries2013.html</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/117000/117589.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>117589</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>117592</ID>
+<Name>Waves</Name>
+<Type>C64 Graphics</Type>
+<GfxType>MultiColor</GfxType>
+<ReleaseDay>5</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<ReleasedAt><Event><ID>2087</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>3</Place>
+</Achievement>
+<Rating>8.68</Rating>
+<Website>http://compo.c64pixels.com/doublescreen/entries2013.html</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/117000/117592.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>118329</ID>
+<Name>Fick, Daul und wurstig</Name>
+<AKA>Oxyron Pflichtrelease 2013</AKA>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>26</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<ReleasedAt><Event><ID>2080</ID>
+<Name>Demo of the Year Competition 2013</Name>
+<EventType>Standalone Compo</EventType>
+<AKA>DOTY 2013</AKA>
+<StartDay>3</StartDay>
+<StartMonth>3</StartMonth>
+<StartYear>2013</StartYear>
+<EndDay>28</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2013</EndYear>
+<Website>http://www.kopacek.de/doty/doty-compo.html</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>5</Place>
+</Achievement>
+<Rating>8.05</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/118000/118329.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Music</CreditType>
+<Release><ID>118329</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>118329</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Bug-Fix</CreditType>
+<Release><ID>118678</ID>
+<Name>Doynamite 1.0</Name>
+<AKA>Doynax LZ</AKA>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>6</ReleaseDay>
+<ReleaseMonth>5</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>120697</ID>
+<Name>Demo of the Year 2013</Name>
+<AKA>DOTY 2013</AKA>
+<Type>C64 Demo</Type>
+<ReleaseDay>21</ReleaseDay>
+<ReleaseMonth>7</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<ReleasedAt><Event><ID>2060</ID>
+<Name>Nordlicht 2013</Name>
+<EventType>Demo Party</EventType>
+<StartDay>19</StartDay>
+<StartMonth>7</StartMonth>
+<StartYear>2013</StartYear>
+<EndDay>21</EndDay>
+<EndMonth>7</EndMonth>
+<EndYear>2013</EndYear>
+<Address>Waller Heerstr. 294</Address>
+<Zip>28219</Zip>
+<City>Bremen</City>
+<Country>Germany</Country>
+<Website>http://nordlicht.demoparty.info/</Website>
+</Event>
+</ReleasedAt>
+<Rating>9</Rating>
+<Website>http://www.kopacek.de/doty/doty-compo.html</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/120000/120697.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Music</CreditType>
+<Release><ID>120697</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>121240</ID>
+<Name>Vectorball</Name>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>25</ReleaseDay>
+<ReleaseMonth>7</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<ReleasedAt><Event><ID>2137</ID>
+<Name>Show me your (vector)balls</Name>
+<EventType>Standalone Compo</EventType>
+<AKA>Slow me your (vector)balls</AKA>
+<StartDay>24</StartDay>
+<StartMonth>5</StartMonth>
+<StartYear>2013</StartYear>
+<EndDay>25</EndDay>
+<EndMonth>6</EndMonth>
+<EndYear>2013</EndYear>
+</Event>
+</ReleasedAt>
+<ScreenShot>https://csdb.dk/gfx/releases/121000/121240.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>121363</ID>
+<Name>Megasprite Generator V2.1</Name>
+<Type>C64 Tool</Type>
+<ReleaseYear>1993</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/121000/121363.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>126151</ID>
+<Name>Alle Im Sack</Name>
+<AKA>All in the Bag</AKA>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>18</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<ReleasedAt><Event><ID>2181</ID>
+<Name>Christmas Fun Competition 2013</Name>
+<EventType>Standalone Compo</EventType>
+<AKA>CFC2013</AKA>
+<StartDay>3</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2013</StartYear>
+<EndDay>25</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2013</EndYear>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed</Compo>
+<Place>2</Place>
+</Achievement>
+<Rating>8.29</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/126000/126151.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Idea</CreditType>
+<Release><ID>126151</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>126707</ID>
+<Name>Countess of Boob</Name>
+<Type>C64 Graphics</Type>
+<GfxType>HiRes</GfxType>
+<ReleaseDay>28</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2013</ReleaseYear>
+<ReleasedAt><Event><ID>2188</ID>
+<Name>the Ultimate Meeting 2013</Name>
+<EventType>Demo Party</EventType>
+<AKA>tUM 2013</AKA>
+<StartDay>27</StartDay>
+<StartMonth>12</StartMonth>
+<StartYear>2013</StartYear>
+<EndDay>29</EndDay>
+<EndMonth>12</EndMonth>
+<EndYear>2013</EndYear>
+<Country>Germany</Country>
+<Website>http://2013.tum-party.net/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Graphics</Compo>
+<Place>2</Place>
+</Achievement>
+<Rating>9.21</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/126000/126707.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>129574</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>131282</ID>
+<Name>Mirror</Name>
+<Type>C64 Graphics</Type>
+<GfxType>HiRes</GfxType>
+<ReleaseDay>8</ReleaseDay>
+<ReleaseMonth>6</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<ReleasedAt><Event><ID>2180</ID>
+<Name>Flashback 2014</Name>
+<EventType>Demo Party</EventType>
+<StartDay>7</StartDay>
+<StartMonth>6</StartMonth>
+<StartYear>2014</StartYear>
+<EndDay>9</EndDay>
+<EndMonth>6</EndMonth>
+<EndYear>2014</EndYear>
+<Address>Bridge College, 333 Kent Street</Address>
+<Zip>2000</Zip>
+<City>Sydney</City>
+<State>New South Wales</State>
+<Country>Australia</Country>
+<Website>http://www.defame.com.au/flashback</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Graphics</Compo>
+<Place>7</Place>
+</Achievement>
+<Rating>8.54</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/131000/131282.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>132059</ID>
+<Name>Zöpf</Name>
+<Type>C64 Graphics</Type>
+<GfxType>HiRes</GfxType>
+<ReleaseDay>26</ReleaseDay>
+<ReleaseMonth>7</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<ReleasedAt><Event><ID>2208</ID>
+<Name>Nordlicht 2014</Name>
+<EventType>Demo Party</EventType>
+<StartDay>25</StartDay>
+<StartMonth>7</StartMonth>
+<StartYear>2014</StartYear>
+<EndDay>27</EndDay>
+<EndMonth>7</EndMonth>
+<EndYear>2014</EndYear>
+<Address>Hoerneckestrasse 23</Address>
+<Zip>28217</Zip>
+<City>Bremen</City>
+<Country>Germany</Country>
+<Website>http://nordlicht.demoparty.info</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>3</Place>
+</Achievement>
+<Rating>8.56</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/132000/132059.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>132062</ID>
+<Name>Oxy Rock</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>26</ReleaseDay>
+<ReleaseMonth>7</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<ReleasedAt><Event><ID>2208</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Demo</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>8.7</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/132000/132062.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>132062</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>132062</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>132241</ID>
+<Name>Burnin' Pen '64</Name>
+<Type>C64 Game</Type>
+<ReleaseDay>9</ReleaseDay>
+<ReleaseMonth>8</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<ReleasedAt><Event><ID>2267</ID>
+<Name>Evoke 2014</Name>
+<EventType>Demo Party</EventType>
+<Tagline>Enjoy demoscene as much as we do!</Tagline>
+<StartDay>8</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2014</StartYear>
+<EndDay>10</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2014</EndYear>
+<Address>Christian-Sünner-Straße 8</Address>
+<Zip>51103</Zip>
+<City>Köln</City>
+<Country>Germany</Country>
+<Website>http://www.evoke.eu/2014/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Game</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>9.78</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/132000/132241.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Help</CreditType>
+<Release><ID>132241</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>132880</ID>
+<Name>Burnin' Pen '64 [bugfixed]</Name>
+<Type>C64 Game</Type>
+<ReleaseDay>7</ReleaseDay>
+<ReleaseMonth>9</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/132000/132880.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Help</CreditType>
+<Release><ID>132880</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>133969</ID>
+<Name>Plants</Name>
+<AKA>growing up...NOT</AKA>
+<Type>C64 Graphics</Type>
+<GfxType>Advanced FLI</GfxType>
+<ReleaseDay>25</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<ReleasedAt><Event><ID>2082</ID>
+<Name>X'2014</Name>
+<EventType>C64 Only Party</EventType>
+<AKA>X-2014,X14,X2014,X'14,X 2014</AKA>
+<StartDay>24</StartDay>
+<StartMonth>10</StartMonth>
+<StartYear>2014</StartYear>
+<EndDay>26</EndDay>
+<EndMonth>10</EndMonth>
+<EndYear>2014</EndYear>
+<Address>De Hoof 18</Address>
+<Zip>5712 LM</Zip>
+<City>Someren</City>
+<Country>Netherlands</Country>
+<Website>http://www.scs-trc.net/x2014</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>7</Place>
+</Achievement>
+<Rating>8.38</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/133000/133969.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>133940</ID>
+<Name>Comaland</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>25</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<ReleasedAt><Event><ID>2082</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>9.42</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/133000/133940.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>133940</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Linking</CreditType>
+<Release><ID>133940</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>133940</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>133975</ID>
+<Name>Bitfire V0.1</Name>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>27</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<Rating>10</Rating>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>134556</ID>
+<Name>Paradise</Name>
+<AKA>Butt</AKA>
+<Type>C64 Graphics</Type>
+<GfxType>Advanced FLI</GfxType>
+<ReleaseDay>16</ReleaseDay>
+<ReleaseMonth>11</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<ReleasedAt><Event><ID>2242</ID>
+<Name>Syntax 2014</Name>
+<EventType>Demo Party</EventType>
+<StartDay>14</StartDay>
+<StartMonth>11</StartMonth>
+<StartYear>2014</StartYear>
+<EndDay>16</EndDay>
+<EndMonth>11</EndMonth>
+<EndYear>2014</EndYear>
+<Address>Corner of Brunswick St and Johnston St in Collingwood</Address>
+<City>Melbourne</City>
+<State>Victoria</State>
+<Country>Australia</Country>
+<Website>http://syntaxparty.org</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Graphics</Compo>
+<Place>9</Place>
+</Achievement>
+<Rating>8.07</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/134000/134556.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>134613</ID>
+<Name>Bitfire V0.2</Name>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>18</ReleaseDay>
+<ReleaseMonth>11</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+</Release>
+</Credit>
+<Credit><CreditType>Text</CreditType>
+<Release><ID>134851</ID>
+<Name>Happy Birthday!</Name>
+<AKA>Era of the New 20's!</AKA>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>24</ReleaseDay>
+<ReleaseMonth>11</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<Rating>7.73</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/134000/134851.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>135099</ID>
+<Name>Strip-a-Minute</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>3</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<Rating>8.63</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/135000/135099.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>135265</ID>
+<Name>Frodigi 5</Name>
+<AKA>FFT Edition</AKA>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>8</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<ScreenShot>https://csdb.dk/gfx/releases/135000/135265.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Help</CreditType>
+<Release><ID>135581</ID>
+<Name>No More Secrets</Name>
+<AKA>NMOS 6510 Unintended Opcodes</AKA>
+<Type>C64 Papermag</Type>
+<ReleaseDay>24</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2014</ReleaseYear>
+<Rating>10</Rating>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>180321</ID>
+<Name>The Last Truckstop 3</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>4</ReleaseDay>
+<ReleaseMonth>8</ReleaseMonth>
+<ReleaseYear>2019</ReleaseYear>
+<ReleasedAt><Event><ID>2826</ID>
+<Name>Datastorm 2019</Name>
+<EventType>Demo Party</EventType>
+<StartDay>2</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2019</StartYear>
+<EndDay>4</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2019</EndYear>
+<City>Gothenburg</City>
+<Country>Sweden</Country>
+<Website>https://datastorm.party/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>9.34</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/180000/180321.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>138322</ID>
+<Name>Bitfire 0.3</Name>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>8</ReleaseDay>
+<ReleaseMonth>5</ReleaseMonth>
+<ReleaseYear>2015</ReleaseYear>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>139000</ID>
+<Name>P0 Snake [sales version 64k] +3PD</Name>
+<AKA>P0 Snake [sales version] / P0 Snake Enhanced</AKA>
+<Type>C64 Crack</Type>
+<ReleaseDay>7</ReleaseDay>
+<ReleaseMonth>6</ReleaseMonth>
+<ReleaseYear>2015</ReleaseYear>
+<Rating>9.29</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/139000/139000.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>139055</ID>
+<Name>P0 Snake [sales version 64k] +3PD</Name>
+<AKA>P0 Snake [sales version 64k] +3PD 100%</AKA>
+<Type>C64 Crack</Type>
+<ReleaseDay>9</ReleaseDay>
+<ReleaseMonth>6</ReleaseMonth>
+<ReleaseYear>2015</ReleaseYear>
+<Rating>9.57</Rating>
+<Website>http://rgcd.bigcartel.com/product/p0-snake-commodore-64</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/139000/139055.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>139263</ID>
+<Name>Fantasmolytic</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>20</ReleaseDay>
+<ReleaseMonth>6</ReleaseMonth>
+<ReleaseYear>2015</ReleaseYear>
+<ReleasedAt><Event><ID>2336</ID>
+<Name>Nordlicht 2015</Name>
+<EventType>Demo Party</EventType>
+<Tagline>the famous Bremen multiplatform demoscene event</Tagline>
+<StartDay>19</StartDay>
+<StartMonth>6</StartMonth>
+<StartYear>2015</StartYear>
+<EndDay>21</EndDay>
+<EndMonth>6</EndMonth>
+<EndYear>2015</EndYear>
+<Address>Hermann-Prüser-Straße 4</Address>
+<Zip>28237</Zip>
+<City>Bremen</City>
+<Country>Germany</Country>
+<Website>http://nordlicht.demoparty.info</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Demo</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>9.34</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/139000/139263.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Linking</CreditType>
+<Release><ID>139263</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>139263</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>139278</ID>
+<Name>Comaland 100%</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>20</ReleaseDay>
+<ReleaseMonth>6</ReleaseMonth>
+<ReleaseYear>2015</ReleaseYear>
+<ReleasedAt><Event><ID>2336</ID>
+</Event>
+</ReleasedAt>
+<Rating>9.64</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/139000/139278.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>139278</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Linking</CreditType>
+<Release><ID>139278</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>139278</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Text</CreditType>
+<Release><ID>144129</ID>
+<Name>A Storm Is Coming</Name>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>1</ReleaseDay>
+<ReleaseMonth>1</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<Rating>7.9</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/144000/144129.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>144862</ID>
+<Name>50 Bytes of Sylvia</Name>
+<AKA>Super Mega Noise Extreme VQ edition</AKA>
+<Type>C64 Demo</Type>
+<ReleaseDay>2</ReleaseDay>
+<ReleaseMonth>2</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<Rating>9.06</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/144000/144862.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>145333</ID>
+<Name>Bitfire V0.5</Name>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>17</ReleaseDay>
+<ReleaseMonth>2</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>146211</ID>
+<Name>Bitfire 0.6</Name>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>15</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<Rating>10</Rating>
+<Website>https://github.com/bboxy/bitfire</Website>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>146531</ID>
+<Name>Sir Pimp Ski</Name>
+<Type>C64 256b Intro</Type>
+<ReleaseDay>22</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<ReleasedAt><Event><ID>2464</ID>
+<Name>Spontaneous Sierpinski Triangle Funcompo</Name>
+<EventType>Standalone Compo</EventType>
+<StartDay>19</StartDay>
+<StartMonth>3</StartMonth>
+<StartYear>2016</StartYear>
+<EndDay>30</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2016</EndYear>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 256b Intro</Compo>
+</Achievement>
+<Rating>9.85</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/146000/146531.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Text</CreditType>
+<Release><ID>145032</ID>
+<Name>The Evil 40</Name>
+<AKA>Happy Birthday Sphinx</AKA>
+<Type>C64 One-File Demo</Type>
+<ReleaseDay>6</ReleaseDay>
+<ReleaseMonth>2</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<ReleasedAt><Event><ID>2458</ID>
+<Name>Sphinx's Evil 40 Meeting</Name>
+<EventType>Meeting</EventType>
+<StartDay>6</StartDay>
+<StartMonth>2</StartMonth>
+<StartYear>2016</StartYear>
+<EndDay>6</EndDay>
+<EndMonth>2</EndMonth>
+<EndYear>2016</EndYear>
+<City>Flensburg</City>
+<Country>Germany</Country>
+</Event>
+</ReleasedAt>
+<Rating>8.45</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/145000/145032.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>146628</ID>
+<Name>Sir68byteski [68b]</Name>
+<Type>C64 256b Intro</Type>
+<ReleaseDay>24</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<ReleasedAt><Event><ID>2464</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 256b Intro</Compo>
+</Achievement>
+<Rating>9.83</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/146000/146628.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>146727</ID>
+<Name>Watch My Balls in Action!</Name>
+<AKA>Arok 2016 Invitation</AKA>
+<Type>C64 Invitation</Type>
+<ReleaseDay>27</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<ReleasedAt><Event><ID>2462</ID>
+<Name>Revision 2016</Name>
+<EventType>Demo Party</EventType>
+<Tagline>Vote Evilbot 2016</Tagline>
+<StartDay>25</StartDay>
+<StartMonth>3</StartMonth>
+<StartYear>2016</StartYear>
+<EndDay>28</EndDay>
+<EndMonth>3</EndMonth>
+<EndYear>2016</EndYear>
+<Address>E WERK, Dr.-Tietz-Straße 14</Address>
+<Zip>66115</Zip>
+<City>Saarbrücken</City>
+<Country>Germany</Country>
+<Website>https://2016.revision-party.net/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Demo</Compo>
+<Place>6</Place>
+</Achievement>
+<Rating>8.87</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/146000/146727.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Help</CreditType>
+<Release><ID>147882</ID>
+<Name>Spindle 2.2</Name>
+<Type>Other Platform C64 Tool</Type>
+<ReleaseDay>27</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<Rating>9.85</Rating>
+<Website>http://www.linusakesson.net/software/spindle/v2.php</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/147000/147882.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Test</CreditType>
+<Release><ID>147882</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>149770</ID>
+<Name>20+1 Years</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>30</ReleaseDay>
+<ReleaseMonth>7</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<ReleasedAt><Event><ID>2454</ID>
+<Name>Arok Party 2016</Name>
+<EventType>Demo Party</EventType>
+<EventType>8 bit Party</EventType>
+<StartDay>29</StartDay>
+<StartMonth>7</StartMonth>
+<StartYear>2016</StartYear>
+<EndDay>31</EndDay>
+<EndMonth>7</EndMonth>
+<EndYear>2016</EndYear>
+<Zip>8448</Zip>
+<City>Ajka-Ajkarendek</City>
+<State>Veszprem</State>
+<Country>Hungary</Country>
+<Website>http://arok.intro.hu</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Demo</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>8.7</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/149000/149770.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>151253</ID>
+<Name>25 Years Atlantis</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>29</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<ReleasedAt><Event><ID>2299</ID>
+<Name>X'2016</Name>
+<EventType>Demo Party</EventType>
+<EventType>C64 Only Party</EventType>
+<AKA>X2016, X-2016, X16, X-16, X'16</AKA>
+<StartDay>28</StartDay>
+<StartMonth>10</StartMonth>
+<StartYear>2016</StartYear>
+<EndDay>30</EndDay>
+<EndMonth>10</EndMonth>
+<EndYear>2016</EndYear>
+<Address>De Hoof 18</Address>
+<Zip>5712LM</Zip>
+<City>Someren</City>
+<State>NB</State>
+<Country>Netherlands</Country>
+<Website>http://www.scs-trc.net/x2016</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>13</Place>
+</Achievement>
+<Rating>8</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/151000/151253.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>151257</ID>
+<Name>Incoherent Nightmare</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>29</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<ReleasedAt><Event><ID>2299</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>5</Place>
+</Achievement>
+<Rating>9.45</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/151000/151257.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>151257</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Linking</CreditType>
+<Release><ID>151257</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>151257</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>151281</ID>
+<Name>Ammonite</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>30</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<ReleasedAt><Event><ID>2299</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>6</Place>
+</Achievement>
+<Rating>9</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/151000/151281.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>151274</ID>
+<Name>Concert</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>30</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<ReleasedAt><Event><ID>2299</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>4</Place>
+</Achievement>
+<Rating>9.36</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/151000/151274.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Linking</CreditType>
+<Release><ID>151274</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>151274</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>151250</ID>
+<Name>25 Years</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>29</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<ReleasedAt><Event><ID>2299</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>10</Place>
+</Achievement>
+<Rating>7.67</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/151000/151250.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>151250</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>151344</ID>
+<Name>Sail to the King, Baby</Name>
+<AKA>Cocktopussy</AKA>
+<Type>C64 Graphics</Type>
+<GfxType>Advanced FLI</GfxType>
+<ReleaseDay>30</ReleaseDay>
+<ReleaseMonth>10</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<Rating>9.67</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/151000/151344.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>151374</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>151630</ID>
+<Name>Algo Dreams</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>13</ReleaseDay>
+<ReleaseMonth>11</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<Rating>9.05</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/151000/151630.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>152190</ID>
+<Name>Drama \o/</Name>
+<AKA>Alphorn</AKA>
+<Type>C64 Graphics</Type>
+<GfxType>Advanced FLI</GfxType>
+<ReleaseDay>16</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2016</ReleaseYear>
+<Rating>9.33</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/152000/152190.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>152996</ID>
+<Name>Mazinger Z Sing-Along</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>23</ReleaseDay>
+<ReleaseMonth>1</ReleaseMonth>
+<ReleaseYear>2017</ReleaseYear>
+<Rating>8.71</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/152000/152996.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>152997</ID>
+<Name>Frodigi 8</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>24</ReleaseDay>
+<ReleaseMonth>1</ReleaseMonth>
+<ReleaseYear>2017</ReleaseYear>
+<Rating>8.57</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/152000/152997.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>153523</ID>
+<Name>The Last Hope</Name>
+<AKA>Leia Tribute - "Would it help if I got out and pushed?"</AKA>
+<Type>C64 Demo</Type>
+<ReleaseDay>11</ReleaseDay>
+<ReleaseMonth>2</ReleaseMonth>
+<ReleaseYear>2017</ReleaseYear>
+<ReleasedAt><Event><ID>2507</ID>
+<Name>Datastorm 2017</Name>
+<EventType>Demo Party</EventType>
+<StartDay>10</StartDay>
+<StartMonth>2</StartMonth>
+<StartYear>2017</StartYear>
+<EndDay>12</EndDay>
+<EndMonth>2</EndMonth>
+<EndYear>2017</EndYear>
+<City>Gothenburg</City>
+<Country>Sweden</Country>
+<Website>http://www.datastorm.party/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>3</Place>
+</Achievement>
+<Rating>8.25</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/153000/153523.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>153526</ID>
+<Name>The Shores of Reflection</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>11</ReleaseDay>
+<ReleaseMonth>2</ReleaseMonth>
+<ReleaseYear>2017</ReleaseYear>
+<ReleasedAt><Event><ID>2507</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>2</Place>
+</Achievement>
+<Rating>9.59</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/153000/153526.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>155521</ID>
+<Name>Reluge</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>16</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2017</ReleaseYear>
+<ReleasedAt><Event><ID>2582</ID>
+<Name>Revision 2017</Name>
+<EventType>Demo Party</EventType>
+<StartDay>14</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>2017</StartYear>
+<EndDay>17</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2017</EndYear>
+<Address>E WERK, Dr.-Tietz-Straße 14</Address>
+<Zip>66115</Zip>
+<City>Saarbrücken</City>
+<Country>Germany</Country>
+<Website>https://2017.revision-party.net/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Demo</Compo>
+<Place>3</Place>
+</Achievement>
+<Rating>9.16</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/155000/155521.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>85944</ID>
+<Name>Mittagspause</Name>
+<Type>C64 Graphics</Type>
+<GfxType>PETSCII</GfxType>
+<ReleaseDay>29</ReleaseDay>
+<ReleaseMonth>12</ReleaseMonth>
+<ReleaseYear>2009</ReleaseYear>
+<ReleasedAt><Event><ID>1598</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed</Compo>
+<Place>3</Place>
+</Achievement>
+<Rating>3.72</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/85000/85944.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>158642</ID>
+<Name>Beats</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>2</ReleaseDay>
+<ReleaseMonth>9</ReleaseMonth>
+<ReleaseYear>2017</ReleaseYear>
+<ReleasedAt><Event><ID>2591</ID>
+<Name>Datastorm 2017 Summer</Name>
+<EventType>Demo Party</EventType>
+<StartDay>1</StartDay>
+<StartMonth>9</StartMonth>
+<StartYear>2017</StartYear>
+<EndDay>3</EndDay>
+<EndMonth>9</EndMonth>
+<EndYear>2017</EndYear>
+<City>Gothenburg</City>
+<Country>Sweden</Country>
+<Website>http://datastorm.party</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>2</Place>
+</Achievement>
+<Rating>9.17</Rating>
+<Website>https://www.youtube.com/watch?v=PoiumRL-ZcI</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/158000/158642.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>158951</ID>
+<Name>40</Name>
+<AKA>the best buddy birthday demo</AKA>
+<Type>C64 Demo</Type>
+<ReleaseDay>19</ReleaseDay>
+<ReleaseMonth>9</ReleaseMonth>
+<ReleaseYear>2017</ReleaseYear>
+<Rating>8.54</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/158000/158951.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>162542</ID>
+<Name>Honey</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>24</ReleaseDay>
+<ReleaseMonth>2</ReleaseMonth>
+<ReleaseYear>2018</ReleaseYear>
+<ReleasedAt><Event><ID>2621</ID>
+<Name>BCC Party #12</Name>
+<EventType>Copy Party</EventType>
+<EventType>Demo Party</EventType>
+<AKA>BCC#12 BCC #$0C CCB</AKA>
+<Tagline>Straight from the Kolonie</Tagline>
+<StartDay>23</StartDay>
+<StartMonth>2</StartMonth>
+<StartYear>2018</StartYear>
+<EndDay>25</EndDay>
+<EndMonth>2</EndMonth>
+<EndYear>2018</EndYear>
+<Address>Buckower Damm 70</Address>
+<Zip>12349</Zip>
+<City>Berlin-Neukölln (Britz)</City>
+<State>Berlin</State>
+<Country>Germany</Country>
+<Website>http://berlinc64club.de/events/4/%20bcc-12%20/</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>4</Place>
+</Achievement>
+<Rating>9.26</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/162000/162542.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>162872</ID>
+<Name>Krush Groovin'</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>13</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2018</ReleaseYear>
+<ReleasedAt><Event><ID>2665</ID>
+<Name>Fjälldata 2018</Name>
+<EventType>Demo Party</EventType>
+<AKA>fjalldata</AKA>
+<Tagline>mysdata med fjällutsikt</Tagline>
+<StartDay>9</StartDay>
+<StartMonth>3</StartMonth>
+<StartYear>2018</StartYear>
+<EndDay>11</EndDay>
+<EndMonth>3</EndMonth>
+<EndYear>2018</EndYear>
+<City>Östersund</City>
+<State>republiken Jämtland</State>
+<Country>Sweden</Country>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>2</Place>
+</Achievement>
+<Rating>8.51</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/162000/162872.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>166708</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>167225</ID>
+<Name>Jump</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>18</ReleaseDay>
+<ReleaseMonth>8</ReleaseMonth>
+<ReleaseYear>2018</ReleaseYear>
+<ReleasedAt><Event><ID>2733</ID>
+<Name>Evoke 2018</Name>
+<EventType>Demo Party</EventType>
+<StartDay>17</StartDay>
+<StartMonth>8</StartMonth>
+<StartYear>2018</StartYear>
+<EndDay>19</EndDay>
+<EndMonth>8</EndMonth>
+<EndYear>2018</EndYear>
+<City>Cologne</City>
+<State>NRW</State>
+<Country>Germany</Country>
+<Website>http://www.evoke.eu</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Demo</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>8.67</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/167000/167225.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>170933</ID>
+<Name>Xcusemo</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>3</ReleaseDay>
+<ReleaseMonth>11</ReleaseMonth>
+<ReleaseYear>2018</ReleaseYear>
+<ReleasedAt><Event><ID>2602</ID>
+<Name>X'2018</Name>
+<EventType>C64 Only Party</EventType>
+<AKA>X'18, X-2018, X2018, X-18</AKA>
+<StartDay>2</StartDay>
+<StartMonth>11</StartMonth>
+<StartYear>2018</StartYear>
+<EndDay>4</EndDay>
+<EndMonth>11</EndMonth>
+<EndYear>2018</EndYear>
+<Address>De Hoof 18</Address>
+<Zip>5712 LM</Zip>
+<City>Someren</City>
+<Country>Netherlands</Country>
+<Website>http://www.scs-trc.net/x2018</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>6</Place>
+</Achievement>
+<Rating>9.16</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/170000/170933.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>170950</ID>
+<Name>C=Bit 18</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>3</ReleaseDay>
+<ReleaseMonth>11</ReleaseMonth>
+<ReleaseYear>2018</ReleaseYear>
+<ReleasedAt><Event><ID>2602</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>3</Place>
+</Achievement>
+<Rating>9.46</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/170000/170950.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Graphics</CreditType>
+<Release><ID>170950</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Linking</CreditType>
+<Release><ID>170950</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>170950</ID>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>170944</ID>
+<Name>Old Men in Used Cars</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>3</ReleaseDay>
+<ReleaseMonth>11</ReleaseMonth>
+<ReleaseYear>2018</ReleaseYear>
+<ReleasedAt><Event><ID>2602</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>5</Place>
+</Achievement>
+<Rating>9.46</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/170000/170944.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>170922</ID>
+<Name>The Star Wars Demo</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>3</ReleaseDay>
+<ReleaseMonth>11</ReleaseMonth>
+<ReleaseYear>2018</ReleaseYear>
+<ReleasedAt><Event><ID>2602</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>9.37</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/170000/170922.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>175657</ID>
+<Name>Monomania</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>2</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2019</ReleaseYear>
+<ReleasedAt><Event><ID>2764</ID>
+<Name>Fjälldata 2019</Name>
+<EventType>Demo Party</EventType>
+<AKA>fjalldata</AKA>
+<Tagline>kyla, kärlek och kärva datorer</Tagline>
+<StartDay>1</StartDay>
+<StartMonth>3</StartMonth>
+<StartYear>2019</StartYear>
+<EndDay>3</EndDay>
+<EndMonth>3</EndMonth>
+<EndYear>2019</EndYear>
+<City>Östersund</City>
+<State>Republiken Jämtland</State>
+<Country>Sweden</Country>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>2</Place>
+</Achievement>
+<Rating>9.06</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/175000/175657.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>177033</ID>
+<Name>1337 Karate</Name>
+<AKA>1337 Karate Premium Deluxe Pro</AKA>
+<Type>C64 Game</Type>
+<ReleaseDay>21</ReleaseDay>
+<ReleaseMonth>4</ReleaseMonth>
+<ReleaseYear>2019</ReleaseYear>
+<ReleasedAt><Event><ID>2780</ID>
+<Name>Revision 2019</Name>
+<EventType>Demo Party</EventType>
+<StartDay>19</StartDay>
+<StartMonth>4</StartMonth>
+<StartYear>2019</StartYear>
+<EndDay>22</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2019</EndYear>
+<Address>E WERK, Dr.-Tietz-Straße 14</Address>
+<Zip>66115</Zip>
+<City>Saarbrücken</City>
+<Country>Germany</Country>
+<Website>https://2019.revision-party.net</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>Mixed Game</Compo>
+<Place>5</Place>
+</Achievement>
+<Website>http://abyss-connection.de/karate</Website>
+<ScreenShot>https://csdb.dk/gfx/releases/177000/177033.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>179130</ID>
+<Name>Thera</Name>
+<AKA>Ananas logo</AKA>
+<Type>C64 Demo</Type>
+<ReleaseDay>30</ReleaseDay>
+<ReleaseMonth>6</ReleaseMonth>
+<ReleaseYear>2019</ReleaseYear>
+<ReleasedAt><Event><ID>2756</ID>
+<Name>Gubbdata 2019</Name>
+<EventType>Demo Party</EventType>
+<Tagline>Framtiden var bättre förr / The future was better back in the days</Tagline>
+<StartDay>28</StartDay>
+<StartMonth>6</StartMonth>
+<StartYear>2019</StartYear>
+<EndDay>30</EndDay>
+<EndMonth>6</EndMonth>
+<EndYear>2019</EndYear>
+<City>Lund</City>
+<Country>Sweden</Country>
+<Website>http://gubbdata.se</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>4</Place>
+</Achievement>
+<Rating>8.75</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/179000/179130.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Code</CreditType>
+<Release><ID>179808</ID>
+<Name>Scrollerunfall</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>19</ReleaseDay>
+<ReleaseMonth>7</ReleaseMonth>
+<ReleaseYear>2019</ReleaseYear>
+<ReleasedAt><Event><ID>2832</ID>
+<Name>Nordlicht 2019</Name>
+<EventType>Demo Party</EventType>
+<Tagline>We like floppies!</Tagline>
+<StartDay>19</StartDay>
+<StartMonth>7</StartMonth>
+<StartYear>2019</StartYear>
+<EndDay>21</EndDay>
+<EndMonth>7</EndMonth>
+<EndYear>2019</EndYear>
+<Address>Hermann-Prüser Straße 4</Address>
+<Zip>28237</Zip>
+<City>Bremen</City>
+<Country>Germany</Country>
+<Website>https://nordlicht.demoparty.info</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Fast Intro</Compo>
+<Place>9</Place>
+</Achievement>
+<ScreenShot>https://csdb.dk/gfx/releases/179000/179808.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>180320</ID>
+<Name>Two Sided</Name>
+<AKA>twosided, Two-Sided</AKA>
+<Type>C64 Demo</Type>
+<ReleaseDay>4</ReleaseDay>
+<ReleaseMonth>8</ReleaseMonth>
+<ReleaseYear>2019</ReleaseYear>
+<ReleasedAt><Event><ID>2826</ID>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>2</Place>
+</Achievement>
+<Rating>9.03</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/180000/180320.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>187525</ID>
+<Name>In a Hurry</Name>
+<AKA>The Two Day Demo</AKA>
+<Type>C64 Demo</Type>
+<ReleaseDay>8</ReleaseDay>
+<ReleaseMonth>2</ReleaseMonth>
+<ReleaseYear>2020</ReleaseYear>
+<ReleasedAt><Event><ID>2879</ID>
+<Name>Fjälldata 2020</Name>
+<EventType>Demo Party</EventType>
+<AKA>fjalldata</AKA>
+<Tagline>satan i datan</Tagline>
+<StartDay>7</StartDay>
+<StartMonth>2</StartMonth>
+<StartYear>2020</StartYear>
+<EndDay>9</EndDay>
+<EndMonth>2</EndMonth>
+<EndYear>2020</EndYear>
+<City>Östersund</City>
+<State>Republiken Jämtland</State>
+<Country>Sweden</Country>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>3</Place>
+</Achievement>
+<Rating>9.06</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/187000/187525.gif</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>187559</ID>
+<Name>ExAc20 Aftershow</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>9</ReleaseDay>
+<ReleaseMonth>2</ReleaseMonth>
+<ReleaseYear>2020</ReleaseYear>
+<Rating>9.13</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/187000/187559.png</ScreenShot>
+</Release>
+</Credit>
+<Credit><CreditType>Loader</CreditType>
+<Release><ID>187977</ID>
+<Name>Stacked</Name>
+<Type>C64 Demo</Type>
+<ReleaseDay>23</ReleaseDay>
+<ReleaseMonth>2</ReleaseMonth>
+<ReleaseYear>2020</ReleaseYear>
+<ReleasedAt><Event><ID>2908</ID>
+<Name>BCC Party #14</Name>
+<EventType>Demo Party</EventType>
+<EventType>C64 Only Party</EventType>
+<Tagline>Martial Farts - Confurzius approves!</Tagline>
+<StartDay>21</StartDay>
+<StartMonth>2</StartMonth>
+<StartYear>2020</StartYear>
+<EndDay>23</EndDay>
+<EndMonth>2</EndMonth>
+<EndYear>2020</EndYear>
+<Address>Ahrensfelder Chaussee 150</Address>
+<Zip>12689</Zip>
+<City>Berlin</City>
+<Country>Germany</Country>
+<Website>https://c64clubberlin.de/?p=3772</Website>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Demo</Compo>
+<Place>1</Place>
+</Achievement>
+<Rating>9.45</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/187000/187977.gif</ScreenShot>
+</Release>
+</Credit>
+</Credits>
+</Handle><script/>
+</CSDbData>
