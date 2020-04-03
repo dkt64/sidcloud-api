@@ -546,6 +546,12 @@ func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {
 // 	return string(buf)
 // }
 
+// insertRelease - Wstawienie release'u do slice
+// ================================================================================================
+func insertRelease(array []Release, value Release, index int) []Release {
+	return append(array[:index], append([]Release{value}, array[index:]...)...)
+}
+
 // ReadLatestReleasesThread - Wątek odczygtujący dane z csdb
 // ================================================================================================
 func ReadLatestReleasesThread() {
@@ -554,155 +560,171 @@ func ReadLatestReleasesThread() {
 		fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Koniec watku ScannerThread !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 	}()
 
-	// for {
 	netClient := &http.Client{Timeout: time.Second * 5}
-	resp, err := netClient.Get("https://csdb.dk/rss/latestreleases.php")
 
-	if ErrCheck(err) {
-		defer resp.Body.Close()
-		body, err := ioutil.ReadAll(resp.Body)
-		ErrCheck(err)
-		// fmt.Println(string(body))
-		resp.Body.Close()
+	firstRun := true
+	var foundNewReleases int
 
-		// Przerobienie na strukturę
+	for {
+		resp, err := netClient.Get("https://csdb.dk/rss/latestreleases.php")
 
-		var latestReleases XMLRssFeed
-		reader := bytes.NewReader(body)
-		decoder := xml.NewDecoder(reader)
-		decoder.CharsetReader = makeCharsetReader
-		// err = xml.Unmarshal([]byte(body), &latestReleases)
-		err = decoder.Decode(&latestReleases)
-		ErrCheck(err)
-
-		// fmt.Println("Odebrano: ", latestReleases)
-		fmt.Println("===================================")
-		fmt.Println("Odebrano listę ostatnich realeases")
-		fmt.Println("===================================")
-
-		for index := 0; index < 20; index++ {
-			rssItem := latestReleases.Items[index]
-			// fmt.Println(rssItem.Title)
-			url, err := url.Parse(rssItem.GUID)
+		if ErrCheck(err) {
+			defer resp.Body.Close()
+			body, err := ioutil.ReadAll(resp.Body)
 			ErrCheck(err)
-			q := url.Query()
-			// fmt.Println(q.Get("id"))
+			// fmt.Println(string(body))
+			resp.Body.Close()
 
-			resp, err := netClient.Get("https://csdb.dk/webservice/?type=release&id=" + q.Get("id"))
+			// Przerobienie na strukturę
 
-			if ErrCheck(err) {
-				defer resp.Body.Close()
-				body, err := ioutil.ReadAll(resp.Body)
+			var latestReleases XMLRssFeed
+			reader := bytes.NewReader(body)
+			decoder := xml.NewDecoder(reader)
+			decoder.CharsetReader = makeCharsetReader
+			// err = xml.Unmarshal([]byte(body), &latestReleases)
+			err = decoder.Decode(&latestReleases)
+			ErrCheck(err)
+
+			// fmt.Println("Odebrano: ", latestReleases)
+			// fmt.Println("===================================")
+			fmt.Println("Odebrano listę ostatnich releases...")
+			// fmt.Println("===================================")
+
+			foundNewReleases = 0
+
+			for index := 0; index < len(latestReleases.Items); index++ {
+				rssItem := latestReleases.Items[index]
+				// fmt.Println(rssItem.Title)
+				url, err := url.Parse(rssItem.GUID)
 				ErrCheck(err)
-				// fmt.Println(string(body))
-				resp.Body.Close()
+				q := url.Query()
+				// fmt.Println(q.Get("id"))
 
-				// Przerobienie na strukturę
+				resp, err := netClient.Get("https://csdb.dk/webservice/?type=release&id=" + q.Get("id"))
 
-				var entry XMLRelease
-				reader := bytes.NewReader(body)
-				decoder := xml.NewDecoder(reader)
-				decoder.CharsetReader = makeCharsetReader
-				err = decoder.Decode(&entry)
-				ErrCheck(err)
+				if ErrCheck(err) {
+					defer resp.Body.Close()
+					body, err := ioutil.ReadAll(resp.Body)
+					ErrCheck(err)
+					// fmt.Println(string(body))
+					resp.Body.Close()
 
-				// var entry XMLRelease
-				// err = xml.Unmarshal([]byte(body), &entry)
-				// ErrCheck(err)
+					// Przerobienie na strukturę
 
-				fmt.Println("Nazwa:  ", entry.ReleaseName)
-				fmt.Println("ID:     ", entry.ReleaseID)
-				fmt.Println("Typ:    ", entry.ReleaseType)
-				for _, group := range entry.XMLReleasedBy.XMLGroup {
-					fmt.Println("XMLGroup:  ", group.Name)
-				}
-				for _, handle := range entry.XMLReleasedBy.XMLHandle {
-					fmt.Println("XMLHandle: ", handle.XMLHandle)
-				}
-				fmt.Println("-----------------------------------")
-				for _, credit := range entry.Credits {
+					var entry XMLRelease
+					reader := bytes.NewReader(body)
+					decoder := xml.NewDecoder(reader)
+					decoder.CharsetReader = makeCharsetReader
+					err = decoder.Decode(&entry)
+					ErrCheck(err)
 
-					if credit.XMLHandle.XMLHandle == "" {
-						found := false
-						for _, releaseHandle := range entry.XMLReleasedBy.XMLHandle {
-							if releaseHandle.ID == credit.XMLHandle.ID && releaseHandle.XMLHandle != "" {
-								fmt.Println(credit.CreditType + ": " + releaseHandle.XMLHandle + " [" + releaseHandle.ID + "]")
-								found = true
-								break
-							}
+					// Szukamy takiego release w naszej bazie
+					//
+
+					var relTypesAllowed = [...]string{"C64 Music", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo", "C128 Release"}
+					found := false
+					for _, rel := range releases {
+						id, _ := strconv.Atoi(entry.ReleaseID)
+						if rel.ReleaseID == id {
+							found = true
 						}
-						if !found {
-							for _, releaseHandle := range entry.Credits {
-								if releaseHandle.XMLHandle.ID == credit.XMLHandle.ID && releaseHandle.XMLHandle.XMLHandle != "" {
-									fmt.Println(credit.CreditType + ": " + releaseHandle.XMLHandle.XMLHandle + " [" + releaseHandle.XMLHandle.ID + "]")
-									break
+					}
+					typeOK := false
+					for _, relType := range relTypesAllowed {
+						if relType == entry.ReleaseType {
+							typeOK = true
+							break
+						}
+					}
+
+					// Jeżeli znaleźliśmy to sprawdzamy typ i dodajemy
+					//
+					if !found && typeOK {
+
+						foundNewReleases++
+
+						// Tworzymy nowy obiekt release który dodamy do slice
+						//
+						var newRelease Release
+						id, _ := strconv.Atoi(entry.ReleaseID)
+						newRelease.ReleaseID = id
+						newRelease.ReleaseName = entry.ReleaseName
+						newRelease.ReleaseScreenShot = entry.ReleaseScreenShot
+
+						// fmt.Println("Nazwa:  ", entry.ReleaseName)
+						// fmt.Println("ID:     ", entry.ReleaseID)
+						// fmt.Println("Typ:    ", entry.ReleaseType)
+						for _, group := range entry.XMLReleasedBy.XMLGroup {
+							// fmt.Println("XMLGroup:  ", group.Name)
+							newRelease.ReleasedBy = append(newRelease.ReleasedBy, group.Name)
+						}
+						for _, handle := range entry.XMLReleasedBy.XMLHandle {
+							// fmt.Println("XMLHandle: ", handle.XMLHandle)
+							newRelease.ReleasedBy = append(newRelease.ReleasedBy, handle.XMLHandle)
+						}
+						// fmt.Println("-----------------------------------")
+						for _, credit := range entry.Credits {
+
+							creditHandle := "???"
+							if len(credit.XMLHandle.XMLHandle) > 0 {
+								// fmt.Println(credit.CreditType + ": " + credit.XMLHandle.XMLHandle + " [" + credit.XMLHandle.ID + "]")
+								if credit.CreditType == "Music" {
+									newRelease.Credits = append(newRelease.Credits, credit.XMLHandle.XMLHandle)
+								}
+							} else {
+								found := false
+								for _, releaseHandle := range entry.XMLReleasedBy.XMLHandle {
+									if releaseHandle.ID == credit.XMLHandle.ID && releaseHandle.XMLHandle != "" {
+										// fmt.Println(credit.CreditType + ": " + releaseHandle.XMLHandle + " [" + releaseHandle.ID + "]")
+										creditHandle = releaseHandle.XMLHandle
+										found = true
+										break
+									}
+								}
+								if !found {
+									for _, releaseHandle := range entry.Credits {
+										if releaseHandle.XMLHandle.ID == credit.XMLHandle.ID && releaseHandle.XMLHandle.XMLHandle != "" {
+											// fmt.Println(credit.CreditType + ": " + releaseHandle.XMLHandle.XMLHandle + " [" + releaseHandle.XMLHandle.ID + "]")
+											creditHandle = releaseHandle.XMLHandle.XMLHandle
+											break
+										}
+									}
+								}
+
+								// Jeżeli mamy handle i type
+								//
+								if credit.CreditType == "Music" && creditHandle != "" {
+									newRelease.Credits = append(newRelease.Credits, creditHandle)
 								}
 							}
 						}
-					} else {
-						fmt.Println(credit.CreditType + ": " + credit.XMLHandle.XMLHandle + " [" + credit.XMLHandle.ID + "]")
+						// fmt.Println("===================================")
+
+						if firstRun {
+							releases = append(releases, newRelease)
+						} else {
+							releases = insertRelease(releases, newRelease, 0)
+						}
 					}
+				} else {
+					fmt.Println("Błąd komunikacji z csdb.dk")
 				}
-				fmt.Println("===================================")
-
-				// Szukamy takiego release w naszej bazie
-				//
-				// Release - wydanie produkcji na csdb
-				// // ------------------------------------------------------------------------------------------------
-				// type Release struct {
-				// 	ReleaseID         int
-				// 	ReleaseName       string
-				// 	ReleaseScreenShot string
-				// 	ReleasedBy        []string
-				// 	Credits           []string
-				// }
-
-				// var releases []Release
-
-				var relTypesAllowed = [...]string{"C64 Music", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo", "C128 Release"}
-				found := false
-				for _, rel := range releases {
-					id, _ := strconv.Atoi(entry.ReleaseID)
-					if rel.ReleaseID == id {
-						found = true
-					}
-				}
-				typeOK := false
-				for _, relType := range relTypesAllowed {
-					if relType == entry.ReleaseType {
-						typeOK = true
-						break
-					}
-				}
-				if !found && typeOK {
-					var newRelease Release
-					id, _ := strconv.Atoi(entry.ReleaseID)
-					newRelease.ReleaseID = id
-					newRelease.ReleaseName = entry.ReleaseName
-					newRelease.ReleaseScreenShot = entry.ReleaseScreenShot
-					releases = append(releases, newRelease)
-				}
-
-			} else {
-				fmt.Println("Błąd komunikacji z csdb.dk")
 			}
+
+		} else {
+			fmt.Println("Błąd komunikacji z csdb.dk")
 		}
 
-	} else {
-		fmt.Println("Błąd komunikacji z csdb.dk")
-	}
+		fmt.Println("Found", foundNewReleases, "new music releases.")
+		for _, rel := range releases {
+			fmt.Println(rel)
+		}
 
-	fmt.Println()
-	fmt.Println("***********************************")
-	for _, rel := range releases {
-		fmt.Println("Name: ", rel.ReleaseName)
+		firstRun = false
+		// SLEEP
+		// ----------------------------------------------------------------------------------------
+		time.Sleep(60 * time.Second)
 	}
-	//
-	// SLEEP
-	// ----------------------------------------------------------------------------------------
-	//
-	// time.Sleep(60 * time.Second)
-	// }
 
 }
 
@@ -710,6 +732,8 @@ func ReadLatestReleasesThread() {
 // MAIN()
 // ================================================================================================
 func main() {
+
+	go ReadLatestReleasesThread()
 
 	// Logowanie do pliku
 	//
@@ -744,7 +768,5 @@ func main() {
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
 	r.POST("/api/v1/csdb_release", CSDBGetRelease)
 
-	ReadLatestReleasesThread()
-
-	// r.Run(":8080")
+	r.Run(":8080")
 }
