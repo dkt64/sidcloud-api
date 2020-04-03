@@ -87,15 +87,22 @@ type XMLCredit struct {
 	XMLHandle  XMLHandle `xml:"Handle"`
 }
 
+// XMLDownloadLink - download links
+// ------------------------------------------------------------------------------------------------
+type XMLDownloadLink struct {
+	Link string `xml:"Link"`
+}
+
 // XMLRelease - wydanie produkcji na csdb
 // ------------------------------------------------------------------------------------------------
 type XMLRelease struct {
-	ReleaseID         string        `xml:"Release>ID"`
-	ReleaseName       string        `xml:"Release>Name"`
-	ReleaseType       string        `xml:"Release>Type"`
-	ReleaseScreenShot string        `xml:"Release>ScreenShot"`
-	XMLReleasedBy     XMLReleasedBy `xml:"Release>ReleasedBy"`
-	Credits           []XMLCredit   `xml:"Release>Credits>Credit"`
+	ReleaseID         string            `xml:"Release>ID"`
+	ReleaseName       string            `xml:"Release>Name"`
+	ReleaseType       string            `xml:"Release>Type"`
+	ReleaseScreenShot string            `xml:"Release>ScreenShot"`
+	XMLReleasedBy     XMLReleasedBy     `xml:"Release>ReleasedBy"`
+	Credits           []XMLCredit       `xml:"Release>Credits>Credit"`
+	DownloadLinks     []XMLDownloadLink `xml:"Release>DownloadLinks>DownloadLink"`
 }
 
 // Release - wydanie produkcji na csdb
@@ -106,6 +113,7 @@ type Release struct {
 	ReleaseScreenShot string
 	ReleasedBy        []string
 	Credits           []string
+	DownloadLinks     []string
 }
 
 var releases []Release
@@ -587,7 +595,7 @@ func ReadLatestReleasesThread() {
 
 			// fmt.Println("Odebrano: ", latestReleases)
 			// fmt.Println("===================================")
-			fmt.Println("Odebrano listę ostatnich releases...")
+			log.Println("Odebrano listę ostatnich releases...")
 			// fmt.Println("===================================")
 
 			foundNewReleases = 0
@@ -637,6 +645,7 @@ func ReadLatestReleasesThread() {
 						}
 					}
 
+					// TODO zrobić update tych info (ktoś mógł uzupełnić potem dane lub pliki)
 					// Jeżeli znaleźliśmy to sprawdzamy typ i dodajemy
 					//
 					if !found && typeOK {
@@ -700,22 +709,41 @@ func ReadLatestReleasesThread() {
 						}
 						// fmt.Println("===================================")
 
-						if firstRun {
-							releases = append(releases, newRelease)
-						} else {
-							releases = insertRelease(releases, newRelease, 0)
+						// Linki dościągnięcia
+						// Najpierw SIDy
+
+						for _, link := range entry.DownloadLinks {
+							if strings.Contains(link.Link, ".sid") {
+								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							}
+						}
+						// Potem PRGs
+						for _, link := range entry.DownloadLinks {
+							if strings.Contains(link.Link, ".prg") {
+								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							}
+						}
+
+						// Dodajemy new release
+						// ale tylko jeżeli mamy niezbędne info o produkcji
+						if len(newRelease.DownloadLinks) > 0 {
+							if firstRun {
+								releases = append(releases, newRelease)
+							} else {
+								releases = insertRelease(releases, newRelease, 0)
+							}
 						}
 					}
 				} else {
-					fmt.Println("Błąd komunikacji z csdb.dk")
+					log.Println("Błąd komunikacji z csdb.dk")
 				}
 			}
 
 		} else {
-			fmt.Println("Błąd komunikacji z csdb.dk")
+			log.Println("Błąd komunikacji z csdb.dk")
 		}
 
-		fmt.Println("Found", foundNewReleases, "new music releases.")
+		log.Println("Found", foundNewReleases, "new music releases.")
 		for _, rel := range releases {
 			fmt.Println(rel)
 		}
