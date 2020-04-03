@@ -1679,3 +1679,210 @@
 [GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
 [GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
 [GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio/:player     --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio/:player     --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio/:player     --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio/:player     --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio/:player     --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio/:player     --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio/:player     --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio/:player     --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio/:player     --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)

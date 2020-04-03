@@ -36,7 +36,6 @@ import (
 	// "code.google.com/p/go-charset/charset"
 	// _ "code.google.com/p/go-charset/data" // Import charset configuration files
 	"github.com/gin-gonic/gin"
-	"golang.org/x/text/encoding/charmap"
 )
 
 // GlobalFileCnt - numer pliku
@@ -516,22 +515,24 @@ type Release struct {
 // makeCharsetReader - decode reader
 // ================================================================================================
 func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {
-	if charset == "ISO-8859-1" {
-		// Windows-1252 is a superset of ISO-8859-1, so should do here
-		return charmap.Windows1252.NewDecoder().Reader(input), nil
-	}
-	return nil, fmt.Errorf("Unknown charset: %s", charset)
+	return input, nil
+
+	// if charset == "ISO-8859-1" {
+	// 	// Windows-1252 is a superset of ISO-8859-1, so should do here
+	// 	return charmap.Windows1252.NewDecoder().Reader(input), nil
+	// }
+	// return nil, fmt.Errorf("Unknown charset: %s", charset)
 }
 
-// toUtf8 - konwersja kodowania
-// ================================================================================================
-func toUtf8(inputbuf []byte) string {
-	buf := make([]rune, len(inputbuf))
-	for i, b := range inputbuf {
-		buf[i] = rune(b)
-	}
-	return string(buf)
-}
+// // toUtf8 - konwersja kodowania
+// // ================================================================================================
+// func toUtf8(inputbuf []byte) string {
+// 	buf := make([]rune, len(inputbuf))
+// 	for i, b := range inputbuf {
+// 		buf[i] = rune(b)
+// 	}
+// 	return string(buf)
+// }
 
 // ReadLatestReleasesThread - Wątek odczygtujący dane z csdb
 // ================================================================================================
@@ -610,10 +611,22 @@ func ReadLatestReleasesThread() {
 				for _, credit := range entry.Credits {
 
 					if credit.Handle.Handle == "" {
+						found := false
 						for _, releaseHandle := range entry.ReleasedBy.Handle {
-							if releaseHandle.ID == credit.Handle.ID {
+							if releaseHandle.ID == credit.Handle.ID && releaseHandle.Handle != "" {
 								fmt.Println(credit.CreditType + ": " + releaseHandle.Handle + " [" + releaseHandle.ID + "]")
+								found = true
+								break
 							}
+						}
+						if !found {
+							for _, releaseHandle := range entry.Credits {
+								if releaseHandle.Handle.ID == credit.Handle.ID && releaseHandle.Handle.Handle != "" {
+									fmt.Println(credit.CreditType + ": " + releaseHandle.Handle.Handle + " [" + releaseHandle.Handle.ID + "]")
+									break
+								}
+							}
+
 						}
 					} else {
 						fmt.Println(credit.CreditType + ": " + credit.Handle.Handle + " [" + credit.Handle.ID + "]")

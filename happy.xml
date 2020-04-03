@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSDbData><Release><ID>189492</ID>
+<Name>The Happy Vaccine</Name>
+<Type>C64 Music</Type>
+<ReleaseDay>31</ReleaseDay>
+<ReleaseMonth>3</ReleaseMonth>
+<ReleaseYear>2020</ReleaseYear>
+<ReleasedAt><Event><ID>2939</ID>
+<Name>2020 Quarantine Emotional Music Compo</Name>
+<EventType>Standalone Compo</EventType>
+<StartDay>23</StartDay>
+<StartMonth>3</StartMonth>
+<StartYear>2020</StartYear>
+<EndDay>30</EndDay>
+<EndMonth>4</EndMonth>
+<EndYear>2020</EndYear>
+</Event>
+</ReleasedAt>
+<Achievement><Compo>C64 Music</Compo>
+</Achievement>
+<Rating>7</Rating>
+<ScreenShot>https://csdb.dk/gfx/releases/189000/189492.png</ScreenShot>
+<ReleasedBy><Group><ID>9974</ID>
+<Name>Latex</Name>
+<Short>LTX</Short>
+<Trivia>[img]http://ltx.zone/latexoo8-logo-csdb.png[/IMG]
+
+Was mostly active on Amiga in the 90's, also made a few productions on PC.
+
+Started producing C64 stuff in 2019, and are now mostly active on C64.</Trivia>
+<BaseCountry>Sweden</BaseCountry>
+<FoundYear>1996</FoundYear>
+<Website>https://ltx.zone</Website>
+<Grouptypes><Grouptype>Demo Group</Grouptype>
+</Grouptypes>
+</Group>
+</ReleasedBy>
+<Credits><Credit><CreditType>Music</CreditType>
+<Handle><ID>30871</ID>
+<Handle>Båtsman</Handle>
+<AKA>Batsman, Boatzman</AKA>
+<Scener><ID>27810</ID>
+<Country>Sweden</Country>
+<Handles><Handle><ID>30871</ID>
+</Handle>
+</Handles>
+</Scener>
+</Handle>
+</Credit>
+</Credits>
+<DownloadLinks><DownloadLink><Link>http://csdb.dk/getinternalfile.php/197055/ltx-the_happy_vaccine.sid</Link>
+<CounterLink>https://csdb.dk/release/download.php?id=234586</CounterLink>
+<Downloads>53</Downloads>
+<Status>Ok</Status>
+</DownloadLink>
+<DownloadLink><Link>http://csdb.dk/getinternalfile.php/197054/ltx-the_happy_vaccine.prg</Link>
+<CounterLink>https://csdb.dk/release/download.php?id=234585</CounterLink>
+<Downloads>41</Downloads>
+<Status>Ok</Status>
+</DownloadLink>
+</DownloadLinks>
+<Comments><UserComment><CSDbUser><ID>6917</ID>
+<Login>Båtsman</Login>
+<RegisteredDate>1970-01-01T01:00:00+01:00</RegisteredDate>
+<CSDbEntry><Handle><ID>30871</ID>
+</Handle>
+</CSDbEntry>
+</CSDbUser>
+<Date>01.04.2020</Date>
+<Text>Thanks Smasher! :D</Text>
+</UserComment>
+<UserComment><CSDbUser><ID>1118</ID>
+<Login>smr</Login>
+<Handle>ZeSmasher</Handle>
+<RegisteredDate>1970-01-01T01:00:00+01:00</RegisteredDate>
+<CSDbEntry><Handle><ID>941</ID>
+<Handle>Smasher</Handle>
+<AKA>Ze Smasher</AKA>
+<Scener><ID>925</ID>
+<Country>Switzerland</Country>
+<Handles><Handle><ID>941</ID>
+</Handle>
+</Handles>
+</Scener>
+</Handle>
+</CSDbEntry>
+</CSDbUser>
+<Date>01.04.2020</Date>
+<Text>cool tune, my homonym!</Text>
+</UserComment>
+</Comments>
+</Release>
+<script/></CSDbData>
