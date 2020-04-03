@@ -43,6 +43,73 @@ import (
 var GlobalFileCnt int
 var posted bool
 
+// RssItem - pojednyczy wpis w XML
+// ------------------------------------------------------------------------------------------------
+type RssItem struct {
+	Title       string `xml:"title"`
+	Link        string `xml:"link"`
+	Description string `xml:"description"`
+	GUID        string `xml:"guid"`
+	PubDate     string `xml:"pubDate"`
+}
+
+// XMLRssFeed - tabela XML
+// ------------------------------------------------------------------------------------------------
+type XMLRssFeed struct {
+	Items []RssItem `xml:"channel>item"`
+}
+
+// XMLHandle - kto jest autorem wydał
+// ------------------------------------------------------------------------------------------------
+type XMLHandle struct {
+	ID        string `xml:"ID"`
+	XMLHandle string `xml:"Handle"`
+}
+
+// XMLGroup - kto jest autorem wydał
+// ------------------------------------------------------------------------------------------------
+type XMLGroup struct {
+	ID   string `xml:"ID"`
+	Name string `xml:"Name"`
+}
+
+// XMLReleasedBy - kto wydał
+// ------------------------------------------------------------------------------------------------
+type XMLReleasedBy struct {
+	XMLHandle []XMLHandle `xml:"Handle"`
+	XMLGroup  []XMLGroup  `xml:"Group"`
+}
+
+// XMLCredit - XMLCredit za produkcję
+// ------------------------------------------------------------------------------------------------
+type XMLCredit struct {
+	CreditType string    `xml:"CreditType"`
+	XMLHandle  XMLHandle `xml:"Handle"`
+}
+
+// XMLRelease - wydanie produkcji na csdb
+// ------------------------------------------------------------------------------------------------
+type XMLRelease struct {
+	ReleaseID         string        `xml:"Release>ID"`
+	ReleaseName       string        `xml:"Release>Name"`
+	ReleaseType       string        `xml:"Release>Type"`
+	ReleaseScreenShot string        `xml:"Release>ScreenShot"`
+	XMLReleasedBy     XMLReleasedBy `xml:"Release>ReleasedBy"`
+	Credits           []XMLCredit   `xml:"Release>Credits>Credit"`
+}
+
+// Release - wydanie produkcji na csdb
+// ------------------------------------------------------------------------------------------------
+type Release struct {
+	ReleaseID         int
+	ReleaseName       string
+	ReleaseScreenShot string
+	ReleasedBy        []string
+	Credits           []string
+}
+
+var releases []Release
+
 // fileExists - sprawdzenie czy plik istnieje
 // ================================================================================================
 func fileExists(filename string) bool {
@@ -457,61 +524,6 @@ func Options(c *gin.Context) {
 	}
 }
 
-// RssItem - pojednyczy wpis w XML
-// ================================================================================================
-type RssItem struct {
-	Title       string `xml:"title"`
-	Link        string `xml:"link"`
-	Description string `xml:"description"`
-	GUID        string `xml:"guid"`
-	PubDate     string `xml:"pubDate"`
-}
-
-// RssFeed - tabela XML
-// ================================================================================================
-type RssFeed struct {
-	Items []RssItem `xml:"channel>item"`
-}
-
-// Handle - kto jest autorem wydał
-// ================================================================================================
-type Handle struct {
-	ID     string `xml:"ID"`
-	Handle string `xml:"Handle"`
-}
-
-// Group - kto jest autorem wydał
-// ================================================================================================
-type Group struct {
-	ID   string `xml:"ID"`
-	Name string `xml:"Name"`
-}
-
-// ReleasedBy - kto wydał
-// ================================================================================================
-type ReleasedBy struct {
-	Handle []Handle `xml:"Handle"`
-	Group  []Group  `xml:"Group"`
-}
-
-// Credit - Credit za produkcję
-// ================================================================================================
-type Credit struct {
-	CreditType string `xml:"CreditType"`
-	Handle     Handle `xml:"Handle"`
-}
-
-// Release - wydanie produkcji na csdb
-// ================================================================================================
-type Release struct {
-	ReleaseID         string     `xml:"Release>ID"`
-	ReleaseName       string     `xml:"Release>Name"`
-	ReleaseType       string     `xml:"Release>Type"`
-	ReleaseScreenShot string     `xml:"Release>ScreenShot"`
-	ReleasedBy        ReleasedBy `xml:"Release>ReleasedBy"`
-	Credits           []Credit   `xml:"Release>Credits>Credit"`
-}
-
 // makeCharsetReader - decode reader
 // ================================================================================================
 func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {
@@ -555,7 +567,7 @@ func ReadLatestReleasesThread() {
 
 		// Przerobienie na strukturę
 
-		var latestReleases RssFeed
+		var latestReleases XMLRssFeed
 		reader := bytes.NewReader(body)
 		decoder := xml.NewDecoder(reader)
 		decoder.CharsetReader = makeCharsetReader
@@ -587,57 +599,89 @@ func ReadLatestReleasesThread() {
 
 				// Przerobienie na strukturę
 
-				var entry Release
+				var entry XMLRelease
 				reader := bytes.NewReader(body)
 				decoder := xml.NewDecoder(reader)
 				decoder.CharsetReader = makeCharsetReader
 				err = decoder.Decode(&entry)
 				ErrCheck(err)
 
-				// var entry Release
+				// var entry XMLRelease
 				// err = xml.Unmarshal([]byte(body), &entry)
 				// ErrCheck(err)
 
 				fmt.Println("Nazwa:  ", entry.ReleaseName)
 				fmt.Println("ID:     ", entry.ReleaseID)
 				fmt.Println("Typ:    ", entry.ReleaseType)
-				for _, group := range entry.ReleasedBy.Group {
-					fmt.Println("Group:  ", group.Name)
+				for _, group := range entry.XMLReleasedBy.XMLGroup {
+					fmt.Println("XMLGroup:  ", group.Name)
 				}
-				for _, handle := range entry.ReleasedBy.Handle {
-					fmt.Println("Handle: ", handle.Handle)
+				for _, handle := range entry.XMLReleasedBy.XMLHandle {
+					fmt.Println("XMLHandle: ", handle.XMLHandle)
 				}
 				fmt.Println("-----------------------------------")
 				for _, credit := range entry.Credits {
 
-					if credit.Handle.Handle == "" {
+					if credit.XMLHandle.XMLHandle == "" {
 						found := false
-						for _, releaseHandle := range entry.ReleasedBy.Handle {
-							if releaseHandle.ID == credit.Handle.ID && releaseHandle.Handle != "" {
-								fmt.Println(credit.CreditType + ": " + releaseHandle.Handle + " [" + releaseHandle.ID + "]")
+						for _, releaseHandle := range entry.XMLReleasedBy.XMLHandle {
+							if releaseHandle.ID == credit.XMLHandle.ID && releaseHandle.XMLHandle != "" {
+								fmt.Println(credit.CreditType + ": " + releaseHandle.XMLHandle + " [" + releaseHandle.ID + "]")
 								found = true
 								break
 							}
 						}
 						if !found {
 							for _, releaseHandle := range entry.Credits {
-								if releaseHandle.Handle.ID == credit.Handle.ID && releaseHandle.Handle.Handle != "" {
-									fmt.Println(credit.CreditType + ": " + releaseHandle.Handle.Handle + " [" + releaseHandle.Handle.ID + "]")
+								if releaseHandle.XMLHandle.ID == credit.XMLHandle.ID && releaseHandle.XMLHandle.XMLHandle != "" {
+									fmt.Println(credit.CreditType + ": " + releaseHandle.XMLHandle.XMLHandle + " [" + releaseHandle.XMLHandle.ID + "]")
 									break
 								}
 							}
-
 						}
 					} else {
-						fmt.Println(credit.CreditType + ": " + credit.Handle.Handle + " [" + credit.Handle.ID + "]")
+						fmt.Println(credit.CreditType + ": " + credit.XMLHandle.XMLHandle + " [" + credit.XMLHandle.ID + "]")
 					}
 				}
 				fmt.Println("===================================")
 
-				// ReleaseType       string `xml:"CSDbData>Release>Type"`
-				// ReleaseScreenShot string `xml:"CSDbData>Release>ScreenShot"`
-				// ReleasedByGroup   string `xml:"CSDbData>Release>ReleasedBy>Group"`
-				// ReleasedByHandle  string `xml:"CSDbData>Release>ReleasedBy>Handle"`
+				// Szukamy takiego release w naszej bazie
+				//
+				// Release - wydanie produkcji na csdb
+				// // ------------------------------------------------------------------------------------------------
+				// type Release struct {
+				// 	ReleaseID         int
+				// 	ReleaseName       string
+				// 	ReleaseScreenShot string
+				// 	ReleasedBy        []string
+				// 	Credits           []string
+				// }
+
+				// var releases []Release
+
+				var relTypesAllowed = [...]string{"C64 Music", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo", "C128 Release"}
+				found := false
+				for _, rel := range releases {
+					id, _ := strconv.Atoi(entry.ReleaseID)
+					if rel.ReleaseID == id {
+						found = true
+					}
+				}
+				typeOK := false
+				for _, relType := range relTypesAllowed {
+					if relType == entry.ReleaseType {
+						typeOK = true
+						break
+					}
+				}
+				if !found && typeOK {
+					var newRelease Release
+					id, _ := strconv.Atoi(entry.ReleaseID)
+					newRelease.ReleaseID = id
+					newRelease.ReleaseName = entry.ReleaseName
+					newRelease.ReleaseScreenShot = entry.ReleaseScreenShot
+					releases = append(releases, newRelease)
+				}
 
 			} else {
 				fmt.Println("Błąd komunikacji z csdb.dk")
@@ -648,6 +692,11 @@ func ReadLatestReleasesThread() {
 		fmt.Println("Błąd komunikacji z csdb.dk")
 	}
 
+	fmt.Println()
+	fmt.Println("***********************************")
+	for _, rel := range releases {
+		fmt.Println("Name: ", rel.ReleaseName)
+	}
 	//
 	// SLEEP
 	// ----------------------------------------------------------------------------------------
