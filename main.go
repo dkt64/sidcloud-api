@@ -31,6 +31,7 @@ import (
 	"runtime"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	// "code.google.com/p/go-charset/charset"
@@ -116,6 +117,8 @@ type Release struct {
 	DownloadLinks     []string
 }
 
+// releases - glówna i globalna tablica z aktualnymi produkcjami
+// ================================================================================================
 var releases []Release
 
 // fileExists - sprawdzenie czy plik istnieje
@@ -207,19 +210,19 @@ func DownloadFile(filepath string, url string) error {
 func CSDBGetLatestReleases(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
 
-	resp, errGet := http.Get("https://csdb.dk/rss/latestreleases.php")
-	ErrCheck(errGet)
+	// resp, errGet := http.Get("https://csdb.dk/rss/latestreleases.php")
+	// ErrCheck(errGet)
 
-	data, errRead := ioutil.ReadAll(resp.Body)
-	ErrCheck(errRead)
+	// data, errRead := ioutil.ReadAll(resp.Body)
+	// ErrCheck(errRead)
 
-	dataString := string(data)
+	// dataString := string(data)
 
 	// Info o wejściu do GET
 	log.Println("CSDBGetLatestReleases()")
 	// log.Println(dataString)
 
-	c.JSON(http.StatusOK, dataString)
+	c.JSON(http.StatusOK, releases)
 }
 
 // CSDBGetRelease - ostatnie release'y
@@ -227,21 +230,21 @@ func CSDBGetLatestReleases(c *gin.Context) {
 func CSDBGetRelease(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
 
-	id := c.Query("id")
+	id, _ := strconv.Atoi(c.Query("id"))
 
-	resp, errGet := http.Get("https://csdb.dk/webservice/?type=release&id=" + id)
-	ErrCheck(errGet)
+	// resp, errGet := http.Get("https://csdb.dk/webservice/?type=release&id=" + id)
+	// ErrCheck(errGet)
 
-	data, errRead := ioutil.ReadAll(resp.Body)
-	ErrCheck(errRead)
+	// data, errRead := ioutil.ReadAll(resp.Body)
+	// ErrCheck(errRead)
 
-	dataString := string(data)
+	// dataString := string(data)
 
 	// Info o wejściu do GET
-	log.Println("CSDBGetRelease id=" + id)
+	log.Println("CSDBGetRelease() nr ", id)
 	// log.Println(dataString)
 
-	c.JSON(http.StatusOK, dataString)
+	c.JSON(http.StatusOK, releases[id])
 }
 
 // AudioGet - granie utworu
@@ -568,9 +571,8 @@ func ReadLatestReleasesThread() {
 		fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Koniec watku ScannerThread !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 	}()
 
-	netClient := &http.Client{Timeout: time.Second * 5}
+	netClient := &http.Client{Timeout: time.Second * 10}
 
-	firstRun := true
 	var foundNewReleases int
 
 	for {
@@ -599,6 +601,8 @@ func ReadLatestReleasesThread() {
 			// fmt.Println("===================================")
 
 			foundNewReleases = 0
+
+			var releasesTemp []Release
 
 			for index := 0; index < len(latestReleases.Items); index++ {
 				rssItem := latestReleases.Items[index]
@@ -631,7 +635,7 @@ func ReadLatestReleasesThread() {
 
 					var relTypesAllowed = [...]string{"C64 Music", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo", "C128 Release"}
 					found := false
-					for _, rel := range releases {
+					for _, rel := range releasesTemp {
 						id, _ := strconv.Atoi(entry.ReleaseID)
 						if rel.ReleaseID == id {
 							found = true
@@ -649,8 +653,6 @@ func ReadLatestReleasesThread() {
 					// Jeżeli znaleźliśmy to sprawdzamy typ i dodajemy
 					//
 					if !found && typeOK {
-
-						foundNewReleases++
 
 						// Tworzymy nowy obiekt release który dodamy do slice
 						//
@@ -727,11 +729,8 @@ func ReadLatestReleasesThread() {
 						// Dodajemy new release
 						// ale tylko jeżeli mamy niezbędne info o produkcji
 						if len(newRelease.DownloadLinks) > 0 {
-							if firstRun {
-								releases = append(releases, newRelease)
-							} else {
-								releases = insertRelease(releases, newRelease, 0)
-							}
+							releasesTemp = append(releasesTemp, newRelease)
+							foundNewReleases++
 						}
 					}
 				} else {
@@ -739,16 +738,25 @@ func ReadLatestReleasesThread() {
 				}
 			}
 
+			// Wyświetlenie danych
+			log.Println("Found", foundNewReleases, "new music releases.")
+			for _, rel := range releasesTemp {
+				// fmt.Println()
+				// fmt.Println(rel)
+				log.Println(rel)
+			}
+			fmt.Println("===============================================")
+
+			var mutex = &sync.Mutex{}
+
+			mutex.Lock()
+			releases = releasesTemp
+			mutex.Unlock()
+
 		} else {
 			log.Println("Błąd komunikacji z csdb.dk")
 		}
 
-		log.Println("Found", foundNewReleases, "new music releases.")
-		for _, rel := range releases {
-			fmt.Println(rel)
-		}
-
-		firstRun = false
 		// SLEEP
 		// ----------------------------------------------------------------------------------------
 		time.Sleep(60 * time.Second)
