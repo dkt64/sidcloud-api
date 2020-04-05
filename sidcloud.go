@@ -770,7 +770,7 @@ func ReadLatestReleasesThread() {
 
 		// SLEEP
 		// ----------------------------------------------------------------------------------------
-		time.Sleep(60 * time.Second)
+		time.Sleep(300 * time.Second)
 	}
 
 }
