@@ -1,0 +1,119 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio/:player     --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/04/03 - 20:12:19 | 200 |     66.0266ms |             ::1 | GET      /
+[GIN] 2020/04/03 - 20:12:19 | 200 |     10.9998ms |             ::1 | GET      /css/app.15d9edd8.css
+[GIN] 2020/04/03 - 20:12:19 | 200 |     24.9973ms |             ::1 | GET      /js/app.bfb4e681.js
+[GIN] 2020/04/03 - 20:12:19 | 200 |     78.9973ms |             ::1 | GET      /js/chunk-vendors.2c8a644d.js
+[GIN] 2020/04/03 - 20:12:19 | 200 |       999.6µs |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/03 - 20:12:24 | 200 |     13.9961ms |             ::1 | GET      /js/app.bfb4e681.js.map
+[GIN] 2020/04/03 - 20:12:42 | 200 |            0s |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/03 - 20:17:57 | 200 |            0s |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/03 - 20:18:00 | 200 |            0s |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/03 - 20:18:01 | 200 |      1.0025ms |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/03 - 20:47:36 | 200 |            0s |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/03 - 20:47:37 | 200 |            0s |             ::1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/03 - 20:47:37 | 200 |            0s |             ::1 | GET      /api/v1/csdb_releases
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /js/*filepath             --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] GET    /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /                         --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /sign.png                 --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] HEAD   /sign.png                 --> github.com/gin-gonic/gin.(*RouterGroup).StaticFile.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/audio/:player     --> main.AudioGet (4 handlers)
+[GIN-debug] POST   /api/v1/audio             --> main.AudioPost (4 handlers)
+[GIN-debug] PUT    /api/v1/audio             --> main.AudioPut (4 handlers)
+[GIN-debug] GET    /api/v1/csdb_releases     --> main.CSDBGetLatestReleases (4 handlers)
+[GIN-debug] POST   /api/v1/csdb_release      --> main.CSDBGetRelease (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8090
+[GIN] 2020/04/05 - 20:40:45 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 20:41:24 | 200 |      1.0007ms |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 20:44:30 | 200 |      1.0016ms |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 20:44:44 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 20:44:47 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 20:49:26 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 20:49:57 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 20:50:32 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 20:54:16 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 20:54:41 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 20:57:57 | 200 |       998.3µs |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 20:58:19 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:01:09 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:01:09 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:04:00 | 200 |       999.7µs |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:04:34 | 200 |      1.0002ms |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:04:34 | 200 |      1.0016ms |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:05:09 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:05:16 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:05:29 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:11:39 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:14:58 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:17:00 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:17:01 | 200 |       998.5µs |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:17:01 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:17:01 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:20:53 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:21:10 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:22:01 | 200 |       999.3µs |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:24:23 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:25:09 | 200 |      1.9673ms |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:25:46 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:26:06 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:27:41 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:28:08 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:29:23 | 200 |       994.3µs |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:29:23 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:29:23 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:29:23 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:29:33 | 200 |         999µs |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:30:17 | 200 |       951.3µs |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:31:12 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:32:47 | 200 |      1.0024ms |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:33:18 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:33:38 | 200 |           1ms |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:34:19 | 200 |       995.7µs |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:34:31 | 200 |       999.5µs |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:34:42 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:36:58 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:38:26 | 200 |      1.0054ms |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:39:05 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:39:09 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:39:36 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:42:06 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:42:13 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases
+[GIN] 2020/04/05 - 21:43:00 | 200 |            0s |       127.0.0.1 | GET      /api/v1/csdb_releases

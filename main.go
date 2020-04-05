@@ -39,6 +39,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+var mutex = &sync.Mutex{}
+
 // GlobalFileCnt - numer pliku
 // ================================================================================================
 var GlobalFileCnt int
@@ -222,7 +224,11 @@ func CSDBGetLatestReleases(c *gin.Context) {
 	log.Println("CSDBGetLatestReleases()")
 	// log.Println(dataString)
 
-	c.JSON(http.StatusOK, releases)
+	mutex.Lock()
+	releasesTemp := releases
+	mutex.Unlock()
+
+	c.JSON(http.StatusOK, releasesTemp)
 }
 
 // CSDBGetRelease - ostatnie release'y
@@ -244,7 +250,11 @@ func CSDBGetRelease(c *gin.Context) {
 	log.Println("CSDBGetRelease() nr ", id)
 	// log.Println(dataString)
 
-	c.JSON(http.StatusOK, releases[id])
+	mutex.Lock()
+	releasesTemp := releases
+	mutex.Unlock()
+
+	c.JSON(http.StatusOK, releasesTemp[id])
 }
 
 // AudioGet - granie utworu
@@ -740,14 +750,15 @@ func ReadLatestReleasesThread() {
 
 			// Wyświetlenie danych
 			log.Println("Found", foundNewReleases, "new music releases.")
-			for _, rel := range releasesTemp {
-				// fmt.Println()
-				// fmt.Println(rel)
-				log.Println(rel)
-			}
-			fmt.Println("===============================================")
+			// for _, rel := range releasesTemp {
+			// 	// fmt.Println()
+			// 	// fmt.Println(rel)
+			// 	log.Println(rel)
+			// }
+			// fmt.Println("===============================================")
 
-			var mutex = &sync.Mutex{}
+			// Przepisanie do zmiennej globalnej
+			//
 
 			mutex.Lock()
 			releases = releasesTemp
@@ -797,6 +808,7 @@ func main() {
 
 	r.StaticFile("/", "./dist/index.html")
 	r.StaticFile("favicon.ico", "./dist/favicon.ico")
+	r.StaticFile("sign.png", "./dist/sign.png")
 
 	r.GET("/api/v1/audio/:player", AudioGet)
 	r.POST("/api/v1/audio", AudioPost)
