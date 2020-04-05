@@ -803,6 +803,7 @@ func main() {
 
 	r.LoadHTMLGlob("./dist/*.html")
 
+	r.StaticFS("/fonts", http.Dir("./dist/fonts"))
 	r.StaticFS("/css", http.Dir("./dist/css"))
 	r.StaticFS("/js", http.Dir("./dist/js"))
 
