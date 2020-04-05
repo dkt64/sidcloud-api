@@ -1,6 +1,8 @@
 /vendor
+/dist_old
 
 *.wav
 *.au
 *.sid
 *.prg
+*.log
