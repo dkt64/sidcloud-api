@@ -19,3 +19,5 @@ dkt: info z pliku SID (czas trwania)
 dkt: przes³uchiwanie kolejnych sidów z produkcji i samego sid'a
 
 dkt: czasami s³ychaæ starego zaka przy zmianie (bufor)
+
+dkt: wyciszenie na koniec i przejœcie do nastêpnego zaka
