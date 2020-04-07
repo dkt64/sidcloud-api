@@ -311,7 +311,7 @@ func AudioGet(c *gin.Context) {
 			if runtime.GOOS == "windows" {
 				cmdName = "sidplayfp/sidplayfp.exe"
 			} else {
-				cmdName = "sidplayfp" // zakładamy że jest zainstalowany
+				cmdName = "sidplayfp/sidplayfp" // zakładamy że jest zainstalowany
 			}
 
 			log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + paramName + " " + filename + ")")
@@ -851,5 +851,5 @@ func main() {
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
 	r.POST("/api/v1/csdb_release", CSDBGetRelease)
 
-	r.Run(":8080")
+	r.Run(":80")
 }

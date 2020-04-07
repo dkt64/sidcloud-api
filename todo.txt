@@ -1,0 +1,21 @@
+ged: loading status przy starcie
+ged: inna forma wyboru - listing
+ged: po wgraniu ju¿ odpowiedniej czêœci daæ mo¿liwoœæ przesuwania w utworze
+
+slajerek:
+na Safari nie slychac dzwieku
+na JS konsoli pisze Loading... i tyle
+na Vivaldi slychac dzwiek, ale jak sie wybierze kolejny utwor
+to na chwile startuje od nowa ten co byl aktualnie odtwarzany
+nastepnie sie pauzuje po chwili ~1s i dopiero wtedy cisza i odpala sie ten co wybralem
+
+ged:
+Byloby fajnie gryby klikniecie na obrazek odpalalo muze i dodawalo ramke wokol tego obrazka (ze jest "aktywna") a ponowne klikniecie dawalo STOP i jakis komentarz "STOPPED-klick to cont" lub jeszcze lepiej drugi zestaw guzikow pod obrazkiem do START/STOP i CONT.
+
+dkt: skalowanie obrazka gdy jest w innej rozdzielczoœci
+
+dkt: info z pliku SID (czas trwania)
+
+dkt: przes³uchiwanie kolejnych sidów z produkcji i samego sid'a
+
+dkt: czasami s³ychaæ starego zaka przy zmianie (bufor)
