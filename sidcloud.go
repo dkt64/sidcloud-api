@@ -251,8 +251,10 @@ func CSDBGetRelease(c *gin.Context) {
 func AudioGet(c *gin.Context) {
 
 	volDown := false
-	const maxOffset int64 = 50000000
-	var vol float64 = 1.25
+	const maxOffset int64 = 50000000 // ~ 10 min
+	// const maxOffset int64 = 5000000 // ~ 1 min
+	const maxVol float64 = 1.25
+	var vol float64 = maxVol
 	var loop = true
 
 	if posted {
@@ -315,19 +317,17 @@ func AudioGet(c *gin.Context) {
 			defer func() {
 				loop = false
 
-				log.Println("Usuwam pliki")
-				log.Println(filenameSID)
-				log.Println(filenamePRG)
-				log.Println(filenameWAV)
 				var err error
-				err = cmd.Process.Release()
-				ErrCheck(err)
 				err = cmd.Process.Kill()
 				ErrCheck(err)
+				log.Println("Usuwam pliki")
+				log.Println(filenameSID)
 				err = os.Remove(filenameSID)
 				ErrCheck(err)
+				log.Println(filenamePRG)
 				err = os.Remove(filenamePRG)
 				ErrCheck(err)
+				log.Println(filenameWAV)
 				err = os.Remove(filenameWAV)
 				ErrCheck(err)
 			}()
@@ -363,22 +363,17 @@ func AudioGet(c *gin.Context) {
 			defer func() {
 				loop = false
 
-				log.Println("Usuwam pliki")
-				// Czekamy 1 sekundę aż pętla główna się zakończy
-				time.Sleep(1000 * time.Millisecond)
-				log.Println(filenameSID)
-				log.Println(filenamePRG)
-				log.Println(filenameWAV)
 				var err error
-				err = cmd.Process.Release()
-				ErrCheck(err)
-				// syscall.Kill(-cmd.Process.Pid, syscall.SIGKILL)
 				err = cmd.Process.Kill()
 				ErrCheck(err)
+				log.Println("Usuwam pliki")
+				log.Println(filenameSID)
 				err = os.Remove(filenameSID)
 				ErrCheck(err)
+				log.Println(filenamePRG)
 				err = os.Remove(filenamePRG)
 				ErrCheck(err)
+				log.Println(filenameWAV)
 				err = os.Remove(filenameWAV)
 				ErrCheck(err)
 			}()
@@ -417,59 +412,58 @@ func AudioGet(c *gin.Context) {
 			// Jeżeli stracimy kontekst to wychodzimy
 			if c.Request.Context() == nil {
 				log.Println("ERR! c.Request.Context() == nil")
-				break
-			}
-
-			// Otwieraamy plik - bez sprawdzania błędów
-			file, _ := os.Open(filenameWAV)
-			// ErrCheck(errOpen)
-
-			// Czytamy z pliku kolejne dane do bufora
-			readed, _ := file.ReadAt(p, offset)
-			// ErrCheck(err)
-			file.Close()
-
-			// Jeżeli coś odczytaliśmy to wysyłamy
-			if readed > 0 {
-
-				if volDown && vol > 0.0 {
-					vol = vol - (float64(offset-maxOffset) / 88.494 * 0.0001)
-					if vol < 0 {
-						vol = 0.0
-						loop = false
-						// break
-					}
-				}
-
-				if offset > 44 {
-					// log.Print("readed " + strconv.Itoa(readed))
-					var ix int
-					for ix = 0; ix < readed; ix = ix + 2 {
-						var valInt1 int16
-						valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
-
-						var valFloat float64
-						valFloat = float64(valInt1) * vol
-						if valFloat > 32766 {
-							valFloat = 32766
-						}
-						if valFloat < -32766 {
-							valFloat = -32766
-						}
-						var valInt2 int16
-						valInt2 = int16(math.Round(valFloat))
-						var valInt3 uint16
-						valInt3 = uint16(valInt2)
-
-						p[ix] = byte(valInt3 & 0xff)
-						p[ix+1] = byte((valInt3 & 0xff00) >> 8)
-					}
-				}
-				c.Data(http.StatusOK, "audio/wav", p)
-				offset += int64(readed)
-				// log.Print(".")
+				loop = false
 			} else {
 
+				// Otwieraamy plik - bez sprawdzania błędów
+				file, _ := os.Open(filenameWAV)
+				// ErrCheck(errOpen)
+
+				// Czytamy z pliku kolejne dane do bufora
+				readed, _ := file.ReadAt(p, offset)
+				// ErrCheck(err)
+				file.Close()
+
+				// Jeżeli coś odczytaliśmy to wysyłamy
+				if readed > 0 {
+
+					if volDown && vol > 0.0 {
+						vol = maxVol - (float64(offset-maxOffset) / 88.494 * 0.0002)
+						if vol < 0 {
+							vol = 0.0
+							loop = false
+							// break
+						}
+					}
+
+					if offset > 44 {
+						// log.Print("readed " + strconv.Itoa(readed))
+						var ix int
+						for ix = 0; ix < readed; ix = ix + 2 {
+							var valInt1 int16
+							valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
+
+							var valFloat float64
+							valFloat = float64(valInt1) * vol
+							if valFloat > 32766 {
+								valFloat = 32766
+							}
+							if valFloat < -32766 {
+								valFloat = -32766
+							}
+							var valInt2 int16
+							valInt2 = int16(math.Round(valFloat))
+							var valInt3 uint16
+							valInt3 = uint16(valInt2)
+
+							p[ix] = byte(valInt3 & 0xff)
+							p[ix+1] = byte((valInt3 & 0xff00) >> 8)
+						}
+					}
+					c.Data(http.StatusOK, "audio/wav", p)
+					offset += int64(readed)
+					// log.Print(".")
+				}
 			}
 
 		}
