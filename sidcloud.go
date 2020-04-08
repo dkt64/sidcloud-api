@@ -1,18 +1,6 @@
 // ================================================================================================
 // Sidcloud by DKT/Samar
 // ================================================================================================
-// TODO:
-// Niepoprawnie odczytuje XML
-// Android/Chrome wielokrotne GET i przerwanie pipe
-// zwracać info z SID
-// używać czasu trwania z pliku i dać możliwość ustawienia
-// wyświetlać w kontrolce poprawny czas
-// używanie ID poprzez Cookies
-// ================================================================================================
-// DONE:
-// dodać obsługę PRG
-// sprawdzać rodzaj pliku i inne błędy
-// ================================================================================================
 
 package main
 
@@ -262,6 +250,11 @@ func CSDBGetRelease(c *gin.Context) {
 // ================================================================================================
 func AudioGet(c *gin.Context) {
 
+	volDown := false
+	const maxOffset int64 = 50000000
+	var vol float64 = 1.25
+	var loop = true
+
 	if posted {
 		posted = false
 
@@ -320,11 +313,15 @@ func AudioGet(c *gin.Context) {
 			ErrCheck(err)
 
 			defer func() {
+				loop = false
+
 				log.Println("Usuwam pliki")
 				log.Println(filenameSID)
 				log.Println(filenamePRG)
 				log.Println(filenameWAV)
 				var err error
+				err = cmd.Process.Release()
+				ErrCheck(err)
 				err = cmd.Process.Kill()
 				ErrCheck(err)
 				err = os.Remove(filenameSID)
@@ -356,15 +353,6 @@ func AudioGet(c *gin.Context) {
 
 			cmd := exec.Command(cmdName, par1, par2, par3, par4, par5, par6, filenameWAV, filename)
 
-			// cmd.Stdout = &out
-			// cmd.Stderr = &stderr
-
-			// log.Println("Path   = " + cmd.Path)
-
-			// for i, arg := range cmd.Args {
-			// 	log.Println("arg[" + strconv.Itoa(i) + "]=" + arg)
-			// }
-
 			// log.Println("start cmd")
 			err := cmd.Start()
 			ErrCheck(err)
@@ -373,6 +361,8 @@ func AudioGet(c *gin.Context) {
 			// log.Println("Errors: " + stderr.String())
 
 			defer func() {
+				loop = false
+
 				log.Println("Usuwam pliki")
 				// Czekamy 1 sekundę aż pętla główna się zakończy
 				time.Sleep(1000 * time.Millisecond)
@@ -380,6 +370,9 @@ func AudioGet(c *gin.Context) {
 				log.Println(filenamePRG)
 				log.Println(filenameWAV)
 				var err error
+				err = cmd.Process.Release()
+				ErrCheck(err)
+				// syscall.Kill(-cmd.Process.Pid, syscall.SIGKILL)
 				err = cmd.Process.Kill()
 				ErrCheck(err)
 				err = os.Remove(filenameSID)
@@ -390,11 +383,6 @@ func AudioGet(c *gin.Context) {
 				ErrCheck(err)
 			}()
 		}
-
-		// Gdyby cos poszło nie tak to zamykamy sidplayfp i kasujemy pliki
-		// defer os.Remove(filenameSID)
-		// defer os.Remove(filenamePRG)
-		// defer os.Remove(filenameWAV)
 
 		// czekamy aż plik wav powstanie - dodać TIMEOUT
 		log.Println(filenameWAV + " is creating...")
@@ -413,17 +401,17 @@ func AudioGet(c *gin.Context) {
 		// Streaming LOOP...
 		// ----------------------------------------------------------------------------------------------
 
-		var loop = true
-
 		for loop {
 
 			// Wysyłamy pakiet co 500 ms
 			time.Sleep(500 * time.Millisecond)
 
 			// Jeżeli doszliśmy w pliku do 50MB to koniec
-			if offset > 50000000 {
-				log.Println("ERR! EOF (50MB).")
-				break
+			if offset > maxOffset {
+
+				// log.Println("Wyciszamy...")
+				// break
+				volDown = true
 			}
 
 			// Jeżeli stracimy kontekst to wychodzimy
@@ -436,11 +424,6 @@ func AudioGet(c *gin.Context) {
 			file, _ := os.Open(filenameWAV)
 			// ErrCheck(errOpen)
 
-			defer func() {
-				log.Println("LOOP END")
-				loop = false
-			}()
-
 			// Czytamy z pliku kolejne dane do bufora
 			readed, _ := file.ReadAt(p, offset)
 			// ErrCheck(err)
@@ -448,6 +431,15 @@ func AudioGet(c *gin.Context) {
 
 			// Jeżeli coś odczytaliśmy to wysyłamy
 			if readed > 0 {
+
+				if volDown && vol > 0.0 {
+					vol = vol - (float64(offset-maxOffset) / 88.494 * 0.0001)
+					if vol < 0 {
+						vol = 0.0
+						loop = false
+						// break
+					}
+				}
 
 				if offset > 44 {
 					// log.Print("readed " + strconv.Itoa(readed))
@@ -457,7 +449,7 @@ func AudioGet(c *gin.Context) {
 						valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
 
 						var valFloat float64
-						valFloat = float64(valInt1) * 1.25
+						valFloat = float64(valInt1) * vol
 						if valFloat > 32766 {
 							valFloat = 32766
 						}
@@ -476,6 +468,8 @@ func AudioGet(c *gin.Context) {
 				c.Data(http.StatusOK, "audio/wav", p)
 				offset += int64(readed)
 				// log.Print(".")
+			} else {
+
 			}
 
 		}

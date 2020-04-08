@@ -21,3 +21,17 @@ dkt: przes³uchiwanie kolejnych sidów z produkcji i samego sid'a
 dkt: czasami s³ychaæ starego zaka przy zmianie (bufor)
 
 dkt: wyciszenie na koniec i przejœcie do nastêpnego zaka
+
+dkt: zostaj¹ odpalone w¹tki sidplayfp (brak defer?)
+
+dkt: nie dzia³a na APPLE
+
+dkt: analiza plikow SID
+
+dkt: analiza pliku SongLengths
+
+dkt: wyœwietlaæ czas aktualny i czas trwania
+
+dkt: logowaæ obci¹¿enie
+
+dkt: nr portu jako parametr
