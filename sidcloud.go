@@ -92,6 +92,7 @@ type XMLRelease struct {
 	ReleaseName       string            `xml:"Release>Name"`
 	ReleaseType       string            `xml:"Release>Type"`
 	ReleaseScreenShot string            `xml:"Release>ScreenShot"`
+	Rating            float32           `xml:"Release>Rating"`
 	XMLReleasedBy     XMLReleasedBy     `xml:"Release>ReleasedBy"`
 	Credits           []XMLCredit       `xml:"Release>Credits>Credit"`
 	DownloadLinks     []XMLDownloadLink `xml:"Release>DownloadLinks>DownloadLink"`
@@ -103,6 +104,7 @@ type Release struct {
 	ReleaseID         int
 	ReleaseName       string
 	ReleaseScreenShot string
+	Rating            float32
 	ReleasedBy        []string
 	Credits           []string
 	DownloadLinks     []string
@@ -251,7 +253,8 @@ func CSDBGetRelease(c *gin.Context) {
 func AudioGet(c *gin.Context) {
 
 	volDown := false
-	const maxOffset int64 = 50000000 // ~ 10 min
+	// const maxOffset int64 = 50000000 // ~ 10 min
+	const maxOffset int64 = 25000000 // ~ 5 min
 	// const maxOffset int64 = 5000000 // ~ 1 min
 	const maxVol float64 = 1.25
 	var vol float64 = maxVol
@@ -298,7 +301,7 @@ func AudioGet(c *gin.Context) {
 
 			var cmdName string
 
-			czas := "-t600"
+			czas := "-t333"
 			// bits := "-p16"
 			// freq := "-f44100"
 
@@ -427,19 +430,24 @@ func AudioGet(c *gin.Context) {
 				// Jeżeli coś odczytaliśmy to wysyłamy
 				if readed > 0 {
 
-					if volDown && vol > 0.0 {
-						vol = maxVol - (float64(offset-maxOffset) / 88.494 * 0.0002)
-						if vol < 0 {
-							vol = 0.0
-							loop = false
-							// break
-						}
-					}
-
+					// Modyfikacja sampli
+					//
 					if offset > 44 {
 						// log.Print("readed " + strconv.Itoa(readed))
 						var ix int
 						for ix = 0; ix < readed; ix = ix + 2 {
+
+							// Wyciszanie
+							if volDown && vol > 0.0 {
+								vol = maxVol - (float64(offset-maxOffset+int64(ix)) / 88.494 * 0.0002)
+								if vol < 0 {
+									vol = 0.0
+									loop = false
+									// break
+								}
+							}
+
+							// Wzmocnienie głośności (domyślnie x 1.25)
 							var valInt1 int16
 							valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
 
@@ -693,6 +701,7 @@ func ReadLatestReleasesThread() {
 						newRelease.ReleaseID = id
 						newRelease.ReleaseName = entry.ReleaseName
 						newRelease.ReleaseScreenShot = entry.ReleaseScreenShot
+						newRelease.Rating = entry.Rating
 
 						// fmt.Println("Nazwa:  ", entry.ReleaseName)
 						// fmt.Println("ID:     ", entry.ReleaseID)
