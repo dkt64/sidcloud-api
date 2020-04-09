@@ -254,8 +254,9 @@ func AudioGet(c *gin.Context) {
 
 	volDown := false
 	// const maxOffset int64 = 50000000 // ~ 10 min
-	const maxOffset int64 = 25000000 // ~ 5 min
+	// const maxOffset int64 = 25000000 // ~ 5 min
 	// const maxOffset int64 = 5000000 // ~ 1 min
+	const maxOffset int64 = 44100*2*300 + 44 // = 5 min
 	const maxVol float64 = 1.25
 	var vol float64 = maxVol
 	var loop = true

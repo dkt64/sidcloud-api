@@ -1,4 +1,4 @@
-ged: loading status przy starcie
+# ged: loading status przy starcie
 ged: inna forma wyboru - listing
 ged: po wgraniu ju¿ odpowiedniej czêœci daæ mo¿liwoœæ przesuwania w utworze
 
@@ -12,7 +12,7 @@ nastepnie sie pauzuje po chwili ~1s i dopiero wtedy cisza i odpala sie ten co wy
 ged:
 Byloby fajnie gryby klikniecie na obrazek odpalalo muze i dodawalo ramke wokol tego obrazka (ze jest "aktywna") a ponowne klikniecie dawalo STOP i jakis komentarz "STOPPED-klick to cont" lub jeszcze lepiej drugi zestaw guzikow pod obrazkiem do START/STOP i CONT.
 
-dkt: skalowanie obrazka gdy jest w innej rozdzielczoœci
+# dkt: skalowanie obrazka gdy jest w innej rozdzielczoœci
 
 dkt: info z pliku SID (czas trwania)
 
@@ -20,7 +20,7 @@ dkt: przes³uchiwanie kolejnych sidów z produkcji i samego sid'a
 
 dkt: czasami s³ychaæ starego zaka przy zmianie (bufor)
 
-dkt: wyciszenie na koniec i przejœcie do nastêpnego zaka
+# dkt: wyciszenie na koniec i przejœcie do nastêpnego zaka
 
 dkt: zostaj¹ odpalone w¹tki sidplayfp (brak defer?)
 
@@ -30,7 +30,7 @@ dkt: analiza plikow SID
 
 dkt: analiza pliku SongLengths
 
-dkt: wyœwietlaæ czas aktualny i czas trwania
+# dkt: wyœwietlaæ czas aktualny i czas trwania
 
 dkt: logowaæ obci¹¿enie
 
