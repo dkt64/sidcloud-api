@@ -825,9 +825,9 @@ func main() {
 	ErrCheck(err)
 	gin.DefaultWriter = io.MultiWriter(os.Stdout, logFileGin)
 
-	log.Println("=========================================")
-	log.Println("======          APP START        ========")
-	log.Println("=========================================")
+	log.Println("==========================================")
+	log.Println("=======          APP START        ========")
+	log.Println("==========================================")
 
 	r := gin.Default()
 
