@@ -1,1 +1,0 @@
-ssh -i C:\Users\admin\.ssh\host1 root@185.157.81.123 date
