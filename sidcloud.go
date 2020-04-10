@@ -402,9 +402,6 @@ func AudioGet(c *gin.Context) {
 
 		for loop {
 
-			// Wysyłamy pakiet co 500 ms
-			time.Sleep(500 * time.Millisecond)
-
 			// Jeżeli doszliśmy w pliku do 50MB to koniec
 			if offset > maxOffset {
 
@@ -475,6 +472,8 @@ func AudioGet(c *gin.Context) {
 				}
 			}
 
+			// Wysyłamy pakiet co 500 ms
+			time.Sleep(500 * time.Millisecond)
 		}
 
 		// Feedback gdybyśmy wyszli z LOOP
