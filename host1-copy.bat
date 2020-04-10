@@ -1,0 +1,2 @@
+c:\tools\pscp -i %USERPROFILE%\.ssh\host1.ppk -r -v dist root@185.157.81.123:/root/go/src/github.com/dkt64/sidcloud-api
+c:\tools\pscp -i %USERPROFILE%\.ssh\host1.ppk sidcloud.go root@185.157.81.123:/root/go/src/github.com/dkt64/sidcloud-api

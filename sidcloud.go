@@ -33,7 +33,8 @@ var mutex = &sync.Mutex{}
 // GlobalFileCnt - numer pliku
 // ================================================================================================
 var GlobalFileCnt int
-var posted bool
+
+// var posted bool
 
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
@@ -261,231 +262,231 @@ func AudioGet(c *gin.Context) {
 	var vol float64 = maxVol
 	var loop = true
 
-	if posted {
-		posted = false
+	// if posted {
+	// 	posted = false
 
-		// Typ połączania
-		c.Header("Access-Control-Allow-Origin", "*")
-		c.Header("Connection", "Keep-Alive")
-		c.Header("Transfer-Encoding", "chunked")
+	// Typ połączania
+	c.Header("Access-Control-Allow-Origin", "*")
+	c.Header("Connection", "Keep-Alive")
+	c.Header("Transfer-Encoding", "chunked")
 
-		// Info o wejściu do GET
-		log.Println("AudioGet start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
+	// Info o wejściu do GET
+	log.Println("AudioGet start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 
-		// dir, _ := os.Getwd()
-		// log.Println("Current working dir " + dir)
+	// dir, _ := os.Getwd()
+	// log.Println("Current working dir " + dir)
 
-		// Przygotowanie nazw plików
-		filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
-		filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
-		filenamePRG := "music" + strconv.Itoa(GlobalFileCnt) + ".prg"
+	// Przygotowanie nazw plików
+	filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
+	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
+	filenamePRG := "music" + strconv.Itoa(GlobalFileCnt) + ".prg"
 
-		log.Println("WAV filename = " + filenameWAV)
+	log.Println("WAV filename = " + filenameWAV)
 
-		var filename = ""
-		if fileExists(filenameSID) {
-			filename = filenameSID
-		} else if fileExists(filenamePRG) {
-			filename = filenamePRG
-		}
-
-		// Odczytujemy parametr - typ playera
-		player := c.Param("player")
-
-		// ==============================
-		// SIDPLAYFP
-		// ==============================
-		if player == "sidplayfp" {
-
-			name := "music" + strconv.Itoa(GlobalFileCnt)
-			paramName := "-w" + name
-
-			var cmdName string
-
-			czas := "-t333"
-			// bits := "-p16"
-			// freq := "-f44100"
-
-			// Odpalenie sidplayfp
-			if runtime.GOOS == "windows" {
-				cmdName = "sidplayfp/sidplayfp.exe"
-			} else {
-				cmdName = "sidplayfp/sidplayfp" // zakładamy że jest zainstalowany
-			}
-
-			log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + paramName + " " + filename + ")")
-			cmd := exec.Command(cmdName, czas, paramName, filename)
-			err := cmd.Start()
-			ErrCheck(err)
-
-			defer func() {
-				loop = false
-
-				var err error
-				err = cmd.Process.Kill()
-				ErrCheck(err)
-				log.Println("Usuwam pliki")
-				log.Println(filenameSID)
-				err = os.Remove(filenameSID)
-				ErrCheck(err)
-				log.Println(filenamePRG)
-				err = os.Remove(filenamePRG)
-				ErrCheck(err)
-				log.Println(filenameWAV)
-				err = os.Remove(filenameWAV)
-				ErrCheck(err)
-			}()
-		}
-
-		// ==============================
-		// JSIDPLAY2
-		// ==============================
-		if player == "jsidplay2" {
-
-			par1 := "-jar"
-			par2 := "jsidplay2_console-4.1.jar"
-			par3 := "-q"
-			par4 := "-a"
-			par5 := "WAV"
-			par6 := "-r"
-
-			var cmdName string
-			cmdName = "java"
-
-			// var out bytes.Buffer
-			// var stderr bytes.Buffer
-
-			cmd := exec.Command(cmdName, par1, par2, par3, par4, par5, par6, filenameWAV, filename)
-
-			// log.Println("start cmd")
-			err := cmd.Start()
-			ErrCheck(err)
-
-			// log.Println("Result: " + out.String())
-			// log.Println("Errors: " + stderr.String())
-
-			defer func() {
-				loop = false
-
-				var err error
-				err = cmd.Process.Kill()
-				ErrCheck(err)
-				log.Println("Usuwam pliki")
-				log.Println(filenameSID)
-				err = os.Remove(filenameSID)
-				ErrCheck(err)
-				log.Println(filenamePRG)
-				err = os.Remove(filenamePRG)
-				ErrCheck(err)
-				log.Println(filenameWAV)
-				err = os.Remove(filenameWAV)
-				ErrCheck(err)
-			}()
-		}
-
-		// czekamy aż plik wav powstanie - dodać TIMEOUT
-		log.Println(filenameWAV + " is creating...")
-		for !fileExists(filenameWAV) {
-			time.Sleep(200 * time.Millisecond)
-		}
-		log.Println(filenameWAV + " created.")
-
-		// Przygotowanie bufora do streamingu
-		const bufferSize = 1024 * 64
-		var offset int64
-		p := make([]byte, bufferSize)
-
-		log.Println("Sending...")
-
-		// Streaming LOOP...
-		// ----------------------------------------------------------------------------------------------
-
-		for loop {
-
-			// Jeżeli doszliśmy w pliku do 50MB to koniec
-			if offset > maxOffset {
-
-				// log.Println("Wyciszamy...")
-				// break
-				volDown = true
-			}
-
-			// Jeżeli stracimy kontekst to wychodzimy
-			if c.Request.Context() == nil {
-				log.Println("ERR! c.Request.Context() == nil")
-				loop = false
-			} else {
-
-				// Otwieraamy plik - bez sprawdzania błędów
-				file, _ := os.Open(filenameWAV)
-				// ErrCheck(errOpen)
-
-				// Czytamy z pliku kolejne dane do bufora
-				readed, _ := file.ReadAt(p, offset)
-				// ErrCheck(err)
-				file.Close()
-
-				// Jeżeli coś odczytaliśmy to wysyłamy
-				if readed > 0 {
-
-					// Modyfikacja sampli
-					//
-					if offset > 44 {
-						// log.Print("readed " + strconv.Itoa(readed))
-						var ix int
-						for ix = 0; ix < readed; ix = ix + 2 {
-
-							// Wyciszanie
-							if volDown && vol > 0.0 {
-								vol = maxVol - (float64(offset-maxOffset+int64(ix)) / 88.494 * 0.0002)
-								if vol < 0 {
-									vol = 0.0
-									loop = false
-									// break
-								}
-							}
-
-							// Wzmocnienie głośności (domyślnie x 1.25)
-							var valInt1 int16
-							valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
-
-							var valFloat float64
-							valFloat = float64(valInt1) * vol
-							if valFloat > 32766 {
-								valFloat = 32766
-							}
-							if valFloat < -32766 {
-								valFloat = -32766
-							}
-							var valInt2 int16
-							valInt2 = int16(math.Round(valFloat))
-							var valInt3 uint16
-							valInt3 = uint16(valInt2)
-
-							p[ix] = byte(valInt3 & 0xff)
-							p[ix+1] = byte((valInt3 & 0xff00) >> 8)
-						}
-					}
-					c.Data(http.StatusOK, "audio/wav", p)
-					offset += int64(readed)
-					// log.Print(".")
-				}
-			}
-
-			// Wysyłamy pakiet co 500 ms
-			time.Sleep(500 * time.Millisecond)
-		}
-
-		// Feedback gdybyśmy wyszli z LOOP
-		c.JSON(http.StatusOK, "Loop ended.")
-		log.Println("Loop ended.")
-
-	} else {
-
-		// Przy powturzonym Get
-		c.JSON(http.StatusOK, "ERR! Repeated GET.")
-		log.Println("ERR! Repeated GET.")
+	var filename = ""
+	if fileExists(filenameSID) {
+		filename = filenameSID
+	} else if fileExists(filenamePRG) {
+		filename = filenamePRG
 	}
+
+	// Odczytujemy parametr - typ playera
+	player := c.Param("player")
+
+	// ==============================
+	// SIDPLAYFP
+	// ==============================
+	if player == "sidplayfp" {
+
+		name := "music" + strconv.Itoa(GlobalFileCnt)
+		paramName := "-w" + name
+
+		var cmdName string
+
+		czas := "-t333"
+		// bits := "-p16"
+		// freq := "-f44100"
+
+		// Odpalenie sidplayfp
+		if runtime.GOOS == "windows" {
+			cmdName = "sidplayfp/sidplayfp.exe"
+		} else {
+			cmdName = "sidplayfp/sidplayfp" // zakładamy że jest zainstalowany
+		}
+
+		log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + paramName + " " + filename + ")")
+		cmd := exec.Command(cmdName, czas, paramName, filename)
+		err := cmd.Start()
+		ErrCheck(err)
+
+		defer func() {
+			loop = false
+
+			var err error
+			err = cmd.Process.Kill()
+			ErrCheck(err)
+			log.Println("Usuwam pliki")
+			log.Println(filenameSID)
+			err = os.Remove(filenameSID)
+			ErrCheck(err)
+			log.Println(filenamePRG)
+			err = os.Remove(filenamePRG)
+			ErrCheck(err)
+			log.Println(filenameWAV)
+			err = os.Remove(filenameWAV)
+			ErrCheck(err)
+		}()
+	}
+
+	// ==============================
+	// JSIDPLAY2
+	// ==============================
+	if player == "jsidplay2" {
+
+		par1 := "-jar"
+		par2 := "jsidplay2_console-4.1.jar"
+		par3 := "-q"
+		par4 := "-a"
+		par5 := "WAV"
+		par6 := "-r"
+
+		var cmdName string
+		cmdName = "java"
+
+		// var out bytes.Buffer
+		// var stderr bytes.Buffer
+
+		cmd := exec.Command(cmdName, par1, par2, par3, par4, par5, par6, filenameWAV, filename)
+
+		// log.Println("start cmd")
+		err := cmd.Start()
+		ErrCheck(err)
+
+		// log.Println("Result: " + out.String())
+		// log.Println("Errors: " + stderr.String())
+
+		defer func() {
+			loop = false
+
+			var err error
+			err = cmd.Process.Kill()
+			ErrCheck(err)
+			log.Println("Usuwam pliki")
+			log.Println(filenameSID)
+			err = os.Remove(filenameSID)
+			ErrCheck(err)
+			log.Println(filenamePRG)
+			err = os.Remove(filenamePRG)
+			ErrCheck(err)
+			log.Println(filenameWAV)
+			err = os.Remove(filenameWAV)
+			ErrCheck(err)
+		}()
+	}
+
+	// czekamy aż plik wav powstanie - dodać TIMEOUT
+	log.Println(filenameWAV + " is creating...")
+	for !fileExists(filenameWAV) {
+		time.Sleep(200 * time.Millisecond)
+	}
+	log.Println(filenameWAV + " created.")
+
+	// Przygotowanie bufora do streamingu
+	const bufferSize = 1024 * 64
+	var offset int64
+	p := make([]byte, bufferSize)
+
+	log.Println("Sending...")
+
+	// Streaming LOOP...
+	// ----------------------------------------------------------------------------------------------
+
+	for loop {
+
+		// Jeżeli doszliśmy w pliku do 50MB to koniec
+		if offset > maxOffset {
+
+			// log.Println("Wyciszamy...")
+			// break
+			volDown = true
+		}
+
+		// Jeżeli stracimy kontekst to wychodzimy
+		if c.Request.Context() == nil {
+			log.Println("ERR! c.Request.Context() == nil")
+			loop = false
+		} else {
+
+			// Otwieraamy plik - bez sprawdzania błędów
+			file, _ := os.Open(filenameWAV)
+			// ErrCheck(errOpen)
+
+			// Czytamy z pliku kolejne dane do bufora
+			readed, _ := file.ReadAt(p, offset)
+			// ErrCheck(err)
+			file.Close()
+
+			// Jeżeli coś odczytaliśmy to wysyłamy
+			if readed > 0 {
+
+				// Modyfikacja sampli
+				//
+				if offset > 44 {
+					// log.Print("readed " + strconv.Itoa(readed))
+					var ix int
+					for ix = 0; ix < readed; ix = ix + 2 {
+
+						// Wyciszanie
+						if volDown && vol > 0.0 {
+							vol = maxVol - (float64(offset-maxOffset+int64(ix)) / 88.494 * 0.0002)
+							if vol < 0 {
+								vol = 0.0
+								loop = false
+								// break
+							}
+						}
+
+						// Wzmocnienie głośności (domyślnie x 1.25)
+						var valInt1 int16
+						valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
+
+						var valFloat float64
+						valFloat = float64(valInt1) * vol
+						if valFloat > 32766 {
+							valFloat = 32766
+						}
+						if valFloat < -32766 {
+							valFloat = -32766
+						}
+						var valInt2 int16
+						valInt2 = int16(math.Round(valFloat))
+						var valInt3 uint16
+						valInt3 = uint16(valInt2)
+
+						p[ix] = byte(valInt3 & 0xff)
+						p[ix+1] = byte((valInt3 & 0xff00) >> 8)
+					}
+				}
+				c.Data(http.StatusOK, "audio/wav", p)
+				offset += int64(readed)
+				// log.Print(".")
+			}
+		}
+
+		// Wysyłamy pakiet co 500 ms
+		time.Sleep(500 * time.Millisecond)
+	}
+
+	// Feedback gdybyśmy wyszli z LOOP
+	c.JSON(http.StatusOK, "Loop ended.")
+	log.Println("Loop ended.")
+
+	// } else {
+
+	// 	// Przy powturzonym Get
+	// 	c.JSON(http.StatusOK, "ERR! Repeated GET.")
+	// 	log.Println("ERR! Repeated GET.")
+	// }
 }
 
 // AudioPost - Odernanie linka do SID lub PRG
@@ -496,7 +497,7 @@ func AudioPost(c *gin.Context) {
 	log.Println("AudioPost start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 
 	GlobalFileCnt++
-	posted = true
+	// posted = true
 
 	var filename = ""
 
@@ -534,7 +535,7 @@ func AudioPut(c *gin.Context) {
 	log.Println("Odebrałem plik " + file.Filename)
 
 	GlobalFileCnt++
-	posted = true
+	// posted = true
 
 	var properExtension = false
 	var filenameSID = ""
@@ -811,6 +812,8 @@ func ReadLatestReleasesThread() {
 // ================================================================================================
 func main() {
 
+	args := os.Args[1:]
+
 	go ReadLatestReleasesThread()
 
 	// Logowanie do pliku
@@ -848,5 +851,5 @@ func main() {
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
 	r.POST("/api/v1/csdb_release", CSDBGetRelease)
 
-	r.Run(":80")
+	r.Run(":" + args[0])
 }

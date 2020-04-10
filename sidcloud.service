@@ -1,0 +1,15 @@
+[Unit]
+Description=SIDCloudWebApp
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=root
+WorkingDirectory=/root/go/src/github.com/dkt64/sidcloud-api
+ExecStart=go run /root/go/src/github.com/dkt64/sidcloud-api/sidcloud.go 80
+
+[Install]
+WantedBy=multi-user.target
