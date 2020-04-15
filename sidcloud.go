@@ -852,7 +852,7 @@ func main() {
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
 	r.POST("/api/v1/csdb_release", CSDBGetRelease)
 
-	log.Fatal(autotls.Run(r, "sidcloud.net"))
+	log.Fatal(autotls.Run(r, "sidcloud.net", "www.sidcloud.net"))
 
 	// r.Run(":" + args[0])
 }
