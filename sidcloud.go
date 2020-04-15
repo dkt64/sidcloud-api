@@ -23,6 +23,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/gin-gonic/autotls"
 	"github.com/gin-gonic/gin"
 )
 
@@ -810,7 +811,7 @@ func ReadLatestReleasesThread() {
 // ================================================================================================
 func main() {
 
-	args := os.Args[1:]
+	// args := os.Args[1:]
 
 	go ReadLatestReleasesThread()
 
@@ -828,6 +829,8 @@ func main() {
 	log.Println("==========================================")
 	log.Println("=======          APP START        ========")
 	log.Println("==========================================")
+
+	gin.SetMode(gin.ReleaseMode)
 
 	r := gin.Default()
 
@@ -849,5 +852,7 @@ func main() {
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
 	r.POST("/api/v1/csdb_release", CSDBGetRelease)
 
-	r.Run(":" + args[0])
+	log.Fatal(autotls.Run(r, "sidcloud.net"))
+
+	// r.Run(":" + args[0])
 }
