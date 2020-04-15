@@ -23,8 +23,6 @@ import (
 	"sync"
 	"time"
 
-	// "code.google.com/p/go-charset/charset"
-	// _ "code.google.com/p/go-charset/data" // Import charset configuration files
 	"github.com/gin-gonic/gin"
 )
 
@@ -489,7 +487,7 @@ func AudioGet(c *gin.Context) {
 	// }
 }
 
-// AudioPost - Odernanie linka do SID lub PRG
+// AudioPost - Odebranie linka do SID lub PRG
 // ================================================================================================
 func AudioPost(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
@@ -523,7 +521,7 @@ func AudioPost(c *gin.Context) {
 	log.Println("AudioPost end with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 }
 
-// AudioPut - Odebranie pliku SID lub PRG
+// AudioPut - Odebranie pliku SID lub PRG - Drag&Drop
 // ================================================================================================
 func AudioPut(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
