@@ -28,6 +28,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+const cacheDir = "cache/"
+
+// mutex - wielowątkowość na tablicy releases
+// ------------------------------------------------------------------------------------------------
 var mutex = &sync.Mutex{}
 
 // RssItem - pojednyczy wpis w XML
@@ -273,7 +277,7 @@ func CreateWAVFiles() {
 	for index, rel := range releases {
 
 		id := strconv.Itoa(rel.ReleaseID)
-		filenameWAV := id + ".wav"
+		filenameWAV := cacheDir + id + ".wav"
 
 		var size int64
 
@@ -288,8 +292,8 @@ func CreateWAVFiles() {
 		if !fileExists(filenameWAV) || size < 29458844 {
 
 			log.Println("Tworzenie pliku " + filenameWAV)
-			filenameSID := id + ".sid"
-			filenamePRG := id + ".prg"
+			filenameSID := cacheDir + id + ".sid"
+			filenamePRG := cacheDir + id + ".prg"
 			// log.Println("WAV filename = " + filenameWAV)
 
 			var filename = ""
@@ -299,7 +303,7 @@ func CreateWAVFiles() {
 				filename = filenamePRG
 			}
 
-			paramName := "-w" + id
+			paramName := "-w" + cacheDir + id
 
 			var cmdName string
 
@@ -323,6 +327,7 @@ func CreateWAVFiles() {
 				releases[index].WAVCached = true
 				mutex.Unlock()
 				log.Println(filenameWAV + " cached")
+				WriteDb()
 			}
 
 			// defer func() {
@@ -346,6 +351,7 @@ func CreateWAVFiles() {
 			releases[index].WAVCached = true
 			mutex.Unlock()
 			log.Println(filenameWAV + " cached")
+			WriteDb()
 		}
 
 	}
@@ -362,7 +368,7 @@ func AudioGet(c *gin.Context) {
 
 	// Odczytujemy parametr - typ playera
 	id := c.Param("id")
-	filenameWAV := id + ".wav"
+	filenameWAV := cacheDir + id + ".wav"
 
 	// const maxOffset int64 = 50000000 // ~ 10 min
 	// const maxOffset int64 = 25000000 // ~ 5 min
@@ -676,12 +682,12 @@ func ReadLatestReleasesThread() {
 
 						// Potem ściągamy
 						if len(newRelease.DownloadLinks) > 0 {
-							filename := ""
+							filename := cacheDir
 							if strings.Contains(newRelease.DownloadLinks[0], ".prg") {
-								filename = strconv.Itoa(newRelease.ReleaseID) + ".prg"
+								filename += strconv.Itoa(newRelease.ReleaseID) + ".prg"
 							}
 							if strings.Contains(newRelease.DownloadLinks[0], ".sid") {
-								filename = strconv.Itoa(newRelease.ReleaseID) + ".sid"
+								filename += strconv.Itoa(newRelease.ReleaseID) + ".sid"
 							}
 
 							// Dodajemy new release
@@ -722,6 +728,7 @@ func ReadLatestReleasesThread() {
 			mutex.Lock()
 			releases = releasesTemp
 			mutex.Unlock()
+			WriteDb()
 
 			CreateWAVFiles()
 			WriteDb()
