@@ -202,20 +202,7 @@ func DownloadFile(filepath string, url string) error {
 
 	// log.Println("Sprawdzanie pliku " + strconv.Itoa(n))
 
-	// var newName string
-
-	// if p[1] == 0x53 && p[2] == 0x49 && p[3] == 0x44 {
-	// 	newName = filepath + ".sid"
-	// 	err := os.Rename(filepath, newName)
-	// 	ErrCheck(err)
-	// } else {
-	// 	newName = filepath + ".prg"
-	// 	err := os.Rename(filepath, newName)
-	// 	ErrCheck(err)
-	// }
-
 	return err
-
 }
 
 // CSDBGetLatestReleases - ostatnie release'y
@@ -223,49 +210,14 @@ func DownloadFile(filepath string, url string) error {
 func CSDBGetLatestReleases(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
 
-	// resp, errGet := http.Get("https://csdb.dk/rss/latestreleases.php")
-	// ErrCheck(errGet)
-
-	// data, errRead := ioutil.ReadAll(resp.Body)
-	// ErrCheck(errRead)
-
-	// dataString := string(data)
-
 	// Info o wejściu do GET
 	log.Println("CSDBGetLatestReleases()")
-	// log.Println(dataString)
 
 	mutex.Lock()
 	releasesTemp := releases
 	mutex.Unlock()
 
 	c.JSON(http.StatusOK, releasesTemp)
-}
-
-// CSDBGetRelease - ostatnie release'y
-// ================================================================================================
-func CSDBGetRelease(c *gin.Context) {
-	c.Header("Access-Control-Allow-Origin", "*")
-
-	id, _ := strconv.Atoi(c.Query("id"))
-
-	// resp, errGet := http.Get("https://csdb.dk/webservice/?type=release&id=" + id)
-	// ErrCheck(errGet)
-
-	// data, errRead := ioutil.ReadAll(resp.Body)
-	// ErrCheck(errRead)
-
-	// dataString := string(data)
-
-	// Info o wejściu do GET
-	log.Println("CSDBGetRelease() nr ", id)
-	// log.Println(dataString)
-
-	mutex.Lock()
-	releasesTemp := releases
-	mutex.Unlock()
-
-	c.JSON(http.StatusOK, releasesTemp[id])
 }
 
 // CreateWAVFiles - Creating WAV files
@@ -330,21 +282,6 @@ func CreateWAVFiles() {
 				WriteDb()
 			}
 
-			// defer func() {
-			// 	var err error
-			// 	err = cmd.Process.Kill()
-			// 	ErrCheck(err)
-			// 	log.Println("Usuwam pliki")
-			// 	// log.Println(filenameSID)
-			// 	// err = os.Remove(filenameSID)
-			// 	// ErrCheck(err)
-			// 	// log.Println(filenamePRG)
-			// 	// err = os.Remove(filenamePRG)
-			// 	// ErrCheck(err)
-			// 	log.Println(filenameWAV)
-			// 	err = os.Remove(filenameWAV)
-			// 	ErrCheck(err)
-			// }()
 		} else {
 			log.Println("Plik " + filenameWAV + " już istnieje")
 			mutex.Lock()
@@ -804,7 +741,6 @@ func main() {
 
 	r.GET("/api/v1/audio/:id", AudioGet)
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
-	r.POST("/api/v1/csdb_release", CSDBGetRelease)
 
 	if args[0] == "https" {
 		log.Fatal(autotls.Run(r, "sidcloud.net", "www.sidcloud.net"))
