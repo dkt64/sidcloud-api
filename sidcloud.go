@@ -6,6 +6,7 @@ package main
 
 import (
 	"bytes"
+	"encoding/json"
 	"encoding/xml"
 	"errors"
 	"fmt"
@@ -28,12 +29,6 @@ import (
 )
 
 var mutex = &sync.Mutex{}
-
-// GlobalFileCnt - numer pliku
-// ================================================================================================
-var GlobalFileCnt int
-
-// var posted bool
 
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
@@ -108,21 +103,17 @@ type Release struct {
 	ReleasedBy        []string
 	Credits           []string
 	DownloadLinks     []string
+	SIDCached         bool
+	WAVCached         bool
 }
 
 // releases - glówna i globalna tablica z aktualnymi produkcjami
 // ================================================================================================
 var releases []Release
 
-// fileExists - sprawdzenie czy plik istnieje
+// sidplayExe - nazwa EXE dla siplayfp
 // ================================================================================================
-func fileExists(filename string) bool {
-	info, err := os.Stat(filename)
-	if os.IsNotExist(err) {
-		return false
-	}
-	return !info.IsDir()
-}
+var sidplayExe string
 
 // ErrCheck - obsługa błedów
 // ================================================================================================
@@ -131,6 +122,31 @@ func ErrCheck(errNr error) bool {
 		fmt.Println(errNr)
 		return false
 	}
+	return true
+}
+
+// ReadDb - Odczyt bazy
+// ================================================================================================
+func ReadDb() {
+	file, _ := ioutil.ReadFile("releases.json")
+	_ = json.Unmarshal([]byte(file), &releases)
+}
+
+// WriteDb - Zapis bazy
+// ================================================================================================
+func WriteDb() {
+	file, _ := json.MarshalIndent(releases, "", " ")
+	_ = ioutil.WriteFile("releases.json", file, 0666)
+}
+
+// fileExists - sprawdzenie czy plik istnieje
+// ================================================================================================
+func fileExists(filename string) bool {
+
+	if _, err := os.Stat(filename); os.IsNotExist(err) {
+		return false
+	}
+
 	return true
 }
 
@@ -165,7 +181,7 @@ func DownloadFile(filepath string, url string) error {
 	}
 	// get the size
 	size := fi.Size()
-	log.Println("Rozmiar pliku " + strconv.Itoa(int(size)))
+	log.Println("Ściągam plik '" + filepath + "' o rozmiarze " + strconv.Itoa(int(size)))
 
 	if size < 8 || size > 65535 {
 		err := errors.New("Rozmiar pliku niewłaściwy")
@@ -182,17 +198,17 @@ func DownloadFile(filepath string, url string) error {
 
 	// log.Println("Sprawdzanie pliku " + strconv.Itoa(n))
 
-	var newName string
+	// var newName string
 
-	if p[1] == 0x53 && p[2] == 0x49 && p[3] == 0x44 {
-		newName = filepath + ".sid"
-		err := os.Rename(filepath, newName)
-		ErrCheck(err)
-	} else {
-		newName = filepath + ".prg"
-		err := os.Rename(filepath, newName)
-		ErrCheck(err)
-	}
+	// if p[1] == 0x53 && p[2] == 0x49 && p[3] == 0x44 {
+	// 	newName = filepath + ".sid"
+	// 	err := os.Rename(filepath, newName)
+	// 	ErrCheck(err)
+	// } else {
+	// 	newName = filepath + ".prg"
+	// 	err := os.Rename(filepath, newName)
+	// 	ErrCheck(err)
+	// }
 
 	return err
 
@@ -248,147 +264,115 @@ func CSDBGetRelease(c *gin.Context) {
 	c.JSON(http.StatusOK, releasesTemp[id])
 }
 
+// CreateWAVFiles - Creating WAV files
+// ================================================================================================
+func CreateWAVFiles() {
+	//
+
+	log.Println("CreateWAVFiles()...")
+	for index, rel := range releases {
+
+		id := strconv.Itoa(rel.ReleaseID)
+		filenameWAV := id + ".wav"
+
+		var size int64
+
+		if fileExists(filenameWAV) {
+			file, err := os.Stat(filenameWAV)
+			if err != nil {
+				fmt.Println("Problem z odczytem rozmiaru pliku " + filenameWAV)
+			}
+			size = file.Size()
+		}
+
+		if !fileExists(filenameWAV) || size < 29458844 {
+
+			log.Println("Tworzenie pliku " + filenameWAV)
+			filenameSID := id + ".sid"
+			filenamePRG := id + ".prg"
+			// log.Println("WAV filename = " + filenameWAV)
+
+			var filename = ""
+			if strings.Contains(rel.DownloadLinks[0], ".sid") {
+				filename = filenameSID
+			} else if strings.Contains(rel.DownloadLinks[0], ".prg") {
+				filename = filenamePRG
+			}
+
+			paramName := "-w" + id
+
+			var cmdName string
+
+			czas := "-t333"
+			// bits := "-p16"
+			// freq := "-f44100"
+
+			// Odpalenie sidplayfp
+			if runtime.GOOS == "windows" {
+				cmdName = "sidplayfp/sidplayfp.exe"
+			} else {
+				cmdName = sidplayExe // zakładamy że jest zainstalowany
+			}
+
+			log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + paramName + " " + filename + ")")
+			cmd := exec.Command(cmdName, czas, paramName, filename)
+			err := cmd.Run()
+			if ErrCheck(err) {
+
+				mutex.Lock()
+				releases[index].WAVCached = true
+				mutex.Unlock()
+				log.Println(filenameWAV + " cached")
+			}
+
+			// defer func() {
+			// 	var err error
+			// 	err = cmd.Process.Kill()
+			// 	ErrCheck(err)
+			// 	log.Println("Usuwam pliki")
+			// 	// log.Println(filenameSID)
+			// 	// err = os.Remove(filenameSID)
+			// 	// ErrCheck(err)
+			// 	// log.Println(filenamePRG)
+			// 	// err = os.Remove(filenamePRG)
+			// 	// ErrCheck(err)
+			// 	log.Println(filenameWAV)
+			// 	err = os.Remove(filenameWAV)
+			// 	ErrCheck(err)
+			// }()
+		} else {
+			log.Println("Plik " + filenameWAV + " już istnieje")
+			mutex.Lock()
+			releases[index].WAVCached = true
+			mutex.Unlock()
+			log.Println(filenameWAV + " cached")
+		}
+
+	}
+}
+
 // AudioGet - granie utworu
 // ================================================================================================
 func AudioGet(c *gin.Context) {
-
-	volDown := false
-	// const maxOffset int64 = 50000000 // ~ 10 min
-	// const maxOffset int64 = 25000000 // ~ 5 min
-	// const maxOffset int64 = 5000000 // ~ 1 min
-	const maxOffset int64 = 44100*2*300 + 44 // = 5 min
-	const maxVol float64 = 1.25
-	var vol float64 = maxVol
-	var loop = true
-
-	// if posted {
-	// 	posted = false
 
 	// Typ połączania
 	c.Header("Access-Control-Allow-Origin", "*")
 	c.Header("Connection", "Keep-Alive")
 	c.Header("Transfer-Encoding", "chunked")
 
-	// Info o wejściu do GET
-	log.Println("AudioGet start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
-
-	// dir, _ := os.Getwd()
-	// log.Println("Current working dir " + dir)
-
-	// Przygotowanie nazw plików
-	filenameWAV := "music" + strconv.Itoa(GlobalFileCnt) + ".wav"
-	filenameSID := "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
-	filenamePRG := "music" + strconv.Itoa(GlobalFileCnt) + ".prg"
-
-	log.Println("WAV filename = " + filenameWAV)
-
-	var filename = ""
-	if fileExists(filenameSID) {
-		filename = filenameSID
-	} else if fileExists(filenamePRG) {
-		filename = filenamePRG
-	}
-
 	// Odczytujemy parametr - typ playera
-	player := c.Param("player")
+	id := c.Param("id")
+	filenameWAV := id + ".wav"
 
-	// ==============================
-	// SIDPLAYFP
-	// ==============================
-	if player == "sidplayfp" {
+	// const maxOffset int64 = 50000000 // ~ 10 min
+	// const maxOffset int64 = 25000000 // ~ 5 min
+	// const maxOffset int64 = 5000000 // ~ 1 min
+	const maxOffset int64 = 44100*2*300 + 44 // = 5 min
+	const maxVol float64 = 1.25
 
-		name := "music" + strconv.Itoa(GlobalFileCnt)
-		paramName := "-w" + name
-
-		var cmdName string
-
-		czas := "-t333"
-		// bits := "-p16"
-		// freq := "-f44100"
-
-		// Odpalenie sidplayfp
-		if runtime.GOOS == "windows" {
-			cmdName = "sidplayfp/sidplayfp.exe"
-		} else {
-			cmdName = "sidplayfp/sidplayfp" // zakładamy że jest zainstalowany
-		}
-
-		log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + paramName + " " + filename + ")")
-		cmd := exec.Command(cmdName, czas, paramName, filename)
-		err := cmd.Start()
-		ErrCheck(err)
-
-		defer func() {
-			loop = false
-
-			var err error
-			err = cmd.Process.Kill()
-			ErrCheck(err)
-			log.Println("Usuwam pliki")
-			log.Println(filenameSID)
-			err = os.Remove(filenameSID)
-			ErrCheck(err)
-			log.Println(filenamePRG)
-			err = os.Remove(filenamePRG)
-			ErrCheck(err)
-			log.Println(filenameWAV)
-			err = os.Remove(filenameWAV)
-			ErrCheck(err)
-		}()
-	}
-
-	// ==============================
-	// JSIDPLAY2
-	// ==============================
-	if player == "jsidplay2" {
-
-		par1 := "-jar"
-		par2 := "jsidplay2_console-4.1.jar"
-		par3 := "-q"
-		par4 := "-a"
-		par5 := "WAV"
-		par6 := "-r"
-
-		var cmdName string
-		cmdName = "java"
-
-		// var out bytes.Buffer
-		// var stderr bytes.Buffer
-
-		cmd := exec.Command(cmdName, par1, par2, par3, par4, par5, par6, filenameWAV, filename)
-
-		// log.Println("start cmd")
-		err := cmd.Start()
-		ErrCheck(err)
-
-		// log.Println("Result: " + out.String())
-		// log.Println("Errors: " + stderr.String())
-
-		defer func() {
-			loop = false
-
-			var err error
-			err = cmd.Process.Kill()
-			ErrCheck(err)
-			log.Println("Usuwam pliki")
-			log.Println(filenameSID)
-			err = os.Remove(filenameSID)
-			ErrCheck(err)
-			log.Println(filenamePRG)
-			err = os.Remove(filenamePRG)
-			ErrCheck(err)
-			log.Println(filenameWAV)
-			err = os.Remove(filenameWAV)
-			ErrCheck(err)
-		}()
-	}
-
-	// czekamy aż plik wav powstanie - dodać TIMEOUT
-	log.Println(filenameWAV + " is creating...")
-	for !fileExists(filenameWAV) {
-		time.Sleep(200 * time.Millisecond)
-	}
-	log.Println(filenameWAV + " created.")
+	var vol float64 = maxVol
+	loop := true
+	volDown := false
 
 	// Przygotowanie bufora do streamingu
 	const bufferSize = 1024 * 64
@@ -418,7 +402,8 @@ func AudioGet(c *gin.Context) {
 
 			// Otwieraamy plik - bez sprawdzania błędów
 			file, _ := os.Open(filenameWAV)
-			// ErrCheck(errOpen)
+			defer file.Close()
+			// ErrCheck(err)
 
 			// Czytamy z pliku kolejne dane do bufora
 			readed, _ := file.ReadAt(p, offset)
@@ -475,89 +460,11 @@ func AudioGet(c *gin.Context) {
 		// Wysyłamy pakiet co 500 ms
 		time.Sleep(500 * time.Millisecond)
 	}
+	// }
 
 	// Feedback gdybyśmy wyszli z LOOP
 	c.JSON(http.StatusOK, "Loop ended.")
 	log.Println("Loop ended.")
-
-	// } else {
-
-	// 	// Przy powturzonym Get
-	// 	c.JSON(http.StatusOK, "ERR! Repeated GET.")
-	// 	log.Println("ERR! Repeated GET.")
-	// }
-}
-
-// AudioPost - Odebranie linka do SID lub PRG
-// ================================================================================================
-func AudioPost(c *gin.Context) {
-	c.Header("Access-Control-Allow-Origin", "*")
-
-	log.Println("AudioPost start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
-
-	GlobalFileCnt++
-	// posted = true
-
-	var filename = ""
-
-	sidURL := c.Query("sid_url")
-
-	filename = "music" + strconv.Itoa(GlobalFileCnt)
-
-	// Ściągnięcie pliku SID
-
-	// Gdy to nie link do SID albo PRG można podejrzewać skrypt
-	// Trzeba sprawdzić zawartość pliku
-	err := DownloadFile(filename, sidURL)
-
-	ErrCheck(err)
-	if err != nil {
-		log.Println("ERR! Error downloading file: " + sidURL)
-		c.JSON(http.StatusOK, "ERR! Error downloading file: "+sidURL)
-	} else {
-		log.Println("Downloaded file: " + sidURL)
-		c.JSON(http.StatusOK, "Downloaded file: "+sidURL)
-	}
-
-	log.Println("AudioPost end with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
-}
-
-// AudioPut - Odebranie pliku SID lub PRG - Drag&Drop
-// ================================================================================================
-func AudioPut(c *gin.Context) {
-	c.Header("Access-Control-Allow-Origin", "*")
-
-	log.Println("AudioPut start with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
-
-	file, fileErr := c.FormFile("file")
-	ErrCheck(fileErr)
-	log.Println("Odebrałem plik " + file.Filename)
-
-	GlobalFileCnt++
-	// posted = true
-
-	var properExtension = false
-	var filenameSID = ""
-
-	if strings.HasSuffix(file.Filename, ".sid") {
-		filenameSID = "music" + strconv.Itoa(GlobalFileCnt) + ".sid"
-		properExtension = true
-	}
-	if strings.HasSuffix(file.Filename, ".prg") {
-		filenameSID = "music" + strconv.Itoa(GlobalFileCnt) + ".prg"
-		properExtension = true
-	}
-
-	if properExtension {
-		// Zapis SID'a
-		saveErr := c.SaveUploadedFile(file, filenameSID)
-		ErrCheck(saveErr)
-		c.JSON(http.StatusOK, "Got the file: "+file.Filename)
-	} else {
-		c.JSON(http.StatusOK, "Wrong file extension: "+file.Filename)
-	}
-
-	log.Println("AudioPut end with GlobalFileCnt = " + strconv.Itoa(GlobalFileCnt))
 }
 
 // Options - Obsługa request'u OPTIONS (CORS)
@@ -767,11 +674,32 @@ func ReadLatestReleasesThread() {
 							}
 						}
 
-						// Dodajemy new release
-						// ale tylko jeżeli mamy niezbędne info o produkcji
+						// Potem ściągamy
 						if len(newRelease.DownloadLinks) > 0 {
-							releasesTemp = append(releasesTemp, newRelease)
-							foundNewReleases++
+							filename := ""
+							if strings.Contains(newRelease.DownloadLinks[0], ".prg") {
+								filename = strconv.Itoa(newRelease.ReleaseID) + ".prg"
+							}
+							if strings.Contains(newRelease.DownloadLinks[0], ".sid") {
+								filename = strconv.Itoa(newRelease.ReleaseID) + ".sid"
+							}
+
+							// Dodajemy new release
+							// ale tylko jeżeli mamy niezbędne info o produkcji
+							if filename != "" {
+
+								if !fileExists(filename) {
+									err := DownloadFile(filename, newRelease.DownloadLinks[0])
+									if ErrCheck(err) {
+										newRelease.SIDCached = true
+									}
+								} else {
+									newRelease.SIDCached = true
+								}
+
+								releasesTemp = append(releasesTemp, newRelease)
+								foundNewReleases++
+							}
 						}
 					}
 				} else {
@@ -795,6 +723,9 @@ func ReadLatestReleasesThread() {
 			releases = releasesTemp
 			mutex.Unlock()
 
+			CreateWAVFiles()
+			WriteDb()
+
 		} else {
 			log.Println("Błąd komunikacji z csdb.dk")
 		}
@@ -811,8 +742,24 @@ func ReadLatestReleasesThread() {
 // ================================================================================================
 func main() {
 
-	// args := os.Args[1:]
+	args := os.Args[1:]
 
+	if len(args) == 0 || (args[0] != "http" && args[0] != "https") {
+		log.Fatal("Podaj parametr 'http' lub 'https'!")
+		os.Exit(1)
+	}
+
+	sidplayExe = "sidplayfp/sidplayfp"
+
+	if args[0] == "http" {
+		if len(args) > 2 {
+			if args[2] == "arm" {
+				sidplayExe = "sidplayfp"
+			}
+		}
+	}
+
+	ReadDb()
 	go ReadLatestReleasesThread()
 
 	// Logowanie do pliku
@@ -830,7 +777,9 @@ func main() {
 	log.Println("=======          APP START        ========")
 	log.Println("==========================================")
 
-	gin.SetMode(gin.ReleaseMode)
+	if args[0] == "https" {
+		gin.SetMode(gin.ReleaseMode)
+	}
 
 	r := gin.Default()
 
@@ -846,13 +795,18 @@ func main() {
 	r.StaticFile("favicon.ico", "./dist/favicon.ico")
 	r.StaticFile("sign.png", "./dist/sign.png")
 
-	r.GET("/api/v1/audio/:player", AudioGet)
-	r.POST("/api/v1/audio", AudioPost)
-	r.PUT("/api/v1/audio", AudioPut)
+	r.GET("/api/v1/audio/:id", AudioGet)
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
 	r.POST("/api/v1/csdb_release", CSDBGetRelease)
 
-	log.Fatal(autotls.Run(r, "sidcloud.net", "www.sidcloud.net"))
-
-	// r.Run(":" + args[0])
+	if args[0] == "https" {
+		log.Fatal(autotls.Run(r, "sidcloud.net", "www.sidcloud.net"))
+	}
+	if args[0] == "http" {
+		if len(args) > 1 {
+			r.Run(":" + args[1])
+		} else {
+			r.Run(":80")
+		}
+	}
 }
