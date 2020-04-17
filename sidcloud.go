@@ -731,6 +731,9 @@ func ReadLatestReleasesThread() {
 								if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".prg") {
 									newRelease.Ext = ".prg"
 								}
+								if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".wav") {
+									newRelease.WAVCached = true
+								}
 
 								if len(newRelease.Ext) > 0 {
 									releasesTemp = append(releasesTemp, newRelease)

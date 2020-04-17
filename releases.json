@@ -15,7 +15,7 @@
    "http://csdb.dk/getinternalfile.php/197580/Mythus cr4cktune.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -33,7 +33,7 @@
    "http://csdb.dk/getinternalfile.php/197575/kolorsin %5Bex%5D.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
