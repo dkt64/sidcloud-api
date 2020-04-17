@@ -5,6 +5,7 @@
 package main
 
 import (
+	"archive/zip"
 	"bytes"
 	"encoding/json"
 	"encoding/xml"
@@ -109,6 +110,7 @@ type Release struct {
 	DownloadLinks     []string
 	SIDCached         bool
 	WAVCached         bool
+	Ext               string
 }
 
 // releases - glówna i globalna tablica z aktualnymi produkcjami
@@ -157,19 +159,21 @@ func fileExists(filename string) bool {
 // DownloadFile will download a url to a local file. It's efficient because it will
 // write as it downloads and not load the whole file into memory.
 // ================================================================================================
-func DownloadFile(filepath string, url string) error {
+func DownloadFile(filepath string, url string, id int) (string, error) {
+
+	var ext string = ""
 
 	// Get the data
 	resp, err := http.Get(url)
 	if err != nil {
-		return err
+		return ext, err
 	}
 	defer resp.Body.Close()
 
 	// Create the file
 	out, err := os.Create(filepath)
 	if err != nil {
-		return err
+		return ext, err
 	}
 	defer out.Close()
 
@@ -181,28 +185,104 @@ func DownloadFile(filepath string, url string) error {
 	// Sprawdzzamy rozmiar pliku
 	fi, err := os.Stat(filepath)
 	if err != nil {
-		return err
+		return ext, err
 	}
 	// get the size
 	size := fi.Size()
 	log.Println("Ściągam plik '" + filepath + "' o rozmiarze " + strconv.Itoa(int(size)))
 
-	if size < 8 || size > 65535 {
+	// if size < 8 || size > 65535 {
+	if size < 8 || size > 5*1024*1024 { // Może być ZIP z innymi większymi plikami więc ustalilem max na 5M
 		err := errors.New("Rozmiar pliku niewłaściwy")
-		return err
+		return ext, err
 	}
-	// Odczytujemy 4 pierwsze bajty żeby sprawdzić czy to SID
-	p := make([]byte, 4)
 
-	logFileGin, err := os.Open(filepath)
-	ErrCheck(err)
-	_, err = logFileGin.Read(p)
-	ErrCheck(err)
-	logFileGin.Close()
+	// // Odczytujemy 4 pierwsze bajty żeby sprawdzić czy to SID
+	// p := make([]byte, 4)
 
-	// log.Println("Sprawdzanie pliku " + strconv.Itoa(n))
+	// file, err := os.Open(filepath)
+	// ErrCheck(err)
+	// _, err = file.Read(p)
+	// ErrCheck(err)
+	// file.Close()
+	// // log.Println("Sprawdzanie pliku " + strconv.Itoa(n))
 
-	return err
+	if strings.Contains(filepath, ".zip") {
+		zipReader, _ := zip.OpenReader(filepath)
+
+		//
+		// Najpierw SIDy
+		//
+		for _, file := range zipReader.File {
+
+			log.Println(file.Name)
+
+			if strings.Contains(file.Name, ".sid") && !file.FileInfo().IsDir() {
+
+				log.Println("Found SID file")
+
+				zippedFile, err := file.Open()
+				ErrCheck(err)
+				defer zippedFile.Close()
+
+				ext = ".sid"
+				log.Println("File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
+				outputFile, err := os.OpenFile(
+					"cache/"+strconv.Itoa(id)+ext,
+					os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
+					file.Mode(),
+				)
+				ErrCheck(err)
+				defer outputFile.Close()
+				_, err = io.Copy(outputFile, zippedFile)
+				ErrCheck(err)
+
+				return ext, nil
+			}
+		}
+
+		//
+		// Potem PRG
+		//
+		for _, file := range zipReader.File {
+
+			log.Println(file.Name)
+
+			if strings.Contains(file.Name, ".prg") && !file.FileInfo().IsDir() {
+
+				zippedFile, err := file.Open()
+				ErrCheck(err)
+				defer zippedFile.Close()
+
+				// Sprawdzamy czy PRG ładuje się pod $0801
+				p := make([]byte, 2)
+				zippedFile.Read(p)
+				if p[0] == 1 && p[1] == 8 {
+
+					log.Println("Found PRG file")
+					ext = ".prg"
+
+					log.Println("File extracted:", file.Name)
+					outputFile, err := os.OpenFile(
+						"cache/"+strconv.Itoa(id)+ext,
+						os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
+						file.Mode(),
+					)
+					ErrCheck(err)
+					defer outputFile.Close()
+					_, err = io.Copy(outputFile, zippedFile)
+					ErrCheck(err)
+				} else {
+					log.Println("PRG file load address != $0801")
+				}
+
+				return ext, nil
+
+			}
+		}
+	}
+
+	return ext, err
 }
 
 // CSDBGetLatestReleases - ostatnie release'y
@@ -244,17 +324,7 @@ func CreateWAVFiles() {
 		if !fileExists(filenameWAV) || size < 29458844 {
 
 			log.Println("Tworzenie pliku " + filenameWAV)
-			filenameSID := cacheDir + id + ".sid"
-			filenamePRG := cacheDir + id + ".prg"
-			// log.Println("WAV filename = " + filenameWAV)
-
-			var filename = ""
-			if strings.Contains(rel.DownloadLinks[0], ".sid") {
-				filename = filenameSID
-			} else if strings.Contains(rel.DownloadLinks[0], ".prg") {
-				filename = filenamePRG
-			}
-
+			filenameSID := cacheDir + id + rel.Ext
 			paramName := "-w" + cacheDir + id
 
 			var cmdName string
@@ -270,8 +340,8 @@ func CreateWAVFiles() {
 				cmdName = sidplayExe // zakładamy że jest zainstalowany
 			}
 
-			log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + paramName + " " + filename + ")")
-			cmd := exec.Command(cmdName, czas, paramName, filename)
+			log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + paramName + " " + filenameSID + ")")
+			cmd := exec.Command(cmdName, czas, paramName, filenameSID)
 			err := cmd.Run()
 			if ErrCheck(err) {
 
@@ -616,15 +686,24 @@ func ReadLatestReleasesThread() {
 								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
 							}
 						}
+						// Potem ZIPy
+						for _, link := range entry.DownloadLinks {
+							if strings.Contains(link.Link, ".zip") {
+								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							}
+						}
 
 						// Potem ściągamy
 						if len(newRelease.DownloadLinks) > 0 {
 							filename := cacheDir
+							if strings.Contains(newRelease.DownloadLinks[0], ".sid") {
+								filename += strconv.Itoa(newRelease.ReleaseID) + ".sid"
+							}
 							if strings.Contains(newRelease.DownloadLinks[0], ".prg") {
 								filename += strconv.Itoa(newRelease.ReleaseID) + ".prg"
 							}
-							if strings.Contains(newRelease.DownloadLinks[0], ".sid") {
-								filename += strconv.Itoa(newRelease.ReleaseID) + ".sid"
+							if strings.Contains(newRelease.DownloadLinks[0], ".zip") {
+								filename += strconv.Itoa(newRelease.ReleaseID) + ".zip"
 							}
 
 							// Dodajemy new release
@@ -632,7 +711,7 @@ func ReadLatestReleasesThread() {
 							if filename != "" {
 
 								if !fileExists(filename) {
-									err := DownloadFile(filename, newRelease.DownloadLinks[0])
+									_, err := DownloadFile(filename, newRelease.DownloadLinks[0], newRelease.ReleaseID)
 									if ErrCheck(err) {
 										newRelease.SIDCached = true
 									}
@@ -640,8 +719,17 @@ func ReadLatestReleasesThread() {
 									newRelease.SIDCached = true
 								}
 
-								releasesTemp = append(releasesTemp, newRelease)
-								foundNewReleases++
+								if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".sid") {
+									newRelease.Ext = ".sid"
+								}
+								if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".prg") {
+									newRelease.Ext = ".prg"
+								}
+
+								if len(newRelease.Ext) > 0 {
+									releasesTemp = append(releasesTemp, newRelease)
+									foundNewReleases++
+								}
 							}
 						}
 					}

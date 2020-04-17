@@ -15,7 +15,8 @@
    "http://csdb.dk/getinternalfile.php/197580/Mythus cr4cktune.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189965,
@@ -32,7 +33,26 @@
    "http://csdb.dk/getinternalfile.php/197575/kolorsin %5Bex%5D.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 189960,
+  "ReleaseName": "Nova Nekropola [swedish]",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189960.gif",
+  "Rating": 0,
+  "ReleasedBy": [
+   "El Topo"
+  ],
+  "Credits": [
+   "El Topo"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197570/el-topo_-_nova_nekropola.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189942,
@@ -50,7 +70,8 @@
    "http://csdb.dk/getinternalfile.php/197547/When-Love-Boat-mattered.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189855,
@@ -67,7 +88,26 @@
    "http://csdb.dk/getinternalfile.php/197452/epic sax gandalf.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 189851,
+  "ReleaseName": "Hebrews 12:2",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189851.png",
+  "Rating": 0,
+  "ReleasedBy": [
+   "LoveJesus"
+  ],
+  "Credits": [
+   "LoveJesus"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197450/oldskool-4kintro-release-aleluya.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189848,
@@ -84,7 +124,44 @@
    "http://csdb.dk/getinternalfile.php/197447/4korona intro %5Bex%5D.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 189844,
+  "ReleaseName": "Outrun PETSCII",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189844.png",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Arkanix Labs"
+  ],
+  "Credits": [
+   "Jason Brooke"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197443/OutRun_PETSCII.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 189842,
+  "ReleaseName": "Vice Tribute",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189842.png",
+  "Rating": 9.29,
+  "ReleasedBy": [
+   "Bonzai"
+  ],
+  "Credits": [
+   "Drax"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197441/ViceTribute-BZ.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189818,
@@ -98,10 +175,32 @@
    "Mibri"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197422/Fight%21.sid"
+   "http://csdb.dk/getinternalfile.php/197422/Fight%21.sid",
+   "http://csdb.dk/getinternalfile.php/197411/fight_by_atlantis.zip"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".sid"
+ },
+ {
+  "ReleaseID": 189803,
+  "ReleaseName": "Radio Free Truth [2sid]",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189803.png",
+  "Rating": 9.8,
+  "ReleasedBy": [
+   "Proxima",
+   "MultiStyle Labs",
+   "Atlantis"
+  ],
+  "Credits": [
+   "Mibri"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197398/radio_free_truth_by_mibri_of_atl-msl-prx.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189802,
@@ -118,7 +217,46 @@
    "http://csdb.dk/getinternalfile.php/197397/lman---microgroove.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 189801,
+  "ReleaseName": "Joyfilled Aleluya",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189801.png",
+  "Rating": 0,
+  "ReleasedBy": [
+   "LoveJesus"
+  ],
+  "Credits": [
+   "LoveJesus"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197396/oldskool-music-release-aleluya.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".sid"
+ },
+ {
+  "ReleaseID": 189800,
+  "ReleaseName": "Scruffy",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189800.png",
+  "Rating": 9.27,
+  "ReleasedBy": [
+   "Hoaxers",
+   "Dekadence",
+   "Darklite"
+  ],
+  "Credits": [
+   "Response"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197395/scruffy-rse.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189794,
@@ -135,7 +273,8 @@
    "http://csdb.dk/getinternalfile.php/197389/Jellica - Lscmii.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189784,
@@ -153,7 +292,8 @@
    "http://csdb.dk/getinternalfile.php/197377/downward-8580.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189742,
@@ -172,7 +312,8 @@
    "http://csdb.dk/getinternalfile.php/197331/Electric_City_2SID.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189729,
@@ -189,7 +330,8 @@
    "http://csdb.dk/getinternalfile.php/197317/stayhome intro.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189728,
@@ -206,7 +348,8 @@
    "http://csdb.dk/getinternalfile.php/197316/petmanbatman.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189727,
@@ -223,7 +366,8 @@
    "http://csdb.dk/getinternalfile.php/197315/doublelswing_palntsc.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189668,
@@ -241,7 +385,8 @@
    "http://csdb.dk/getinternalfile.php/197255/psycho8580_WakeUpCall.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189656,
@@ -258,7 +403,8 @@
    "http://csdb.dk/getinternalfile.php/197239/ncomv_fegolhuzz.sid"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189639,
@@ -275,7 +421,8 @@
    "http://csdb.dk/getinternalfile.php/197224/Excess-Tai-Pan_intro.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189627,
@@ -292,7 +439,8 @@
    "http://csdb.dk/getinternalfile.php/197208/dalezy_-_itt-nincs-turo-rudi.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189601,
@@ -312,7 +460,8 @@
    "http://csdb.dk/getinternalfile.php/197181/lost.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189598,
@@ -330,7 +479,8 @@
    "http://csdb.dk/getinternalfile.php/197177/Children.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189594,
@@ -348,6 +498,7 @@
    "http://csdb.dk/getinternalfile.php/197173/ltx-blinding_lights.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true
+  "WAVCached": true,
+  "Ext": ".sid"
  }
 ]
