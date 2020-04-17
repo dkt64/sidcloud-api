@@ -220,11 +220,6 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 			if strings.Contains(file.Name, ".sid") && !file.FileInfo().IsDir() {
 
 				log.Println("Found SID file")
-
-				zippedFile, err := file.Open()
-				ErrCheck(err)
-				defer zippedFile.Close()
-
 				ext = ".sid"
 				log.Println("File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
 				outputFile, err := os.OpenFile(
@@ -234,6 +229,11 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 				)
 				ErrCheck(err)
 				defer outputFile.Close()
+
+				zippedFile, err := file.Open()
+				ErrCheck(err)
+				defer zippedFile.Close()
+
 				_, err = io.Copy(outputFile, zippedFile)
 				ErrCheck(err)
 
@@ -250,19 +250,20 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 
 			if strings.Contains(file.Name, ".prg") && !file.FileInfo().IsDir() {
 
+				// Sprawdzamy czy PRG ładuje się pod $0801
 				zippedFile, err := file.Open()
 				ErrCheck(err)
 				defer zippedFile.Close()
-
-				// Sprawdzamy czy PRG ładuje się pod $0801
 				p := make([]byte, 2)
 				zippedFile.Read(p)
+				zippedFile.Close()
+
 				if p[0] == 1 && p[1] == 8 {
 
 					log.Println("Found PRG file")
 					ext = ".prg"
 
-					log.Println("File extracted:", file.Name)
+					log.Println("File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
 					outputFile, err := os.OpenFile(
 						"cache/"+strconv.Itoa(id)+ext,
 						os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
@@ -270,6 +271,11 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 					)
 					ErrCheck(err)
 					defer outputFile.Close()
+
+					zippedFile, err := file.Open()
+					ErrCheck(err)
+					defer zippedFile.Close()
+
 					_, err = io.Copy(outputFile, zippedFile)
 					ErrCheck(err)
 				} else {
