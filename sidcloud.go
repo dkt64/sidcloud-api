@@ -9,7 +9,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"encoding/xml"
-	"errors"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -19,6 +18,7 @@ import (
 	"net/url"
 	"os"
 	"os/exec"
+	"path/filepath"
 	"runtime"
 	"strconv"
 	"strings"
@@ -121,6 +121,20 @@ var releases []Release
 // ================================================================================================
 var sidplayExe string
 
+// SIDFile - opis pliku z HVSC
+// ================================================================================================
+type SIDFile struct {
+	ID         int64
+	Filepath   string
+	Filename   string
+	Author     string
+	PlayLength int64
+}
+
+// hvsc - lista plików HVSC
+// ================================================================================================
+var hvsc []SIDFile
+
 // ErrCheck - obsługa błedów
 // ================================================================================================
 func ErrCheck(errNr error) bool {
@@ -143,6 +157,20 @@ func ReadDb() {
 func WriteDb() {
 	file, _ := json.MarshalIndent(releases, "", " ")
 	_ = ioutil.WriteFile("releases.json", file, 0666)
+}
+
+// ReadHVSCJson - Odczyt pliku HVSC
+// ================================================================================================
+func ReadHVSCJson() {
+	file, _ := ioutil.ReadFile("hvsc.json")
+	_ = json.Unmarshal([]byte(file), &hvsc)
+}
+
+// WriteHVSCJson - Zapis pliku HVSC
+// ================================================================================================
+func WriteHVSCJson() {
+	file, _ := json.MarshalIndent(hvsc, "", " ")
+	_ = ioutil.WriteFile("hvsc.json", file, 0666)
 }
 
 // fileExists - sprawdzenie czy plik istnieje
@@ -191,22 +219,39 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 	size := fi.Size()
 	log.Println("Ściągam plik '" + filepath + "' o rozmiarze " + strconv.Itoa(int(size)))
 
-	// if size < 8 || size > 65535 {
-	if size < 8 || size > 5*1024*1024 { // Może być ZIP z innymi większymi plikami więc ustalilem max na 5M
-		err := errors.New("Rozmiar pliku niewłaściwy")
-		return ext, err
+	// // if size < 8 || size > 65535 {
+	// if size < 8 || size > 5*1024*1024 { // Może być ZIP z innymi większymi plikami więc ustalilem max na 5M
+	// 	err := errors.New("Rozmiar pliku niewłaściwy")
+	// 	return ext, err
+	// }
+
+	//
+	// Rozpakowanie pliku D64
+	//
+	if strings.Contains(filepath, ".d64") {
+
+		extractedPRG, found := ExtractD64(filepath)
+		if found {
+
+			ext = ".prg"
+
+			// Create the file
+			out, err := os.Create("cache/" + strconv.Itoa(id) + ext)
+			ErrCheck(err)
+			defer out.Close()
+
+			// Write the body to file
+			_, err = out.Write(extractedPRG)
+			ErrCheck(err)
+			out.Close()
+
+			return ext, err
+		}
 	}
 
-	// // Odczytujemy 4 pierwsze bajty żeby sprawdzić czy to SID
-	// p := make([]byte, 4)
-
-	// file, err := os.Open(filepath)
-	// ErrCheck(err)
-	// _, err = file.Read(p)
-	// ErrCheck(err)
-	// file.Close()
-	// // log.Println("Sprawdzanie pliku " + strconv.Itoa(n))
-
+	//
+	// Rozkakowanie pliku ZIP
+	//
 	if strings.Contains(filepath, ".zip") {
 		zipReader, _ := zip.OpenReader(filepath)
 
@@ -237,7 +282,7 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 				_, err = io.Copy(outputFile, zippedFile)
 				ErrCheck(err)
 
-				return ext, nil
+				return ext, err
 			}
 		}
 
@@ -278,11 +323,58 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 
 					_, err = io.Copy(outputFile, zippedFile)
 					ErrCheck(err)
-				} else {
-					log.Println("PRG file load address != $0801")
-				}
 
-				return ext, nil
+					return ext, err
+
+				}
+				log.Println("PRG file load address != $0801")
+
+			}
+		}
+
+		//
+		// Potem D64
+		//
+		for _, file := range zipReader.File {
+
+			log.Println(file.Name)
+
+			if strings.Contains(file.Name, ".d64") && !file.FileInfo().IsDir() {
+
+				log.Println("Found D64 file")
+				log.Println("File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
+				outputFile, err := os.OpenFile(
+					"cache/"+strconv.Itoa(id)+".d64",
+					os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
+					file.Mode(),
+				)
+				ErrCheck(err)
+				defer outputFile.Close()
+
+				zippedFile, err := file.Open()
+				ErrCheck(err)
+				defer zippedFile.Close()
+
+				_, err = io.Copy(outputFile, zippedFile)
+				ErrCheck(err)
+
+				extractedPRG, found := ExtractD64("cache/" + strconv.Itoa(id) + ".d64")
+				if found {
+
+					ext = ".prg"
+
+					// Create the file
+					out, err := os.Create("cache/" + strconv.Itoa(id) + ext)
+					ErrCheck(err)
+					defer out.Close()
+
+					// Write the body to file
+					_, err = out.Write(extractedPRG)
+					ErrCheck(err)
+					out.Close()
+
+					return ext, err
+				}
 
 			}
 		}
@@ -368,6 +460,32 @@ func CreateWAVFiles() {
 		}
 
 	}
+}
+
+// GetHVSCFilter - lista przefiltrowanych SIDów
+// ================================================================================================
+func GetHVSCFilter(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+
+	// Info o wejściu do GET
+	log.Println("GetHVSCFilter()")
+
+	// Odczytujemy parametr - filtr
+	id := c.Param("id")
+
+	id = strings.ToLower(id)
+
+	var hvscTemp []SIDFile
+
+	for _, sid := range hvsc {
+		searchAuthor := strings.ToLower(sid.Author)
+		searchFilename := strings.ToLower(sid.Filename)
+		if strings.Contains(searchAuthor, id) || strings.Contains(searchFilename, id) {
+			hvscTemp = append(hvscTemp, sid)
+		}
+	}
+
+	c.JSON(http.StatusOK, hvscTemp)
 }
 
 // AudioGet - granie utworu
@@ -698,6 +816,12 @@ func ReadLatestReleasesThread() {
 								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
 							}
 						}
+						// Potem D64y
+						for _, link := range entry.DownloadLinks {
+							if strings.Contains(link.Link, ".d64") {
+								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							}
+						}
 
 						// Potem ściągamy
 						if len(newRelease.DownloadLinks) > 0 {
@@ -710,6 +834,9 @@ func ReadLatestReleasesThread() {
 							}
 							if strings.Contains(newRelease.DownloadLinks[0], ".zip") {
 								filename += strconv.Itoa(newRelease.ReleaseID) + ".zip"
+							}
+							if strings.Contains(newRelease.DownloadLinks[0], ".d64") {
+								filename += strconv.Itoa(newRelease.ReleaseID) + ".d64"
 							}
 
 							// Dodajemy new release
@@ -778,10 +905,148 @@ func ReadLatestReleasesThread() {
 
 }
 
+// HVSCPrepareData - Wątek odczygtujący dane z HVSC
+// ================================================================================================
+func HVSCPrepareData() {
+
+	log.Println("HVSC start")
+	var id int64
+
+	root := "./C64Music/Games"
+	err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
+		if filepath.Ext(path) != ".sid" {
+			return nil
+		}
+
+		split := "/"
+		if runtime.GOOS == "windows" {
+			split = "\\"
+		}
+
+		pathSlice := strings.Split(path, split)
+		var newSIDFile SIDFile
+		newSIDFile.ID = id
+		newSIDFile.Filepath = path
+		newSIDFile.Author = "Games"
+		newSIDFile.Filename = strings.ReplaceAll(strings.TrimSuffix(pathSlice[len(pathSlice)-1], ".sid"), "_", " ")
+		hvsc = append(hvsc, newSIDFile)
+		id++
+		return nil
+	})
+	ErrCheck(err)
+
+	root = "./C64Music/Musicians"
+	err = filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
+		if filepath.Ext(path) != ".sid" {
+			return nil
+		}
+
+		split := "/"
+		if runtime.GOOS == "windows" {
+			split = "\\"
+		}
+
+		pathSlice := strings.Split(path, split)
+		var newSIDFile SIDFile
+		newSIDFile.ID = id
+		newSIDFile.Filepath = path
+		newSIDFile.Author = strings.ReplaceAll(pathSlice[len(pathSlice)-2], "_", " ")
+		newSIDFile.Filename = strings.ReplaceAll(strings.TrimSuffix(pathSlice[len(pathSlice)-1], ".sid"), "_", " ")
+		hvsc = append(hvsc, newSIDFile)
+		id++
+		return nil
+	})
+	ErrCheck(err)
+
+	WriteHVSCJson()
+	log.Println("HVSC stop")
+}
+
+// D64GetSector - Read sector from D64
+// ================================================================================================
+func D64GetSector(file *os.File, track byte, sector byte) []byte {
+
+	var track2Address = [...]int64{0x00000, 0x00000, 0x01500, 0x02A00, 0x03F00, 0x05400, 0x06900,
+		0x07E00, 0x09300, 0x0A800, 0x0BD00, 0x0D200, 0x0E700, 0x0FC00, 0x11100, 0x12600, 0x13B00,
+		0x15000, 0x16500, 0x17800, 0x18B00, 0x19E00, 0x1B100, 0x1C400, 0x1D700, 0x1EA00, 0x1FC00,
+		0x20E00, 0x22000, 0x23200, 0x24400, 0x25600, 0x26700, 0x27800, 0x28900, 0x29A00, 0x2AB00,
+		0x2BC00, 0x2CD00, 0x2DE00, 0x2EF00}
+
+	file.Seek(track2Address[int64(track)]+256*int64(sector), 0)
+	p := make([]byte, 256)
+	file.Read(p)
+
+	return p
+}
+
+// ExtractD64 - Extract PRG from D64
+// ================================================================================================
+func ExtractD64(filename string) ([]byte, bool) {
+
+	file, err := os.Open(filename)
+	ErrCheck(err)
+	defer file.Close()
+
+	var dirTrack byte = 18
+	var dirSector byte = 1
+	var outfile []byte
+	loop := true
+
+	for loop {
+		log.Println("I'm on dir track " + strconv.Itoa(int(dirTrack)) + " and sector " + strconv.Itoa(int(dirSector)))
+		sector := D64GetSector(file, dirTrack, dirSector)
+		for ptr := 0; ptr < 8*0x20; ptr += 0x20 {
+			if (sector[ptr+2] & 7) == 2 {
+				log.Println("Found PRG file, ptr " + strconv.Itoa(int(ptr)))
+				name := string(sector[ptr+5 : ptr+14])
+				var fileTrack byte = sector[ptr+3]
+				var fileSector byte = sector[ptr+4]
+				log.Println(name + " T:" + strconv.Itoa(int(fileTrack)) + " S:" + strconv.Itoa(int(fileSector)))
+
+				// Najpierw sprawdzimy czy load address == $0801
+				prg := D64GetSector(file, fileTrack, fileSector)
+
+				if prg[2] == 1 && prg[3] == 8 {
+					log.Println("Loading address is OK")
+
+					fileTrack = prg[0]
+					fileSector = prg[1]
+					fileloop := true
+					outfile = append(outfile, prg[2:]...)
+
+					for fileloop && fileTrack != 0 {
+						prg = D64GetSector(file, fileTrack, fileSector)
+						fileTrack = prg[0]
+						fileSector = prg[1]
+						outfile = append(outfile, prg[2:]...)
+					}
+					log.Println("Koniec pliku")
+					return outfile, true
+
+					// fileloop = false
+					// loop = false
+					// break
+				}
+				log.Println("Loading address is NOK")
+			}
+		}
+		dirTrack = sector[0]
+		if dirTrack == 0 {
+			break
+		}
+		dirSector = sector[1]
+	}
+
+	return outfile, false
+
+}
+
 // ================================================================================================
 // MAIN()
 // ================================================================================================
 func main() {
+
+	// HVSCPrepareData()
 
 	args := os.Args[1:]
 
@@ -838,6 +1103,7 @@ func main() {
 
 	r.GET("/api/v1/audio/:id", AudioGet)
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
+	r.GET("/api/v1/hvsc_filter/:id", GetHVSCFilter)
 
 	if args[0] == "https" {
 		log.Fatal(autotls.Run(r, "sidcloud.net", "www.sidcloud.net"))

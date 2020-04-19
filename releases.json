@@ -1,9 +1,27 @@
 [
  {
+  "ReleaseID": 189982,
+  "ReleaseName": "Creatures PETSCII",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189982.png",
+  "Rating": 8.17,
+  "ReleasedBy": [
+   "Arkanix Labs"
+  ],
+  "Credits": [
+   "Steve Rowlands"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197592/Creatures_PETSCII.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
   "ReleaseID": 189971,
   "ReleaseName": "Cr4cktune",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189971.png",
-  "Rating": 9.33,
+  "Rating": 9.25,
   "ReleasedBy": [
    "Delysid"
   ],
@@ -15,7 +33,7 @@
    "http://csdb.dk/getinternalfile.php/197580/Mythus cr4cktune.prg"
   ],
   "SIDCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "Ext": ".sid"
  },
  {
@@ -33,7 +51,7 @@
    "http://csdb.dk/getinternalfile.php/197575/kolorsin %5Bex%5D.prg"
   ],
   "SIDCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "Ext": ".prg"
  },
  {
@@ -55,10 +73,28 @@
   "Ext": ".sid"
  },
  {
+  "ReleaseID": 189946,
+  "ReleaseName": "TND Pop-Tastic",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189946.png",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The New Dimension"
+  ],
+  "Credits": [
+   "Richard"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197552/TND_Poptastic.d64"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
   "ReleaseID": 189942,
   "ReleaseName": "When Love Boat Mattered",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189942.png",
-  "Rating": 9.82,
+  "Rating": 9.77,
   "ReleasedBy": [
    "MultiStyle Labs"
   ],
@@ -110,6 +146,25 @@
   "Ext": ".prg"
  },
  {
+  "ReleaseID": 189850,
+  "ReleaseName": "Morte Subita",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189850.png",
+  "Rating": 9.3,
+  "ReleasedBy": [
+   "Resource",
+   "Royal Belgian Beer Squadron"
+  ],
+  "Credits": [
+   "6R6"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197449/mortesubita.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
   "ReleaseID": 189848,
   "ReleaseName": "4korona Intro",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189848.png",
@@ -146,24 +201,6 @@
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 189842,
-  "ReleaseName": "Vice Tribute",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189842.png",
-  "Rating": 9.29,
-  "ReleasedBy": [
-   "Bonzai"
-  ],
-  "Credits": [
-   "Drax"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197441/ViceTribute-BZ.zip"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
- },
- {
   "ReleaseID": 189818,
   "ReleaseName": "Fight!",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189818.gif",
@@ -181,6 +218,43 @@
   "SIDCached": true,
   "WAVCached": true,
   "Ext": ".sid"
+ },
+ {
+  "ReleaseID": 190017,
+  "ReleaseName": "B13",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190017.png",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Russian Massive Digital Aggression"
+  ],
+  "Credits": [
+   "Crokocat"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197638/crokocat-b13.sid",
+   "http://csdb.dk/getinternalfile.php/197637/crokocat-b13.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".sid"
+ },
+ {
+  "ReleaseID": 190015,
+  "ReleaseName": "30 Years",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190015.png",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Public Enemies"
+  ],
+  "Credits": [
+   "Zynox"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197635/30-years.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189803,
@@ -206,7 +280,7 @@
   "ReleaseID": 189802,
   "ReleaseName": "Microgroove",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189802.png",
-  "Rating": 9.41,
+  "Rating": 9.5,
   "ReleasedBy": [
    "LMan"
   ],
@@ -262,7 +336,7 @@
   "ReleaseID": 189794,
   "ReleaseName": "Lscmii",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189794.png",
-  "Rating": 7.44,
+  "Rating": 7.8,
   "ReleasedBy": [
    "Jellica"
   ],
@@ -280,7 +354,7 @@
   "ReleaseID": 189784,
   "ReleaseName": "Downward",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189784.png",
-  "Rating": 8.38,
+  "Rating": 8.56,
   "ReleasedBy": [
    "Kruthers"
   ],
@@ -307,8 +381,8 @@
    "Flex"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197341/Electric_City_2SID_%288580R5%2B6581AR4_SIDFX%29.sid",
    "http://csdb.dk/getinternalfile.php/197332/Electric_City_2SID_8580_Stereo.sid",
+   "http://csdb.dk/getinternalfile.php/197341/Electric_City_2SID_%288580R5%2B6581AR4_SIDFX%29.sid",
    "http://csdb.dk/getinternalfile.php/197331/Electric_City_2SID.prg"
   ],
   "SIDCached": true,
@@ -400,7 +474,8 @@
    "Fegolhuzz"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197239/ncomv_fegolhuzz.sid"
+   "http://csdb.dk/getinternalfile.php/197239/ncomv_fegolhuzz.sid",
+   "http://csdb.dk/getinternalfile.php/197238/ncomv_fegolhuzz.d64"
   ],
   "SIDCached": true,
   "WAVCached": true,
@@ -425,80 +500,22 @@
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 189627,
-  "ReleaseName": "Itt nincs Túró Rudi",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189627.png",
-  "Rating": 9.38,
+  "ReleaseID": 189635,
+  "ReleaseName": "DI4KONAL - Heureka Edition",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189635.png",
+  "Rating": 9.57,
   "ReleasedBy": [
-   "Triad"
+   "Low Spirit"
   ],
   "Credits": [
-   "dalezy"
+   "Agemixer",
+   "Markus Schneider"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197208/dalezy_-_itt-nincs-turo-rudi.prg"
+   "http://csdb.dk/getinternalfile.php/197217/DI4KONAL - Heureka Edition %5BLS%5D.d64"
   ],
   "SIDCached": true,
   "WAVCached": true,
   "Ext": ".prg"
- },
- {
-  "ReleaseID": 189601,
-  "ReleaseName": "Lost in the Night",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189601.png",
-  "Rating": 9.06,
-  "ReleasedBy": [
-   "MultiStyle Labs",
-   "Samar Productions",
-   "Genesis Project"
-  ],
-  "Credits": [
-   "MCH"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197182/lost.sid",
-   "http://csdb.dk/getinternalfile.php/197181/lost.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
- },
- {
-  "ReleaseID": 189598,
-  "ReleaseName": "Children",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189598.png",
-  "Rating": 6.7,
-  "ReleasedBy": [
-   "Vibrants"
-  ],
-  "Credits": [
-   "Chordian"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197178/Children.sid",
-   "http://csdb.dk/getinternalfile.php/197177/Children.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
- },
- {
-  "ReleaseID": 189594,
-  "ReleaseName": "Blinding Lights",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189594.png",
-  "Rating": 7.4,
-  "ReleasedBy": [
-   "Latex"
-  ],
-  "Credits": [
-   "Båtsman"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197172/ltx-blinding_lights.sid",
-   "http://csdb.dk/getinternalfile.php/197173/ltx-blinding_lights.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
  }
 ]

@@ -1,9 +1,10 @@
-/vendor
-/dist_old
+/C64Music
+/cache
 
 *.wav
 *.au
 *.sid
 *.prg
+*.d64
 *.log
 *.zip
