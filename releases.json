@@ -201,6 +201,24 @@
   "Ext": ".prg"
  },
  {
+  "ReleaseID": 189842,
+  "ReleaseName": "Vice Tribute",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189842.gif",
+  "Rating": 9.29,
+  "ReleasedBy": [
+   "Bonzai"
+  ],
+  "Credits": [
+   "Drax"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197441/ViceTribute-BZ.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
   "ReleaseID": 189818,
   "ReleaseName": "Fight!",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189818.gif",
@@ -221,7 +239,7 @@
  },
  {
   "ReleaseID": 190017,
-  "ReleaseName": "B13",
+  "ReleaseName": "Box13",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190017.png",
   "Rating": 0,
   "ReleasedBy": [
@@ -461,61 +479,5 @@
   "SIDCached": true,
   "WAVCached": true,
   "Ext": ".sid"
- },
- {
-  "ReleaseID": 189656,
-  "ReleaseName": "New Cases of Mystery Virus",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189656.png",
-  "Rating": 8.71,
-  "ReleasedBy": [
-   "Fairlight"
-  ],
-  "Credits": [
-   "Fegolhuzz"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197239/ncomv_fegolhuzz.sid",
-   "http://csdb.dk/getinternalfile.php/197238/ncomv_fegolhuzz.d64"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
- },
- {
-  "ReleaseID": 189639,
-  "ReleaseName": "Excess Tai-Pan Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189639.png",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Excess"
-  ],
-  "Credits": [
-   "Decoy"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197224/Excess-Tai-Pan_intro.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
- },
- {
-  "ReleaseID": 189635,
-  "ReleaseName": "DI4KONAL - Heureka Edition",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189635.png",
-  "Rating": 9.57,
-  "ReleasedBy": [
-   "Low Spirit"
-  ],
-  "Credits": [
-   "Agemixer",
-   "Markus Schneider"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197217/DI4KONAL - Heureka Edition %5BLS%5D.d64"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
  }
 ]

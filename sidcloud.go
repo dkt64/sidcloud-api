@@ -430,6 +430,7 @@ func CreateWAVFiles() {
 			czas := "-t333"
 			// bits := "-p16"
 			// freq := "-f44100"
+			model := "-mn"
 
 			// Odpalenie sidplayfp
 			if runtime.GOOS == "windows" {
@@ -438,8 +439,8 @@ func CreateWAVFiles() {
 				cmdName = sidplayExe // zakładamy że jest zainstalowany
 			}
 
-			log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + paramName + " " + filenameSID + ")")
-			cmd := exec.Command(cmdName, czas, paramName, filenameSID)
+			log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + model + " " + paramName + " " + filenameSID + ")")
+			cmd := exec.Command(cmdName, czas, model, paramName, filenameSID)
 			err := cmd.Run()
 			if ErrCheck(err) {
 
