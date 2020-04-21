@@ -15,6 +15,7 @@ import (
 	"log"
 	"math"
 	"net/http"
+	"net/smtp"
 	"net/url"
 	"os"
 	"os/exec"
@@ -505,7 +506,7 @@ func AudioGet(c *gin.Context) {
 	// const maxOffset int64 = 50000000 // ~ 10 min
 	// const maxOffset int64 = 25000000 // ~ 5 min
 	// const maxOffset int64 = 5000000 // ~ 1 min
-	const maxOffset int64 = 44100*2*300 + 44 // = 5 min
+	const maxOffset int64 = 44100 * 2 * 300 // = 5 min
 	const maxVol float64 = 1.25
 
 	var vol float64 = maxVol
@@ -523,6 +524,7 @@ func AudioGet(c *gin.Context) {
 	// ----------------------------------------------------------------------------------------------
 
 	var sum float64
+	var dataSent int64 = 0
 	silenceCnt := 0
 
 	for loop {
@@ -530,7 +532,7 @@ func AudioGet(c *gin.Context) {
 		sum = 0
 
 		// Jeżeli doszliśmy w pliku do 50MB to koniec
-		if offset > maxOffset {
+		if dataSent > maxOffset {
 
 			// log.Println("Wyciszamy...")
 			// break
@@ -602,6 +604,7 @@ func AudioGet(c *gin.Context) {
 
 					if sum >= 5.0 || offset < 44 || offset > 44100*60 {
 						c.Data(http.StatusOK, "audio/wav", p)
+						dataSent += int64(len(p))
 						// log.Print(".")
 					}
 
@@ -645,6 +648,48 @@ func Options(c *gin.Context) {
 		// c.Header("Content-Type", "application/json")
 		c.AbortWithStatus(http.StatusOK)
 	}
+}
+
+// smtpServer - smtpServer data to smtp server
+// ================================================================================================
+type smtpServer struct {
+	host string
+	port string
+}
+
+// Address - URI to smtp server
+// ================================================================================================
+func (s *smtpServer) Address() string {
+	return s.host + ":" + s.port
+}
+
+// SendEmail - decode reader
+// ================================================================================================
+func SendEmail(in string) {
+	// Sender data.
+	from := "sidcloud.net@gmail.com"
+	password := "SidCloud1024!"
+
+	// Receiver email address.
+	to := []string{
+		"b.apanasewicz@gmail.com",
+		// "secondemail@gmail.com",
+	}
+
+	// smtp server configuration.
+	smtpServer := smtpServer{host: "smtp.gmail.com", port: "587"}
+
+	// Message.
+	message := []byte(in)
+	// Authentication.
+	auth := smtp.PlainAuth("", from, password, smtpServer.host)
+	// Sending email.
+	err := smtp.SendMail(smtpServer.Address(), auth, from, to, message)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println("Email Sent!")
 }
 
 // makeCharsetReader - decode reader
@@ -875,6 +920,7 @@ func ReadLatestReleasesThread() {
 									_, err := DownloadFile(filename, newRelease.DownloadLinks[0], newRelease.ReleaseID)
 									if ErrCheck(err) {
 										newRelease.SIDCached = true
+										// SendEmail("Nowa produkcja na CSDB.DK: " + newRelease.ReleaseName + " by " + newRelease.ReleasedBy[0])
 									}
 								} else {
 									newRelease.SIDCached = true
