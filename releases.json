@@ -1,5 +1,24 @@
 [
  {
+  "ReleaseID": 190161,
+  "ReleaseName": "From Sunrise to Midnight",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190161.png",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Mayday!"
+  ],
+  "Credits": [
+   "Spider Jerusalem"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197793/From_Sunrise_to_Midnight.sid",
+   "http://csdb.dk/getinternalfile.php/197792/From_Sunrise_to_Midnight.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".sid"
+ },
+ {
   "ReleaseID": 190139,
   "ReleaseName": "Futurecity 2049",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190139.png",
@@ -40,7 +59,7 @@
   "ReleaseID": 189971,
   "ReleaseName": "Cr4cktune",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189971.png",
-  "Rating": 9.25,
+  "Rating": 9.31,
   "ReleasedBy": [
    "Delysid"
   ],

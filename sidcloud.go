@@ -31,6 +31,8 @@ import (
 )
 
 const cacheDir = "cache/"
+const wavSize = 29458844
+const wavTime = "333"
 
 // mutex - wielowątkowość na tablicy releases
 // ------------------------------------------------------------------------------------------------
@@ -420,7 +422,7 @@ func CreateWAVFiles() {
 			size = file.Size()
 		}
 
-		if !fileExists(filenameWAV) || size < 29458844 {
+		if !fileExists(filenameWAV) || size < wavSize {
 
 			log.Println("Tworzenie pliku " + filenameWAV)
 			filenameSID := cacheDir + id + rel.Ext
@@ -428,7 +430,7 @@ func CreateWAVFiles() {
 
 			var cmdName string
 
-			czas := "-t333"
+			czas := "-t" + wavTime
 			// bits := "-p16"
 			// freq := "-f44100"
 			model := "-mn"
@@ -518,7 +520,7 @@ func AudioGet(c *gin.Context) {
 	var offset int64
 	p := make([]byte, bufferSize)
 
-	log.Println("Sending...")
+	log.Println("Sending " + id + "...")
 
 	// Streaming LOOP...
 	// ----------------------------------------------------------------------------------------------
@@ -568,7 +570,7 @@ func AudioGet(c *gin.Context) {
 
 							// Wyciszanie
 							if volDown && vol > 0.0 {
-								vol = maxVol - (float64(offset-maxOffset+int64(ix)) / 88.494 * 0.0002)
+								vol = maxVol - (float64(dataSent-maxOffset+int64(ix)) / 88.494 * 0.0002)
 								if vol < 0 {
 									vol = 0.0
 									loop = false
