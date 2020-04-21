@@ -452,11 +452,11 @@ func CreateWAVFiles() {
 			}
 
 		} else {
-			log.Println("Plik " + filenameWAV + " już istnieje")
+			// log.Println("Plik " + filenameWAV + " już istnieje")
 			mutex.Lock()
 			releases[index].WAVCached = true
 			mutex.Unlock()
-			log.Println(filenameWAV + " cached")
+			// log.Println(filenameWAV + " cached")
 			WriteDb()
 		}
 
@@ -522,7 +522,12 @@ func AudioGet(c *gin.Context) {
 	// Streaming LOOP...
 	// ----------------------------------------------------------------------------------------------
 
+	var sum float64
+	silenceCnt := 0
+
 	for loop {
+
+		sum = 0
 
 		// Jeżeli doszliśmy w pliku do 50MB to koniec
 		if offset > maxOffset {
@@ -544,59 +549,81 @@ func AudioGet(c *gin.Context) {
 			// ErrCheck(err)
 
 			// Czytamy z pliku kolejne dane do bufora
-			readed, _ := file.ReadAt(p, offset)
-			// ErrCheck(err)
+			readed, err := file.ReadAt(p, offset)
 			file.Close()
 
-			// Jeżeli coś odczytaliśmy to wysyłamy
-			if readed > 0 {
+			if ErrCheck(err) {
 
-				// Modyfikacja sampli
-				//
-				if offset > 44 {
-					// log.Print("readed " + strconv.Itoa(readed))
-					var ix int
-					for ix = 0; ix < readed; ix = ix + 2 {
+				// Jeżeli coś odczytaliśmy to wysyłamy
+				if readed > 0 {
 
-						// Wyciszanie
-						if volDown && vol > 0.0 {
-							vol = maxVol - (float64(offset-maxOffset+int64(ix)) / 88.494 * 0.0002)
-							if vol < 0 {
-								vol = 0.0
-								loop = false
-								// break
+					// Modyfikacja sampli
+					//
+					if offset > 44 {
+						// log.Print("readed " + strconv.Itoa(readed))
+						var ix int
+						for ix = 0; ix < readed; ix = ix + 2 {
+
+							// Wyciszanie
+							if volDown && vol > 0.0 {
+								vol = maxVol - (float64(offset-maxOffset+int64(ix)) / 88.494 * 0.0002)
+								if vol < 0 {
+									vol = 0.0
+									loop = false
+									// break
+								}
 							}
-						}
 
-						// Wzmocnienie głośności (domyślnie x 1.25)
-						var valInt1 int16
-						valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
+							// Wzmocnienie głośności (domyślnie x 1.25)
+							var valInt1 int16
+							valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
 
-						var valFloat float64
-						valFloat = float64(valInt1) * vol
-						if valFloat > 32766 {
-							valFloat = 32766
-						}
-						if valFloat < -32766 {
-							valFloat = -32766
-						}
-						var valInt2 int16
-						valInt2 = int16(math.Round(valFloat))
-						var valInt3 uint16
-						valInt3 = uint16(valInt2)
+							var valFloat float64
+							valFloat = float64(valInt1) * vol
+							if valFloat > 32766 {
+								valFloat = 32766
+							}
+							if valFloat < -32766 {
+								valFloat = -32766
+							}
+							var valInt2 int16
+							valInt2 = int16(math.Round(valFloat))
+							var valInt3 uint16
+							valInt3 = uint16(valInt2)
 
-						p[ix] = byte(valInt3 & 0xff)
-						p[ix+1] = byte((valInt3 & 0xff00) >> 8)
+							p[ix] = byte(valInt3 & 0xff)
+							p[ix+1] = byte((valInt3 & 0xff00) >> 8)
+
+							sum += math.Abs(valFloat)
+						}
 					}
+
+					sum = sum / float64(readed)
+
+					if sum >= 5.0 || offset < 44 || offset > 44100*60 {
+						c.Data(http.StatusOK, "audio/wav", p)
+						// log.Print(".")
+					}
+
+					if sum < 5.0 && offset > 44100*60 { // po 30 sekundach
+						silenceCnt++
+						if silenceCnt >= 5 {
+							log.Println("Silence at " + strconv.FormatInt(offset, 10))
+							loop = false
+						}
+					}
+
+					offset += int64(readed)
 				}
-				c.Data(http.StatusOK, "audio/wav", p)
-				offset += int64(readed)
-				// log.Print(".")
 			}
 		}
 
-		// Wysyłamy pakiet co 500 ms
-		time.Sleep(500 * time.Millisecond)
+		// Wysyłamy pakiet co 250 ms
+		if sum >= 5.0 || offset > 44100*60 {
+			// if sum >= 5.0 {
+			time.Sleep(250 * time.Millisecond)
+		}
+
 	}
 	// }
 

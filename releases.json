@@ -1,5 +1,24 @@
 [
  {
+  "ReleaseID": 190139,
+  "ReleaseName": "Futurecity 2049",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190139.png",
+  "Rating": 9.25,
+  "ReleasedBy": [
+   "Delysid"
+  ],
+  "Credits": [
+   "Mythus"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197770/Mythus futurecity 2049.sid",
+   "http://csdb.dk/getinternalfile.php/197769/Mythus futurecity 2049.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".sid"
+ },
+ {
   "ReleaseID": 189982,
   "ReleaseName": "Creatures PETSCII",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189982.png",
@@ -204,7 +223,7 @@
   "ReleaseID": 189842,
   "ReleaseName": "Vice Tribute",
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189842.gif",
-  "Rating": 9.29,
+  "Rating": 9.37,
   "ReleasedBy": [
    "Bonzai"
   ],
@@ -460,24 +479,5 @@
   "SIDCached": true,
   "WAVCached": true,
   "Ext": ".prg"
- },
- {
-  "ReleaseID": 189668,
-  "ReleaseName": "WakeUpCall",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189668.png",
-  "Rating": 9.65,
-  "ReleasedBy": [
-   "MultiStyle Labs"
-  ],
-  "Credits": [
-   "psych858o"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197254/WakeUpCall.sid",
-   "http://csdb.dk/getinternalfile.php/197255/psycho8580_WakeUpCall.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
  }
 ]
