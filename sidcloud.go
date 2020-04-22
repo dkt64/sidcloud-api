@@ -88,29 +88,71 @@ type XMLDownloadLink struct {
 	Link string `xml:"Link"`
 }
 
+// XMLEvent - kompo
+// ------------------------------------------------------------------------------------------------
+type XMLEvent struct {
+	ID   string `xml:"ID"`
+	Name string `xml:"Name"`
+}
+
+// XMLReleasedAt - kompa
+// ------------------------------------------------------------------------------------------------
+type XMLReleasedAt struct {
+	XMLEvent XMLEvent `xml:"Event"`
+}
+
+// XMLUsedSID - SIDy
+// ------------------------------------------------------------------------------------------------
+type XMLUsedSID struct {
+	ID       string `xml:"ID"`
+	HVSCPath string `xml:"HVSCPath"`
+	Name     string `xml:"Name"`
+	Author   string `xml:"Author"`
+}
+
 // XMLRelease - wydanie produkcji na csdb
 // ------------------------------------------------------------------------------------------------
 type XMLRelease struct {
 	ReleaseID         string            `xml:"Release>ID"`
 	ReleaseName       string            `xml:"Release>Name"`
 	ReleaseType       string            `xml:"Release>Type"`
+	ReleaseYear       string            `xml:"Release>ReleaseYear"`
+	ReleaseMonth      string            `xml:"Release>ReleaseMonth"`
+	ReleaseDay        string            `xml:"Release>ReleaseDay"`
 	ReleaseScreenShot string            `xml:"Release>ScreenShot"`
 	Rating            float32           `xml:"Release>Rating"`
 	XMLReleasedBy     XMLReleasedBy     `xml:"Release>ReleasedBy"`
+	XMLReleasedAt     XMLReleasedAt     `xml:"Release>ReleasedAt"`
 	Credits           []XMLCredit       `xml:"Release>Credits>Credit"`
 	DownloadLinks     []XMLDownloadLink `xml:"Release>DownloadLinks>DownloadLink"`
+	UsedSIDs          []XMLUsedSID      `xml:"Release>UsedSIDs>SID"`
+}
+
+// UsedSID - wydanie produkcji na csdb
+// ------------------------------------------------------------------------------------------------
+type UsedSID struct {
+	ID       string
+	HVSCPath string
+	Name     string
+	Author   string
 }
 
 // Release - wydanie produkcji na csdb
 // ------------------------------------------------------------------------------------------------
 type Release struct {
 	ReleaseID         int
+	ReleaseYear       int
+	ReleaseMonth      int
+	ReleaseDay        int
 	ReleaseName       string
+	ReleaseType       string
 	ReleaseScreenShot string
+	ReleasedAt        string
 	Rating            float32
 	ReleasedBy        []string
 	Credits           []string
 	DownloadLinks     []string
+	UsedSIDs          []UsedSID
 	SIDCached         bool
 	WAVCached         bool
 	Ext               string
@@ -722,6 +764,27 @@ func insertRelease(array []Release, value Release, index int) []Release {
 	return append(array[:index], append([]Release{value}, array[index:]...)...)
 }
 
+// Difference - Różnica pomiędzy dwoma slice
+// ================================================================================================
+func Difference(a, b []Release) (diff []Release) {
+
+	for _, itema := range b {
+		found := false
+		for _, itemb := range a {
+			if itema.ReleaseID == itemb.ReleaseID &&
+				len(itema.DownloadLinks) == len(itemb.DownloadLinks) {
+				found = true
+				break
+			}
+		}
+		if !found {
+			diff = append(diff, itema)
+		}
+	}
+
+	return diff
+}
+
 // ReadLatestReleasesThread - Wątek odczygtujący dane z csdb
 // ================================================================================================
 func ReadLatestReleasesThread() {
@@ -821,10 +884,17 @@ func ReadLatestReleasesThread() {
 						newRelease.ReleaseName = entry.ReleaseName
 						newRelease.ReleaseScreenShot = entry.ReleaseScreenShot
 						newRelease.Rating = entry.Rating
+						newRelease.ReleaseYear, _ = strconv.Atoi(entry.ReleaseYear)
+						newRelease.ReleaseMonth, _ = strconv.Atoi(entry.ReleaseMonth)
+						newRelease.ReleaseDay, _ = strconv.Atoi(entry.ReleaseDay)
+						newRelease.ReleaseType = entry.ReleaseType
+						newRelease.ReleasedAt = entry.XMLReleasedAt.XMLEvent.Name
 
 						// fmt.Println("Nazwa:  ", entry.ReleaseName)
 						// fmt.Println("ID:     ", entry.ReleaseID)
 						// fmt.Println("Typ:    ", entry.ReleaseType)
+						// fmt.Println("Event:  ", entry.XMLReleasedAt.XMLEvent.Name)
+
 						for _, group := range entry.XMLReleasedBy.XMLGroup {
 							// fmt.Println("XMLGroup:  ", group.Name)
 							newRelease.ReleasedBy = append(newRelease.ReleasedBy, group.Name)
@@ -832,6 +902,14 @@ func ReadLatestReleasesThread() {
 						for _, handle := range entry.XMLReleasedBy.XMLHandle {
 							// fmt.Println("XMLHandle: ", handle.XMLHandle)
 							newRelease.ReleasedBy = append(newRelease.ReleasedBy, handle.XMLHandle)
+						}
+						for _, entrySid := range entry.UsedSIDs {
+							var sid UsedSID
+							sid.Author = entrySid.Author
+							sid.HVSCPath = entrySid.HVSCPath
+							sid.ID = entrySid.ID
+							sid.Name = entrySid.Name
+							newRelease.UsedSIDs = append(newRelease.UsedSIDs, sid)
 						}
 						// fmt.Println("-----------------------------------")
 						for _, credit := range entry.Credits {
@@ -981,6 +1059,12 @@ func ReadLatestReleasesThread() {
 
 }
 
+// CSDBPrepareData - Wątek odczygtujący wszystkie releasy z csdb
+// ================================================================================================
+func CSDBPrepareData() {
+
+}
+
 // HVSCPrepareData - Wątek odczygtujący dane z HVSC
 // ================================================================================================
 func HVSCPrepareData() {
@@ -1122,7 +1206,8 @@ func ExtractD64(filename string) ([]byte, bool) {
 // ================================================================================================
 func main() {
 
-	// HVSCPrepareData()
+	go HVSCPrepareData()
+	go CSDBPrepareData()
 
 	args := os.Args[1:]
 
