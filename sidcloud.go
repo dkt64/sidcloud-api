@@ -9,7 +9,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"encoding/xml"
-	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
@@ -21,9 +20,9 @@ import (
 	"os/exec"
 	"path/filepath"
 	"runtime"
+	"sort"
 	"strconv"
 	"strings"
-	"sync"
 	"time"
 
 	"github.com/gin-gonic/autotls"
@@ -34,9 +33,8 @@ const cacheDir = "cache/"
 const wavSize = 29458844
 const wavTime = "333"
 
-// mutex - wielowątkowość na tablicy releases
-// ------------------------------------------------------------------------------------------------
-var mutex = &sync.Mutex{}
+const backIds = 1000
+const backMonths = 3
 
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
@@ -128,6 +126,12 @@ type XMLRelease struct {
 	UsedSIDs          []XMLUsedSID      `xml:"Release>UsedSIDs>SID"`
 }
 
+// LatestRelease - najwyższy numer ID
+// ------------------------------------------------------------------------------------------------
+type LatestRelease struct {
+	ID int `xml:"LatestReleaseId"`
+}
+
 // UsedSID - wydanie produkcji na csdb
 // ------------------------------------------------------------------------------------------------
 type UsedSID struct {
@@ -148,19 +152,24 @@ type Release struct {
 	ReleaseType       string
 	ReleaseScreenShot string
 	ReleasedAt        string
+	SIDPath           string
 	Rating            float32
 	ReleasedBy        []string
 	Credits           []string
 	DownloadLinks     []string
-	UsedSIDs          []UsedSID
-	SIDCached         bool
-	WAVCached         bool
-	Ext               string
+	// UsedSIDs          []UsedSID
+	SIDCached bool
+	WAVCached bool
+	Ext       string
 }
 
 // releases - glówna i globalna tablica z aktualnymi produkcjami
 // ================================================================================================
 var releases []Release
+
+// allReleases - glówna i globalna tablica ze wszystkimi produkcjami
+// ================================================================================================
+var csdb []Release
 
 // sidplayExe - nazwa EXE dla siplayfp
 // ================================================================================================
@@ -184,7 +193,7 @@ var hvsc []SIDFile
 // ================================================================================================
 func ErrCheck(errNr error) bool {
 	if errNr != nil {
-		fmt.Println(errNr)
+		log.Println(errNr)
 		return false
 	}
 	return true
@@ -204,6 +213,20 @@ func WriteDb() {
 	_ = ioutil.WriteFile("releases.json", file, 0666)
 }
 
+// ReadCSDb - Odczyt bazy
+// ================================================================================================
+func ReadCSDb() {
+	file, _ := ioutil.ReadFile("csdb.json")
+	_ = json.Unmarshal([]byte(file), &csdb)
+}
+
+// WriteCSDb - Zapis bazy
+// ================================================================================================
+func WriteCSDb() {
+	file, _ := json.MarshalIndent(csdb, "", " ")
+	_ = ioutil.WriteFile("csdb.json", file, 0666)
+}
+
 // ReadHVSCJson - Odczyt pliku HVSC
 // ================================================================================================
 func ReadHVSCJson() {
@@ -218,6 +241,131 @@ func WriteHVSCJson() {
 	_ = ioutil.WriteFile("hvsc.json", file, 0666)
 }
 
+// insertRelease - Wstawienie release'u do slice
+// ================================================================================================
+func insertRelease(array []Release, value Release, index int) []Release {
+	return append(array[:index], append([]Release{value}, array[index:]...)...)
+}
+
+// Difference - Różnica pomiędzy dwoma slice
+// ================================================================================================
+func Difference(a, b []Release) (diff []Release) {
+
+	for _, itema := range b {
+		found := false
+		for _, itemb := range a {
+			if itema.ReleaseID == itemb.ReleaseID &&
+				len(itema.DownloadLinks) == len(itemb.DownloadLinks) {
+				found = true
+				break
+			}
+		}
+		if !found {
+			diff = append(diff, itema)
+		}
+	}
+
+	return diff
+}
+
+// D64GetSector - Read sector from D64
+// ================================================================================================
+func D64GetSector(file *os.File, track byte, sector byte) []byte {
+
+	var track2Address = [...]int64{0x00000, 0x00000, 0x01500, 0x02A00, 0x03F00, 0x05400, 0x06900,
+		0x07E00, 0x09300, 0x0A800, 0x0BD00, 0x0D200, 0x0E700, 0x0FC00, 0x11100, 0x12600, 0x13B00,
+		0x15000, 0x16500, 0x17800, 0x18B00, 0x19E00, 0x1B100, 0x1C400, 0x1D700, 0x1EA00, 0x1FC00,
+		0x20E00, 0x22000, 0x23200, 0x24400, 0x25600, 0x26700, 0x27800, 0x28900, 0x29A00, 0x2AB00,
+		0x2BC00, 0x2CD00, 0x2DE00, 0x2EF00}
+
+	file.Seek(track2Address[int64(track)]+256*int64(sector), 0)
+	p := make([]byte, 256)
+	file.Read(p)
+
+	return p
+}
+
+// ExtractD64 - Extract PRG from D64
+// ================================================================================================
+func ExtractD64(filename string) ([]byte, bool) {
+
+	file, err := os.Open(filename)
+	ErrCheck(err)
+	defer file.Close()
+
+	var dirTrack byte = 18
+	var dirSector byte = 1
+	var outfile []byte
+	loop := true
+
+	for loop {
+		// log.Println("I'm on dir track " + strconv.Itoa(int(dirTrack)) + " and sector " + strconv.Itoa(int(dirSector)))
+		sector := D64GetSector(file, dirTrack, dirSector)
+		for ptr := 0; ptr < 8*0x20; ptr += 0x20 {
+			if (sector[ptr+2] & 7) == 2 {
+				name := string(sector[ptr+5 : ptr+14])
+				var fileTrack byte = sector[ptr+3]
+				var fileSector byte = sector[ptr+4]
+				log.Println(name + " T:" + strconv.Itoa(int(fileTrack)) + " S:" + strconv.Itoa(int(fileSector)))
+
+				// Najpierw sprawdzimy czy load address == $0801
+				prg := D64GetSector(file, fileTrack, fileSector)
+
+				if prg[2] == 1 && prg[3] == 8 {
+					// log.Println("Loading address is OK")
+					log.Println("Found PRG file in D64, ptr " + strconv.Itoa(int(ptr)))
+
+					fileTrack = prg[0]
+					fileSector = prg[1]
+					fileloop := true
+					outfile = append(outfile, prg[2:]...)
+
+					for fileloop && fileTrack != 0 {
+						prg = D64GetSector(file, fileTrack, fileSector)
+						fileTrack = prg[0]
+						fileSector = prg[1]
+						outfile = append(outfile, prg[2:]...)
+					}
+					// log.Println("Koniec pliku")
+					return outfile, true
+
+					// fileloop = false
+					// loop = false
+					// break
+				}
+				// log.Println("Loading address is NOK")
+			}
+		}
+		dirTrack = sector[0]
+		if dirTrack == 0 {
+			break
+		}
+		dirSector = sector[1]
+	}
+
+	return outfile, false
+
+}
+
+// Sortowanie datami
+// ================================================================================================
+
+type byDate []Release
+
+func (s byDate) Len() int {
+	return len(s)
+}
+func (s byDate) Swap(i, j int) {
+	s[i], s[j] = s[j], s[i]
+}
+func (s byDate) Less(i, j int) bool {
+
+	d1 := time.Date(s[i].ReleaseYear, time.Month(s[i].ReleaseMonth), s[i].ReleaseDay, 0, 0, 0, 0, time.Local)
+	d2 := time.Date(s[j].ReleaseYear, time.Month(s[j].ReleaseMonth), s[j].ReleaseDay, 0, 0, 0, 0, time.Local)
+
+	return d2.Before(d1)
+}
+
 // fileExists - sprawdzenie czy plik istnieje
 // ================================================================================================
 func fileExists(filename string) bool {
@@ -228,6 +376,28 @@ func fileExists(filename string) bool {
 
 	return true
 }
+
+// makeCharsetReader - decode reader
+// ================================================================================================
+func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {
+	return input, nil
+
+	// if charset == "ISO-8859-1" {
+	// 	// Windows-1252 is a superset of ISO-8859-1, so should do here
+	// 	return charmap.Windows1252.NewDecoder().Reader(input), nil
+	// }
+	// return nil, fmt.Errorf("Unknown charset: %s", charset)
+}
+
+// // toUtf8 - konwersja kodowania
+// // ================================================================================================
+// func toUtf8(inputbuf []byte) string {
+// 	buf := make([]rune, len(inputbuf))
+// 	for i, b := range inputbuf {
+// 		buf[i] = rune(b)
+// 	}
+// 	return string(buf)
+// }
 
 // DownloadFile will download a url to a local file. It's efficient because it will
 // write as it downloads and not load the whole file into memory.
@@ -305,7 +475,7 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 		//
 		for _, file := range zipReader.File {
 
-			log.Println(file.Name)
+			// log.Println(file.Name)
 
 			if strings.Contains(file.Name, ".sid") && !file.FileInfo().IsDir() {
 
@@ -336,7 +506,7 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 		//
 		for _, file := range zipReader.File {
 
-			log.Println(file.Name)
+			// log.Println(file.Name)
 
 			if strings.Contains(file.Name, ".prg") && !file.FileInfo().IsDir() {
 
@@ -382,11 +552,11 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 		//
 		for _, file := range zipReader.File {
 
-			log.Println(file.Name)
+			// log.Println(file.Name)
 
 			if strings.Contains(file.Name, ".d64") && !file.FileInfo().IsDir() {
 
-				log.Println("Found D64 file")
+				// log.Println("Found D64 file")
 				log.Println("File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
 				outputFile, err := os.OpenFile(
 					"cache/"+strconv.Itoa(id)+".d64",
@@ -428,84 +598,680 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 	return ext, err
 }
 
-// CSDBGetLatestReleases - ostatnie release'y
+// DownloadFilesThread - Wątek ściągający pliki produkcji z csdb
 // ================================================================================================
-func CSDBGetLatestReleases(c *gin.Context) {
-	c.Header("Access-Control-Allow-Origin", "*")
+func DownloadFilesThread() {
 
-	// Info o wejściu do GET
-	log.Println("CSDBGetLatestReleases()")
+	defer func() {
+		log.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Koniec watku DownloadFiles !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+	}()
 
-	mutex.Lock()
-	releasesTemp := releases
-	mutex.Unlock()
+	for {
 
-	c.JSON(http.StatusOK, releasesTemp)
+		log.Println("DownloadFilesThread()...")
+
+		for index, newRelease := range releases {
+			if len(newRelease.DownloadLinks) > 0 {
+				filename := cacheDir
+				if strings.Contains(newRelease.DownloadLinks[0], ".sid") {
+					filename += strconv.Itoa(newRelease.ReleaseID) + ".sid"
+				}
+				if strings.Contains(newRelease.DownloadLinks[0], ".prg") {
+					filename += strconv.Itoa(newRelease.ReleaseID) + ".prg"
+				}
+				if strings.Contains(newRelease.DownloadLinks[0], ".zip") {
+					filename += strconv.Itoa(newRelease.ReleaseID) + ".zip"
+				}
+				if strings.Contains(newRelease.DownloadLinks[0], ".d64") {
+					filename += strconv.Itoa(newRelease.ReleaseID) + ".d64"
+				}
+
+				// Dodajemy new release
+				// ale tylko jeżeli mamy niezbędne info o produkcji
+				if filename != "" {
+
+					if !fileExists(filename) {
+						_, err := DownloadFile(filename, newRelease.DownloadLinks[0], newRelease.ReleaseID)
+						if ErrCheck(err) {
+							newRelease.SIDCached = true
+							// SendEmail("Nowa produkcja na CSDB.DK: " + newRelease.ReleaseName + " by " + newRelease.ReleasedBy[0])
+						}
+					} else {
+						newRelease.SIDCached = true
+					}
+
+					if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".sid") {
+						newRelease.Ext = ".sid"
+					}
+					if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".prg") {
+						newRelease.Ext = ".prg"
+					}
+					if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".wav") {
+						newRelease.WAVCached = true
+					}
+
+					releases[index] = newRelease
+
+					// SLEEP
+					// ----------------------------------------------------------------------------------------
+					time.Sleep(1 * time.Second)
+
+				}
+			}
+		}
+
+		// SLEEP
+		// ----------------------------------------------------------------------------------------
+		time.Sleep(30 * time.Second)
+	}
 }
 
-// CreateWAVFiles - Creating WAV files
+// CreateWAVFilesThread - Creating WAV files
 // ================================================================================================
-func CreateWAVFiles() {
+func CreateWAVFilesThread() {
 	//
 
-	log.Println("CreateWAVFiles()...")
-	for index, rel := range releases {
+	defer func() {
+		log.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Koniec watku CreateWAVFiles !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+	}()
 
-		id := strconv.Itoa(rel.ReleaseID)
-		filenameWAV := cacheDir + id + ".wav"
+	for {
 
-		var size int64
+		log.Println("CreateWAVFilesThread()...")
+		for index, rel := range releases {
 
-		if fileExists(filenameWAV) {
-			file, err := os.Stat(filenameWAV)
-			if err != nil {
-				fmt.Println("Problem z odczytem rozmiaru pliku " + filenameWAV)
+			if len(rel.Ext) == 4 && rel.SIDCached {
+				id := strconv.Itoa(rel.ReleaseID)
+				filenameWAV := cacheDir + id + ".wav"
+
+				var size int64
+
+				if fileExists(filenameWAV) {
+					file, err := os.Stat(filenameWAV)
+					if err != nil {
+						log.Println("Problem z odczytem rozmiaru pliku " + filenameWAV)
+					}
+					size = file.Size()
+				}
+
+				if !fileExists(filenameWAV) || size < wavSize {
+
+					log.Println("Tworzenie pliku " + filenameWAV)
+					filenameSID := cacheDir + id + rel.Ext
+					paramName := "-w" + cacheDir + id
+
+					var cmdName string
+
+					czas := "-t" + wavTime
+					// bits := "-p16"
+					// freq := "-f44100"
+					model := "-mn"
+
+					// Odpalenie sidplayfp
+					if runtime.GOOS == "windows" {
+						cmdName = "sidplayfp/sidplayfp.exe"
+					} else {
+						cmdName = sidplayExe // zakładamy że jest zainstalowany
+					}
+
+					log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + model + " " + paramName + " " + filenameSID + ")")
+					cmd := exec.Command(cmdName, czas, model, paramName, filenameSID)
+					err := cmd.Run()
+					if ErrCheck(err) {
+
+						releases[index].WAVCached = true
+						log.Println(filenameWAV + " cached")
+						WriteDb()
+					}
+
+					// SLEEP
+					// ----------------------------------------------------------------------------------------
+					time.Sleep(5 * time.Second)
+
+				} else {
+					// log.Println("Plik " + filenameWAV + " już istnieje")
+					releases[index].WAVCached = true
+					// log.Println(filenameWAV + " cached")
+					WriteDb()
+				}
 			}
-			size = file.Size()
+
 		}
 
-		if !fileExists(filenameWAV) || size < wavSize {
+		// SLEEP
+		// ----------------------------------------------------------------------------------------
+		time.Sleep(1 * time.Minute)
+	}
 
-			log.Println("Tworzenie pliku " + filenameWAV)
-			filenameSID := cacheDir + id + rel.Ext
-			paramName := "-w" + cacheDir + id
+}
 
-			var cmdName string
+// ReadLatestReleasesThread - Wątek odczygtujący dane z csdb
+// ================================================================================================
+func ReadLatestReleasesThread() {
 
-			czas := "-t" + wavTime
-			// bits := "-p16"
-			// freq := "-f44100"
-			model := "-mn"
+	defer func() {
+		log.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Koniec watku ReadLatestReleases !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+	}()
 
-			// Odpalenie sidplayfp
-			if runtime.GOOS == "windows" {
-				cmdName = "sidplayfp/sidplayfp.exe"
-			} else {
-				cmdName = sidplayExe // zakładamy że jest zainstalowany
+	netClient := &http.Client{Timeout: time.Second * 10}
+
+	var foundNewReleases int
+
+	for {
+		log.Println("ReadLatestReleasesThread()...")
+
+		resp, err := netClient.Get("https://csdb.dk/rss/latestreleases.php")
+
+		if ErrCheck(err) {
+			defer resp.Body.Close()
+			body, err := ioutil.ReadAll(resp.Body)
+			ErrCheck(err)
+			// log.Println(string(body))
+			resp.Body.Close()
+
+			// Przerobienie na strukturę
+
+			var latestReleases XMLRssFeed
+			reader := bytes.NewReader(body)
+			decoder := xml.NewDecoder(reader)
+			decoder.CharsetReader = makeCharsetReader
+			// err = xml.Unmarshal([]byte(body), &latestReleases)
+			err = decoder.Decode(&latestReleases)
+			ErrCheck(err)
+
+			// log.Println("Odebrano: ", latestReleases)
+			// log.Println("===================================")
+			log.Println("Odebrano listę ostatnich releases...")
+			// log.Println("===================================")
+
+			foundNewReleases = 0
+
+			var releasesTemp []Release
+
+			for index := 0; index < len(latestReleases.Items); index++ {
+				rssItem := latestReleases.Items[index]
+				// log.Println(rssItem.Title)
+				url, err := url.Parse(rssItem.GUID)
+				ErrCheck(err)
+				q := url.Query()
+				// log.Println(q.Get("id"))
+
+				resp, err := netClient.Get("https://csdb.dk/webservice/?type=release&id=" + q.Get("id"))
+
+				if ErrCheck(err) {
+					defer resp.Body.Close()
+					body, err := ioutil.ReadAll(resp.Body)
+					ErrCheck(err)
+					// log.Println(string(body))
+					resp.Body.Close()
+
+					// Przerobienie na strukturę
+
+					var entry XMLRelease
+					reader := bytes.NewReader(body)
+					decoder := xml.NewDecoder(reader)
+					decoder.CharsetReader = makeCharsetReader
+					err = decoder.Decode(&entry)
+					ErrCheck(err)
+
+					// Szukamy takiego release w naszej bazie
+					//
+
+					id, _ := strconv.Atoi(entry.ReleaseID)
+
+					var relTypesAllowed = [...]string{"C64 Music", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo", "C128 Release"}
+					found := false
+					for _, rel := range releasesTemp {
+						if rel.ReleaseID == id {
+							found = true
+						}
+					}
+					typeOK := false
+					for _, relType := range relTypesAllowed {
+						if relType == entry.ReleaseType {
+							typeOK = true
+							break
+						}
+					}
+
+					// TODO zrobić update tych info (ktoś mógł uzupełnić potem dane lub pliki)
+					// Jeżeli znaleźliśmy to sprawdzamy typ i dodajemy
+					//
+					if !found && typeOK {
+
+						// Tworzymy nowy obiekt release który dodamy do slice
+						//
+						var newRelease Release
+						id, _ := strconv.Atoi(entry.ReleaseID)
+						newRelease.ReleaseID = id
+						newRelease.ReleaseName = entry.ReleaseName
+						newRelease.ReleaseScreenShot = entry.ReleaseScreenShot
+						newRelease.Rating = entry.Rating
+						newRelease.ReleaseYear, _ = strconv.Atoi(entry.ReleaseYear)
+						newRelease.ReleaseMonth, _ = strconv.Atoi(entry.ReleaseMonth)
+						newRelease.ReleaseDay, _ = strconv.Atoi(entry.ReleaseDay)
+						newRelease.ReleaseType = entry.ReleaseType
+						newRelease.ReleasedAt = entry.XMLReleasedAt.XMLEvent.Name
+
+						if len(entry.UsedSIDs) == 1 {
+							newRelease.SIDPath = entry.UsedSIDs[0].HVSCPath
+						}
+
+						// log.Println("Nazwa:  ", entry.ReleaseName)
+						// log.Println("ID:     ", entry.ReleaseID)
+						// log.Println("Typ:    ", entry.ReleaseType)
+						// log.Println("Event:  ", entry.XMLReleasedAt.XMLEvent.Name)
+
+						for _, group := range entry.XMLReleasedBy.XMLGroup {
+							// log.Println("XMLGroup:  ", group.Name)
+							newRelease.ReleasedBy = append(newRelease.ReleasedBy, group.Name)
+						}
+						for _, handle := range entry.XMLReleasedBy.XMLHandle {
+							// log.Println("XMLHandle: ", handle.XMLHandle)
+							newRelease.ReleasedBy = append(newRelease.ReleasedBy, handle.XMLHandle)
+						}
+						// for _, entrySid := range entry.UsedSIDs {
+						// 	var sid UsedSID
+						// 	sid.Author = entrySid.Author
+						// 	sid.HVSCPath = entrySid.HVSCPath
+						// 	sid.ID = entrySid.ID
+						// 	sid.Name = entrySid.Name
+						// 	newRelease.UsedSIDs = append(newRelease.UsedSIDs, sid)
+						// }
+						// log.Println("-----------------------------------")
+						for _, credit := range entry.Credits {
+
+							creditHandle := "???"
+							if len(credit.XMLHandle.XMLHandle) > 0 {
+								// log.Println(credit.CreditType + ": " + credit.XMLHandle.XMLHandle + " [" + credit.XMLHandle.ID + "]")
+								if credit.CreditType == "Music" {
+									newRelease.Credits = append(newRelease.Credits, credit.XMLHandle.XMLHandle)
+								}
+							} else {
+								found := false
+								for _, releaseHandle := range entry.XMLReleasedBy.XMLHandle {
+									if releaseHandle.ID == credit.XMLHandle.ID && releaseHandle.XMLHandle != "" {
+										// log.Println(credit.CreditType + ": " + releaseHandle.XMLHandle + " [" + releaseHandle.ID + "]")
+										creditHandle = releaseHandle.XMLHandle
+										found = true
+										break
+									}
+								}
+								if !found {
+									for _, releaseHandle := range entry.Credits {
+										if releaseHandle.XMLHandle.ID == credit.XMLHandle.ID && releaseHandle.XMLHandle.XMLHandle != "" {
+											// log.Println(credit.CreditType + ": " + releaseHandle.XMLHandle.XMLHandle + " [" + releaseHandle.XMLHandle.ID + "]")
+											creditHandle = releaseHandle.XMLHandle.XMLHandle
+											break
+										}
+									}
+								}
+
+								// Jeżeli mamy handle i type
+								//
+								if credit.CreditType == "Music" && creditHandle != "" {
+									newRelease.Credits = append(newRelease.Credits, creditHandle)
+								}
+							}
+						}
+						// log.Println("===================================")
+
+						// Linki dościągnięcia
+						// Najpierw SIDy
+
+						for _, link := range entry.DownloadLinks {
+							if strings.Contains(link.Link, ".sid") {
+								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							}
+						}
+						// Potem PRGs
+						for _, link := range entry.DownloadLinks {
+							if strings.Contains(link.Link, ".prg") {
+								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							}
+						}
+						// Potem ZIPy
+						for _, link := range entry.DownloadLinks {
+							if strings.Contains(link.Link, ".zip") {
+								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							}
+						}
+						// Potem D64y
+						for _, link := range entry.DownloadLinks {
+							if strings.Contains(link.Link, ".d64") {
+								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							}
+						}
+
+						//
+						// Dodajemy
+						//
+						releasesTemp = append(releasesTemp, newRelease)
+					}
+				} else {
+					log.Println("Błąd komunikacji z csdb.dk")
+				}
 			}
 
-			log.Println("Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + model + " " + paramName + " " + filenameSID + ")")
-			cmd := exec.Command(cmdName, czas, model, paramName, filenameSID)
-			err := cmd.Run()
-			if ErrCheck(err) {
+			//
+			// Dodanie do globalnej tablicy
+			//
 
-				mutex.Lock()
-				releases[index].WAVCached = true
-				mutex.Unlock()
-				log.Println(filenameWAV + " cached")
-				WriteDb()
+			for _, rel1 := range releasesTemp {
+
+				found := false
+				for _, rel2 := range releases {
+					if rel2.ReleaseID == rel1.ReleaseID {
+						found = true
+						break
+					}
+				}
+
+				if !found {
+					releases = append(releases, rel1)
+					foundNewReleases++
+				}
 			}
+
+			for _, rel1 := range csdb {
+
+				found := false
+				for _, rel2 := range releases {
+					if rel2.ReleaseID == rel1.ReleaseID {
+						found = true
+						break
+					}
+				}
+
+				if !found {
+					releases = append(releases, rel1)
+				}
+			}
+
+			// Wyświetlenie danych
+			log.Println("Found", foundNewReleases, "new releases")
+
+			sort.Sort(byDate(releases))
+			WriteDb()
 
 		} else {
-			// log.Println("Plik " + filenameWAV + " już istnieje")
-			mutex.Lock()
-			releases[index].WAVCached = true
-			mutex.Unlock()
-			// log.Println(filenameWAV + " cached")
-			WriteDb()
+			log.Println("Błąd komunikacji z csdb.dk")
 		}
 
+		// SLEEP
+		// ----------------------------------------------------------------------------------------
+		time.Sleep(2 * time.Minute)
 	}
+
+}
+
+// CSDBPrepareDataThread - Wątek odczygtujący wszystkie releasy z csdb
+// ================================================================================================
+func CSDBPrepareDataThread() {
+
+	defer func() {
+		log.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Koniec watku CSDBPrepareData !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+	}()
+
+	for {
+
+		lastDate := time.Now().AddDate(0, -backMonths, 0)
+
+		netClient := &http.Client{Timeout: time.Second * 10}
+
+		resp, err := netClient.Get("https://csdb.dk/webservice/?type=release&id=0")
+
+		log.Println("CSDBPrepareDataThread()...")
+
+		if ErrCheck(err) {
+
+			defer resp.Body.Close()
+			body, err := ioutil.ReadAll(resp.Body)
+			ErrCheck(err)
+			// log.Println(string(body))
+			resp.Body.Close()
+
+			// Przerobienie na strukturę
+
+			var entry LatestRelease
+			reader := bytes.NewReader(body)
+			decoder := xml.NewDecoder(reader)
+			decoder.CharsetReader = makeCharsetReader
+			err = decoder.Decode(&entry)
+			ErrCheck(err)
+
+			log.Println("===================================")
+			log.Println("Najwyższy numer ID wynosi " + strconv.Itoa(entry.ID))
+
+			var csdbTemp []Release
+
+			for id := entry.ID; id > entry.ID-backIds; id-- {
+
+				resp, err := netClient.Get("https://csdb.dk/webservice/?type=release&id=" + strconv.Itoa(id))
+
+				// log.Println("ID " + strconv.Itoa(id))
+
+				if ErrCheck(err) {
+					defer resp.Body.Close()
+					body, err := ioutil.ReadAll(resp.Body)
+					ErrCheck(err)
+					// log.Println(string(body))
+					resp.Body.Close()
+
+					// Przerobienie na strukturę
+
+					var entry XMLRelease
+					reader := bytes.NewReader(body)
+					decoder := xml.NewDecoder(reader)
+					decoder.CharsetReader = makeCharsetReader
+					err = decoder.Decode(&entry)
+					ErrCheck(err)
+
+					// Szukamy takiego release w naszej bazie
+					//
+
+					var relTypesAllowed = [...]string{"C64 Music", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo", "C128 Release"}
+					typeOK := false
+					for _, relType := range relTypesAllowed {
+						if relType == entry.ReleaseType {
+							typeOK = true
+							break
+						}
+					}
+
+					prodYear, _ := strconv.Atoi(entry.ReleaseYear)
+					prodMonth, _ := strconv.Atoi(entry.ReleaseMonth)
+					prodDay, _ := strconv.Atoi(entry.ReleaseDay)
+					prodTime := time.Date(prodYear, time.Month(prodMonth), prodDay, 0, 0, 0, 0, time.Local)
+
+					// TODO zrobić update tych info (ktoś mógł uzupełnić potem dane lub pliki)
+					// Jeżeli znaleźliśmy to sprawdzamy typ i dodajemy
+					//
+					if typeOK && prodTime.After(lastDate) {
+
+						// Tworzymy nowy obiekt release który dodamy do slice
+						//
+						var newRelease Release
+						id, _ := strconv.Atoi(entry.ReleaseID)
+						newRelease.ReleaseID = id
+						newRelease.ReleaseName = entry.ReleaseName
+						newRelease.ReleaseScreenShot = entry.ReleaseScreenShot
+						newRelease.Rating = entry.Rating
+						newRelease.ReleaseYear, _ = strconv.Atoi(entry.ReleaseYear)
+						newRelease.ReleaseMonth, _ = strconv.Atoi(entry.ReleaseMonth)
+						newRelease.ReleaseDay, _ = strconv.Atoi(entry.ReleaseDay)
+						newRelease.ReleaseType = entry.ReleaseType
+						newRelease.ReleasedAt = entry.XMLReleasedAt.XMLEvent.Name
+
+						if len(entry.UsedSIDs) == 1 {
+							newRelease.SIDPath = entry.UsedSIDs[0].HVSCPath
+						}
+
+						log.Println("Nazwa:  ", entry.ReleaseName)
+						// log.Println("ID:     ", entry.ReleaseID)
+						// log.Println("Typ:    ", entry.ReleaseType)
+						// log.Println("Event:  ", entry.XMLReleasedAt.XMLEvent.Name)
+
+						for _, group := range entry.XMLReleasedBy.XMLGroup {
+							// log.Println("XMLGroup:  ", group.Name)
+							newRelease.ReleasedBy = append(newRelease.ReleasedBy, group.Name)
+						}
+						for _, handle := range entry.XMLReleasedBy.XMLHandle {
+							// log.Println("XMLHandle: ", handle.XMLHandle)
+							newRelease.ReleasedBy = append(newRelease.ReleasedBy, handle.XMLHandle)
+						}
+						// for _, entrySid := range entry.UsedSIDs {
+						// 	var sid UsedSID
+						// 	sid.Author = entrySid.Author
+						// 	sid.HVSCPath = entrySid.HVSCPath
+						// 	sid.ID = entrySid.ID
+						// 	sid.Name = entrySid.Name
+						// 	newRelease.UsedSIDs = append(newRelease.UsedSIDs, sid)
+						// }
+						// log.Println("-----------------------------------")
+						for _, credit := range entry.Credits {
+
+							creditHandle := "???"
+							if len(credit.XMLHandle.XMLHandle) > 0 {
+								// log.Println(credit.CreditType + ": " + credit.XMLHandle.XMLHandle + " [" + credit.XMLHandle.ID + "]")
+								if credit.CreditType == "Music" {
+									newRelease.Credits = append(newRelease.Credits, credit.XMLHandle.XMLHandle)
+								}
+							} else {
+								found := false
+								for _, releaseHandle := range entry.XMLReleasedBy.XMLHandle {
+									if releaseHandle.ID == credit.XMLHandle.ID && releaseHandle.XMLHandle != "" {
+										// log.Println(credit.CreditType + ": " + releaseHandle.XMLHandle + " [" + releaseHandle.ID + "]")
+										creditHandle = releaseHandle.XMLHandle
+										found = true
+										break
+									}
+								}
+								if !found {
+									for _, releaseHandle := range entry.Credits {
+										if releaseHandle.XMLHandle.ID == credit.XMLHandle.ID && releaseHandle.XMLHandle.XMLHandle != "" {
+											// log.Println(credit.CreditType + ": " + releaseHandle.XMLHandle.XMLHandle + " [" + releaseHandle.XMLHandle.ID + "]")
+											creditHandle = releaseHandle.XMLHandle.XMLHandle
+											break
+										}
+									}
+								}
+
+								// Jeżeli mamy handle i type
+								//
+								if credit.CreditType == "Music" && creditHandle != "" {
+									newRelease.Credits = append(newRelease.Credits, creditHandle)
+								}
+							}
+						}
+						// log.Println("===================================")
+
+						// Linki dościągnięcia
+						// Najpierw SIDy
+
+						for _, link := range entry.DownloadLinks {
+							if strings.Contains(link.Link, ".sid") {
+								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							}
+						}
+						// Potem PRGs
+						for _, link := range entry.DownloadLinks {
+							if strings.Contains(link.Link, ".prg") {
+								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							}
+						}
+						// Potem ZIPy
+						for _, link := range entry.DownloadLinks {
+							if strings.Contains(link.Link, ".zip") {
+								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							}
+						}
+						// Potem D64y
+						for _, link := range entry.DownloadLinks {
+							if strings.Contains(link.Link, ".d64") {
+								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							}
+						}
+
+						csdbTemp = append(csdbTemp, newRelease)
+					}
+				} else {
+					log.Println("Błąd komunikacji z csdb.dk")
+				}
+
+			}
+			csdb = csdbTemp
+			sort.Sort(byDate(csdb))
+			WriteCSDb()
+
+			log.Println("Ilość produkcji z ostatnich " + strconv.Itoa(backMonths) + " miesięcy oraz " + strconv.Itoa(backIds) + " wpisów wynosi " + strconv.Itoa(len(csdb)))
+
+		} else {
+			log.Println("Błąd komunikacji z csdb.dk")
+		}
+
+		// SLEEP
+		// ----------------------------------------------------------------------------------------
+		// time.Sleep(24 * time.Hour)
+		time.Sleep(5 * time.Minute)
+	}
+}
+
+// HVSCPrepareData - Wątek odczygtujący dane z HVSC
+// ================================================================================================
+func HVSCPrepareData() {
+
+	log.Println("HVSC start")
+	var id int64
+
+	root := "./C64Music/Games"
+	err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
+		if filepath.Ext(path) != ".sid" {
+			return nil
+		}
+
+		split := "/"
+		if runtime.GOOS == "windows" {
+			split = "\\"
+		}
+
+		pathSlice := strings.Split(path, split)
+		var newSIDFile SIDFile
+		newSIDFile.ID = id
+		newSIDFile.Filepath = path
+		newSIDFile.Author = "Games"
+		newSIDFile.Filename = strings.ReplaceAll(strings.TrimSuffix(pathSlice[len(pathSlice)-1], ".sid"), "_", " ")
+		hvsc = append(hvsc, newSIDFile)
+		id++
+		return nil
+	})
+	ErrCheck(err)
+
+	root = "./C64Music/Musicians"
+	err = filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
+		if filepath.Ext(path) != ".sid" {
+			return nil
+		}
+
+		split := "/"
+		if runtime.GOOS == "windows" {
+			split = "\\"
+		}
+
+		pathSlice := strings.Split(path, split)
+		var newSIDFile SIDFile
+		newSIDFile.ID = id
+		newSIDFile.Filepath = path
+		newSIDFile.Author = strings.ReplaceAll(pathSlice[len(pathSlice)-2], "_", " ")
+		newSIDFile.Filename = strings.ReplaceAll(strings.TrimSuffix(pathSlice[len(pathSlice)-1], ".sid"), "_", " ")
+		hvsc = append(hvsc, newSIDFile)
+		id++
+		return nil
+	})
+	ErrCheck(err)
+
+	WriteHVSCJson()
+	log.Println("HVSC stop")
 }
 
 // GetHVSCFilter - lista przefiltrowanych SIDów
@@ -532,6 +1298,19 @@ func GetHVSCFilter(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, hvscTemp)
+}
+
+// CSDBGetLatestReleases - ostatnie release'y
+// ================================================================================================
+func CSDBGetLatestReleases(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+
+	// Info o wejściu do GET
+	log.Println("CSDBGetLatestReleases()")
+
+	releasesTemp := releases
+
+	c.JSON(http.StatusOK, releasesTemp)
 }
 
 // AudioGet - granie utworu
@@ -675,8 +1454,8 @@ func AudioGet(c *gin.Context) {
 	// }
 
 	// Feedback gdybyśmy wyszli z LOOP
-	c.JSON(http.StatusOK, "Loop ended.")
-	log.Println("Loop ended.")
+	c.JSON(http.StatusOK, "Loop ended")
+	log.Println("Loop ended")
 }
 
 // Options - Obsługa request'u OPTIONS (CORS)
@@ -730,475 +1509,10 @@ func SendEmail(in string) {
 	// Sending email.
 	err := smtp.SendMail(smtpServer.Address(), auth, from, to, message)
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 		return
 	}
-	fmt.Println("Email Sent!")
-}
-
-// makeCharsetReader - decode reader
-// ================================================================================================
-func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {
-	return input, nil
-
-	// if charset == "ISO-8859-1" {
-	// 	// Windows-1252 is a superset of ISO-8859-1, so should do here
-	// 	return charmap.Windows1252.NewDecoder().Reader(input), nil
-	// }
-	// return nil, fmt.Errorf("Unknown charset: %s", charset)
-}
-
-// // toUtf8 - konwersja kodowania
-// // ================================================================================================
-// func toUtf8(inputbuf []byte) string {
-// 	buf := make([]rune, len(inputbuf))
-// 	for i, b := range inputbuf {
-// 		buf[i] = rune(b)
-// 	}
-// 	return string(buf)
-// }
-
-// insertRelease - Wstawienie release'u do slice
-// ================================================================================================
-func insertRelease(array []Release, value Release, index int) []Release {
-	return append(array[:index], append([]Release{value}, array[index:]...)...)
-}
-
-// Difference - Różnica pomiędzy dwoma slice
-// ================================================================================================
-func Difference(a, b []Release) (diff []Release) {
-
-	for _, itema := range b {
-		found := false
-		for _, itemb := range a {
-			if itema.ReleaseID == itemb.ReleaseID &&
-				len(itema.DownloadLinks) == len(itemb.DownloadLinks) {
-				found = true
-				break
-			}
-		}
-		if !found {
-			diff = append(diff, itema)
-		}
-	}
-
-	return diff
-}
-
-// ReadLatestReleasesThread - Wątek odczygtujący dane z csdb
-// ================================================================================================
-func ReadLatestReleasesThread() {
-
-	defer func() {
-		fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Koniec watku ScannerThread !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-	}()
-
-	netClient := &http.Client{Timeout: time.Second * 10}
-
-	var foundNewReleases int
-
-	for {
-		resp, err := netClient.Get("https://csdb.dk/rss/latestreleases.php")
-
-		if ErrCheck(err) {
-			defer resp.Body.Close()
-			body, err := ioutil.ReadAll(resp.Body)
-			ErrCheck(err)
-			// fmt.Println(string(body))
-			resp.Body.Close()
-
-			// Przerobienie na strukturę
-
-			var latestReleases XMLRssFeed
-			reader := bytes.NewReader(body)
-			decoder := xml.NewDecoder(reader)
-			decoder.CharsetReader = makeCharsetReader
-			// err = xml.Unmarshal([]byte(body), &latestReleases)
-			err = decoder.Decode(&latestReleases)
-			ErrCheck(err)
-
-			// fmt.Println("Odebrano: ", latestReleases)
-			// fmt.Println("===================================")
-			log.Println("Odebrano listę ostatnich releases...")
-			// fmt.Println("===================================")
-
-			foundNewReleases = 0
-
-			var releasesTemp []Release
-
-			for index := 0; index < len(latestReleases.Items); index++ {
-				rssItem := latestReleases.Items[index]
-				// fmt.Println(rssItem.Title)
-				url, err := url.Parse(rssItem.GUID)
-				ErrCheck(err)
-				q := url.Query()
-				// fmt.Println(q.Get("id"))
-
-				resp, err := netClient.Get("https://csdb.dk/webservice/?type=release&id=" + q.Get("id"))
-
-				if ErrCheck(err) {
-					defer resp.Body.Close()
-					body, err := ioutil.ReadAll(resp.Body)
-					ErrCheck(err)
-					// fmt.Println(string(body))
-					resp.Body.Close()
-
-					// Przerobienie na strukturę
-
-					var entry XMLRelease
-					reader := bytes.NewReader(body)
-					decoder := xml.NewDecoder(reader)
-					decoder.CharsetReader = makeCharsetReader
-					err = decoder.Decode(&entry)
-					ErrCheck(err)
-
-					// Szukamy takiego release w naszej bazie
-					//
-
-					var relTypesAllowed = [...]string{"C64 Music", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo", "C128 Release"}
-					found := false
-					for _, rel := range releasesTemp {
-						id, _ := strconv.Atoi(entry.ReleaseID)
-						if rel.ReleaseID == id {
-							found = true
-						}
-					}
-					typeOK := false
-					for _, relType := range relTypesAllowed {
-						if relType == entry.ReleaseType {
-							typeOK = true
-							break
-						}
-					}
-
-					// TODO zrobić update tych info (ktoś mógł uzupełnić potem dane lub pliki)
-					// Jeżeli znaleźliśmy to sprawdzamy typ i dodajemy
-					//
-					if !found && typeOK {
-
-						// Tworzymy nowy obiekt release który dodamy do slice
-						//
-						var newRelease Release
-						id, _ := strconv.Atoi(entry.ReleaseID)
-						newRelease.ReleaseID = id
-						newRelease.ReleaseName = entry.ReleaseName
-						newRelease.ReleaseScreenShot = entry.ReleaseScreenShot
-						newRelease.Rating = entry.Rating
-						newRelease.ReleaseYear, _ = strconv.Atoi(entry.ReleaseYear)
-						newRelease.ReleaseMonth, _ = strconv.Atoi(entry.ReleaseMonth)
-						newRelease.ReleaseDay, _ = strconv.Atoi(entry.ReleaseDay)
-						newRelease.ReleaseType = entry.ReleaseType
-						newRelease.ReleasedAt = entry.XMLReleasedAt.XMLEvent.Name
-
-						// fmt.Println("Nazwa:  ", entry.ReleaseName)
-						// fmt.Println("ID:     ", entry.ReleaseID)
-						// fmt.Println("Typ:    ", entry.ReleaseType)
-						// fmt.Println("Event:  ", entry.XMLReleasedAt.XMLEvent.Name)
-
-						for _, group := range entry.XMLReleasedBy.XMLGroup {
-							// fmt.Println("XMLGroup:  ", group.Name)
-							newRelease.ReleasedBy = append(newRelease.ReleasedBy, group.Name)
-						}
-						for _, handle := range entry.XMLReleasedBy.XMLHandle {
-							// fmt.Println("XMLHandle: ", handle.XMLHandle)
-							newRelease.ReleasedBy = append(newRelease.ReleasedBy, handle.XMLHandle)
-						}
-						for _, entrySid := range entry.UsedSIDs {
-							var sid UsedSID
-							sid.Author = entrySid.Author
-							sid.HVSCPath = entrySid.HVSCPath
-							sid.ID = entrySid.ID
-							sid.Name = entrySid.Name
-							newRelease.UsedSIDs = append(newRelease.UsedSIDs, sid)
-						}
-						// fmt.Println("-----------------------------------")
-						for _, credit := range entry.Credits {
-
-							creditHandle := "???"
-							if len(credit.XMLHandle.XMLHandle) > 0 {
-								// fmt.Println(credit.CreditType + ": " + credit.XMLHandle.XMLHandle + " [" + credit.XMLHandle.ID + "]")
-								if credit.CreditType == "Music" {
-									newRelease.Credits = append(newRelease.Credits, credit.XMLHandle.XMLHandle)
-								}
-							} else {
-								found := false
-								for _, releaseHandle := range entry.XMLReleasedBy.XMLHandle {
-									if releaseHandle.ID == credit.XMLHandle.ID && releaseHandle.XMLHandle != "" {
-										// fmt.Println(credit.CreditType + ": " + releaseHandle.XMLHandle + " [" + releaseHandle.ID + "]")
-										creditHandle = releaseHandle.XMLHandle
-										found = true
-										break
-									}
-								}
-								if !found {
-									for _, releaseHandle := range entry.Credits {
-										if releaseHandle.XMLHandle.ID == credit.XMLHandle.ID && releaseHandle.XMLHandle.XMLHandle != "" {
-											// fmt.Println(credit.CreditType + ": " + releaseHandle.XMLHandle.XMLHandle + " [" + releaseHandle.XMLHandle.ID + "]")
-											creditHandle = releaseHandle.XMLHandle.XMLHandle
-											break
-										}
-									}
-								}
-
-								// Jeżeli mamy handle i type
-								//
-								if credit.CreditType == "Music" && creditHandle != "" {
-									newRelease.Credits = append(newRelease.Credits, creditHandle)
-								}
-							}
-						}
-						// fmt.Println("===================================")
-
-						// Linki dościągnięcia
-						// Najpierw SIDy
-
-						for _, link := range entry.DownloadLinks {
-							if strings.Contains(link.Link, ".sid") {
-								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
-							}
-						}
-						// Potem PRGs
-						for _, link := range entry.DownloadLinks {
-							if strings.Contains(link.Link, ".prg") {
-								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
-							}
-						}
-						// Potem ZIPy
-						for _, link := range entry.DownloadLinks {
-							if strings.Contains(link.Link, ".zip") {
-								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
-							}
-						}
-						// Potem D64y
-						for _, link := range entry.DownloadLinks {
-							if strings.Contains(link.Link, ".d64") {
-								newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
-							}
-						}
-
-						// Potem ściągamy
-						if len(newRelease.DownloadLinks) > 0 {
-							filename := cacheDir
-							if strings.Contains(newRelease.DownloadLinks[0], ".sid") {
-								filename += strconv.Itoa(newRelease.ReleaseID) + ".sid"
-							}
-							if strings.Contains(newRelease.DownloadLinks[0], ".prg") {
-								filename += strconv.Itoa(newRelease.ReleaseID) + ".prg"
-							}
-							if strings.Contains(newRelease.DownloadLinks[0], ".zip") {
-								filename += strconv.Itoa(newRelease.ReleaseID) + ".zip"
-							}
-							if strings.Contains(newRelease.DownloadLinks[0], ".d64") {
-								filename += strconv.Itoa(newRelease.ReleaseID) + ".d64"
-							}
-
-							// Dodajemy new release
-							// ale tylko jeżeli mamy niezbędne info o produkcji
-							if filename != "" {
-
-								if !fileExists(filename) {
-									_, err := DownloadFile(filename, newRelease.DownloadLinks[0], newRelease.ReleaseID)
-									if ErrCheck(err) {
-										newRelease.SIDCached = true
-										// SendEmail("Nowa produkcja na CSDB.DK: " + newRelease.ReleaseName + " by " + newRelease.ReleasedBy[0])
-									}
-								} else {
-									newRelease.SIDCached = true
-								}
-
-								if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".sid") {
-									newRelease.Ext = ".sid"
-								}
-								if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".prg") {
-									newRelease.Ext = ".prg"
-								}
-								if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".wav") {
-									newRelease.WAVCached = true
-								}
-
-								if len(newRelease.Ext) > 0 {
-									releasesTemp = append(releasesTemp, newRelease)
-									foundNewReleases++
-								}
-							}
-						}
-					}
-				} else {
-					log.Println("Błąd komunikacji z csdb.dk")
-				}
-			}
-
-			// Wyświetlenie danych
-			log.Println("Found", foundNewReleases, "new music releases.")
-			// for _, rel := range releasesTemp {
-			// 	// fmt.Println()
-			// 	// fmt.Println(rel)
-			// 	log.Println(rel)
-			// }
-			// fmt.Println("===============================================")
-
-			// Przepisanie do zmiennej globalnej
-			//
-
-			mutex.Lock()
-			releases = releasesTemp
-			mutex.Unlock()
-			WriteDb()
-
-			CreateWAVFiles()
-			WriteDb()
-
-		} else {
-			log.Println("Błąd komunikacji z csdb.dk")
-		}
-
-		// SLEEP
-		// ----------------------------------------------------------------------------------------
-		time.Sleep(300 * time.Second)
-	}
-
-}
-
-// CSDBPrepareData - Wątek odczygtujący wszystkie releasy z csdb
-// ================================================================================================
-func CSDBPrepareData() {
-
-}
-
-// HVSCPrepareData - Wątek odczygtujący dane z HVSC
-// ================================================================================================
-func HVSCPrepareData() {
-
-	log.Println("HVSC start")
-	var id int64
-
-	root := "./C64Music/Games"
-	err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
-		if filepath.Ext(path) != ".sid" {
-			return nil
-		}
-
-		split := "/"
-		if runtime.GOOS == "windows" {
-			split = "\\"
-		}
-
-		pathSlice := strings.Split(path, split)
-		var newSIDFile SIDFile
-		newSIDFile.ID = id
-		newSIDFile.Filepath = path
-		newSIDFile.Author = "Games"
-		newSIDFile.Filename = strings.ReplaceAll(strings.TrimSuffix(pathSlice[len(pathSlice)-1], ".sid"), "_", " ")
-		hvsc = append(hvsc, newSIDFile)
-		id++
-		return nil
-	})
-	ErrCheck(err)
-
-	root = "./C64Music/Musicians"
-	err = filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
-		if filepath.Ext(path) != ".sid" {
-			return nil
-		}
-
-		split := "/"
-		if runtime.GOOS == "windows" {
-			split = "\\"
-		}
-
-		pathSlice := strings.Split(path, split)
-		var newSIDFile SIDFile
-		newSIDFile.ID = id
-		newSIDFile.Filepath = path
-		newSIDFile.Author = strings.ReplaceAll(pathSlice[len(pathSlice)-2], "_", " ")
-		newSIDFile.Filename = strings.ReplaceAll(strings.TrimSuffix(pathSlice[len(pathSlice)-1], ".sid"), "_", " ")
-		hvsc = append(hvsc, newSIDFile)
-		id++
-		return nil
-	})
-	ErrCheck(err)
-
-	WriteHVSCJson()
-	log.Println("HVSC stop")
-}
-
-// D64GetSector - Read sector from D64
-// ================================================================================================
-func D64GetSector(file *os.File, track byte, sector byte) []byte {
-
-	var track2Address = [...]int64{0x00000, 0x00000, 0x01500, 0x02A00, 0x03F00, 0x05400, 0x06900,
-		0x07E00, 0x09300, 0x0A800, 0x0BD00, 0x0D200, 0x0E700, 0x0FC00, 0x11100, 0x12600, 0x13B00,
-		0x15000, 0x16500, 0x17800, 0x18B00, 0x19E00, 0x1B100, 0x1C400, 0x1D700, 0x1EA00, 0x1FC00,
-		0x20E00, 0x22000, 0x23200, 0x24400, 0x25600, 0x26700, 0x27800, 0x28900, 0x29A00, 0x2AB00,
-		0x2BC00, 0x2CD00, 0x2DE00, 0x2EF00}
-
-	file.Seek(track2Address[int64(track)]+256*int64(sector), 0)
-	p := make([]byte, 256)
-	file.Read(p)
-
-	return p
-}
-
-// ExtractD64 - Extract PRG from D64
-// ================================================================================================
-func ExtractD64(filename string) ([]byte, bool) {
-
-	file, err := os.Open(filename)
-	ErrCheck(err)
-	defer file.Close()
-
-	var dirTrack byte = 18
-	var dirSector byte = 1
-	var outfile []byte
-	loop := true
-
-	for loop {
-		log.Println("I'm on dir track " + strconv.Itoa(int(dirTrack)) + " and sector " + strconv.Itoa(int(dirSector)))
-		sector := D64GetSector(file, dirTrack, dirSector)
-		for ptr := 0; ptr < 8*0x20; ptr += 0x20 {
-			if (sector[ptr+2] & 7) == 2 {
-				log.Println("Found PRG file, ptr " + strconv.Itoa(int(ptr)))
-				name := string(sector[ptr+5 : ptr+14])
-				var fileTrack byte = sector[ptr+3]
-				var fileSector byte = sector[ptr+4]
-				log.Println(name + " T:" + strconv.Itoa(int(fileTrack)) + " S:" + strconv.Itoa(int(fileSector)))
-
-				// Najpierw sprawdzimy czy load address == $0801
-				prg := D64GetSector(file, fileTrack, fileSector)
-
-				if prg[2] == 1 && prg[3] == 8 {
-					log.Println("Loading address is OK")
-
-					fileTrack = prg[0]
-					fileSector = prg[1]
-					fileloop := true
-					outfile = append(outfile, prg[2:]...)
-
-					for fileloop && fileTrack != 0 {
-						prg = D64GetSector(file, fileTrack, fileSector)
-						fileTrack = prg[0]
-						fileSector = prg[1]
-						outfile = append(outfile, prg[2:]...)
-					}
-					log.Println("Koniec pliku")
-					return outfile, true
-
-					// fileloop = false
-					// loop = false
-					// break
-				}
-				log.Println("Loading address is NOK")
-			}
-		}
-		dirTrack = sector[0]
-		if dirTrack == 0 {
-			break
-		}
-		dirSector = sector[1]
-	}
-
-	return outfile, false
-
+	log.Println("Email Sent!")
 }
 
 // ================================================================================================
@@ -1206,9 +1520,9 @@ func ExtractD64(filename string) ([]byte, bool) {
 // ================================================================================================
 func main() {
 
-	go HVSCPrepareData()
-	go CSDBPrepareData()
-
+	//
+	// Spraedzamy argumenty
+	//
 	args := os.Args[1:]
 
 	if len(args) == 0 || (args[0] != "http" && args[0] != "https") {
@@ -1216,6 +1530,9 @@ func main() {
 		os.Exit(1)
 	}
 
+	//
+	// Nazwa programu SIDPLAYFP zależna od OS
+	//
 	sidplayExe = "sidplayfp/sidplayfp"
 
 	if args[0] == "http" {
@@ -1226,9 +1543,21 @@ func main() {
 		}
 	}
 
+	//
+	// Odczyt JSONów
+	//
+	ReadCSDb()
 	ReadDb()
-	go ReadLatestReleasesThread()
 
+	//
+	// Uruchomienie wątków
+	//
+	go CSDBPrepareDataThread()
+	go ReadLatestReleasesThread()
+	go CreateWAVFilesThread()
+	go DownloadFilesThread()
+
+	//
 	// Logowanie do pliku
 	//
 	logFileApp, err := os.OpenFile("app.log", os.O_CREATE|os.O_APPEND|os.O_RDWR, 0666)
@@ -1240,14 +1569,23 @@ func main() {
 	ErrCheck(err)
 	gin.DefaultWriter = io.MultiWriter(os.Stdout, logFileGin)
 
+	//
+	// Info powitalne
+	//
 	log.Println("==========================================")
 	log.Println("=======          APP START        ========")
 	log.Println("==========================================")
 
+	//
+	// Tryb serwera, dla https tryb Rel, dla http tryb Dev
+	//
 	if args[0] == "https" {
 		gin.SetMode(gin.ReleaseMode)
 	}
 
+	//
+	// Konfiguracja serwera
+	//
 	r := gin.Default()
 
 	r.Use(Options)
@@ -1266,6 +1604,9 @@ func main() {
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
 	r.GET("/api/v1/hvsc_filter/:id", GetHVSCFilter)
 
+	//
+	// Start serwera
+	//
 	if args[0] == "https" {
 		log.Fatal(autotls.Run(r, "sidcloud.net", "www.sidcloud.net"))
 	}

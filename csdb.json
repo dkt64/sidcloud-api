@@ -19,9 +19,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197816/TND_Girl_Intro.d64"
   ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
  },
  {
   "ReleaseID": 190161,
@@ -44,9 +44,9 @@
    "http://csdb.dk/getinternalfile.php/197793/From_Sunrise_to_Midnight.sid",
    "http://csdb.dk/getinternalfile.php/197792/From_Sunrise_to_Midnight.prg"
   ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
  },
  {
   "ReleaseID": 190139,
@@ -69,9 +69,9 @@
    "http://csdb.dk/getinternalfile.php/197770/Mythus futurecity 2049.sid",
    "http://csdb.dk/getinternalfile.php/197769/Mythus futurecity 2049.prg"
   ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
  },
  {
   "ReleaseID": 189982,
@@ -93,9 +93,57 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197592/Creatures_PETSCII.zip"
   ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
+ },
+ {
+  "ReleaseID": 189946,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 15,
+  "ReleaseName": "TND Pop-Tastic",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189946.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The New Dimension"
+  ],
+  "Credits": [
+   "Richard"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197552/TND_Poptastic.d64"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
+ },
+ {
+  "ReleaseID": 189960,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 15,
+  "ReleaseName": "Nova Nekropola [swedish]",
+  "ReleaseType": "C64 Diskmag",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189960.gif",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "El Topo"
+  ],
+  "Credits": [
+   "El Topo"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197570/el-topo_-_nova_nekropola.zip"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
  },
  {
   "ReleaseID": 189971,
@@ -118,9 +166,9 @@
    "http://csdb.dk/getinternalfile.php/197581/Mythus cr4cktune.sid",
    "http://csdb.dk/getinternalfile.php/197580/Mythus cr4cktune.prg"
   ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
  },
  {
   "ReleaseID": 189965,
@@ -142,57 +190,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197575/kolorsin %5Bex%5D.prg"
   ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
- },
- {
-  "ReleaseID": 189960,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 15,
-  "ReleaseName": "Nova Nekropola [swedish]",
-  "ReleaseType": "C64 Diskmag",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189960.gif",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "El Topo"
-  ],
-  "Credits": [
-   "El Topo"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197570/el-topo_-_nova_nekropola.zip"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
- },
- {
-  "ReleaseID": 189946,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 15,
-  "ReleaseName": "TND Pop-Tastic",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189946.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "The New Dimension"
-  ],
-  "Credits": [
-   "Richard"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197552/TND_Poptastic.d64"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
  },
  {
   "ReleaseID": 189942,
@@ -215,9 +215,33 @@
    "http://csdb.dk/getinternalfile.php/197548/When-Love-Boat-mattered.sid",
    "http://csdb.dk/getinternalfile.php/197547/When-Love-Boat-mattered.prg"
   ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
+ },
+ {
+  "ReleaseID": 189844,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 12,
+  "ReleaseName": "Outrun PETSCII",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189844.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/B/Brooke_Jason/Out_Run.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Arkanix Labs"
+  ],
+  "Credits": [
+   "Jason Brooke"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197443/OutRun_PETSCII.zip"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
  },
  {
   "ReleaseID": 189818,
@@ -240,9 +264,33 @@
    "http://csdb.dk/getinternalfile.php/197422/Fight%21.sid",
    "http://csdb.dk/getinternalfile.php/197411/fight_by_atlantis.zip"
   ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
+ },
+ {
+  "ReleaseID": 189855,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 12,
+  "ReleaseName": "Epic Sax Gandalf",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189855.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 8.89,
+  "ReleasedBy": [
+   "Deja Vu"
+  ],
+  "Credits": [
+   "Ddw"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197452/epic sax gandalf.prg"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
  },
  {
   "ReleaseID": 189851,
@@ -264,9 +312,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197450/oldskool-4kintro-release-aleluya.zip"
   ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
  },
  {
   "ReleaseID": 189850,
@@ -289,81 +337,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197449/mortesubita.zip"
   ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
- },
- {
-  "ReleaseID": 189855,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 12,
-  "ReleaseName": "Epic Sax Gandalf",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189855.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 8.89,
-  "ReleasedBy": [
-   "Deja Vu"
-  ],
-  "Credits": [
-   "Ddw"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197452/epic sax gandalf.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
- },
- {
-  "ReleaseID": 189844,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 12,
-  "ReleaseName": "Outrun PETSCII",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189844.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/B/Brooke_Jason/Out_Run.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Arkanix Labs"
-  ],
-  "Credits": [
-   "Jason Brooke"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197443/OutRun_PETSCII.zip"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
- },
- {
-  "ReleaseID": 189842,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 12,
-  "ReleaseName": "Vice Tribute",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189842.gif",
-  "ReleasedAt": "Revision 2020",
-  "SIDPath": "",
-  "Rating": 9.37,
-  "ReleasedBy": [
-   "Bonzai"
-  ],
-  "Credits": [
-   "Drax"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197441/ViceTribute-BZ.zip"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
  },
  {
   "ReleaseID": 189848,
@@ -385,9 +361,57 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197447/4korona intro %5Bex%5D.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
+ },
+ {
+  "ReleaseID": 189842,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 12,
+  "ReleaseName": "Vice Tribute",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189842.gif",
+  "ReleasedAt": "Revision 2020",
+  "SIDPath": "",
+  "Rating": 9.37,
+  "ReleasedBy": [
+   "Bonzai"
+  ],
+  "Credits": [
+   "Drax"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197441/ViceTribute-BZ.zip"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
+ },
+ {
+  "ReleaseID": 190015,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 11,
+  "ReleaseName": "30 Years",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190015.png",
+  "ReleasedAt": "",
+  "SIDPath": "/DEMOS/A-F/Armageddon_Intro.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Public Enemies"
+  ],
+  "Credits": [
+   "Zynox"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197635/30-years.prg"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
  },
  {
   "ReleaseID": 190017,
@@ -410,33 +434,9 @@
    "http://csdb.dk/getinternalfile.php/197638/crokocat-b13.sid",
    "http://csdb.dk/getinternalfile.php/197637/crokocat-b13.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
- },
- {
-  "ReleaseID": 190015,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 11,
-  "ReleaseName": "30 Years",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190015.png",
-  "ReleasedAt": "",
-  "SIDPath": "/DEMOS/A-F/Armageddon_Intro.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Public Enemies"
-  ],
-  "Credits": [
-   "Zynox"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197635/30-years.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189803,
@@ -460,9 +460,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197398/radio_free_truth_by_mibri_of_atl-msl-prx.zip"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189802,
@@ -484,9 +484,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197397/lman---microgroove.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189801,
@@ -508,9 +508,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197396/oldskool-music-release-aleluya.zip"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189800,
@@ -534,9 +534,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197395/scruffy-rse.zip"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189794,
@@ -558,9 +558,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197389/Jellica - Lscmii.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189784,
@@ -583,9 +583,9 @@
    "http://csdb.dk/getinternalfile.php/197378/downward-8580.sid",
    "http://csdb.dk/getinternalfile.php/197377/downward-8580.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189742,
@@ -609,9 +609,9 @@
    "http://csdb.dk/getinternalfile.php/197341/Electric_City_2SID_%288580R5%2B6581AR4_SIDFX%29.sid",
    "http://csdb.dk/getinternalfile.php/197331/Electric_City_2SID.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189729,
@@ -633,9 +633,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197317/stayhome intro.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189728,
@@ -657,9 +657,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197316/petmanbatman.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189727,
@@ -681,9 +681,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197315/doublelswing_palntsc.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189668,
@@ -706,9 +706,9 @@
    "http://csdb.dk/getinternalfile.php/197254/WakeUpCall.sid",
    "http://csdb.dk/getinternalfile.php/197255/psycho8580_WakeUpCall.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189656,
@@ -731,9 +731,9 @@
    "http://csdb.dk/getinternalfile.php/197239/ncomv_fegolhuzz.sid",
    "http://csdb.dk/getinternalfile.php/197238/ncomv_fegolhuzz.d64"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189639,
@@ -755,9 +755,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197224/Excess-Tai-Pan_intro.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189635,
@@ -780,9 +780,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197217/DI4KONAL - Heureka Edition %5BLS%5D.d64"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189627,
@@ -804,9 +804,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197208/dalezy_-_itt-nincs-turo-rudi.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189601,
@@ -831,9 +831,9 @@
    "http://csdb.dk/getinternalfile.php/197182/lost.sid",
    "http://csdb.dk/getinternalfile.php/197181/lost.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189598,
@@ -856,9 +856,9 @@
    "http://csdb.dk/getinternalfile.php/197178/Children.sid",
    "http://csdb.dk/getinternalfile.php/197177/Children.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189594,
@@ -881,9 +881,9 @@
    "http://csdb.dk/getinternalfile.php/197172/ltx-blinding_lights.sid",
    "http://csdb.dk/getinternalfile.php/197173/ltx-blinding_lights.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189590,
@@ -928,9 +928,9 @@
    "http://csdb.dk/getinternalfile.php/197119/Anxiety in Gotham.sid",
    "http://csdb.dk/getinternalfile.php/197120/Anxiety in Gotham.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189561,
@@ -953,9 +953,9 @@
    "http://csdb.dk/getinternalfile.php/197138/azzurro.sid",
    "http://csdb.dk/getinternalfile.php/197133/azzurro-slaxx-hf.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189560,
@@ -979,9 +979,9 @@
    "http://csdb.dk/getinternalfile.php/197132/future unsure digi drama.sid",
    "http://csdb.dk/getinternalfile.php/197131/future unsure digi drama.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189577,
@@ -1004,9 +1004,9 @@
    "http://csdb.dk/getinternalfile.php/197151/wk_quara.sid",
    "http://csdb.dk/getinternalfile.php/197150/wk_quara.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189545,
@@ -1029,9 +1029,9 @@
    "http://csdb.dk/getinternalfile.php/197112/killer_virus_trance.sid",
    "http://csdb.dk/getinternalfile.php/197113/killer_virus_trance.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189543,
@@ -1055,9 +1055,9 @@
    "http://csdb.dk/getinternalfile.php/197110/deserted_cities_2sid.sid",
    "http://csdb.dk/getinternalfile.php/197108/deserted_cities.d64"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189535,
@@ -1080,9 +1080,9 @@
    "http://csdb.dk/getinternalfile.php/197100/killer_virus_trance.sid",
    "http://csdb.dk/getinternalfile.php/197099/killer_virus_trance.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189510,
@@ -1102,7 +1102,7 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197072/corona128.d64"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
   "Ext": ""
  },
@@ -1127,9 +1127,9 @@
    "http://csdb.dk/getinternalfile.php/197055/ltx-the_happy_vaccine.sid",
    "http://csdb.dk/getinternalfile.php/197054/ltx-the_happy_vaccine.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189481,
@@ -1152,9 +1152,9 @@
    "http://csdb.dk/getinternalfile.php/197041/C0ACID-19.sid",
    "http://csdb.dk/getinternalfile.php/197042/C0ACID-19.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189416,
@@ -1177,9 +1177,9 @@
    "http://csdb.dk/getinternalfile.php/196968/Tested_Untested.sid",
    "http://csdb.dk/getinternalfile.php/196967/Tested_Untested.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189396,
@@ -1202,9 +1202,9 @@
    "http://csdb.dk/getinternalfile.php/196946/covid-19.sid",
    "http://csdb.dk/getinternalfile.php/196945/covid-19.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189452,
@@ -1226,9 +1226,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197006/I_AM_EINZIG.d64"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189449,
@@ -1250,9 +1250,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197003/Dark_Rainstorms_in_My_Heart.d64"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189445,
@@ -1275,9 +1275,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/196999/nofps.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189442,
@@ -1301,9 +1301,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/196995/free-ammo.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189430,
@@ -1326,9 +1326,9 @@
    "http://csdb.dk/getinternalfile.php/196982/TURRICAN_ROTM.sid",
    "http://csdb.dk/getinternalfile.php/196981/Turrican_ROTM.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189417,
@@ -1350,9 +1350,9 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/196962/nostalgy.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189455,
@@ -1375,9 +1375,9 @@
    "http://csdb.dk/getinternalfile.php/197010/Mythus smile.sid",
    "http://csdb.dk/getinternalfile.php/197009/Mythus smile.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189456,
@@ -1400,58 +1400,9 @@
    "http://csdb.dk/getinternalfile.php/197012/Cramborona_Infections.sid",
    "http://csdb.dk/getinternalfile.php/197011/Cramborona_Infections.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
- },
- {
-  "ReleaseID": 189341,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 29,
-  "ReleaseName": "Sunny Spring",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189341.png",
-  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
-  "SIDPath": "",
-  "Rating": 8.5,
-  "ReleasedBy": [
-   "Finnish Gold"
-  ],
-  "Credits": [
-   "Proton"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196885/sunnyspring.sid",
-   "http://csdb.dk/getinternalfile.php/196886/sunnyspring.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": false,
-  "Ext": ".sid"
- },
- {
-  "ReleaseID": 189379,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 29,
-  "ReleaseName": "Jeet Kune Do",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189379.png",
-  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
-  "SIDPath": "",
-  "Rating": 8.67,
-  "ReleasedBy": [
-   "SIDWAVE"
-  ],
-  "Credits": [
-   "SIDWAVE"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196928/Jeet-Kune-Do.d64"
-  ],
-  "SIDCached": true,
-  "WAVCached": false,
-  "Ext": ".prg"
+  "Ext": ""
  },
  {
   "ReleaseID": 189375,
@@ -1474,9 +1425,108 @@
    "http://csdb.dk/getinternalfile.php/196923/lionsinacage.sid",
    "http://csdb.dk/getinternalfile.php/196924/lionsinacage.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
+ },
+ {
+  "ReleaseID": 189341,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 29,
+  "ReleaseName": "Sunny Spring",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189341.png",
+  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
+  "SIDPath": "",
+  "Rating": 8.5,
+  "ReleasedBy": [
+   "Finnish Gold"
+  ],
+  "Credits": [
+   "Proton"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/196885/sunnyspring.sid",
+   "http://csdb.dk/getinternalfile.php/196886/sunnyspring.prg"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
+ },
+ {
+  "ReleaseID": 189379,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 29,
+  "ReleaseName": "Jeet Kune Do",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189379.png",
+  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
+  "SIDPath": "",
+  "Rating": 8.67,
+  "ReleasedBy": [
+   "SIDWAVE"
+  ],
+  "Credits": [
+   "SIDWAVE"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/196928/Jeet-Kune-Do.d64"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
+ },
+ {
+  "ReleaseID": 189246,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 27,
+  "ReleaseName": "Nuclear Intro",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189246.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/0-9/20CC/van_Santen_Edwin/So-Phisticated_III_part_4.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Nuclear",
+   "Scan"
+  ],
+  "Credits": [
+   "EVS"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/196771/nuclear_intro.prg"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
+ },
+ {
+  "ReleaseID": 189273,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 27,
+  "ReleaseName": "Covid19",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189273.png",
+  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
+  "SIDPath": "",
+  "Rating": 6.13,
+  "ReleasedBy": [
+   "Emarti"
+  ],
+  "Credits": [
+   "Emarti"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/196815/covid19.sid",
+   "http://csdb.dk/getinternalfile.php/196817/covid19.prg"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
  },
  {
   "ReleaseID": 189271,
@@ -1500,59 +1550,9 @@
    "http://csdb.dk/getinternalfile.php/196812/i miss a woman i dont love.sid",
    "http://csdb.dk/getinternalfile.php/196811/i miss a woman i dont love.prg"
   ],
-  "SIDCached": true,
+  "SIDCached": false,
   "WAVCached": false,
-  "Ext": ".sid"
- },
- {
-  "ReleaseID": 189246,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 27,
-  "ReleaseName": "Nuclear Intro",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189246.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/0-9/20CC/van_Santen_Edwin/So-Phisticated_III_part_4.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Nuclear",
-   "Scan"
-  ],
-  "Credits": [
-   "EVS"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196771/nuclear_intro.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": false,
-  "Ext": ".prg"
- },
- {
-  "ReleaseID": 189273,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 27,
-  "ReleaseName": "Covid19",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189273.png",
-  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
-  "SIDPath": "",
-  "Rating": 6.13,
-  "ReleasedBy": [
-   "Emarti"
-  ],
-  "Credits": [
-   "Emarti"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196815/covid19.sid",
-   "http://csdb.dk/getinternalfile.php/196817/covid19.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ""
  },
  {
   "ReleaseID": 189206,
