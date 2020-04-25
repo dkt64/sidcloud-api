@@ -37,7 +37,7 @@ const wavTime = "333"
 
 const historyMaxEntries = 50
 
-// const historyMaxMonths = 3
+const historyMaxMonths = 3
 
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
@@ -1041,7 +1041,7 @@ func ReadLatestReleases() {
 // ================================================================================================
 func CSDBPrepareData() {
 
-	// lastDate := time.Now().AddDate(0, -historyMaxMonths, 0)
+	lastDate := time.Now().AddDate(0, -historyMaxMonths, 0)
 
 	netClient := &http.Client{Timeout: time.Second * 10}
 
@@ -1114,15 +1114,15 @@ func CSDBPrepareData() {
 							}
 						}
 
-						// prodYear, _ := strconv.Atoi(entry.ReleaseYear)
-						// prodMonth, _ := strconv.Atoi(entry.ReleaseMonth)
-						// prodDay, _ := strconv.Atoi(entry.ReleaseDay)
-						// prodTime := time.Date(prodYear, time.Month(prodMonth), prodDay, 0, 0, 0, 0, time.Local)
+						prodYear, _ := strconv.Atoi(entry.ReleaseYear)
+						prodMonth, _ := strconv.Atoi(entry.ReleaseMonth)
+						prodDay, _ := strconv.Atoi(entry.ReleaseDay)
+						prodTime := time.Date(prodYear, time.Month(prodMonth), prodDay, 0, 0, 0, 0, time.Local)
 
 						// TODO zrobić update tych info (ktoś mógł uzupełnić potem dane lub pliki)
 						// Jeżeli znaleźliśmy to sprawdzamy typ i dodajemy
 						//
-						if typeOK { // && prodTime.After(lastDate) {
+						if typeOK && prodTime.After(lastDate) {
 
 							// Tworzymy nowy obiekt release który dodamy do slice
 							//
