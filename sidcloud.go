@@ -29,12 +29,15 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+var csdbDataReady bool = false
+
 const cacheDir = "cache/"
 const wavSize = 29458844
 const wavTime = "333"
 
-const historyMaxEntries = 1000
-const historyMaxMonths = 1
+const historyMaxEntries = 50
+
+// const historyMaxMonths = 3
 
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
@@ -698,7 +701,7 @@ func CreateWAVFiles() {
 				size = file.Size()
 			}
 
-			if !fileExists(filenameWAV) || size < wavSize || !rel.WAVCached {
+			if !fileExists(filenameWAV) || size < wavSize || (fileExists(filenameWAV) && !rel.WAVCached) {
 
 				log.Println("[CreateWAVFiles]\tCreating file " + filenameWAV)
 				filenameSID := cacheDir + id + rel.Ext
@@ -785,7 +788,7 @@ func ReadLatestReleases() {
 
 	var foundNewReleases int
 
-	log.Println("[ReadLatestReleases]\tLOOP")
+	log.Println("[ReadLatestReleases]LOOP")
 
 	resp, err := netClient.Get("https://csdb.dk/rss/latestreleases.php")
 
@@ -808,7 +811,7 @@ func ReadLatestReleases() {
 
 		// log.Println("Odebrano: ", latestReleases)
 		// log.Println("===================================")
-		log.Println("[ReadLatestReleases]\tGot latest releases RSS")
+		log.Println("[ReadLatestReleases]Got latest releases RSS")
 		// log.Println("===================================")
 
 		foundNewReleases = 0
@@ -978,7 +981,7 @@ func ReadLatestReleases() {
 					}
 				}
 			} else {
-				log.Println("[ReadLatestReleases]\tBłąd komunikacji z csdb.dk")
+				log.Println("[ReadLatestReleases]Błąd komunikacji z csdb.dk")
 			}
 		}
 
@@ -1003,46 +1006,50 @@ func ReadLatestReleases() {
 			}
 		}
 
-		for _, rel1 := range csdb {
+		if csdbDataReady {
+			for _, rel1 := range csdb {
 
-			found := false
-			for index, rel2 := range releases {
-				if rel2.ReleaseID == rel1.ReleaseID {
-					found = true
-					updateReleaseInfo(index, rel1)
-					break
+				found := false
+				for index, rel2 := range releases {
+					if rel2.ReleaseID == rel1.ReleaseID {
+						found = true
+						updateReleaseInfo(index, rel1)
+						break
+					}
 				}
-			}
 
-			if !found {
-				releases = append(releases, rel1)
-				foundNewReleases++
+				if !found {
+					releases = append(releases, rel1)
+					foundNewReleases++
+				}
 			}
 		}
 
 		// Wyświetlenie danych
-		log.Println("[ReadLatestReleases]\tFound " + strconv.Itoa(foundNewReleases) + " new releases")
+		log.Println("[ReadLatestReleases]Found " + strconv.Itoa(foundNewReleases) + " new releases")
 
 		sort.Sort(byID(releases))
 		WriteDb()
 
 	} else {
-		log.Println("[ReadLatestReleases]\tBłąd komunikacji z csdb.dk")
+		log.Println("[ReadLatestReleases]Błąd komunikacji z csdb.dk")
 	}
 
 }
 
 // CSDBPrepareData - Wątek odczygtujący wszystkie releasy z csdb
 // ================================================================================================
-func CSDBPrepareData(firstRun bool) {
+func CSDBPrepareData() {
 
-	lastDate := time.Now().AddDate(0, -historyMaxMonths, 0)
+	// lastDate := time.Now().AddDate(0, -historyMaxMonths, 0)
 
 	netClient := &http.Client{Timeout: time.Second * 10}
 
 	resp, err := netClient.Get("https://csdb.dk/webservice/?type=release&id=0")
 
 	log.Println("[CSDBPrepareData]\tLOOP")
+
+	csdbDataReady = false
 
 	if ErrCheck(err) {
 
@@ -1107,15 +1114,15 @@ func CSDBPrepareData(firstRun bool) {
 							}
 						}
 
-						prodYear, _ := strconv.Atoi(entry.ReleaseYear)
-						prodMonth, _ := strconv.Atoi(entry.ReleaseMonth)
-						prodDay, _ := strconv.Atoi(entry.ReleaseDay)
-						prodTime := time.Date(prodYear, time.Month(prodMonth), prodDay, 0, 0, 0, 0, time.Local)
+						// prodYear, _ := strconv.Atoi(entry.ReleaseYear)
+						// prodMonth, _ := strconv.Atoi(entry.ReleaseMonth)
+						// prodDay, _ := strconv.Atoi(entry.ReleaseDay)
+						// prodTime := time.Date(prodYear, time.Month(prodMonth), prodDay, 0, 0, 0, 0, time.Local)
 
 						// TODO zrobić update tych info (ktoś mógł uzupełnić potem dane lub pliki)
 						// Jeżeli znaleźliśmy to sprawdzamy typ i dodajemy
 						//
-						if typeOK && prodTime.After(lastDate) {
+						if typeOK { // && prodTime.After(lastDate) {
 
 							// Tworzymy nowy obiekt release który dodamy do slice
 							//
@@ -1135,7 +1142,7 @@ func CSDBPrepareData(firstRun bool) {
 								newRelease.SIDPath = entry.UsedSIDs[0].HVSCPath
 							}
 
-							log.Println("[CSDBPrepareData]\tEntry name: " + entry.ReleaseName)
+							// log.Println("[CSDBPrepareData]\tEntry name: " + entry.ReleaseName)
 							// log.Println("ID:     ", entry.ReleaseID)
 							// log.Println("Typ:    ", entry.ReleaseType)
 							// log.Println("Event:  ", entry.XMLReleasedAt.XMLEvent.Name)
@@ -1226,6 +1233,8 @@ func CSDBPrepareData(firstRun bool) {
 							//
 							if len(newRelease.DownloadLinks) > 0 {
 								csdbTemp = append(csdbTemp, newRelease)
+								foundNewReleases++
+								log.Println("[CSDBPrepareData]\t" + strconv.Itoa(foundNewReleases) + ") Entry name: " + entry.ReleaseName + "Entry ID: " + entry.ReleaseID)
 							}
 						}
 					}
@@ -1243,7 +1252,12 @@ func CSDBPrepareData(firstRun bool) {
 		csdb = csdbTemp
 		WriteCSDb()
 
-		log.Println("[CSDBPrepareData]\tAmount of " + strconv.Itoa(len(csdb)) + " releases from last " + strconv.Itoa(historyMaxMonths) + " month(s)")
+		log.Println("[CSDBPrepareData]\tFinish")
+
+		csdbDataReady = true
+
+		// log.Println("[CSDBPrepareData]\tAmount of " + strconv.Itoa(len(csdb)) + " releases from last " + strconv.Itoa(historyMaxMonths) + " month(s)")
+		// log.Println("[CSDBPrepareData]\tAmount of " + strconv.Itoa(len(csdb)) + " releases from last " + strconv.Itoa(historyMaxMonths) + " month(s)")
 
 	} else {
 		log.Println("[CSDBPrepareData]\tBłąd komunikacji z csdb.dk")
@@ -1561,27 +1575,26 @@ func SendEmail(in string) {
 // ================================================================================================
 func CSDBWebServices() {
 
-	const CSDBPrepareDataCycle time.Duration = 60 * 60 * 24
+	// const CSDBPrepareDataCycle time.Duration = 60 * 60 * 24
 	const CSDBWebServicesCycle time.Duration = 60 * 5
 
-	time1 := time.Now()
-	firstRun := true
+	// time1 := time.Now()
+	// firstRun := true
+
+	go CSDBPrepareData()
 
 	for {
-		time0 := time.Now()
+		// time0 := time.Now()
+
+		// if (time0.Sub(time1)) > (CSDBPrepareDataCycle*time.Second) || firstRun {
+		// if firstRun {
+		// 	// time1 = time.Now()
+		// 	firstRun = false
+		// }
 
 		ReadLatestReleases()
 		DownloadFiles()
 		CreateWAVFiles()
-
-		if (time0.Sub(time1)) > (CSDBPrepareDataCycle*time.Second) || firstRun {
-			time1 = time.Now()
-			CSDBPrepareData(firstRun)
-			firstRun = false
-			ReadLatestReleases()
-			DownloadFiles()
-			CreateWAVFiles()
-		}
 
 		time.Sleep(CSDBWebServicesCycle * time.Second)
 	}
