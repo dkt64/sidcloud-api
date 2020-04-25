@@ -311,7 +311,7 @@ func ExtractD64(filename string) ([]byte, bool) {
 	loop := true
 
 	for loop {
-		log.Println("[ExtractD64]\tDir track " + strconv.Itoa(int(dirTrack)) + " and sector " + strconv.Itoa(int(dirSector)))
+		log.Println("[ExtractD64] Dir track " + strconv.Itoa(int(dirTrack)) + " and sector " + strconv.Itoa(int(dirSector)))
 		sector := D64GetSector(file, dirTrack, dirSector)
 		for ptr := 0; ptr < 8*0x20; ptr += 0x20 {
 			if (sector[ptr+2] & 7) == 2 {
@@ -320,12 +320,12 @@ func ExtractD64(filename string) ([]byte, bool) {
 				var fileSector byte = sector[ptr+4]
 
 				// Najpierw sprawdzimy czy load address == $0801
-				log.Println("[ExtractD64]\tReading " + name + " TRACK:" + strconv.Itoa(int(fileTrack)) + " SECTOR:" + strconv.Itoa(int(fileSector)))
+				log.Println("[ExtractD64] Reading " + name + " TRACK:" + strconv.Itoa(int(fileTrack)) + " SECTOR:" + strconv.Itoa(int(fileSector)))
 				prg := D64GetSector(file, fileTrack, fileSector)
 
 				if (prg[2] == 1 || prg[2] == 0) && prg[3] == 8 {
-					log.Println("[ExtractD64]\tLoading address is OK")
-					// log.Println("[ExtractD64]\tFirst PRG file in D64: " + name + " T:" + strconv.Itoa(int(fileTrack)) + " S:" + strconv.Itoa(int(fileSector)))
+					log.Println("[ExtractD64] Loading address is OK")
+					// log.Println("[ExtractD64] First PRG file in D64: " + name + " T:" + strconv.Itoa(int(fileTrack)) + " S:" + strconv.Itoa(int(fileSector)))
 
 					fileTrack = prg[0]
 					fileSector = prg[1]
@@ -345,7 +345,7 @@ func ExtractD64(filename string) ([]byte, bool) {
 					// loop = false
 					// break
 				}
-				log.Println("[ExtractD64]\tLoading address is NOK")
+				log.Println("[ExtractD64] Loading address is NOK")
 			}
 		}
 		dirTrack = sector[0]
@@ -458,7 +458,7 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 	}
 	// get the size
 	size := fi.Size()
-	log.Println("[DownloadFile]\tDownloading file '" + filepath + "' size " + strconv.Itoa(int(size)))
+	log.Println("[DownloadFile] Downloading file '" + filepath + "' size " + strconv.Itoa(int(size)))
 
 	// // if size < 8 || size > 65535 {
 	// if size < 8 || size > 5*1024*1024 { // Może być ZIP z innymi większymi plikami więc ustalilem max na 5M
@@ -505,9 +505,9 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 
 			if strings.Contains(file.Name, ".sid") && !file.FileInfo().IsDir() {
 
-				log.Println("[DownloadFile]\tFound SID file")
+				log.Println("[DownloadFile] Found SID file")
 				ext = ".sid"
-				log.Println("[DownloadFile]\tFile extracted: " + file.Name + " with ID " + strconv.Itoa(id))
+				log.Println("[DownloadFile] File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
 				outputFile, err := os.OpenFile(
 					cacheDir+strconv.Itoa(id)+ext,
 					os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
@@ -549,7 +549,7 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 					// log.Println("[DownloadFile] Found PRG file")
 					ext = ".prg"
 
-					log.Println("[DownloadFile]\tFile extracted: " + file.Name + " with ID " + strconv.Itoa(id))
+					log.Println("[DownloadFile] File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
 					outputFile, err := os.OpenFile(
 						cacheDir+strconv.Itoa(id)+ext,
 						os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
@@ -582,7 +582,7 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 			if strings.Contains(file.Name, ".d64") && !file.FileInfo().IsDir() {
 
 				// log.Println("[DownloadFile] Found D64 file")
-				log.Println("[DownloadFile]\tFile extracted: " + file.Name + " with ID " + strconv.Itoa(id))
+				log.Println("[DownloadFile] File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
 				outputFile, err := os.OpenFile(
 					cacheDir+strconv.Itoa(id)+".d64",
 					os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
@@ -627,7 +627,7 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 // ================================================================================================
 func DownloadFiles() {
 
-	log.Println("[DownloadFiles]\tLOOP")
+	log.Println("[DownloadFiles] LOOP")
 
 	for index, newRelease := range releases {
 		if len(newRelease.DownloadLinks) > 0 {
@@ -655,9 +655,9 @@ func DownloadFiles() {
 						// Sprawdzay czy istnieje SID lub PRG
 						if fileExists(cacheDir+strconv.Itoa(newRelease.ReleaseID)+".sid") || fileExists(cacheDir+strconv.Itoa(newRelease.ReleaseID)+".prg") {
 							newRelease.SIDCached = true
-							log.Println("[DownloadFiles]\tFile cached")
+							log.Println("[DownloadFiles] File cached")
 						} else {
-							log.Println("[DownloadFiles]\tFile not cached")
+							log.Println("[DownloadFiles] File not cached")
 							newRelease.SIDCached = false
 							newRelease.WAVCached = false
 						}
@@ -684,7 +684,7 @@ func DownloadFiles() {
 // ================================================================================================
 func CreateWAVFiles() {
 
-	log.Println("[CreateWAVFiles]\tLOOP")
+	log.Println("[CreateWAVFiles] LOOP")
 	for index, rel := range releases {
 
 		if len(rel.Ext) == 4 && rel.SIDCached {
@@ -696,14 +696,14 @@ func CreateWAVFiles() {
 			if fileExists(filenameWAV) {
 				file, err := os.Stat(filenameWAV)
 				if err != nil {
-					log.Println("[CreateWAVFiles]\tProblem z odczytem rozmiaru pliku " + filenameWAV)
+					log.Println("[CreateWAVFiles] Problem z odczytem rozmiaru pliku " + filenameWAV)
 				}
 				size = file.Size()
 			}
 
 			if !fileExists(filenameWAV) || size < wavSize || (fileExists(filenameWAV) && !rel.WAVCached) {
 
-				log.Println("[CreateWAVFiles]\tCreating file " + filenameWAV)
+				log.Println("[CreateWAVFiles] Creating file " + filenameWAV)
 				filenameSID := cacheDir + id + rel.Ext
 				paramName := "-w" + cacheDir + id
 
@@ -721,7 +721,7 @@ func CreateWAVFiles() {
 					cmdName = sidplayExe // zakładamy że jest zainstalowany
 				}
 
-				log.Println("[CreateWAVFiles]\tStarting sidplayfp... cmdName(" + cmdName + " " + czas + " " + model + " " + paramName + " " + filenameSID + ")")
+				log.Println("[CreateWAVFiles] Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + model + " " + paramName + " " + filenameSID + ")")
 				cmd := exec.Command(cmdName, czas, model, paramName, filenameSID)
 				err := cmd.Run()
 				if ErrCheck(err) {
@@ -730,20 +730,20 @@ func CreateWAVFiles() {
 					if fileExists(filenameWAV) {
 						file, err := os.Stat(filenameWAV)
 						if err != nil {
-							log.Println("[CreateWAVFiles]\tProblem z odczytem rozmiaru pliku " + filenameWAV)
+							log.Println("[CreateWAVFiles] Problem z odczytem rozmiaru pliku " + filenameWAV)
 						}
 						size = file.Size()
 					}
 
 					if fileExists(filenameWAV) && size >= wavSize {
 						releases[index].WAVCached = true
-						log.Println("[CreateWAVFiles]\t" + filenameWAV + " cached")
+						log.Println("[CreateWAVFiles] " + filenameWAV + " cached")
 						WriteDb()
 					} else {
-						log.Println("[CreateWAVFiles]\t" + filenameWAV + " not cached")
+						log.Println("[CreateWAVFiles] " + filenameWAV + " not cached")
 					}
 				} else {
-					log.Println("[CreateWAVFiles]\tProblem with sidplayfp and " + filenameWAV)
+					log.Println("[CreateWAVFiles] Problem with sidplayfp and " + filenameWAV)
 				}
 
 			} else {
@@ -1028,7 +1028,7 @@ func ReadLatestReleases() {
 		// Wyświetlenie danych
 		log.Println("[ReadLatestReleases]Found " + strconv.Itoa(foundNewReleases) + " new releases")
 
-		sort.Sort(byID(releases))
+		sort.Sort(byDate(releases))
 		WriteDb()
 
 	} else {
@@ -1047,7 +1047,7 @@ func CSDBPrepareData() {
 
 	resp, err := netClient.Get("https://csdb.dk/webservice/?type=release&id=0")
 
-	log.Println("[CSDBPrepareData]\tLOOP")
+	log.Println("[CSDBPrepareData] LOOP")
 
 	csdbDataReady = false
 
@@ -1069,7 +1069,7 @@ func CSDBPrepareData() {
 		ErrCheck(err)
 
 		// log.Println("===================================")
-		log.Println("[CSDBPrepareData]\tNajwyższy numer ID wynosi " + strconv.Itoa(entry.ID))
+		log.Println("[CSDBPrepareData] Najwyższy numer ID wynosi " + strconv.Itoa(entry.ID))
 
 		var csdbTemp []Release
 
@@ -1142,7 +1142,7 @@ func CSDBPrepareData() {
 								newRelease.SIDPath = entry.UsedSIDs[0].HVSCPath
 							}
 
-							// log.Println("[CSDBPrepareData]\tEntry name: " + entry.ReleaseName)
+							// log.Println("[CSDBPrepareData] Entry name: " + entry.ReleaseName)
 							// log.Println("ID:     ", entry.ReleaseID)
 							// log.Println("Typ:    ", entry.ReleaseType)
 							// log.Println("Event:  ", entry.XMLReleasedAt.XMLEvent.Name)
@@ -1234,33 +1234,33 @@ func CSDBPrepareData() {
 							if len(newRelease.DownloadLinks) > 0 {
 								csdbTemp = append(csdbTemp, newRelease)
 								foundNewReleases++
-								log.Println("[CSDBPrepareData]\t" + strconv.Itoa(foundNewReleases) + ") Entry name: " + entry.ReleaseName + "Entry ID: " + entry.ReleaseID)
+								log.Println("[CSDBPrepareData] " + strconv.Itoa(foundNewReleases) + ") Entry name: " + entry.ReleaseName + "Entry ID: " + entry.ReleaseID)
 							}
 						}
 					}
 				} else {
-					log.Println("[CSDBPrepareData]\tBłąd komunikacji z csdb.dk")
+					log.Println("[CSDBPrepareData] Błąd komunikacji z csdb.dk")
 					break
 				}
 			} else {
-				log.Println("[CSDBPrepareData]\tBłąd komunikacji z csdb.dk")
+				log.Println("[CSDBPrepareData] Błąd komunikacji z csdb.dk")
 				break
 			}
 
 		}
-		sort.Sort(byID(csdbTemp))
+		sort.Sort(byDate(csdbTemp))
 		csdb = csdbTemp
 		WriteCSDb()
 
-		log.Println("[CSDBPrepareData]\tFinish")
+		log.Println("[CSDBPrepareData] Finish")
 
 		csdbDataReady = true
 
-		// log.Println("[CSDBPrepareData]\tAmount of " + strconv.Itoa(len(csdb)) + " releases from last " + strconv.Itoa(historyMaxMonths) + " month(s)")
-		// log.Println("[CSDBPrepareData]\tAmount of " + strconv.Itoa(len(csdb)) + " releases from last " + strconv.Itoa(historyMaxMonths) + " month(s)")
+		// log.Println("[CSDBPrepareData] Amount of " + strconv.Itoa(len(csdb)) + " releases from last " + strconv.Itoa(historyMaxMonths) + " month(s)")
+		// log.Println("[CSDBPrepareData] Amount of " + strconv.Itoa(len(csdb)) + " releases from last " + strconv.Itoa(historyMaxMonths) + " month(s)")
 
 	} else {
-		log.Println("[CSDBPrepareData]\tBłąd komunikacji z csdb.dk")
+		log.Println("[CSDBPrepareData] Błąd komunikacji z csdb.dk")
 	}
 
 }
@@ -1377,7 +1377,7 @@ func AudioGet(c *gin.Context) {
 	if fileExists(filenameWAV) {
 
 		// Info o wejściu do GET
-		log.Println("[GIN:AudioGet]\t" + id)
+		log.Println("[GIN:AudioGet] " + id)
 
 		// const maxOffset int64 = 50000000 // ~ 10 min
 		// const maxOffset int64 = 25000000 // ~ 5 min
@@ -1394,7 +1394,7 @@ func AudioGet(c *gin.Context) {
 		var offset int64
 		p := make([]byte, bufferSize)
 
-		log.Println("[GIN:AudioGet]\tSending " + id + "...")
+		log.Println("[GIN:AudioGet] Sending " + id + "...")
 
 		// Streaming LOOP...
 		// ----------------------------------------------------------------------------------------------
@@ -1417,7 +1417,7 @@ func AudioGet(c *gin.Context) {
 
 			// Jeżeli stracimy kontekst to wychodzimy
 			if c.Request.Context() == nil {
-				log.Println("[GIN:AudioGet]\tERR! c.Request.Context() == nil")
+				log.Println("[GIN:AudioGet] ERR! c.Request.Context() == nil")
 				loop = false
 			} else {
 
@@ -1487,7 +1487,7 @@ func AudioGet(c *gin.Context) {
 						if sum < 5.0 && offset > 44100*60 { // po 30 sekundach
 							silenceCnt++
 							if silenceCnt >= 5 {
-								log.Println("[GIN:AudioGet]\tSilence at " + strconv.FormatInt(offset, 10))
+								log.Println("[GIN:AudioGet] Silence at " + strconv.FormatInt(offset, 10))
 								loop = false
 							}
 						}
@@ -1505,13 +1505,13 @@ func AudioGet(c *gin.Context) {
 
 		}
 	} else {
-		log.Println("[GIN:AudioGet]\tWAV file doesn't exists")
+		log.Println("[GIN:AudioGet] WAV file doesn't exists")
 	}
 	// }
 
 	// Feedback gdybyśmy wyszli z LOOP
-	c.JSON(http.StatusOK, "[GIN:AudioGet]\tLoop ended")
-	log.Println("[GIN:AudioGet]\tLoop ended")
+	c.JSON(http.StatusOK, "[GIN:AudioGet] Loop ended")
+	log.Println("[GIN:AudioGet] Loop ended")
 }
 
 // Options - Obsługa request'u OPTIONS (CORS)
