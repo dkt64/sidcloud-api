@@ -33,11 +33,8 @@ const cacheDir = "cache/"
 const wavSize = 29458844
 const wavTime = "333"
 
-const backIdsFirstTime = 500
-const backMonthsFirstTime = 1
-
-const backIdsNextTime = 5000
-const backMonthsNextTime = 2
+const historyMaxEntries = 1000
+const historyMaxMonths = 1
 
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
@@ -375,6 +372,21 @@ func (s byDate) Less(i, j int) bool {
 	d2 := time.Date(s[j].ReleaseYear, time.Month(s[j].ReleaseMonth), s[j].ReleaseDay, 0, 0, 0, 0, time.Local)
 
 	return d2.Before(d1)
+}
+
+// Sortowanie byID
+// ================================================================================================
+
+type byID []Release
+
+func (s byID) Len() int {
+	return len(s)
+}
+func (s byID) Swap(i, j int) {
+	s[i], s[j] = s[j], s[i]
+}
+func (s byID) Less(i, j int) bool {
+	return s[i].ReleaseID > s[j].ReleaseID
 }
 
 // fileExists - sprawdzenie czy plik istnieje
@@ -1011,7 +1023,7 @@ func ReadLatestReleases() {
 		// Wyświetlenie danych
 		log.Println("[ReadLatestReleases]\tFound " + strconv.Itoa(foundNewReleases) + " new releases")
 
-		sort.Sort(byDate(releases))
+		sort.Sort(byID(releases))
 		WriteDb()
 
 	} else {
@@ -1024,15 +1036,7 @@ func ReadLatestReleases() {
 // ================================================================================================
 func CSDBPrepareData(firstRun bool) {
 
-	backMonths := backMonthsNextTime
-	backIds := backIdsNextTime
-
-	if firstRun {
-		backMonths = backMonthsFirstTime
-		backIds = backIdsFirstTime
-	}
-
-	lastDate := time.Now().AddDate(0, -backMonths, 0)
+	lastDate := time.Now().AddDate(0, -historyMaxMonths, 0)
 
 	netClient := &http.Client{Timeout: time.Second * 10}
 
@@ -1062,11 +1066,16 @@ func CSDBPrepareData(firstRun bool) {
 
 		var csdbTemp []Release
 
-		for id := entry.ID; id > entry.ID-backIds; id-- {
+		foundNewReleases := 0
+		id := entry.ID
+
+		for foundNewReleases < historyMaxEntries {
 
 			resp, err := netClient.Get("https://csdb.dk/webservice/?type=release&id=" + strconv.Itoa(id))
 
 			// log.Println("ID " + strconv.Itoa(id))
+
+			id--
 
 			if ErrCheck(err) {
 				defer resp.Body.Close()
@@ -1220,17 +1229,21 @@ func CSDBPrepareData(firstRun bool) {
 							}
 						}
 					}
+				} else {
+					log.Println("[CSDBPrepareData]\tBłąd komunikacji z csdb.dk")
+					break
 				}
 			} else {
 				log.Println("[CSDBPrepareData]\tBłąd komunikacji z csdb.dk")
+				break
 			}
 
 		}
-		sort.Sort(byDate(csdbTemp))
+		sort.Sort(byID(csdbTemp))
 		csdb = csdbTemp
 		WriteCSDb()
 
-		log.Println("[CSDBPrepareData]\tAmount of " + strconv.Itoa(len(csdb)) + " releases from last " + strconv.Itoa(backMonths) + " months, last " + strconv.Itoa(backIds) + " entries")
+		log.Println("[CSDBPrepareData]\tAmount of " + strconv.Itoa(len(csdb)) + " releases from last " + strconv.Itoa(historyMaxMonths) + " month(s)")
 
 	} else {
 		log.Println("[CSDBPrepareData]\tBłąd komunikacji z csdb.dk")
