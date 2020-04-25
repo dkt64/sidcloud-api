@@ -1,5 +1,54 @@
 [
  {
+  "ReleaseID": 190290,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 25,
+  "ReleaseName": "RapidNews #11",
+  "ReleaseType": "C64 Diskmag",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190290.png",
+  "ReleasedAt": "Virtual ExCeSs Pub Meeting MK2",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Flex",
+   "Eco"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197928/RapidNews %2311 by ExCeSs.d64"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 190292,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 25,
+  "ReleaseName": "Excess Checkerboard \u0026 DYCP",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190292.png",
+  "ReleasedAt": "Virtual ExCeSs Pub Meeting MK2",
+  "SIDPath": "/MUSICIANS/D/Danko_Tomas/Kik_It.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Danko"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197930/excess_meeting_mkii.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
   "ReleaseID": 190262,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
@@ -9,7 +58,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190262.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 9.38,
+  "Rating": 9.55,
   "ReleasedBy": [
    "Genesis Project"
   ],
@@ -59,7 +108,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190241.gif",
   "ReleasedAt": "CSDB C64 Lockdown 2020 Fun Compo",
   "SIDPath": "/MUSICIANS/P/Psycho/Electronica.sid",
-  "Rating": 9.5,
+  "Rating": 9.55,
   "ReleasedBy": [
    "Onslaught"
   ],
@@ -148,31 +197,6 @@
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 190161,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 21,
-  "ReleaseName": "From Sunrise to Midnight",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190161.png",
-  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
-  "SIDPath": "",
-  "Rating": 7.37,
-  "ReleasedBy": [
-   "Mayday!"
-  ],
-  "Credits": [
-   "Spider Jerusalem"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197793/From_Sunrise_to_Midnight.sid",
-   "http://csdb.dk/getinternalfile.php/197792/From_Sunrise_to_Midnight.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
- },
- {
   "ReleaseID": 190139,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
@@ -192,6 +216,31 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197770/Mythus futurecity 2049.sid",
    "http://csdb.dk/getinternalfile.php/197769/Mythus futurecity 2049.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".sid"
+ },
+ {
+  "ReleaseID": 190161,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 21,
+  "ReleaseName": "From Sunrise to Midnight",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190161.png",
+  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
+  "SIDPath": "",
+  "Rating": 7.37,
+  "ReleasedBy": [
+   "Mayday!"
+  ],
+  "Credits": [
+   "Spider Jerusalem"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197793/From_Sunrise_to_Midnight.sid",
+   "http://csdb.dk/getinternalfile.php/197792/From_Sunrise_to_Midnight.prg"
   ],
   "SIDCached": true,
   "WAVCached": true,
@@ -368,30 +417,6 @@
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 189842,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 12,
-  "ReleaseName": "Vice Tribute",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189842.gif",
-  "ReleasedAt": "Revision 2020",
-  "SIDPath": "",
-  "Rating": 9.37,
-  "ReleasedBy": [
-   "Bonzai"
-  ],
-  "Credits": [
-   "Drax"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197441/ViceTribute-BZ.zip"
-  ],
-  "SIDCached": true,
-  "WAVCached": false,
-  "Ext": ".prg"
- },
- {
   "ReleaseID": 189818,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
@@ -413,8 +438,32 @@
    "http://csdb.dk/getinternalfile.php/197411/fight_by_atlantis.zip"
   ],
   "SIDCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "Ext": ".sid"
+ },
+ {
+  "ReleaseID": 189842,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 12,
+  "ReleaseName": "Vice Tribute",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189842.gif",
+  "ReleasedAt": "Revision 2020",
+  "SIDPath": "",
+  "Rating": 9.37,
+  "ReleasedBy": [
+   "Bonzai"
+  ],
+  "Credits": [
+   "Drax"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197441/ViceTribute-BZ.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189855,
@@ -514,30 +563,6 @@
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 189794,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 11,
-  "ReleaseName": "Lscmii",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189794.png",
-  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
-  "SIDPath": "",
-  "Rating": 7.82,
-  "ReleasedBy": [
-   "Jellica"
-  ],
-  "Credits": [
-   "Jellica"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197389/Jellica - Lscmii.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": false,
-  "Ext": ".prg"
- },
- {
   "ReleaseID": 190015,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
@@ -560,6 +585,32 @@
   "SIDCached": true,
   "WAVCached": true,
   "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 189800,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 11,
+  "ReleaseName": "Scruffy",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189800.png",
+  "ReleasedAt": "Revision 2020",
+  "SIDPath": "",
+  "Rating": 9.27,
+  "ReleasedBy": [
+   "Hoaxers",
+   "Dekadence",
+   "Darklite"
+  ],
+  "Credits": [
+   "Response"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197395/scruffy-rse.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 190017,
@@ -661,30 +712,28 @@
   "Ext": ".sid"
  },
  {
-  "ReleaseID": 189800,
+  "ReleaseID": 189794,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 11,
-  "ReleaseName": "Scruffy",
+  "ReleaseName": "Lscmii",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189800.png",
-  "ReleasedAt": "Revision 2020",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189794.png",
+  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 9.27,
+  "Rating": 7.82,
   "ReleasedBy": [
-   "Hoaxers",
-   "Dekadence",
-   "Darklite"
+   "Jellica"
   ],
   "Credits": [
-   "Response"
+   "Jellica"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197395/scruffy-rse.zip"
+   "http://csdb.dk/getinternalfile.php/197389/Jellica - Lscmii.prg"
   ],
   "SIDCached": true,
   "WAVCached": false,
-  "Ext": ".sid"
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 190287,

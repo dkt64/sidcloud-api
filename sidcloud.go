@@ -35,7 +35,7 @@ const cacheDir = "cache/"
 const wavSize = 29458844
 const wavTime = "333"
 
-const historyMaxEntries = 50
+const historyMaxEntries = 80
 
 const historyMaxMonths = 3
 
@@ -1028,7 +1028,13 @@ func ReadLatestReleases() {
 		// Wyświetlenie danych
 		log.Println("[ReadLatestReleases]Found " + strconv.Itoa(foundNewReleases) + " new releases")
 
+		sort.Sort(byID(releases))
 		sort.Sort(byDate(releases))
+
+		if len(releases) > historyMaxEntries {
+			releases = releases[0:historyMaxEntries]
+		}
+
 		WriteDb()
 
 	} else {
@@ -1248,6 +1254,7 @@ func CSDBPrepareData() {
 			}
 
 		}
+		sort.Sort(byID(csdbTemp))
 		sort.Sort(byDate(csdbTemp))
 		csdb = csdbTemp
 		WriteCSDb()
