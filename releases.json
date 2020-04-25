@@ -609,7 +609,7 @@
    "http://csdb.dk/getinternalfile.php/197395/scruffy-rse.zip"
   ],
   "SIDCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "Ext": ".sid"
  },
  {
@@ -660,7 +660,7 @@
    "http://csdb.dk/getinternalfile.php/197398/radio_free_truth_by_mibri_of_atl-msl-prx.zip"
   ],
   "SIDCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "Ext": ".sid"
  },
  {
@@ -684,7 +684,7 @@
    "http://csdb.dk/getinternalfile.php/197397/lman---microgroove.prg"
   ],
   "SIDCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "Ext": ".prg"
  },
  {
@@ -708,7 +708,7 @@
    "http://csdb.dk/getinternalfile.php/197396/oldskool-music-release-aleluya.zip"
   ],
   "SIDCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "Ext": ".sid"
  },
  {
@@ -732,7 +732,7 @@
    "http://csdb.dk/getinternalfile.php/197389/Jellica - Lscmii.prg"
   ],
   "SIDCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "Ext": ".prg"
  },
  {
