@@ -1240,7 +1240,7 @@ func CSDBPrepareData() {
 							if len(newRelease.DownloadLinks) > 0 {
 								csdbTemp = append(csdbTemp, newRelease)
 								foundNewReleases++
-								log.Println("[CSDBPrepareData] " + strconv.Itoa(foundNewReleases) + ") Entry name: " + entry.ReleaseName + "Entry ID: " + entry.ReleaseID)
+								log.Println("[CSDBPrepareData] " + strconv.Itoa(foundNewReleases) + ") Entry name: " + entry.ReleaseName + ", Entry ID: " + entry.ReleaseID)
 							}
 						}
 					}
