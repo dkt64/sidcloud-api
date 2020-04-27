@@ -1400,7 +1400,7 @@ func AudioGet(c *gin.Context) {
 						bytesToSendStart, _ := strconv.Atoi(headerRangeSplitted2[0])
 						bytesToSendEnd, _ := strconv.Atoi(headerRangeSplitted2[1])
 
-						bytesToSend = bytesToSendEnd - bytesToSendStart
+						bytesToSend = bytesToSendEnd - bytesToSendStart + 1
 					}
 				}
 			}
