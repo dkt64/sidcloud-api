@@ -788,7 +788,7 @@ func ReadLatestReleases() {
 
 	var foundNewReleases int
 
-	log.Println("[ReadLatestReleases]LOOP")
+	log.Println("[ReadLatestReleases] LOOP")
 
 	resp, err := netClient.Get("https://csdb.dk/rss/latestreleases.php")
 
@@ -811,7 +811,7 @@ func ReadLatestReleases() {
 
 		// log.Println("Odebrano: ", latestReleases)
 		// log.Println("===================================")
-		log.Println("[ReadLatestReleases]Got latest releases RSS")
+		log.Println("[ReadLatestReleases] Got latest releases RSS")
 		// log.Println("===================================")
 
 		foundNewReleases = 0
@@ -981,7 +981,7 @@ func ReadLatestReleases() {
 					}
 				}
 			} else {
-				log.Println("[ReadLatestReleases]Błąd komunikacji z csdb.dk")
+				log.Println("[ReadLatestReleases] Błąd komunikacji z csdb.dk")
 			}
 		}
 
@@ -1026,7 +1026,7 @@ func ReadLatestReleases() {
 		}
 
 		// Wyświetlenie danych
-		log.Println("[ReadLatestReleases]Found " + strconv.Itoa(foundNewReleases) + " new releases")
+		log.Println("[ReadLatestReleases] Found " + strconv.Itoa(foundNewReleases) + " new releases")
 
 		sort.Sort(byID(releases))
 		sort.Sort(byDate(releases))
@@ -1038,7 +1038,7 @@ func ReadLatestReleases() {
 		WriteDb()
 
 	} else {
-		log.Println("[ReadLatestReleases]Błąd komunikacji z csdb.dk")
+		log.Println("[ReadLatestReleases] Błąd komunikacji z csdb.dk")
 	}
 
 }
@@ -1254,8 +1254,8 @@ func CSDBPrepareData() {
 			}
 
 		}
-		sort.Sort(byID(csdbTemp))
-		sort.Sort(byDate(csdbTemp))
+		// sort.Sort(byID(csdbTemp))
+		// sort.Sort(byDate(csdbTemp))
 		csdb = csdbTemp
 		WriteCSDb()
 
@@ -1611,7 +1611,6 @@ func CSDBWebServices() {
 // MAIN()
 // ================================================================================================
 func main() {
-
 	//
 	// Spraedzamy argumenty
 	//

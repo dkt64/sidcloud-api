@@ -1,5 +1,80 @@
 [
  {
+  "ReleaseID": 190337,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 26,
+  "ReleaseName": "Propaganda List #1 2020",
+  "ReleaseType": "C64 Diskmag",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190337.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Atlantis",
+   "Genesis Project",
+   "Propaganda Magazine Staff"
+  ],
+  "Credits": [
+   "Xiny6581"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197964/PropaList1-2020.d64"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 190335,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 26,
+  "ReleaseName": "Nightingales",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190335.png",
+  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The Solution"
+  ],
+  "Credits": [
+   "DAM"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197958/nightingales.sid",
+   "http://csdb.dk/getinternalfile.php/197957/nightingales.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
+  "Ext": ".sid"
+ },
+ {
+  "ReleaseID": 190299,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 26,
+  "ReleaseName": "R.I.P. BY-TOR",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190299.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/D/Daglish_Ben/Future_Knight.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Ben Daglish"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197938/R.I.P. BY-TOR by ExCeSs.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
+  "Ext": ".prg"
+ },
+ {
   "ReleaseID": 190295,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
@@ -20,30 +95,107 @@
    "http://csdb.dk/getinternalfile.php/197933/lowercase_ninja.zip"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 190299,
+  "ReleaseID": 190338,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 26,
-  "ReleaseName": "R.I.P. BY-TOR",
-  "ReleaseType": "C64 Crack intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190299.png",
+  "ReleaseName": "Fix It Felix Jr 64 Soundtrack",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190338.png",
   "ReleasedAt": "",
   "SIDPath": "",
   "Rating": 0,
   "ReleasedBy": [
-   "Excess"
+   "Saul Cross"
   ],
-  "Credits": null,
+  "Credits": [
+   "Saul Cross"
+  ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197938/R.I.P. BY-TOR by ExCeSs.prg"
+   "http://csdb.dk/getinternalfile.php/197961/Fix_It_Felix_Jr_c64.sid",
+   "http://csdb.dk/getinternalfile.php/197963/Fix_It_Felix_Jr_c64.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
+  "Ext": ".sid"
+ },
+ {
+  "ReleaseID": 190290,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 25,
+  "ReleaseName": "RapidNews #11",
+  "ReleaseType": "C64 Diskmag",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190290.png",
+  "ReleasedAt": "Virtual ExCeSs Pub Meeting MK2",
+  "SIDPath": "",
+  "Rating": 10,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Flex",
+   "Eco"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197928/RapidNews %2311 by ExCeSs.d64"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 190287,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 25,
+  "ReleaseName": "N0S Intro 69",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190287.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/G/Gray_Matt/Hunters_Moon.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Nostalgia"
+  ],
+  "Credits": [
+   "Matt Gray"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197924/no-69.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 190262,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 25,
+  "ReleaseName": "Corooned",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190262.png",
+  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
+  "SIDPath": "",
+  "Rating": 9.38,
+  "ReleasedBy": [
+   "Genesis Project"
+  ],
+  "Credits": [
+   "Stinsen"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197896/corooned.sid",
+   "http://csdb.dk/getinternalfile.php/197897/corooned.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 190292,
@@ -66,58 +218,8 @@
    "http://csdb.dk/getinternalfile.php/197930/excess_meeting_mkii.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
- },
- {
-  "ReleaseID": 190290,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 25,
-  "ReleaseName": "RapidNews #11",
-  "ReleaseType": "C64 Diskmag",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190290.png",
-  "ReleasedAt": "Virtual ExCeSs Pub Meeting MK2",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Excess"
-  ],
-  "Credits": [
-   "Flex",
-   "Eco"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197928/RapidNews %2311 by ExCeSs.d64"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
- },
- {
-  "ReleaseID": 190262,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 25,
-  "ReleaseName": "Corooned",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190262.png",
-  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
-  "SIDPath": "",
-  "Rating": 9.55,
-  "ReleasedBy": [
-   "Genesis Project"
-  ],
-  "Credits": [
-   "Stinsen"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197896/corooned.sid",
-   "http://csdb.dk/getinternalfile.php/197897/corooned.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
  },
  {
   "ReleaseID": 190249,
@@ -141,7 +243,7 @@
    "http://csdb.dk/getinternalfile.php/197882/I Fu%23%40ed Up.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -165,7 +267,31 @@
    "http://csdb.dk/getinternalfile.php/197872/bro of flynn-ons.d64"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 190203,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 23,
+  "ReleaseName": "Kolorflip",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190203.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/M/Mythus/Summer_is_Coming.sid",
+  "Rating": 8.78,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Mythus"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197835/kolorflip %5Bex%5D.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -191,32 +317,8 @@
    "http://csdb.dk/getinternalfile.php/197859/pvm-wtbr.zip"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
- },
- {
-  "ReleaseID": 190203,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 23,
-  "ReleaseName": "Kolorflip",
-  "ReleaseType": "C64 Crack intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190203.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/M/Mythus/Summer_is_Coming.sid",
-  "Rating": 8.78,
-  "ReleasedBy": [
-   "Excess"
-  ],
-  "Credits": [
-   "Mythus"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197835/kolorflip %5Bex%5D.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
  },
  {
   "ReleaseID": 190186,
@@ -239,33 +341,8 @@
    "http://csdb.dk/getinternalfile.php/197816/TND_Girl_Intro.d64"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
- },
- {
-  "ReleaseID": 190139,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 21,
-  "ReleaseName": "Futurecity 2049",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190139.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.25,
-  "ReleasedBy": [
-   "Delysid"
-  ],
-  "Credits": [
-   "Mythus"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197770/Mythus futurecity 2049.sid",
-   "http://csdb.dk/getinternalfile.php/197769/Mythus futurecity 2049.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
  },
  {
   "ReleaseID": 190161,
@@ -289,7 +366,32 @@
    "http://csdb.dk/getinternalfile.php/197792/From_Sunrise_to_Midnight.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
+  "Ext": ".sid"
+ },
+ {
+  "ReleaseID": 190139,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 21,
+  "ReleaseName": "Futurecity 2049",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190139.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.25,
+  "ReleasedBy": [
+   "Delysid"
+  ],
+  "Credits": [
+   "Mythus"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197770/Mythus futurecity 2049.sid",
+   "http://csdb.dk/getinternalfile.php/197769/Mythus futurecity 2049.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -313,31 +415,7 @@
    "http://csdb.dk/getinternalfile.php/197592/Creatures_PETSCII.zip"
   ],
   "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
- },
- {
-  "ReleaseID": 189965,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 15,
-  "ReleaseName": "Kolorsin",
-  "ReleaseType": "C64 Crack intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189965.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.25,
-  "ReleasedBy": [
-   "Excess"
-  ],
-  "Credits": [
-   "Mythus"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197575/kolorsin %5Bex%5D.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -358,35 +436,12 @@
    "El Topo"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197570/el-topo_-_nova_nekropola.zip"
+   "http://csdb.dk/getinternalfile.php/197570/el-topo_-_nova_nekropola.zip",
+   "https://files.scene.org/get/demos/artists/el-topo/el-topo_-_nova_nekropola.zip"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
- },
- {
-  "ReleaseID": 189946,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 15,
-  "ReleaseName": "TND Pop-Tastic",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189946.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "The New Dimension"
-  ],
-  "Credits": [
-   "Richard"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197552/TND_Poptastic.d64"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
  },
  {
   "ReleaseID": 189971,
@@ -410,8 +465,56 @@
    "http://csdb.dk/getinternalfile.php/197580/Mythus cr4cktune.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
+ },
+ {
+  "ReleaseID": 189965,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 15,
+  "ReleaseName": "Kolorsin",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189965.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.25,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Mythus"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197575/kolorsin %5Bex%5D.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 189946,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 15,
+  "ReleaseName": "TND Pop-Tastic",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189946.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The New Dimension"
+  ],
+  "Credits": [
+   "Richard"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197552/TND_Poptastic.d64"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189942,
@@ -435,7 +538,7 @@
    "http://csdb.dk/getinternalfile.php/197547/When-Love-Boat-mattered.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -459,7 +562,7 @@
    "http://csdb.dk/getinternalfile.php/197443/OutRun_PETSCII.zip"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -484,32 +587,8 @@
    "http://csdb.dk/getinternalfile.php/197411/fight_by_atlantis.zip"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
- },
- {
-  "ReleaseID": 189842,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 12,
-  "ReleaseName": "Vice Tribute",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189842.gif",
-  "ReleasedAt": "Revision 2020",
-  "SIDPath": "",
-  "Rating": 9.37,
-  "ReleasedBy": [
-   "Bonzai"
-  ],
-  "Credits": [
-   "Drax"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197441/ViceTribute-BZ.zip"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
  },
  {
   "ReleaseID": 189855,
@@ -532,7 +611,7 @@
    "http://csdb.dk/getinternalfile.php/197452/epic sax gandalf.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -556,7 +635,55 @@
    "http://csdb.dk/getinternalfile.php/197450/oldskool-4kintro-release-aleluya.zip"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 189842,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 12,
+  "ReleaseName": "Vice Tribute",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189842.gif",
+  "ReleasedAt": "Revision 2020",
+  "SIDPath": "",
+  "Rating": 9.37,
+  "ReleasedBy": [
+   "Bonzai"
+  ],
+  "Credits": [
+   "Drax"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197441/ViceTribute-BZ.zip"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 189848,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 12,
+  "ReleaseName": "4korona Intro",
+  "ReleaseType": "C64 4K Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189848.png",
+  "ReleasedAt": "Revision 2020",
+  "SIDPath": "/MUSICIANS/J/Jeff/X-Large_6.sid",
+  "Rating": 8.18,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Jeff"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197447/4korona intro %5Bex%5D.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -581,31 +708,7 @@
    "http://csdb.dk/getinternalfile.php/197449/mortesubita.zip"
   ],
   "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
- },
- {
-  "ReleaseID": 189848,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 12,
-  "ReleaseName": "4korona Intro",
-  "ReleaseType": "C64 4K Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189848.png",
-  "ReleasedAt": "Revision 2020",
-  "SIDPath": "/MUSICIANS/J/Jeff/X-Large_6.sid",
-  "Rating": 8.18,
-  "ReleasedBy": [
-   "Excess"
-  ],
-  "Credits": [
-   "Jeff"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197447/4korona intro %5Bex%5D.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -629,57 +732,32 @@
    "http://csdb.dk/getinternalfile.php/197389/Jellica - Lscmii.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 189801,
+  "ReleaseID": 190015,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 11,
-  "ReleaseName": "Joyfilled Aleluya",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189801.png",
-  "ReleasedAt": "Revision 2020",
-  "SIDPath": "",
+  "ReleaseName": "30 Years",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190015.png",
+  "ReleasedAt": "",
+  "SIDPath": "/DEMOS/A-F/Armageddon_Intro.sid",
   "Rating": 0,
   "ReleasedBy": [
-   "LoveJesus"
+   "Public Enemies"
   ],
   "Credits": [
-   "LoveJesus"
+   "Zynox"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197396/oldskool-music-release-aleluya.zip"
+   "http://csdb.dk/getinternalfile.php/197635/30-years.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
- },
- {
-  "ReleaseID": 190017,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 11,
-  "ReleaseName": "Box13",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190017.png",
-  "ReleasedAt": "Revision 2020",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Russian Massive Digital Aggression"
-  ],
-  "Credits": [
-   "Crokocat"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197638/crokocat-b13.sid",
-   "http://csdb.dk/getinternalfile.php/197637/crokocat-b13.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
+  "WAVCached": false,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189803,
@@ -704,7 +782,7 @@
    "http://csdb.dk/getinternalfile.php/197398/radio_free_truth_by_mibri_of_atl-msl-prx.zip"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -728,32 +806,31 @@
    "http://csdb.dk/getinternalfile.php/197397/lman---microgroove.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 189784,
+  "ReleaseID": 189801,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 11,
-  "ReleaseName": "Downward",
+  "ReleaseName": "Joyfilled Aleluya",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189784.png",
-  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189801.png",
+  "ReleasedAt": "Revision 2020",
   "SIDPath": "",
-  "Rating": 8.3,
+  "Rating": 0,
   "ReleasedBy": [
-   "Kruthers"
+   "LoveJesus"
   ],
   "Credits": [
-   "Kruthers"
+   "LoveJesus"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197378/downward-8580.sid",
-   "http://csdb.dk/getinternalfile.php/197377/downward-8580.prg"
+   "http://csdb.dk/getinternalfile.php/197396/oldskool-music-release-aleluya.zip"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -779,32 +856,58 @@
    "http://csdb.dk/getinternalfile.php/197395/scruffy-rse.zip"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
-  "ReleaseID": 190015,
+  "ReleaseID": 190017,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 11,
-  "ReleaseName": "30 Years",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190015.png",
-  "ReleasedAt": "",
-  "SIDPath": "/DEMOS/A-F/Armageddon_Intro.sid",
+  "ReleaseName": "Box13",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190017.png",
+  "ReleasedAt": "Revision 2020",
+  "SIDPath": "",
   "Rating": 0,
   "ReleasedBy": [
-   "Public Enemies"
+   "Russian Massive Digital Aggression"
   ],
   "Credits": [
-   "Zynox"
+   "Crokocat"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197635/30-years.prg"
+   "http://csdb.dk/getinternalfile.php/197638/crokocat-b13.sid",
+   "http://csdb.dk/getinternalfile.php/197637/crokocat-b13.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
+  "WAVCached": false,
+  "Ext": ".sid"
+ },
+ {
+  "ReleaseID": 189784,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 11,
+  "ReleaseName": "Downward",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189784.png",
+  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
+  "SIDPath": "",
+  "Rating": 8.3,
+  "ReleasedBy": [
+   "Kruthers"
+  ],
+  "Credits": [
+   "Kruthers"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197378/downward-8580.sid",
+   "http://csdb.dk/getinternalfile.php/197377/downward-8580.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189742,
@@ -829,8 +932,32 @@
    "http://csdb.dk/getinternalfile.php/197331/Electric_City_2SID.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
+ },
+ {
+  "ReleaseID": 189729,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 8,
+  "ReleaseName": "Stayhome Intro",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189729.gif",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/M/Mythus/Trixy_Trax.sid",
+  "Rating": 9.5,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Mythus"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197317/stayhome intro.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189728,
@@ -853,7 +980,7 @@
    "http://csdb.dk/getinternalfile.php/197316/petmanbatman.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -877,31 +1004,7 @@
    "http://csdb.dk/getinternalfile.php/197315/doublelswing_palntsc.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
- },
- {
-  "ReleaseID": 189729,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 8,
-  "ReleaseName": "Stayhome Intro",
-  "ReleaseType": "C64 Crack intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189729.gif",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/M/Mythus/Trixy_Trax.sid",
-  "Rating": 9.5,
-  "ReleasedBy": [
-   "Excess"
-  ],
-  "Credits": [
-   "Mythus"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197317/stayhome intro.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -926,7 +1029,7 @@
    "http://csdb.dk/getinternalfile.php/197238/ncomv_fegolhuzz.d64"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -939,7 +1042,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189668.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 9.5,
+  "Rating": 9.47,
   "ReleasedBy": [
    "MultiStyle Labs"
   ],
@@ -951,32 +1054,8 @@
    "http://csdb.dk/getinternalfile.php/197255/psycho8580_WakeUpCall.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
- },
- {
-  "ReleaseID": 189627,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 5,
-  "ReleaseName": "Itt nincs Túró Rudi",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189627.png",
-  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
-  "SIDPath": "",
-  "Rating": 9.28,
-  "ReleasedBy": [
-   "Triad"
-  ],
-  "Credits": [
-   "dalezy"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197208/dalezy_-_itt-nincs-turo-rudi.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
  },
  {
   "ReleaseID": 189639,
@@ -999,7 +1078,7 @@
    "http://csdb.dk/getinternalfile.php/197224/Excess-Tai-Pan_intro.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -1024,7 +1103,31 @@
    "http://csdb.dk/getinternalfile.php/197217/DI4KONAL - Heureka Edition %5BLS%5D.d64"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
+  "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 189627,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 5,
+  "ReleaseName": "Itt nincs T�r� Rudi",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189627.png",
+  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
+  "SIDPath": "",
+  "Rating": 9.28,
+  "ReleasedBy": [
+   "Triad"
+  ],
+  "Credits": [
+   "dalezy"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197208/dalezy_-_itt-nincs-turo-rudi.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -1037,7 +1140,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189601.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 8.94,
+  "Rating": 8.95,
   "ReleasedBy": [
    "MultiStyle Labs",
    "Samar Productions",
@@ -1051,7 +1154,7 @@
    "http://csdb.dk/getinternalfile.php/197181/lost.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1076,7 +1179,7 @@
    "http://csdb.dk/getinternalfile.php/197177/Children.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1094,14 +1197,14 @@
    "Latex"
   ],
   "Credits": [
-   "Båtsman"
+   "Batsman"
   ],
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197172/ltx-blinding_lights.sid",
    "http://csdb.dk/getinternalfile.php/197173/ltx-blinding_lights.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1125,7 +1228,7 @@
    "http://csdb.dk/getinternalfile.php/197168/toi.D64"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -1150,7 +1253,7 @@
    "http://csdb.dk/getinternalfile.php/197133/azzurro-slaxx-hf.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1175,7 +1278,7 @@
    "http://csdb.dk/getinternalfile.php/197150/wk_quara.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1201,7 +1304,7 @@
    "http://csdb.dk/getinternalfile.php/197131/future unsure digi drama.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1226,7 +1329,7 @@
    "http://csdb.dk/getinternalfile.php/197120/Anxiety in Gotham.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1251,7 +1354,7 @@
    "http://csdb.dk/getinternalfile.php/197113/killer_virus_trance.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1277,7 +1380,7 @@
    "http://csdb.dk/getinternalfile.php/197108/deserted_cities.d64"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1302,32 +1405,8 @@
    "http://csdb.dk/getinternalfile.php/197099/killer_virus_trance.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
- },
- {
-  "ReleaseID": 190287,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 0,
-  "ReleaseName": "N0S Intro 69",
-  "ReleaseType": "C64 Crack intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190287.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/G/Gray_Matt/Hunters_Moon.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Nostalgia"
-  ],
-  "Credits": [
-   "Matt Gray"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197924/no-69.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
  },
  {
   "ReleaseID": 189492,
@@ -1344,14 +1423,14 @@
    "Latex"
   ],
   "Credits": [
-   "Båtsman"
+   "Batsman"
   ],
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197055/ltx-the_happy_vaccine.sid",
    "http://csdb.dk/getinternalfile.php/197054/ltx-the_happy_vaccine.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1376,7 +1455,7 @@
    "http://csdb.dk/getinternalfile.php/197042/C0ACID-19.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1401,7 +1480,7 @@
    "http://csdb.dk/getinternalfile.php/196945/covid-19.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1426,7 +1505,7 @@
    "http://csdb.dk/getinternalfile.php/197009/Mythus smile.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1450,32 +1529,33 @@
    "http://csdb.dk/getinternalfile.php/197006/I_AM_EINZIG.d64"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 189449,
+  "ReleaseID": 189456,
   "ReleaseYear": 2020,
   "ReleaseMonth": 3,
   "ReleaseDay": 30,
-  "ReleaseName": "Dark Rainstorms in My Heart",
+  "ReleaseName": "Cramborona Infections",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189449.png",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189456.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 8.43,
+  "Rating": 8.29,
   "ReleasedBy": [
-   "SIDWAVE"
+   "Genesis Project"
   ],
   "Credits": [
-   "SIDWAVE"
+   "Xiny6581"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197003/Dark_Rainstorms_in_My_Heart.d64"
+   "http://csdb.dk/getinternalfile.php/197012/Cramborona_Infections.sid",
+   "http://csdb.dk/getinternalfile.php/197011/Cramborona_Infections.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
+  "WAVCached": false,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189445,
@@ -1493,13 +1573,13 @@
   ],
   "Credits": [
    "6R6",
-   "Kristian Røstøen"
+   "Kristian Rostoen"
   ],
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/196999/nofps.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -1525,32 +1605,32 @@
    "http://csdb.dk/getinternalfile.php/196995/free-ammo.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 189456,
+  "ReleaseID": 189430,
   "ReleaseYear": 2020,
   "ReleaseMonth": 3,
   "ReleaseDay": 30,
-  "ReleaseName": "Cramborona Infections",
+  "ReleaseName": "Turrican - Rise of the Machine",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189456.png",
-  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189430.png",
+  "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 8.29,
+  "Rating": 9.58,
   "ReleasedBy": [
-   "Genesis Project"
+   "Jason Page"
   ],
   "Credits": [
-   "Xiny6581"
+   "Jason Page"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197012/Cramborona_Infections.sid",
-   "http://csdb.dk/getinternalfile.php/197011/Cramborona_Infections.prg"
+   "http://csdb.dk/getinternalfile.php/196982/TURRICAN_ROTM.sid",
+   "http://csdb.dk/getinternalfile.php/196981/Turrican_ROTM.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
@@ -1574,7 +1654,7 @@
    "http://csdb.dk/getinternalfile.php/196962/nostalgy.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".prg"
  },
  {
@@ -1599,33 +1679,32 @@
    "http://csdb.dk/getinternalfile.php/196967/Tested_Untested.prg"
   ],
   "SIDCached": true,
-  "WAVCached": true,
+  "WAVCached": false,
   "Ext": ".sid"
  },
  {
-  "ReleaseID": 189430,
+  "ReleaseID": 189449,
   "ReleaseYear": 2020,
   "ReleaseMonth": 3,
   "ReleaseDay": 30,
-  "ReleaseName": "Turrican - Rise of the Machine",
+  "ReleaseName": "Dark Rainstorms in My Heart",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189430.png",
-  "ReleasedAt": "",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189449.png",
+  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 9.58,
+  "Rating": 8.43,
   "ReleasedBy": [
-   "Jason Page"
+   "SIDWAVE"
   ],
   "Credits": [
-   "Jason Page"
+   "SIDWAVE"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196982/TURRICAN_ROTM.sid",
-   "http://csdb.dk/getinternalfile.php/196981/Turrican_ROTM.prg"
+   "http://csdb.dk/getinternalfile.php/197003/Dark_Rainstorms_in_My_Heart.d64"
   ],
   "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
+  "WAVCached": false,
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189379,
@@ -1800,6 +1879,30 @@
   "Ext": ".prg"
  },
  {
+  "ReleaseID": 189149,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 24,
+  "ReleaseName": "Cubetro",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189149.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/M/Mermaid/Chillroom.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The Seventh Sector"
+  ],
+  "Credits": [
+   "Mermaid"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/196671/tss_cubetro.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": false,
+  "Ext": ".prg"
+ },
+ {
   "ReleaseID": 189118,
   "ReleaseYear": 2020,
   "ReleaseMonth": 3,
@@ -1825,30 +1928,6 @@
   "SIDCached": true,
   "WAVCached": false,
   "Ext": ".sid"
- },
- {
-  "ReleaseID": 189149,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 24,
-  "ReleaseName": "Cubetro",
-  "ReleaseType": "C64 Crack intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189149.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/M/Mermaid/Chillroom.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "The Seventh Sector"
-  ],
-  "Credits": [
-   "Mermaid"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196671/tss_cubetro.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": false,
-  "Ext": ".prg"
  },
  {
   "ReleaseID": 189096,
@@ -1899,79 +1978,5 @@
   "SIDCached": true,
   "WAVCached": false,
   "Ext": ".sid"
- },
- {
-  "ReleaseID": 189206,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 22,
-  "ReleaseName": "The Forum64 18th Anniversary Party Intro",
-  "ReleaseType": "C64 Crack intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189206.gif",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Raiders of the Lost Empire"
-  ],
-  "Credits": [
-   "Stinsen"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196728/anni18fat.D64"
-  ],
-  "SIDCached": true,
-  "WAVCached": false,
-  "Ext": ".prg"
- },
- {
-  "ReleaseID": 189047,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 22,
-  "ReleaseName": "Slappin",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189047.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.57,
-  "ReleasedBy": [
-   "MultiStyle Labs",
-   "Genesis Project"
-  ],
-  "Credits": [
-   "psych858o"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196561/Slappin.sid",
-   "http://csdb.dk/getinternalfile.php/196562/Slappin-Psych858o-GP.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": false,
-  "Ext": ".sid"
- },
- {
-  "ReleaseID": 188936,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 20,
-  "ReleaseName": "Flashback 20/20 Invitation",
-  "ReleaseType": "C64 Invitation",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/188000/188936.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 8.7,
-  "ReleasedBy": [
-   "Desire"
-  ],
-  "Credits": [
-   "No-XS"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196446/fb2020.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": false,
-  "Ext": ".prg"
  }
 ]
