@@ -1,5 +1,80 @@
 [
  {
+  "ReleaseID": 190367,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 27,
+  "ReleaseName": "Forona",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190367.png",
+  "ReleasedAt": "CSDB C64 Lockdown 2020 Fun Compo",
+  "SIDPath": "/MUSICIANS/F/Fulcrum/Corona.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The 7th Division"
+  ],
+  "Credits": [
+   "Fulcrum"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197993/forona.prg"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
+ },
+ {
+  "ReleaseID": 190338,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 26,
+  "ReleaseName": "Fix It Felix Jr 64 Soundtrack",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190338.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Saul Cross"
+  ],
+  "Credits": [
+   "Saul Cross"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197961/Fix_It_Felix_Jr_c64.sid",
+   "http://csdb.dk/getinternalfile.php/197963/Fix_It_Felix_Jr_c64.prg"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
+ },
+ {
+  "ReleaseID": 190337,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 26,
+  "ReleaseName": "Propaganda List #1 2020",
+  "ReleaseType": "C64 Diskmag",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190337.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.23,
+  "ReleasedBy": [
+   "Atlantis",
+   "Genesis Project",
+   "Propaganda Magazine Staff"
+  ],
+  "Credits": [
+   "Xiny6581"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197964/PropaList1-2020.d64"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
+ },
+ {
   "ReleaseID": 190335,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
@@ -155,7 +230,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190262.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 9.55,
+  "Rating": 9.38,
   "ReleasedBy": [
    "Genesis Project"
   ],
@@ -1897,82 +1972,6 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/196637/StreetOfMySoul.sid",
    "http://csdb.dk/getinternalfile.php/196636/Jammer_StreetOfMySoul.prg"
-  ],
-  "SIDCached": false,
-  "WAVCached": false,
-  "Ext": ""
- },
- {
-  "ReleaseID": 189096,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 23,
-  "ReleaseName": "Day 6 in Kleve Hades",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189096.png",
-  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
-  "SIDPath": "",
-  "Rating": 9.72,
-  "ReleasedBy": [
-   "MultiStyle Labs"
-  ],
-  "Credits": [
-   "Linus"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196612/Day6-in-Kleve-Hades.sid",
-   "http://csdb.dk/getinternalfile.php/196613/Linus_Day6.prg"
-  ],
-  "SIDCached": false,
-  "WAVCached": false,
-  "Ext": ""
- },
- {
-  "ReleaseID": 189061,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 23,
-  "ReleaseName": "Shadows (Lindsey Stirling C64 Version)",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189061.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Onslaught"
-  ],
-  "Credits": [
-   "Narcisound"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197118/shadows.sid",
-   "http://csdb.dk/getinternalfile.php/197117/shadows.prg"
-  ],
-  "SIDCached": false,
-  "WAVCached": false,
-  "Ext": ""
- },
- {
-  "ReleaseID": 189047,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 22,
-  "ReleaseName": "Slappin",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189047.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.57,
-  "ReleasedBy": [
-   "MultiStyle Labs",
-   "Genesis Project"
-  ],
-  "Credits": [
-   "psych858o"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196561/Slappin.sid",
-   "http://csdb.dk/getinternalfile.php/196562/Slappin-Psych858o-GP.prg"
   ],
   "SIDCached": false,
   "WAVCached": false,

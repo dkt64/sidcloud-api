@@ -39,6 +39,8 @@ const historyMaxEntries = 80
 
 const historyMaxMonths = 3
 
+const defaultBufferSize = 1024 * 64
+
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
 type RssItem struct {
@@ -1375,7 +1377,37 @@ func AudioGet(c *gin.Context) {
 	// Typ połączania
 	c.Header("Access-Control-Allow-Origin", "*")
 	c.Header("Connection", "Keep-Alive")
-	c.Header("Transfer-Encoding", "chunked")
+	c.Header("Transfer-Encoding", "identity")
+
+	//
+	// Analiza nagłówka - ile bajtów mamy wysłać
+	//
+	bytesToSend := 0
+	headerRange := c.GetHeader("Range")
+	log.Println("[GIN:AudioGet] Header:Range = " + headerRange)
+	if len(headerRange) > 0 {
+		headerRangeSplitted1 := strings.Split(headerRange, "=")
+
+		if len(headerRangeSplitted1) > 0 {
+			log.Println("[GIN:AudioGet] range in " + headerRangeSplitted1[0])
+
+			if len(headerRangeSplitted1) > 1 {
+				headerRangeSplitted2 := strings.Split(headerRangeSplitted1[1], "-")
+				if len(headerRangeSplitted2) > 0 {
+					log.Println("[GIN:AudioGet] start " + headerRangeSplitted2[0])
+					if len(headerRangeSplitted2) > 1 {
+						log.Println("[GIN:AudioGet] end " + headerRangeSplitted2[1])
+						bytesToSendStart, _ := strconv.Atoi(headerRangeSplitted2[0])
+						bytesToSendEnd, _ := strconv.Atoi(headerRangeSplitted2[1])
+
+						bytesToSend = bytesToSendEnd - bytesToSendStart
+					}
+				}
+			}
+		}
+	}
+
+	log.Println("[GIN:AudioGet] Bytes to send " + strconv.Itoa(bytesToSend))
 
 	// Odczytujemy parametr - typ playera
 	id := c.Param("id")
@@ -1384,7 +1416,7 @@ func AudioGet(c *gin.Context) {
 	if fileExists(filenameWAV) {
 
 		// Info o wejściu do GET
-		log.Println("[GIN:AudioGet] " + id)
+		log.Println("[GIN:AudioGet] WAV file exists with ID " + id)
 
 		// const maxOffset int64 = 50000000 // ~ 10 min
 		// const maxOffset int64 = 25000000 // ~ 5 min
@@ -1397,9 +1429,15 @@ func AudioGet(c *gin.Context) {
 		volDown := false
 
 		// Przygotowanie bufora do streamingu
-		const bufferSize = 1024 * 64
+		var bufferSize int
+		if bytesToSend == 0 {
+			bufferSize = defaultBufferSize
+		} else {
+			bufferSize = bytesToSend
+		}
+
+		bufferSize = 2
 		var offset int64
-		p := make([]byte, bufferSize)
 
 		log.Println("[GIN:AudioGet] Sending " + id + "...")
 
@@ -1432,6 +1470,8 @@ func AudioGet(c *gin.Context) {
 				file, _ := os.Open(filenameWAV)
 				defer file.Close()
 				// ErrCheck(err)
+
+				p := make([]byte, bufferSize)
 
 				// Czytamy z pliku kolejne dane do bufora
 				readed, err := file.ReadAt(p, offset)
@@ -1486,7 +1526,9 @@ func AudioGet(c *gin.Context) {
 						sum = sum / float64(readed)
 
 						if sum >= 5.0 || offset < 44 || offset > 44100*60 {
-							c.Data(http.StatusOK, "audio/wav", p)
+							c.Data(http.StatusPartialContent, "audio/wav", p)
+
+							bufferSize = defaultBufferSize
 							dataSent += int64(len(p))
 							// log.Print(".")
 						}
