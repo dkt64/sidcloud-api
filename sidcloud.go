@@ -39,7 +39,7 @@ const historyMaxEntries = 80
 
 const historyMaxMonths = 3
 
-const defaultBufferSize = 1024 * 64
+const defaultBufferSize = 1024 * 4
 
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
@@ -392,6 +392,27 @@ func (s byID) Swap(i, j int) {
 }
 func (s byID) Less(i, j int) bool {
 	return s[i].ReleaseID > s[j].ReleaseID
+}
+
+// Sortowanie datami i ID
+// ================================================================================================
+
+type byDateAndID []Release
+
+func (s byDateAndID) Len() int {
+	return len(s)
+}
+func (s byDateAndID) Swap(i, j int) {
+	s[i], s[j] = s[j], s[i]
+}
+func (s byDateAndID) Less(i, j int) bool {
+
+	d1 := time.Date(s[i].ReleaseYear, time.Month(s[i].ReleaseMonth), s[i].ReleaseDay, 0, 0, 0, 0, time.Local)
+	d2 := time.Date(s[j].ReleaseYear, time.Month(s[j].ReleaseMonth), s[j].ReleaseDay, 0, 0, 0, 0, time.Local)
+	id1 := s[i].ReleaseID
+	id2 := s[j].ReleaseID
+
+	return d2.Before(d1) && id1 > id2
 }
 
 // fileExists - sprawdzenie czy plik istnieje
@@ -1030,8 +1051,11 @@ func ReadLatestReleases() {
 		// Wyświetlenie danych
 		log.Println("[ReadLatestReleases] Found " + strconv.Itoa(foundNewReleases) + " new releases")
 
-		sort.Sort(byID(releases))
-		sort.Sort(byDate(releases))
+		if foundNewReleases > 0 {
+			sort.Sort(byDateAndID(releases))
+		}
+		// sort.Sort(byID(releases))
+		// sort.Sort(byDate(releases))
 
 		if len(releases) > historyMaxEntries {
 			releases = releases[0:historyMaxEntries]
@@ -1256,6 +1280,7 @@ func CSDBPrepareData() {
 			}
 
 		}
+
 		// sort.Sort(byID(csdbTemp))
 		// sort.Sort(byDate(csdbTemp))
 		csdb = csdbTemp
@@ -1397,10 +1422,13 @@ func AudioGet(c *gin.Context) {
 					log.Println("[GIN:AudioGet] start " + headerRangeSplitted2[0])
 					if len(headerRangeSplitted2) > 1 {
 						log.Println("[GIN:AudioGet] end " + headerRangeSplitted2[1])
-						bytesToSendStart, _ := strconv.Atoi(headerRangeSplitted2[0])
-						bytesToSendEnd, _ := strconv.Atoi(headerRangeSplitted2[1])
-
-						bytesToSend = bytesToSendEnd - bytesToSendStart + 1
+						bytesToSendStart, err := strconv.Atoi(headerRangeSplitted2[0])
+						if ErrCheck2(err) {
+							bytesToSendEnd, err := strconv.Atoi(headerRangeSplitted2[1])
+							if ErrCheck2(err) {
+								bytesToSend = bytesToSendEnd - bytesToSendStart + 1
+							}
+						}
 					}
 				}
 			}
@@ -1430,13 +1458,12 @@ func AudioGet(c *gin.Context) {
 
 		// Przygotowanie bufora do streamingu
 		var bufferSize int
-		if bytesToSend == 0 {
-			bufferSize = defaultBufferSize
-		} else {
+		if bytesToSend > 0 {
 			bufferSize = bytesToSend
+		} else {
+			bufferSize = defaultBufferSize
 		}
 
-		bufferSize = 2
 		var offset int64
 
 		log.Println("[GIN:AudioGet] Sending " + id + "...")
@@ -1527,6 +1554,7 @@ func AudioGet(c *gin.Context) {
 
 						if sum >= 5.0 || offset < 44 || offset > 44100*60 {
 							c.Data(http.StatusPartialContent, "audio/wav", p)
+							c.Writer.Flush()
 
 							bufferSize = defaultBufferSize
 							dataSent += int64(len(p))
@@ -1547,10 +1575,10 @@ func AudioGet(c *gin.Context) {
 			}
 
 			// Wysyłamy pakiet co 250 ms
-			if sum >= 5.0 || offset > 44100*60 {
-				// if sum >= 5.0 {
-				time.Sleep(250 * time.Millisecond)
-			}
+			// if sum >= 5.0 || offset > 44100*60 {
+			// 	// if sum >= 5.0 {
+			// 	time.Sleep(250 * time.Millisecond)
+			// }
 
 		}
 	} else {
@@ -1561,6 +1589,116 @@ func AudioGet(c *gin.Context) {
 	// Feedback gdybyśmy wyszli z LOOP
 	c.JSON(http.StatusOK, "[GIN:AudioGet] Loop ended")
 	log.Println("[GIN:AudioGet] Loop ended")
+}
+
+// AudioGet2 - granie utworu
+// ================================================================================================
+func AudioGet2(c *gin.Context) {
+
+	// Typ połączania
+	c.Header("Access-Control-Allow-Origin", "*")
+	c.Header("Connection", "Keep-Alive")
+	c.Header("Transfer-Encoding", "identity")
+	c.Header("Accept-Ranges", "bytes")
+
+	//
+	// Analiza nagłówka - ile bajtów mamy wysłać
+	//
+	bytesToSend := 0
+	bytesToSendStart := 0
+	headerRange := c.GetHeader("Range")
+	log.Println("[GIN:AudioGet2] Header:Range = " + headerRange)
+	if len(headerRange) > 0 {
+		headerRangeSplitted1 := strings.Split(headerRange, "=")
+
+		if len(headerRangeSplitted1) > 0 {
+			log.Println("[GIN:AudioGet2] range in " + headerRangeSplitted1[0])
+
+			if len(headerRangeSplitted1) > 1 {
+				headerRangeSplitted2 := strings.Split(headerRangeSplitted1[1], "-")
+				if len(headerRangeSplitted2) > 0 {
+					log.Println("[GIN:AudioGet2] start " + headerRangeSplitted2[0])
+					if len(headerRangeSplitted2) > 1 {
+						log.Println("[GIN:AudioGet2] end " + headerRangeSplitted2[1])
+						bytesToSendStart, err := strconv.Atoi(headerRangeSplitted2[0])
+						if ErrCheck2(err) {
+							bytesToSendEnd, err := strconv.Atoi(headerRangeSplitted2[1])
+							if ErrCheck2(err) {
+								bytesToSend = bytesToSendEnd - bytesToSendStart + 1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	log.Println("[GIN:AudioGet2] Bytes to send " + strconv.Itoa(bytesToSend))
+
+	// Odczytujemy parametr - typ playera
+	id := c.Param("id")
+	filenameWAV := cacheDir + id + ".wav"
+
+	if fileExists(filenameWAV) {
+
+		// Info o wejściu do GET
+		log.Println("[GIN:AudioGet2] WAV file exists with ID " + id)
+
+		log.Println("[GIN:AudioGet2] Sending " + id + "...")
+
+		// Streaming LOOP...
+		// ----------------------------------------------------------------------------------------------
+
+		// Otwieraamy plik - bez sprawdzania błędów
+		file, _ := os.Open(filenameWAV)
+		defer file.Close()
+		// ErrCheck(err)
+
+		var p []byte
+
+		if bytesToSend > 0 {
+			p = make([]byte, bytesToSend)
+			log.Println("[GIN:AudioGet2] Tworzę bufor o rozmiarze " + strconv.Itoa(bytesToSend))
+		} else {
+			file, err := os.Stat(filenameWAV)
+			if err != nil {
+				log.Println("[GIN:AudioGet2] Problem z odczytem rozmiaru pliku " + filenameWAV)
+			}
+			size := file.Size()
+
+			p = make([]byte, size)
+			log.Println("[GIN:AudioGet2] Tworzę bufor o rozmiarze " + strconv.Itoa(int(size)))
+		}
+
+		// Czytamy z pliku kolejne dane do bufora
+		readed, err := file.ReadAt(p, int64(bytesToSendStart))
+
+		if ErrCheck(err) {
+
+			// Jeżeli coś odczytaliśmy to wysyłamy
+			if readed > 0 {
+
+				log.Println("[GIN:AudioGet2] Odczytałem bajtów " + strconv.Itoa(readed))
+				// Feedback gdybyśmy wyszli z LOOP
+				if bytesToSend > 0 {
+					c.Data(http.StatusPartialContent, "audio/wav", p)
+				} else {
+					c.Data(http.StatusOK, "audio/wav", p)
+				}
+				// c.Writer.Flush()
+			} else {
+				c.JSON(http.StatusInternalServerError, "[GIN:AudioGet2] StatusInternalServerError")
+
+			}
+		} else {
+			c.JSON(http.StatusInternalServerError, "[GIN:AudioGet2] StatusInternalServerError")
+
+		}
+	} else {
+		c.JSON(http.StatusInternalServerError, "[GIN:AudioGet2] StatusInternalServerError")
+
+	}
+
 }
 
 // Options - Obsługa request'u OPTIONS (CORS)
@@ -1654,7 +1792,7 @@ func CSDBWebServices() {
 // ================================================================================================
 func main() {
 	//
-	// Spraedzamy argumenty
+	// Sprawdzamy argumenty
 	//
 	args := os.Args[1:]
 
@@ -1699,6 +1837,7 @@ func main() {
 	//
 	ReadCSDb()
 	ReadDb()
+	sort.Sort(byDateAndID(releases))
 
 	//
 	// Uruchomienie wątków
@@ -1729,7 +1868,7 @@ func main() {
 	r.StaticFile("favicon.ico", "./dist/favicon.ico")
 	r.StaticFile("sign.png", "./dist/sign.png")
 
-	r.GET("/api/v1/audio/:id", AudioGet)
+	r.GET("/api/v1/audio/:id", AudioGet2)
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
 	r.GET("/api/v1/hvsc_filter/:id", GetHVSCFilter)
 

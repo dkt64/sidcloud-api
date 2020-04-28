@@ -1,12 +1,36 @@
 [
  {
+  "ReleaseID": 190374,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 27,
+  "ReleaseName": "The Corona Killer Thriller!",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190374.gif",
+  "ReleasedAt": "CSDB C64 Lockdown 2020 Fun Compo",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Raiders of the Lost Empire"
+  ],
+  "Credits": [
+   "Holy Moses"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/198001/corona.D64"
+  ],
+  "SIDCached": false,
+  "WAVCached": false,
+  "Ext": ""
+ },
+ {
   "ReleaseID": 190367,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 27,
   "ReleaseName": "Forona",
   "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190367.png",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190367.gif",
   "ReleasedAt": "CSDB C64 Lockdown 2020 Fun Compo",
   "SIDPath": "/MUSICIANS/F/Fulcrum/Corona.sid",
   "Rating": 0,
@@ -58,7 +82,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190337.png",
   "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 9.23,
+  "Rating": 9.33,
   "ReleasedBy": [
    "Atlantis",
    "Genesis Project",
@@ -230,7 +254,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190262.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 9.38,
+  "Rating": 9.43,
   "ReleasedBy": [
    "Genesis Project"
   ],
@@ -280,7 +304,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190241.gif",
   "ReleasedAt": "CSDB C64 Lockdown 2020 Fun Compo",
   "SIDPath": "/MUSICIANS/P/Psycho/Electronica.sid",
-  "Rating": 9.55,
+  "Rating": 9.58,
   "ReleasedBy": [
    "Onslaught"
   ],
@@ -304,7 +328,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190225.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 9.02,
+  "Rating": 9,
   "ReleasedBy": [
    "PVM"
   ],
@@ -1945,33 +1969,6 @@
   ],
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/196671/tss_cubetro.prg"
-  ],
-  "SIDCached": false,
-  "WAVCached": false,
-  "Ext": ""
- },
- {
-  "ReleaseID": 189118,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 24,
-  "ReleaseName": "Street of My Soul",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189118.png",
-  "ReleasedAt": "2020 Quarantine Emotional Music Compo",
-  "SIDPath": "",
-  "Rating": 9.48,
-  "ReleasedBy": [
-   "Samar Productions",
-   "MultiStyle Labs",
-   "EXclusive ON"
-  ],
-  "Credits": [
-   "Jammer"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196637/StreetOfMySoul.sid",
-   "http://csdb.dk/getinternalfile.php/196636/Jammer_StreetOfMySoul.prg"
   ],
   "SIDCached": false,
   "WAVCached": false,
