@@ -7,6 +7,7 @@ package main
 import (
 	"archive/zip"
 	"bytes"
+	"encoding/binary"
 	"encoding/json"
 	"encoding/xml"
 	"io"
@@ -14,7 +15,6 @@ import (
 	"log"
 	"math"
 	"net/http"
-	"net/smtp"
 	"net/url"
 	"os"
 	"os/exec"
@@ -29,17 +29,23 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// const wavSize = 29458844
+
 var csdbDataReady bool = false
 
 const cacheDir = "cache/"
-const wavSize = 29458844
+
 const wavTime = "333"
 
 const historyMaxEntries = 80
 
 const historyMaxMonths = 3
 
-const defaultBufferSize = 1024 * 4
+const defaultBufferSize = 1024 * 32
+
+const wavTime5minutes int64 = 44100 * 2 * 300 // = 5 min
+
+const wavTime10seconds int64 = 44100 * 2 * 10 // = 10 sekund
 
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
@@ -426,6 +432,17 @@ func fileExists(filename string) bool {
 	return true
 }
 
+// fileExists - sprawdzenie czy plik istnieje
+// ================================================================================================
+func fileSize(filename string) (int64, error) {
+	// Sprawdzamy rozmiar pliku
+	fileStat, err := os.Stat(filename)
+	if ErrCheck(err) {
+		return fileStat.Size(), err
+	}
+	return fileStat.Size(), err
+}
+
 // makeCharsetReader - decode reader
 // ================================================================================================
 func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {
@@ -703,6 +720,88 @@ func DownloadFiles() {
 	}
 }
 
+// WAVCutZeroes - Usuwa puste miejsca w pliku WAV
+// ================================================================================================
+func WAVCutZeroes(filename string) error {
+
+	var size int64
+	if fileExists(filename) {
+		file, err := os.Stat(filename)
+		if ErrCheck(err) {
+			size = file.Size()
+		} else {
+			log.Println("[WAVCutZeroes] Problem z odczytem rozmiaru pliku " + filename)
+			return err
+		}
+	}
+
+	file, err := os.Open(filename)
+	defer file.Close()
+
+	if ErrCheck(err) {
+		p := make([]byte, size)
+		readed, err := file.ReadAt(p, 0)
+		if (int64(readed) == size) && ErrCheck(err) {
+
+			file.Close()
+			os.Remove(filename)
+
+			// Wycinamy początkowe śmieci
+			p = append(p[:44], p[0x2000+44:]...)
+
+			var i int
+			for i = 44; i < (len(p) - 2); i = i + 2 {
+				if (p[i] < 0xFA && p[i] > 5) || p[i+1] != 0 {
+					// Wycinamy początkową ciszę
+					log.Println("[WAVCutZeroes] Wycinam początkową ciszę do " + strconv.Itoa(i))
+					p = append(p[:44], p[i:]...)
+					break
+				}
+			}
+
+			const wavTime5seconds = 44100 * 5 // = 5 sekund
+
+			sil := 0
+			for i = int(wavTime10seconds) + 44; i < (len(p) - 2); i = i + 2 {
+				if (p[i] >= 0xFA && p[i+1] == 0xFF) || (p[i] <= 5 && p[i+1] == 0) {
+					sil++
+					// log.Println("[WAVCutZeroes] Found zeroes at " + strconv.Itoa(i))
+					if sil > wavTime5seconds {
+						// Wycinamy końcową ciszę
+						log.Println("[WAVCutZeroes] Wycinam końcową ciszę od " + strconv.Itoa(i))
+						p = append(p[:i], p[len(p):]...)
+						break
+					}
+				} else {
+					sil = 0
+				}
+			}
+
+			// Zmieniamy rozmiar chunks
+
+			ChunkSize := len(p) - 8
+			DataSize := len(p) - 44
+
+			binary.LittleEndian.PutUint32(p[4:], uint32(ChunkSize))
+			binary.LittleEndian.PutUint32(p[40:], uint32(DataSize))
+
+			file, err := os.OpenFile(filename, os.O_CREATE, 0666)
+			written, err := file.Write(p)
+			defer file.Close()
+
+			if ErrCheck(err) {
+				log.Println("[WAVCutZeroes] Zapisałem plik " + filename + " o nowym rozmiarze " + strconv.Itoa(written))
+				return nil
+			}
+			return err
+		}
+	} else {
+		return err
+	}
+
+	return err
+}
+
 // CreateWAVFiles - Creating WAV files
 // ================================================================================================
 func CreateWAVFiles() {
@@ -714,17 +813,17 @@ func CreateWAVFiles() {
 			id := strconv.Itoa(rel.ReleaseID)
 			filenameWAV := cacheDir + id + ".wav"
 
-			var size int64
+			// var size int64
+			// if fileExists(filenameWAV) {
+			// 	file, err := os.Stat(filenameWAV)
+			// 	if err != nil {
+			// 		log.Println("[CreateWAVFiles] Problem z odczytem rozmiaru pliku " + filenameWAV)
+			// 	}
+			// 	size = file.Size()
+			// }
 
-			if fileExists(filenameWAV) {
-				file, err := os.Stat(filenameWAV)
-				if err != nil {
-					log.Println("[CreateWAVFiles] Problem z odczytem rozmiaru pliku " + filenameWAV)
-				}
-				size = file.Size()
-			}
-
-			if !fileExists(filenameWAV) || size < wavSize || (fileExists(filenameWAV) && !rel.WAVCached) {
+			// if !fileExists(filenameWAV) || size < wavSize || (fileExists(filenameWAV) && !rel.WAVCached) {
+			if !fileExists(filenameWAV) || (fileExists(filenameWAV) && !rel.WAVCached) {
 
 				log.Println("[CreateWAVFiles] Creating file " + filenameWAV)
 				filenameSID := cacheDir + id + rel.Ext
@@ -750,15 +849,17 @@ func CreateWAVFiles() {
 				if ErrCheck(err) {
 
 					// Jeszcze raz sprawdzamy czy plik powstał o odpowiedniej długości
-					if fileExists(filenameWAV) {
-						file, err := os.Stat(filenameWAV)
-						if err != nil {
-							log.Println("[CreateWAVFiles] Problem z odczytem rozmiaru pliku " + filenameWAV)
-						}
-						size = file.Size()
-					}
+					// if fileExists(filenameWAV) {
+					// 	file, err := os.Stat(filenameWAV)
+					// 	if err != nil {
+					// 		log.Println("[CreateWAVFiles] Problem z odczytem rozmiaru pliku " + filenameWAV)
+					// 	}
+					// 	size = file.Size()
+					// }
 
-					if fileExists(filenameWAV) && size >= wavSize {
+					// if fileExists(filenameWAV) && size >= wavSize {
+					if fileExists(filenameWAV) {
+						WAVCutZeroes(filenameWAV)
 						releases[index].WAVCached = true
 						log.Println("[CreateWAVFiles] " + filenameWAV + " cached")
 						WriteDb()
@@ -767,6 +868,7 @@ func CreateWAVFiles() {
 					}
 				} else {
 					log.Println("[CreateWAVFiles] Problem with sidplayfp and " + filenameWAV)
+					os.Remove(filenameWAV)
 				}
 
 			} else {
@@ -785,6 +887,7 @@ func CreateWAVFiles() {
 // ================================================================================================
 func updateReleaseInfo(index int, newRelease Release) {
 	releases[index].Credits = newRelease.Credits
+	releases[index].ReleaseType = newRelease.ReleaseType
 	releases[index].Rating = newRelease.Rating
 	releases[index].ReleaseScreenShot = newRelease.ReleaseScreenShot
 	releases[index].ReleasedAt = newRelease.ReleasedAt
@@ -1402,54 +1505,27 @@ func AudioGet(c *gin.Context) {
 	// Typ połączania
 	c.Header("Access-Control-Allow-Origin", "*")
 	c.Header("Connection", "Keep-Alive")
-	c.Header("Transfer-Encoding", "identity")
+	c.Header("Transfer-Encoding", "chunked")
 
-	//
-	// Analiza nagłówka - ile bajtów mamy wysłać
-	//
-	bytesToSend := 0
-	headerRange := c.GetHeader("Range")
-	log.Println("[GIN:AudioGet] Header:Range = " + headerRange)
-	if len(headerRange) > 0 {
-		headerRangeSplitted1 := strings.Split(headerRange, "=")
-
-		if len(headerRangeSplitted1) > 0 {
-			log.Println("[GIN:AudioGet] range in " + headerRangeSplitted1[0])
-
-			if len(headerRangeSplitted1) > 1 {
-				headerRangeSplitted2 := strings.Split(headerRangeSplitted1[1], "-")
-				if len(headerRangeSplitted2) > 0 {
-					log.Println("[GIN:AudioGet] start " + headerRangeSplitted2[0])
-					if len(headerRangeSplitted2) > 1 {
-						log.Println("[GIN:AudioGet] end " + headerRangeSplitted2[1])
-						bytesToSendStart, err := strconv.Atoi(headerRangeSplitted2[0])
-						if ErrCheck2(err) {
-							bytesToSendEnd, err := strconv.Atoi(headerRangeSplitted2[1])
-							if ErrCheck2(err) {
-								bytesToSend = bytesToSendEnd - bytesToSendStart + 1
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	log.Println("[GIN:AudioGet] Bytes to send " + strconv.Itoa(bytesToSend))
-
-	// Odczytujemy parametr - typ playera
+	// Odczytujemy parametr - numer muzy
 	id := c.Param("id")
 	filenameWAV := cacheDir + id + ".wav"
 
 	if fileExists(filenameWAV) {
 
+		fSize, _ := fileSize(filenameWAV)
+
 		// Info o wejściu do GET
 		log.Println("[GIN:AudioGet] WAV file exists with ID " + id)
 
-		// const maxOffset int64 = 50000000 // ~ 10 min
-		// const maxOffset int64 = 25000000 // ~ 5 min
-		// const maxOffset int64 = 5000000 // ~ 1 min
-		const maxOffset int64 = 44100 * 2 * 300 // = 5 min
+		var maxOffset int64
+
+		if fSize > wavTime5minutes {
+			maxOffset = wavTime5minutes - wavTime10seconds
+		} else {
+			maxOffset = fSize - wavTime10seconds
+		}
+
 		const maxVol float64 = 1.25
 
 		var vol float64 = maxVol
@@ -1457,12 +1533,12 @@ func AudioGet(c *gin.Context) {
 		volDown := false
 
 		// Przygotowanie bufora do streamingu
-		var bufferSize int
-		if bytesToSend > 0 {
-			bufferSize = bytesToSend
-		} else {
-			bufferSize = defaultBufferSize
-		}
+		// var bufferSize int
+		// if bytesToSend > 0 {
+		// 	bufferSize = bytesToSend
+		// } else {
+		bufferSize := defaultBufferSize
+		// }
 
 		var offset int64
 
@@ -1473,7 +1549,6 @@ func AudioGet(c *gin.Context) {
 
 		var sum float64
 		var dataSent int64 = 0
-		silenceCnt := 0
 
 		for loop {
 
@@ -1504,7 +1579,7 @@ func AudioGet(c *gin.Context) {
 				readed, err := file.ReadAt(p, offset)
 				file.Close()
 
-				if ErrCheck(err) {
+				if ErrCheck2(err) {
 
 					// Jeżeli coś odczytaliśmy to wysyłamy
 					if readed > 0 {
@@ -1552,34 +1627,15 @@ func AudioGet(c *gin.Context) {
 
 						sum = sum / float64(readed)
 
-						if sum >= 5.0 || offset < 44 || offset > 44100*60 {
-							c.Data(http.StatusPartialContent, "audio/wav", p)
-							c.Writer.Flush()
-
-							bufferSize = defaultBufferSize
-							dataSent += int64(len(p))
-							// log.Print(".")
-						}
-
-						if sum < 5.0 && offset > 44100*60 { // po 30 sekundach
-							silenceCnt++
-							if silenceCnt >= 5 {
-								log.Println("[GIN:AudioGet] Silence at " + strconv.FormatInt(offset, 10))
-								loop = false
-							}
-						}
+						c.Data(http.StatusPartialContent, "audio/wav", p)
+						dataSent += int64(len(p))
 
 						offset += int64(readed)
 					}
 				}
 			}
 
-			// Wysyłamy pakiet co 250 ms
-			// if sum >= 5.0 || offset > 44100*60 {
-			// 	// if sum >= 5.0 {
 			// 	time.Sleep(250 * time.Millisecond)
-			// }
-
 		}
 	} else {
 		log.Println("[GIN:AudioGet] WAV file doesn't exists")
@@ -1591,172 +1647,163 @@ func AudioGet(c *gin.Context) {
 	log.Println("[GIN:AudioGet] Loop ended")
 }
 
-// AudioGet2 - granie utworu
-// ================================================================================================
-func AudioGet2(c *gin.Context) {
+// // AudioGet2 - granie utworu
+// // ================================================================================================
+// func AudioGet2(c *gin.Context) {
 
-	// Typ połączania
-	c.Header("Access-Control-Allow-Origin", "*")
-	c.Header("Connection", "Keep-Alive")
-	c.Header("Transfer-Encoding", "identity")
-	c.Header("Accept-Ranges", "bytes")
+// 	// Typ połączania
+// 	c.Header("Access-Control-Allow-Origin", "*")
+// 	c.Header("Connection", "Keep-Alive")
+// 	c.Header("Transfer-Encoding", "identity")
+// 	c.Header("Accept-Ranges", "bytes")
 
-	//
-	// Analiza nagłówka - ile bajtów mamy wysłać
-	//
-	bytesToSend := 0
-	bytesToSendStart := 0
-	headerRange := c.GetHeader("Range")
-	log.Println("[GIN:AudioGet2] Header:Range = " + headerRange)
-	if len(headerRange) > 0 {
-		headerRangeSplitted1 := strings.Split(headerRange, "=")
+// 	//
+// 	// Analiza nagłówka - ile bajtów mamy wysłać
+// 	//
+// 	bytesToSend := 0
+// 	bytesToSendStart := 0
+// 	headerRange := c.GetHeader("Range")
+// 	log.Println("[GIN:AudioGet2] Header:Range = " + headerRange)
+// 	if len(headerRange) > 0 {
+// 		headerRangeSplitted1 := strings.Split(headerRange, "=")
 
-		if len(headerRangeSplitted1) > 0 {
-			log.Println("[GIN:AudioGet2] range in " + headerRangeSplitted1[0])
+// 		if len(headerRangeSplitted1) > 0 {
+// 			log.Println("[GIN:AudioGet2] range in " + headerRangeSplitted1[0])
 
-			if len(headerRangeSplitted1) > 1 {
-				headerRangeSplitted2 := strings.Split(headerRangeSplitted1[1], "-")
-				if len(headerRangeSplitted2) > 0 {
-					log.Println("[GIN:AudioGet2] start " + headerRangeSplitted2[0])
-					if len(headerRangeSplitted2) > 1 {
-						log.Println("[GIN:AudioGet2] end " + headerRangeSplitted2[1])
-						bytesToSendStart, err := strconv.Atoi(headerRangeSplitted2[0])
-						if ErrCheck2(err) {
-							bytesToSendEnd, err := strconv.Atoi(headerRangeSplitted2[1])
-							if ErrCheck2(err) {
-								bytesToSend = bytesToSendEnd - bytesToSendStart + 1
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+// 			if len(headerRangeSplitted1) > 1 {
+// 				headerRangeSplitted2 := strings.Split(headerRangeSplitted1[1], "-")
+// 				if len(headerRangeSplitted2) > 0 {
+// 					log.Println("[GIN:AudioGet2] start " + headerRangeSplitted2[0])
+// 					if len(headerRangeSplitted2) > 1 {
+// 						log.Println("[GIN:AudioGet2] end " + headerRangeSplitted2[1])
+// 						bytesToSendStart, err := strconv.Atoi(headerRangeSplitted2[0])
+// 						if ErrCheck2(err) {
+// 							bytesToSendEnd, err := strconv.Atoi(headerRangeSplitted2[1])
+// 							if ErrCheck2(err) {
+// 								bytesToSend = bytesToSendEnd - bytesToSendStart + 1
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
 
-	log.Println("[GIN:AudioGet2] Bytes to send " + strconv.Itoa(bytesToSend))
+// 	log.Println("[GIN:AudioGet2] Bytes to send " + strconv.Itoa(bytesToSend))
 
-	// Odczytujemy parametr - typ playera
-	id := c.Param("id")
-	filenameWAV := cacheDir + id + ".wav"
+// 	// Odczytujemy parametr - typ playera
+// 	id := c.Param("id")
+// 	filenameWAV := cacheDir + id + ".wav"
 
-	if fileExists(filenameWAV) {
+// 	if fileExists(filenameWAV) {
 
-		// Info o wejściu do GET
-		log.Println("[GIN:AudioGet2] WAV file exists with ID " + id)
+// 		// Info o wejściu do GET
+// 		log.Println("[GIN:AudioGet2] WAV file exists with ID " + id)
 
-		log.Println("[GIN:AudioGet2] Sending " + id + "...")
+// 		log.Println("[GIN:AudioGet2] Sending " + id + "...")
 
-		// Streaming LOOP...
-		// ----------------------------------------------------------------------------------------------
+// 		// Streaming LOOP...
+// 		// ----------------------------------------------------------------------------------------------
 
-		// Otwieraamy plik - bez sprawdzania błędów
-		file, _ := os.Open(filenameWAV)
-		defer file.Close()
-		// ErrCheck(err)
+// 		// Sprawdzamy rozmiar pliku
+// 		fileSize, err := os.Stat(filenameWAV)
+// 		if err != nil {
+// 			log.Println("[GIN:AudioGet2] Problem z odczytem rozmiaru pliku " + filenameWAV)
+// 		}
+// 		size := fileSize.Size()
 
-		var p []byte
+// 		// Otwieraamy plik - bez sprawdzania błędów
+// 		file, _ := os.Open(filenameWAV)
+// 		defer file.Close()
+// 		// ErrCheck(err)
 
-		if bytesToSend > 0 {
-			p = make([]byte, bytesToSend)
-			log.Println("[GIN:AudioGet2] Tworzę bufor o rozmiarze " + strconv.Itoa(bytesToSend))
-		} else {
-			file, err := os.Stat(filenameWAV)
-			if err != nil {
-				log.Println("[GIN:AudioGet2] Problem z odczytem rozmiaru pliku " + filenameWAV)
-			}
-			size := file.Size()
+// 		var p []byte
 
-			p = make([]byte, size)
-			log.Println("[GIN:AudioGet2] Tworzę bufor o rozmiarze " + strconv.Itoa(int(size)))
-		}
+// 		if bytesToSend > 0 {
+// 			p = make([]byte, bytesToSend)
+// 			log.Println("[GIN:AudioGet2] Tworzę bufor o rozmiarze " + strconv.Itoa(bytesToSend))
+// 		} else {
+// 			p = make([]byte, size-int64(bytesToSendStart))
+// 			log.Println("[GIN:AudioGet2] Tworzę bufor o rozmiarze " + strconv.Itoa(int(size-int64(bytesToSendStart))))
+// 		}
 
-		// Czytamy z pliku kolejne dane do bufora
-		readed, err := file.ReadAt(p, int64(bytesToSendStart))
+// 		// Czytamy z pliku kolejne dane do bufora
+// 		readed, err := file.ReadAt(p, int64(bytesToSendStart))
 
-		if ErrCheck(err) {
+// 		if ErrCheck(err) {
 
-			// Jeżeli coś odczytaliśmy to wysyłamy
-			if readed > 0 {
+// 			// Jeżeli coś odczytaliśmy to wysyłamy
+// 			if readed > 0 {
 
-				log.Println("[GIN:AudioGet2] Odczytałem bajtów " + strconv.Itoa(readed))
-				// Feedback gdybyśmy wyszli z LOOP
-				if bytesToSend > 0 {
-					c.Data(http.StatusPartialContent, "audio/wav", p)
-				} else {
-					c.Data(http.StatusOK, "audio/wav", p)
-				}
-				// c.Writer.Flush()
-			} else {
-				c.JSON(http.StatusInternalServerError, "[GIN:AudioGet2] StatusInternalServerError")
+// 				log.Println("[GIN:AudioGet2] Odczytałem bajtów " + strconv.Itoa(readed))
+// 				// Feedback gdybyśmy wyszli z LOOP
+// 				if bytesToSend > 0 {
+// 					log.Println("[GIN:AudioGet2] StatusPartialContent")
+// 					c.Data(http.StatusPartialContent, "audio/wav", p)
+// 					c.Writer.Flush()
+// 				} else {
+// 					log.Println("[GIN:AudioGet2] StatusOK")
+// 					c.Data(http.StatusOK, "audio/wav", p)
+// 					c.Writer.Flush()
+// 				}
 
-			}
-		} else {
-			c.JSON(http.StatusInternalServerError, "[GIN:AudioGet2] StatusInternalServerError")
+// 			} else {
+// 				c.JSON(http.StatusInternalServerError, "[GIN:AudioGet2] StatusInternalServerError")
 
-		}
-	} else {
-		c.JSON(http.StatusInternalServerError, "[GIN:AudioGet2] StatusInternalServerError")
+// 			}
+// 		} else {
+// 			c.JSON(http.StatusInternalServerError, "[GIN:AudioGet2] StatusInternalServerError")
 
-	}
+// 		}
 
-}
+// 	} else {
+// 		c.JSON(http.StatusInternalServerError, "[GIN:AudioGet2] StatusInternalServerError")
 
-// Options - Obsługa request'u OPTIONS (CORS)
-// ================================================================================================
-func Options(c *gin.Context) {
-	if c.Request.Method != "OPTIONS" {
-		c.Next()
-	} else {
-		c.Header("Access-Control-Allow-Origin", "*")
-		c.Header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS")
-		c.Header("Access-Control-Allow-Headers", "authorization, origin, content-type, accept")
-		c.Header("Allow", "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS")
-		// c.Header("Content-Type", "application/json")
-		c.AbortWithStatus(http.StatusOK)
-	}
-}
+// 	}
 
-// smtpServer - smtpServer data to smtp server
-// ================================================================================================
-type smtpServer struct {
-	host string
-	port string
-}
+// }
 
-// Address - URI to smtp server
-// ================================================================================================
-func (s *smtpServer) Address() string {
-	return s.host + ":" + s.port
-}
+// // smtpServer - smtpServer data to smtp server
+// // ================================================================================================
+// type smtpServer struct {
+// 	host string
+// 	port string
+// }
 
-// SendEmail - decode reader
-// ================================================================================================
-func SendEmail(in string) {
-	// Sender data.
-	from := "sidcloud.net@gmail.com"
-	password := "SidCloud1024!"
+// // Address - URI to smtp server
+// // ================================================================================================
+// func (s *smtpServer) Address() string {
+// 	return s.host + ":" + s.port
+// }
 
-	// Receiver email address.
-	to := []string{
-		"b.apanasewicz@gmail.com",
-		// "secondemail@gmail.com",
-	}
+// // SendEmail - decode reader
+// // ================================================================================================
+// func SendEmail(in string) {
+// 	// Sender data.
+// 	from := "sidcloud.net@gmail.com"
+// 	password := "SidCloud1024!"
 
-	// smtp server configuration.
-	smtpServer := smtpServer{host: "smtp.gmail.com", port: "587"}
+// 	// Receiver email address.
+// 	to := []string{
+// 		"b.apanasewicz@gmail.com",
+// 		// "secondemail@gmail.com",
+// 	}
 
-	// Message.
-	message := []byte(in)
-	// Authentication.
-	auth := smtp.PlainAuth("", from, password, smtpServer.host)
-	// Sending email.
-	err := smtp.SendMail(smtpServer.Address(), auth, from, to, message)
-	if err != nil {
-		log.Println(err)
-		return
-	}
-	log.Println("Email Sent!")
-}
+// 	// smtp server configuration.
+// 	smtpServer := smtpServer{host: "smtp.gmail.com", port: "587"}
+
+// 	// Message.
+// 	message := []byte(in)
+// 	// Authentication.
+// 	auth := smtp.PlainAuth("", from, password, smtpServer.host)
+// 	// Sending email.
+// 	err := smtp.SendMail(smtpServer.Address(), auth, from, to, message)
+// 	if err != nil {
+// 		log.Println(err)
+// 		return
+// 	}
+// 	log.Println("Email Sent!")
+// }
 
 // CSDBWebServices - Obsługa CSDB Web Services w osobnym wątku
 // ================================================================================================
@@ -1784,6 +1831,21 @@ func CSDBWebServices() {
 		CreateWAVFiles()
 
 		time.Sleep(CSDBWebServicesCycle * time.Second)
+	}
+}
+
+// Options - Obsługa request'u OPTIONS (CORS)
+// ================================================================================================
+func Options(c *gin.Context) {
+	if c.Request.Method != "OPTIONS" {
+		c.Next()
+	} else {
+		c.Header("Access-Control-Allow-Origin", "*")
+		c.Header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS")
+		c.Header("Access-Control-Allow-Headers", "authorization, origin, content-type, accept")
+		c.Header("Allow", "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS")
+		// c.Header("Content-Type", "application/json")
+		c.AbortWithStatus(http.StatusOK)
 	}
 }
 
@@ -1868,7 +1930,7 @@ func main() {
 	r.StaticFile("favicon.ico", "./dist/favicon.ico")
 	r.StaticFile("sign.png", "./dist/sign.png")
 
-	r.GET("/api/v1/audio/:id", AudioGet2)
+	r.GET("/api/v1/audio/:id", AudioGet)
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
 	r.GET("/api/v1/hvsc_filter/:id", GetHVSCFilter)
 
