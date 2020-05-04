@@ -29,13 +29,11 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// const wavSize = 29458844
-
 var csdbDataReady bool = false
 
 const cacheDir = "cache/"
 
-const wavTime = "333"
+const wavTime = "330"
 
 const historyMaxEntries = 80
 
@@ -43,9 +41,13 @@ const historyMaxMonths = 3
 
 const defaultBufferSize = 1024 * 32
 
+const wavHeaderSize = 44 // rozmiar nagłówka WAV
+
 const wavTime5minutes int64 = 44100 * 2 * 300 // = 5 min
 
 const wavTime10seconds int64 = 44100 * 2 * 10 // = 10 sekund
+
+const wavTime5seconds int64 = 44100 * 2 * 5 // = 5 sekund
 
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
@@ -720,9 +722,9 @@ func DownloadFiles() {
 	}
 }
 
-// WAVCutZeroes - Usuwa puste miejsca w pliku WAV
+// WAVPrepare - Usuwa puste miejsca w pliku WAV, wycisza, wzmacnia
 // ================================================================================================
-func WAVCutZeroes(filename string) error {
+func WAVPrepare(filename string) error {
 
 	var size int64
 	if fileExists(filename) {
@@ -730,7 +732,7 @@ func WAVCutZeroes(filename string) error {
 		if ErrCheck(err) {
 			size = file.Size()
 		} else {
-			log.Println("[WAVCutZeroes] Problem z odczytem rozmiaru pliku " + filename)
+			log.Println("[WAVPrepare] Problem z odczytem rozmiaru pliku " + filename)
 			return err
 		}
 	}
@@ -747,28 +749,28 @@ func WAVCutZeroes(filename string) error {
 			os.Remove(filename)
 
 			// Wycinamy początkowe śmieci
-			p = append(p[:44], p[0x2000+44:]...)
+			p = append(p[:wavHeaderSize], p[0x2000+wavHeaderSize:]...)
 
 			var i int
-			for i = 44; i < (len(p) - 2); i = i + 2 {
+			for i = wavHeaderSize; i < (len(p) - 2); i = i + 2 {
 				if (p[i] < 0xFA && p[i] > 5) || p[i+1] != 0 {
 					// Wycinamy początkową ciszę
-					log.Println("[WAVCutZeroes] Wycinam początkową ciszę do " + strconv.Itoa(i))
-					p = append(p[:44], p[i:]...)
+					log.Println("[WAVPrepare] Wycinam początkową ciszę do " + strconv.Itoa(i))
+					p = append(p[:wavHeaderSize], p[i:]...)
 					break
 				}
 			}
 
-			const wavTime5seconds = 44100 * 5 // = 5 sekund
+			const silTime5seconds = 44100 * 5 // = 5 sekund
 
 			sil := 0
-			for i = int(wavTime10seconds) + 44; i < (len(p) - 2); i = i + 2 {
+			for i = int(wavTime10seconds) + wavHeaderSize; i < (len(p) - 2); i = i + 2 {
 				if (p[i] >= 0xFA && p[i+1] == 0xFF) || (p[i] <= 5 && p[i+1] == 0) {
 					sil++
-					// log.Println("[WAVCutZeroes] Found zeroes at " + strconv.Itoa(i))
-					if sil > wavTime5seconds {
+					// log.Println("[WAVPrepare] Found zeroes at " + strconv.Itoa(i))
+					if sil > silTime5seconds {
 						// Wycinamy końcową ciszę
-						log.Println("[WAVCutZeroes] Wycinam końcową ciszę od " + strconv.Itoa(i))
+						log.Println("[WAVPrepare] Wycinam końcową ciszę od " + strconv.Itoa(i))
 						p = append(p[:i], p[len(p):]...)
 						break
 					}
@@ -777,10 +779,50 @@ func WAVCutZeroes(filename string) error {
 				}
 			}
 
+			// Przycięcie do max 5 minut
+
+			if len(p) > int(wavTime5minutes+wavHeaderSize) {
+				p = append(p[:wavTime5minutes+wavHeaderSize], p[len(p):]...)
+			}
+
+			// Wzmocnienie i wyciszenie
+
+			const maxVol float64 = 1.25
+			var vol float64 = maxVol
+
+			for ix := wavHeaderSize; ix < len(p); ix = ix + 2 {
+
+				// Wyciszenie (tylko gdy nie było cięcia)
+				if sil == 0 && ix > len(p)-int(wavTime5seconds) {
+					vol = maxVol * (float64(len(p)-ix) / float64(wavTime5seconds))
+				}
+
+				// Wzmocnienie głośności (domyślnie x 1.25)
+				var valInt1 int16
+				valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
+
+				var valFloat float64
+				valFloat = float64(valInt1) * vol
+				if valFloat > 32766 {
+					valFloat = 32766
+				}
+				if valFloat < -32766 {
+					valFloat = -32766
+				}
+				var valInt2 int16
+				valInt2 = int16(math.Round(valFloat))
+				var valInt3 uint16
+				valInt3 = uint16(valInt2)
+
+				p[ix] = byte(valInt3 & 0xff)
+				p[ix+1] = byte((valInt3 & 0xff00) >> 8)
+
+			}
+
 			// Zmieniamy rozmiar chunks
 
 			ChunkSize := len(p) - 8
-			DataSize := len(p) - 44
+			DataSize := len(p) - wavHeaderSize
 
 			binary.LittleEndian.PutUint32(p[4:], uint32(ChunkSize))
 			binary.LittleEndian.PutUint32(p[40:], uint32(DataSize))
@@ -790,7 +832,7 @@ func WAVCutZeroes(filename string) error {
 			defer file.Close()
 
 			if ErrCheck(err) {
-				log.Println("[WAVCutZeroes] Zapisałem plik " + filename + " o nowym rozmiarze " + strconv.Itoa(written))
+				log.Println("[WAVPrepare] Zapisałem plik " + filename + " o nowym rozmiarze " + strconv.Itoa(written))
 				return nil
 			}
 			return err
@@ -833,7 +875,7 @@ func CreateWAVFiles() {
 
 				czas := "-t" + wavTime
 				// bits := "-p16"
-				// freq := "-f44100"
+				// freq := "-fwavHeaderSize100"
 				model := "-mn"
 
 				// Odpalenie sidplayfp
@@ -859,7 +901,7 @@ func CreateWAVFiles() {
 
 					// if fileExists(filenameWAV) && size >= wavSize {
 					if fileExists(filenameWAV) {
-						WAVCutZeroes(filenameWAV)
+						WAVPrepare(filenameWAV)
 						releases[index].WAVCached = true
 						log.Println("[CreateWAVFiles] " + filenameWAV + " cached")
 						WriteDb()
@@ -903,6 +945,9 @@ func updateReleaseInfo(index int, newRelease Release) {
 			releases[index].SIDCached = false
 			releases[index].WAVCached = false
 		}
+	}
+	if !fileExists(cacheDir + strconv.Itoa(releases[index].ReleaseID) + ".wav") {
+		releases[index].WAVCached = false
 	}
 }
 
@@ -1505,7 +1550,8 @@ func AudioGet(c *gin.Context) {
 	// Typ połączania
 	c.Header("Access-Control-Allow-Origin", "*")
 	c.Header("Connection", "Keep-Alive")
-	c.Header("Transfer-Encoding", "chunked")
+	c.Header("Transfer-Encoding", "identity")
+	c.Header("Accept-Ranges", "bytes")
 
 	// Odczytujemy parametr - numer muzy
 	id := c.Param("id")
@@ -1513,138 +1559,31 @@ func AudioGet(c *gin.Context) {
 
 	if fileExists(filenameWAV) {
 
-		fSize, _ := fileSize(filenameWAV)
-
 		// Info o wejściu do GET
-		log.Println("[GIN:AudioGet] WAV file exists with ID " + id)
-
-		var maxOffset int64
-
-		if fSize > wavTime5minutes {
-			maxOffset = wavTime5minutes - wavTime10seconds
-		} else {
-			maxOffset = fSize - wavTime10seconds
-		}
-
-		const maxVol float64 = 1.25
-
-		var vol float64 = maxVol
-		loop := true
-		volDown := false
-
-		// Przygotowanie bufora do streamingu
-		// var bufferSize int
-		// if bytesToSend > 0 {
-		// 	bufferSize = bytesToSend
-		// } else {
-		bufferSize := defaultBufferSize
-		// }
-
-		var offset int64
-
 		log.Println("[GIN:AudioGet] Sending " + id + "...")
 
 		// Streaming LOOP...
 		// ----------------------------------------------------------------------------------------------
 
-		var sum float64
-		var dataSent int64 = 0
-
-		for loop {
-
-			sum = 0
-
-			// Jeżeli doszliśmy w pliku do 50MB to koniec
-			if dataSent > maxOffset {
-
-				// log.Println("Wyciszamy...")
-				// break
-				volDown = true
-			}
-
-			// Jeżeli stracimy kontekst to wychodzimy
-			if c.Request.Context() == nil {
-				log.Println("[GIN:AudioGet] ERR! c.Request.Context() == nil")
-				loop = false
+		// Otwieraamy plik - bez sprawdzania błędów
+		file, err := os.Open(filenameWAV)
+		defer file.Close()
+		if ErrCheck(err) {
+			size, err := fileSize(filenameWAV)
+			if ErrCheck(err) {
+				p := make([]byte, size)
+				file.Read(p)
+				c.Data(http.StatusPartialContent, "audio/wav", p)
 			} else {
-
-				// Otwieraamy plik - bez sprawdzania błędów
-				file, _ := os.Open(filenameWAV)
-				defer file.Close()
-				// ErrCheck(err)
-
-				p := make([]byte, bufferSize)
-
-				// Czytamy z pliku kolejne dane do bufora
-				readed, err := file.ReadAt(p, offset)
-				file.Close()
-
-				if ErrCheck2(err) {
-
-					// Jeżeli coś odczytaliśmy to wysyłamy
-					if readed > 0 {
-
-						// Modyfikacja sampli
-						//
-						if offset > 44 {
-							// log.Print("readed " + strconv.Itoa(readed))
-							var ix int
-							for ix = 0; ix < readed; ix = ix + 2 {
-
-								// Wyciszanie
-								if volDown && vol > 0.0 {
-									vol = maxVol - (float64(dataSent-maxOffset+int64(ix)) / 88.494 * 0.0002)
-									if vol < 0 {
-										vol = 0.0
-										loop = false
-										// break
-									}
-								}
-
-								// Wzmocnienie głośności (domyślnie x 1.25)
-								var valInt1 int16
-								valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
-
-								var valFloat float64
-								valFloat = float64(valInt1) * vol
-								if valFloat > 32766 {
-									valFloat = 32766
-								}
-								if valFloat < -32766 {
-									valFloat = -32766
-								}
-								var valInt2 int16
-								valInt2 = int16(math.Round(valFloat))
-								var valInt3 uint16
-								valInt3 = uint16(valInt2)
-
-								p[ix] = byte(valInt3 & 0xff)
-								p[ix+1] = byte((valInt3 & 0xff00) >> 8)
-
-								sum += math.Abs(valFloat)
-							}
-						}
-
-						sum = sum / float64(readed)
-
-						c.Data(http.StatusPartialContent, "audio/wav", p)
-						dataSent += int64(len(p))
-
-						offset += int64(readed)
-					}
-				}
+				log.Println("[GIN:AudioGet] Can't read size of file " + filenameWAV)
 			}
-
-			// 	time.Sleep(250 * time.Millisecond)
+		} else {
+			log.Println("[GIN:AudioGet] Can't open file " + filenameWAV)
 		}
 	} else {
-		log.Println("[GIN:AudioGet] WAV file doesn't exists")
+		log.Println("[GIN:AudioGet] No WAV file " + filenameWAV)
 	}
-	// }
 
-	// Feedback gdybyśmy wyszli z LOOP
-	c.JSON(http.StatusOK, "[GIN:AudioGet] Loop ended")
-	log.Println("[GIN:AudioGet] Loop ended")
 }
 
 // // AudioGet2 - granie utworu
