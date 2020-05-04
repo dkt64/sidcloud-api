@@ -827,7 +827,7 @@ func WAVPrepare(filename string) error {
 			binary.LittleEndian.PutUint32(p[4:], uint32(ChunkSize))
 			binary.LittleEndian.PutUint32(p[40:], uint32(DataSize))
 
-			file, err := os.OpenFile(filename, os.O_CREATE, 0666)
+			file, err := os.OpenFile(filename, os.O_CREATE|os.O_WRONLY, 0666)
 			written, err := file.Write(p)
 			defer file.Close()
 
