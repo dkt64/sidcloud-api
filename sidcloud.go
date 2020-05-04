@@ -1581,19 +1581,19 @@ func AudioGet(c *gin.Context) {
 	bytesToSendStart := 0
 	bytesToSendEnd := 0
 	headerRange := c.GetHeader("Range")
-	log.Println("[GIN:AudioGet2] Header:Range = " + headerRange)
+	log.Println("[GIN:AudioGet] Header:Range = " + headerRange)
 	if len(headerRange) > 0 {
 		headerRangeSplitted1 := strings.Split(headerRange, "=")
 
 		if len(headerRangeSplitted1) > 0 {
-			log.Println("[GIN:AudioGet2] range in " + headerRangeSplitted1[0])
+			log.Println("[GIN:AudioGet] range in " + headerRangeSplitted1[0])
 
 			if len(headerRangeSplitted1) > 1 {
 				headerRangeSplitted2 := strings.Split(headerRangeSplitted1[1], "-")
 				if len(headerRangeSplitted2) > 0 {
-					log.Println("[GIN:AudioGet2] start = " + headerRangeSplitted2[0])
+					log.Println("[GIN:AudioGet] start = " + headerRangeSplitted2[0])
 					if len(headerRangeSplitted2) > 1 {
-						log.Println("[GIN:AudioGet2] end = " + headerRangeSplitted2[1])
+						log.Println("[GIN:AudioGet] end = " + headerRangeSplitted2[1])
 						bytesToSendStart, err := strconv.Atoi(headerRangeSplitted2[0])
 						if ErrCheck2(err) {
 							bytesToSendEnd, err := strconv.Atoi(headerRangeSplitted2[1])
@@ -1607,8 +1607,8 @@ func AudioGet(c *gin.Context) {
 		}
 	}
 
-	log.Println("[GIN:AudioGet2] Bytes to send " + strconv.Itoa(bytesToSend))
-	log.Println("[GIN:AudioGet2] From " + strconv.Itoa(bytesToSendStart) + " to " + strconv.Itoa(bytesToSendEnd))
+	log.Println("[GIN:AudioGet] Bytes to send " + strconv.Itoa(bytesToSend))
+	log.Println("[GIN:AudioGet] From " + strconv.Itoa(bytesToSendStart) + " to " + strconv.Itoa(bytesToSendEnd))
 
 	if bytesToSend > 0 {
 		c.Header("Content-length", strconv.Itoa(bytesToSend))

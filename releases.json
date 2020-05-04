@@ -295,6 +295,30 @@
   "Ext": ".prg"
  },
  {
+  "ReleaseID": 190447,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 28,
+  "ReleaseName": "By-Tor Tribute",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190447.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/C/Crowther_Antony/R1-D1_Unit_Attack.sid",
+  "Rating": 9.61,
+  "ReleasedBy": [
+   "Delysid"
+  ],
+  "Credits": [
+   "Antony Crowther"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/198080/bytor_tribute.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
   "ReleaseID": 190441,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
@@ -318,30 +342,6 @@
   "SIDCached": true,
   "WAVCached": true,
   "Ext": ".sid"
- },
- {
-  "ReleaseID": 190447,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 28,
-  "ReleaseName": "By-Tor Tribute",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190447.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/C/Crowther_Antony/R1-D1_Unit_Attack.sid",
-  "Rating": 9.61,
-  "ReleasedBy": [
-   "Delysid"
-  ],
-  "Credits": [
-   "Antony Crowther"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/198080/bytor_tribute.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
  },
  {
   "ReleaseID": 190367,
@@ -565,6 +565,30 @@
   "Ext": ".prg"
  },
  {
+  "ReleaseID": 190287,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 25,
+  "ReleaseName": "N0S Intro 69",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190287.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/G/Gray_Matt/Hunters_Moon.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Nostalgia"
+  ],
+  "Credits": [
+   "Matt Gray"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197924/no-69.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
   "ReleaseID": 190262,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
@@ -588,30 +612,6 @@
   "SIDCached": true,
   "WAVCached": true,
   "Ext": ".sid"
- },
- {
-  "ReleaseID": 190287,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 25,
-  "ReleaseName": "N0S Intro 69",
-  "ReleaseType": "C64 Crack intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190287.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/G/Gray_Matt/Hunters_Moon.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Nostalgia"
-  ],
-  "Credits": [
-   "Matt Gray"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197924/no-69.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
  },
  {
   "ReleaseID": 190241,
@@ -787,28 +787,29 @@
   "Ext": ".sid"
  },
  {
-  "ReleaseID": 189982,
+  "ReleaseID": 190017,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
-  "ReleaseDay": 16,
-  "ReleaseName": "Creatures PETSCII",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189982.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/R/Rowlands_Steve/Creatures.sid",
-  "Rating": 8.17,
+  "ReleaseDay": 11,
+  "ReleaseName": "Box13",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190017.png",
+  "ReleasedAt": "Revision 2020",
+  "SIDPath": "",
+  "Rating": 0,
   "ReleasedBy": [
-   "Arkanix Labs"
+   "Russian Massive Digital Aggression"
   ],
   "Credits": [
-   "Steve Rowlands"
+   "Crokocat"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197592/Creatures_PETSCII.zip"
+   "http://csdb.dk/getinternalfile.php/197638/crokocat-b13.sid",
+   "http://csdb.dk/getinternalfile.php/197637/crokocat-b13.prg"
   ],
   "SIDCached": true,
   "WAVCached": true,
-  "Ext": ".prg"
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189946,
@@ -859,29 +860,28 @@
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 190017,
+  "ReleaseID": 189982,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
-  "ReleaseDay": 11,
-  "ReleaseName": "Box13",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190017.png",
-  "ReleasedAt": "Revision 2020",
-  "SIDPath": "",
-  "Rating": 0,
+  "ReleaseDay": 16,
+  "ReleaseName": "Creatures PETSCII",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189982.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/R/Rowlands_Steve/Creatures.sid",
+  "Rating": 8.17,
   "ReleasedBy": [
-   "Russian Massive Digital Aggression"
+   "Arkanix Labs"
   ],
   "Credits": [
-   "Crokocat"
+   "Steve Rowlands"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197638/crokocat-b13.sid",
-   "http://csdb.dk/getinternalfile.php/197637/crokocat-b13.prg"
+   "http://csdb.dk/getinternalfile.php/197592/Creatures_PETSCII.zip"
   ],
   "SIDCached": true,
   "WAVCached": true,
-  "Ext": ".sid"
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189965,
@@ -983,29 +983,28 @@
   "Ext": ".sid"
  },
  {
-  "ReleaseID": 189818,
+  "ReleaseID": 189855,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 12,
-  "ReleaseName": "Fight!",
-  "ReleaseType": "C64 Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189818.gif",
-  "ReleasedAt": "Revision 2020",
+  "ReleaseName": "Epic Sax Gandalf",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189855.png",
+  "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 8.45,
+  "Rating": 8.89,
   "ReleasedBy": [
-   "Atlantis"
+   "Deja Vu"
   ],
   "Credits": [
-   "Mibri"
+   "Ddw"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197422/Fight%21.sid",
-   "http://csdb.dk/getinternalfile.php/197411/fight_by_atlantis.zip"
+   "http://csdb.dk/getinternalfile.php/197452/epic sax gandalf.prg"
   ],
   "SIDCached": true,
   "WAVCached": true,
-  "Ext": ".sid"
+  "Ext": ".prg"
  },
  {
   "ReleaseID": 189851,
@@ -1129,52 +1128,29 @@
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 189855,
+  "ReleaseID": 189818,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 12,
-  "ReleaseName": "Epic Sax Gandalf",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189855.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 8.89,
-  "ReleasedBy": [
-   "Deja Vu"
-  ],
-  "Credits": [
-   "Ddw"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197452/epic sax gandalf.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".prg"
- },
- {
-  "ReleaseID": 189802,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 11,
-  "ReleaseName": "Microgroove",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189802.png",
+  "ReleaseName": "Fight!",
+  "ReleaseType": "C64 Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189818.gif",
   "ReleasedAt": "Revision 2020",
   "SIDPath": "",
-  "Rating": 9.5,
+  "Rating": 8.45,
   "ReleasedBy": [
-   "LMan"
+   "Atlantis"
   ],
   "Credits": [
-   "LMan"
+   "Mibri"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197397/lman---microgroove.prg"
+   "http://csdb.dk/getinternalfile.php/197422/Fight%21.sid",
+   "http://csdb.dk/getinternalfile.php/197411/fight_by_atlantis.zip"
   ],
   "SIDCached": true,
   "WAVCached": true,
-  "Ext": ".prg"
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189801,
@@ -1302,6 +1278,30 @@
   "Ext": ".sid"
  },
  {
+  "ReleaseID": 189802,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 11,
+  "ReleaseName": "Microgroove",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189802.png",
+  "ReleasedAt": "Revision 2020",
+  "SIDPath": "",
+  "Rating": 9.5,
+  "ReleasedBy": [
+   "LMan"
+  ],
+  "Credits": [
+   "LMan"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197397/lman---microgroove.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".prg"
+ },
+ {
   "ReleaseID": 189742,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
@@ -1328,24 +1328,24 @@
   "Ext": ".sid"
  },
  {
-  "ReleaseID": 189727,
+  "ReleaseID": 189729,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 8,
-  "ReleaseName": "Doubleswing Intro",
+  "ReleaseName": "Stayhome Intro",
   "ReleaseType": "C64 Crack intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189727.gif",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189729.gif",
   "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/S/Swallow/Strike_Force_Remix.sid",
-  "Rating": 8.27,
+  "SIDPath": "/MUSICIANS/M/Mythus/Trixy_Trax.sid",
+  "Rating": 9.5,
   "ReleasedBy": [
    "Excess"
   ],
   "Credits": [
-   "Swallow"
+   "Mythus"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197315/doublelswing_palntsc.prg"
+   "http://csdb.dk/getinternalfile.php/197317/stayhome intro.prg"
   ],
   "SIDCached": true,
   "WAVCached": true,
@@ -1376,24 +1376,24 @@
   "Ext": ".prg"
  },
  {
-  "ReleaseID": 189729,
+  "ReleaseID": 189727,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 8,
-  "ReleaseName": "Stayhome Intro",
+  "ReleaseName": "Doubleswing Intro",
   "ReleaseType": "C64 Crack intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189729.gif",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189727.gif",
   "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/M/Mythus/Trixy_Trax.sid",
-  "Rating": 9.5,
+  "SIDPath": "/MUSICIANS/S/Swallow/Strike_Force_Remix.sid",
+  "Rating": 8.27,
   "ReleasedBy": [
    "Excess"
   ],
   "Credits": [
-   "Mythus"
+   "Swallow"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197317/stayhome intro.prg"
+   "http://csdb.dk/getinternalfile.php/197315/doublelswing_palntsc.prg"
   ],
   "SIDCached": true,
   "WAVCached": true,
@@ -1523,6 +1523,31 @@
   "Ext": ".prg"
  },
  {
+  "ReleaseID": 189598,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 3,
+  "ReleaseName": "Children",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189598.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 6.7,
+  "ReleasedBy": [
+   "Vibrants"
+  ],
+  "Credits": [
+   "Chordian"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197178/Children.sid",
+   "http://csdb.dk/getinternalfile.php/197177/Children.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".sid"
+ },
+ {
   "ReleaseID": 189590,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
@@ -1545,6 +1570,31 @@
   "SIDCached": true,
   "WAVCached": true,
   "Ext": ".prg"
+ },
+ {
+  "ReleaseID": 189594,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 4,
+  "ReleaseDay": 3,
+  "ReleaseName": "Blinding Lights",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189594.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 7.51,
+  "ReleasedBy": [
+   "Latex"
+  ],
+  "Credits": [
+   "Båtsman"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/197172/ltx-blinding_lights.sid",
+   "http://csdb.dk/getinternalfile.php/197173/ltx-blinding_lights.prg"
+  ],
+  "SIDCached": true,
+  "WAVCached": true,
+  "Ext": ".sid"
  },
  {
   "ReleaseID": 189601,
@@ -1574,76 +1624,25 @@
   "Ext": ".sid"
  },
  {
-  "ReleaseID": 189594,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 3,
-  "ReleaseName": "Blinding Lights",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189594.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 7.51,
-  "ReleasedBy": [
-   "Latex"
-  ],
-  "Credits": [
-   "Båtsman"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197172/ltx-blinding_lights.sid",
-   "http://csdb.dk/getinternalfile.php/197173/ltx-blinding_lights.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
- },
- {
-  "ReleaseID": 189598,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 3,
-  "ReleaseName": "Children",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189598.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 6.7,
-  "ReleasedBy": [
-   "Vibrants"
-  ],
-  "Credits": [
-   "Chordian"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197178/Children.sid",
-   "http://csdb.dk/getinternalfile.php/197177/Children.prg"
-  ],
-  "SIDCached": true,
-  "WAVCached": true,
-  "Ext": ".sid"
- },
- {
-  "ReleaseID": 189543,
+  "ReleaseID": 189549,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 2,
-  "ReleaseName": "Deserted Cities",
+  "ReleaseName": "Anxiety in Gotham",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189543.png",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189549.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 6.89,
+  "Rating": 8.2,
   "ReleasedBy": [
-   "Finnish Gold"
+   "Saul Cross"
   ],
   "Credits": [
-   "Proton"
+   "Saul Cross"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197110/deserted_cities_2sid.sid",
-   "http://csdb.dk/getinternalfile.php/197109/deserted_cities.sid",
-   "http://csdb.dk/getinternalfile.php/197108/deserted_cities.d64"
+   "http://csdb.dk/getinternalfile.php/197119/Anxiety in Gotham.sid",
+   "http://csdb.dk/getinternalfile.php/197120/Anxiety in Gotham.prg"
   ],
   "SIDCached": true,
   "WAVCached": true,
@@ -1701,25 +1700,26 @@
   "Ext": ".sid"
  },
  {
-  "ReleaseID": 189577,
+  "ReleaseID": 189543,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 2,
-  "ReleaseName": "Quara",
+  "ReleaseName": "Deserted Cities",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189577.png",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189543.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 8.29,
+  "Rating": 6.89,
   "ReleasedBy": [
-   "Wolk"
+   "Finnish Gold"
   ],
   "Credits": [
-   "Wolk"
+   "Proton"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197151/wk_quara.sid",
-   "http://csdb.dk/getinternalfile.php/197150/wk_quara.prg"
+   "http://csdb.dk/getinternalfile.php/197110/deserted_cities_2sid.sid",
+   "http://csdb.dk/getinternalfile.php/197109/deserted_cities.sid",
+   "http://csdb.dk/getinternalfile.php/197108/deserted_cities.d64"
   ],
   "SIDCached": true,
   "WAVCached": true,
@@ -1751,25 +1751,25 @@
   "Ext": ".sid"
  },
  {
-  "ReleaseID": 189549,
+  "ReleaseID": 189577,
   "ReleaseYear": 2020,
   "ReleaseMonth": 4,
   "ReleaseDay": 2,
-  "ReleaseName": "Anxiety in Gotham",
+  "ReleaseName": "Quara",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189549.png",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189577.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 8.2,
+  "Rating": 8.29,
   "ReleasedBy": [
-   "Saul Cross"
+   "Wolk"
   ],
   "Credits": [
-   "Saul Cross"
+   "Wolk"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197119/Anxiety in Gotham.sid",
-   "http://csdb.dk/getinternalfile.php/197120/Anxiety in Gotham.prg"
+   "http://csdb.dk/getinternalfile.php/197151/wk_quara.sid",
+   "http://csdb.dk/getinternalfile.php/197150/wk_quara.prg"
   ],
   "SIDCached": true,
   "WAVCached": true,
