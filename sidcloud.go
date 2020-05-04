@@ -1553,14 +1553,47 @@ func AudioGet(c *gin.Context) {
 	c.Header("Transfer-Encoding", "identity")
 	c.Header("Accept-Ranges", "bytes")
 
+	//
+	// Analiza nagłówka - ile bajtów mamy wysłać
+	//
+	bytesToSend := 0
+	bytesToSendStart := 0
+	bytesToSendEnd := 0
+	headerRange := c.GetHeader("Range")
+	log.Println("[GIN:AudioGet2] Header:Range = " + headerRange)
+	if len(headerRange) > 0 {
+		headerRangeSplitted1 := strings.Split(headerRange, "=")
+
+		if len(headerRangeSplitted1) > 0 {
+			log.Println("[GIN:AudioGet2] range in " + headerRangeSplitted1[0])
+
+			if len(headerRangeSplitted1) > 1 {
+				headerRangeSplitted2 := strings.Split(headerRangeSplitted1[1], "-")
+				if len(headerRangeSplitted2) > 0 {
+					log.Println("[GIN:AudioGet2] start = " + headerRangeSplitted2[0])
+					if len(headerRangeSplitted2) > 1 {
+						log.Println("[GIN:AudioGet2] end = " + headerRangeSplitted2[1])
+						bytesToSendStart, err := strconv.Atoi(headerRangeSplitted2[0])
+						if ErrCheck2(err) {
+							bytesToSendEnd, err := strconv.Atoi(headerRangeSplitted2[1])
+							if ErrCheck2(err) {
+								bytesToSend = bytesToSendEnd - bytesToSendStart + 1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	log.Println("[GIN:AudioGet2] Bytes to send " + strconv.Itoa(bytesToSend))
+	log.Println("[GIN:AudioGet2] From " + strconv.Itoa(bytesToSendStart) + " to " + strconv.Itoa(bytesToSendEnd))
+
 	// Odczytujemy parametr - numer muzy
 	id := c.Param("id")
 	filenameWAV := cacheDir + id + ".wav"
 
 	if fileExists(filenameWAV) {
-
-		// Info o wejściu do GET
-		log.Println("[GIN:AudioGet] Sending " + id + "...")
 
 		// Streaming LOOP...
 		// ----------------------------------------------------------------------------------------------
@@ -1571,9 +1604,14 @@ func AudioGet(c *gin.Context) {
 		if ErrCheck(err) {
 			size, err := fileSize(filenameWAV)
 			if ErrCheck(err) {
+				// Info o wejściu do GET
+				log.Println("[GIN:AudioGet] Sending " + id + "..., filesize " + strconv.Itoa(int(size)))
+
 				p := make([]byte, size)
 				file.Read(p)
-				c.Data(http.StatusPartialContent, "audio/wav", p)
+				file.Close()
+				c.Data(http.StatusOK, "audio/wav", p)
+				c.Writer.Flush()
 			} else {
 				log.Println("[GIN:AudioGet] Can't read size of file " + filenameWAV)
 			}
