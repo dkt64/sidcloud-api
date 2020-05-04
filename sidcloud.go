@@ -170,10 +170,10 @@ type Release struct {
 	ReleasedBy        []string
 	Credits           []string
 	DownloadLinks     []string
+	SrcCached         bool
+	WAVCached         bool
+	SrcExt            string
 	// UsedSIDs          []UsedSID
-	SIDCached bool
-	WAVCached bool
-	Ext       string
 }
 
 // releases - glówna i globalna tablica z aktualnymi produkcjami
@@ -690,27 +690,27 @@ func DownloadFiles() {
 			// Dodajemy new release
 			// ale tylko jeżeli mamy niezbędne info o produkcji
 			if filename != "" {
-				if !newRelease.SIDCached || !(fileExists(cacheDir+strconv.Itoa(newRelease.ReleaseID)+".sid") || fileExists(cacheDir+strconv.Itoa(newRelease.ReleaseID)+".prg")) {
+				if !newRelease.SrcCached || !(fileExists(cacheDir+strconv.Itoa(newRelease.ReleaseID)+".sid") || fileExists(cacheDir+strconv.Itoa(newRelease.ReleaseID)+".prg")) {
 					_, err := DownloadFile(filename, newRelease.DownloadLinks[0], newRelease.ReleaseID)
 
 					if ErrCheck(err) {
 						// Sprawdzay czy istnieje SID lub PRG
 						if fileExists(cacheDir+strconv.Itoa(newRelease.ReleaseID)+".sid") || fileExists(cacheDir+strconv.Itoa(newRelease.ReleaseID)+".prg") {
-							newRelease.SIDCached = true
+							newRelease.SrcCached = true
 							log.Println("[DownloadFiles] File cached")
 						} else {
 							log.Println("[DownloadFiles] File not cached")
-							newRelease.SIDCached = false
+							newRelease.SrcCached = false
 							newRelease.WAVCached = false
 						}
 						// SendEmail("Nowa produkcja na CSDB.DK: " + newRelease.ReleaseName + " by " + newRelease.ReleasedBy[0])
 					}
 
 					if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".sid") {
-						newRelease.Ext = ".sid"
+						newRelease.SrcExt = ".sid"
 					}
 					if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".prg") {
-						newRelease.Ext = ".prg"
+						newRelease.SrcExt = ".prg"
 					}
 
 					releases[index] = newRelease
@@ -851,7 +851,7 @@ func CreateWAVFiles() {
 	log.Println("[CreateWAVFiles] LOOP")
 	for index, rel := range releases {
 
-		if len(rel.Ext) == 4 && rel.SIDCached {
+		if len(rel.SrcExt) == 4 && rel.SrcCached {
 			id := strconv.Itoa(rel.ReleaseID)
 			filenameWAV := cacheDir + id + ".wav"
 
@@ -868,7 +868,7 @@ func CreateWAVFiles() {
 			if !fileExists(filenameWAV) || (fileExists(filenameWAV) && !rel.WAVCached) {
 
 				log.Println("[CreateWAVFiles] Creating file " + filenameWAV)
-				filenameSID := cacheDir + id + rel.Ext
+				filenameSID := cacheDir + id + rel.SrcExt
 				paramName := "-w" + cacheDir + id
 
 				var cmdName string
@@ -942,7 +942,7 @@ func updateReleaseInfo(index int, newRelease Release) {
 			}
 		} else if len(releases[index].DownloadLinks) < len(newRelease.DownloadLinks) && releases[index].DownloadLinks[0] != ".sid" && newRelease.DownloadLinks[0] == ".sid" {
 			releases[index].DownloadLinks = newRelease.DownloadLinks
-			releases[index].SIDCached = false
+			releases[index].SrcCached = false
 			releases[index].WAVCached = false
 		}
 	}
