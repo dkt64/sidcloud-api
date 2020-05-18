@@ -1,5 +1,30 @@
 [
  {
+  "ReleaseID": 190751,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 5,
+  "ReleaseDay": 6,
+  "ReleaseName": "Indigo",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190751.gif",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "DommoCORE64"
+  ],
+  "Credits": [
+   "DommoCORE64"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/198401/Indigo.sid",
+   "http://csdb.dk/getinternalfile.php/198400/Indigo.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": ""
+ },
+ {
   "ReleaseID": 190659,
   "ReleaseYear": 2020,
   "ReleaseMonth": 5,
@@ -9,7 +34,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190659.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 9.5,
+  "Rating": 9.59,
   "ReleasedBy": [
    "Elysium",
    "MultiStyle Labs"
@@ -35,7 +60,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190651.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 8.29,
+  "Rating": 8.5,
   "ReleasedBy": [
    "Padua"
   ],
@@ -60,7 +85,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190624.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 9.79,
+  "Rating": 9.81,
   "ReleasedBy": [
    "MultiStyle Labs"
   ],
@@ -87,14 +112,15 @@
   "SIDPath": "",
   "Rating": 0,
   "ReleasedBy": [
-   "DommoCore64"
+   "DommoCORE64"
   ],
   "Credits": [
-   "DommoCore64"
+   "DommoCORE64"
   ],
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/198261/Song_of_Storms.sid",
-   "http://csdb.dk/getinternalfile.php/198260/song_of_storms.d64"
+   "http://csdb.dk/getinternalfile.php/198399/Song_of_Storms.d64",
+   "http://csdb.dk/getinternalfile.php/198260/song_of_storms_nc.d64"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -256,7 +282,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190464.gif",
   "ReleasedAt": "CSDb C64 Lockdown 2020 Fun Compo",
   "SIDPath": "/MUSICIANS/B/Blues_Muz/Gallefoss_Glenn/Plaster_v2.sid",
-  "Rating": 8.8,
+  "Rating": 8.91,
   "ReleasedBy": [
    "Hokuto Force"
   ],
@@ -401,7 +427,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190338.png",
   "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 0,
+  "Rating": 9.11,
   "ReleasedBy": [
    "Saul Cross"
   ],
@@ -452,7 +478,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190335.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 8.4,
+  "Rating": 8.39,
   "ReleasedBy": [
    "The Solution"
   ],
@@ -477,7 +503,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190299.png",
   "ReleasedAt": "",
   "SIDPath": "/MUSICIANS/D/Daglish_Ben/Future_Knight.sid",
-  "Rating": 9.28,
+  "Rating": 8.73,
   "ReleasedBy": [
    "Excess"
   ],
@@ -598,7 +624,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190262.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 9.35,
+  "Rating": 9.32,
   "ReleasedBy": [
    "Genesis Project"
   ],
@@ -746,7 +772,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/190000/190161.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 7.67,
+  "Rating": 7.71,
   "ReleasedBy": [
    "Mayday!"
   ],
@@ -1286,7 +1312,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189784.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 8.3,
+  "Rating": 8.42,
   "ReleasedBy": [
    "Kruthers"
   ],
@@ -1311,7 +1337,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189742.png",
   "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 9.58,
+  "Rating": 9.6,
   "ReleasedBy": [
    "Artline Designs"
   ],
@@ -1319,8 +1345,8 @@
    "Flex"
   ],
   "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/197341/Electric_City_2SID_%288580R5%2B6581AR4_SIDFX%29.sid",
    "http://csdb.dk/getinternalfile.php/197332/Electric_City_2SID_8580_Stereo.sid",
+   "http://csdb.dk/getinternalfile.php/197341/Electric_City_2SID_%288580R5%2B6581AR4_SIDFX%29.sid",
    "http://csdb.dk/getinternalfile.php/197331/Electric_City_2SID.prg"
   ],
   "SrcCached": false,
@@ -1361,7 +1387,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189728.png",
   "ReleasedAt": "CSDb C64 Lockdown 2020 Fun Compo",
   "SIDPath": "",
-  "Rating": 8.95,
+  "Rating": 9,
   "ReleasedBy": [
    "Dr. TerrorZ"
   ],
@@ -1709,7 +1735,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189549.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 8.2,
+  "Rating": 7.69,
   "ReleasedBy": [
    "Saul Cross"
   ],
@@ -1759,7 +1785,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189543.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 6.89,
+  "Rating": 7,
   "ReleasedBy": [
    "Finnish Gold"
   ],
@@ -1910,7 +1936,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189452.png",
   "ReleasedAt": "2020 Quarantine Emotional Music Compo",
   "SIDPath": "",
-  "Rating": 8.12,
+  "Rating": 8,
   "ReleasedBy": [
    "SIDWAVE"
   ],
@@ -1943,31 +1969,6 @@
   ],
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/197003/Dark_Rainstorms_in_My_Heart.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": ""
- },
- {
-  "ReleaseID": 189445,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 30,
-  "ReleaseName": "NOFPS",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/189000/189445.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/B/Blues_Muz/Return.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Hitmen"
-  ],
-  "Credits": [
-   "6R6",
-   "Kristian Røstøen"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/196999/nofps.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,

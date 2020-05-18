@@ -934,6 +934,9 @@ func updateReleaseInfo(index int, newRelease Release) {
 	releases[index].ReleaseScreenShot = newRelease.ReleaseScreenShot
 	releases[index].ReleasedAt = newRelease.ReleasedAt
 	releases[index].ReleasedBy = newRelease.ReleasedBy
+	releases[index].ReleaseDay = newRelease.ReleaseDay
+	releases[index].ReleaseMonth = newRelease.ReleaseMonth
+	releases[index].ReleaseYear = newRelease.ReleaseYear
 
 	if newRelease.DownloadLinks != nil {
 		if releases[index].DownloadLinks == nil {
@@ -1638,6 +1641,7 @@ func AudioGet(c *gin.Context) {
 		log.Println("[GIN:AudioGet] Can't open file " + filenameWAV)
 	}
 
+	log.Println("[GIN:AudioGet] Sending " + id + " ended.")
 }
 
 // // smtpServer - smtpServer data to smtp server
