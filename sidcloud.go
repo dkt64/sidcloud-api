@@ -173,6 +173,7 @@ type Release struct {
 	SrcCached         bool
 	WAVCached         bool
 	SrcExt            string
+	Disabled          bool
 	// UsedSIDs          []UsedSID
 }
 
@@ -851,7 +852,7 @@ func CreateWAVFiles() {
 	log.Println("[CreateWAVFiles] LOOP")
 	for index, rel := range releases {
 
-		if len(rel.SrcExt) == 4 && rel.SrcCached {
+		if len(rel.SrcExt) == 4 && rel.SrcCached && !rel.Disabled {
 			id := strconv.Itoa(rel.ReleaseID)
 			filenameWAV := cacheDir + id + ".wav"
 
@@ -887,32 +888,43 @@ func CreateWAVFiles() {
 
 				log.Println("[CreateWAVFiles] Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + model + " " + paramName + " " + filenameSID + ")")
 				cmd := exec.Command(cmdName, czas, model, paramName, filenameSID)
-				err := cmd.Run()
-				if ErrCheck(err) {
+				errStart := cmd.Start()
 
-					// Jeszcze raz sprawdzamy czy plik powstał o odpowiedniej długości
-					// if fileExists(filenameWAV) {
-					// 	file, err := os.Stat(filenameWAV)
-					// 	if err != nil {
-					// 		log.Println("[CreateWAVFiles] Problem z odczytem rozmiaru pliku " + filenameWAV)
-					// 	}
-					// 	size = file.Size()
-					// }
+				if ErrCheck(errStart) {
 
-					// if fileExists(filenameWAV) && size >= wavSize {
-					if fileExists(filenameWAV) {
-						WAVPrepare(filenameWAV)
-						releases[index].WAVCached = true
-						log.Println("[CreateWAVFiles] " + filenameWAV + " cached")
+					done := make(chan error)
+					go func() { done <- cmd.Wait() }()
+					select {
+					case err := <-done:
+						// exited
+
+						// Jeszcze raz sprawdzamy czy plik powstał o odpowiedniej długości
+						// if fileExists(filenameWAV) {
+						// 	file, err := os.Stat(filenameWAV)
+						// 	if err != nil {
+						// 		log.Println("[CreateWAVFiles] Problem z odczytem rozmiaru pliku " + filenameWAV)
+						// 	}
+						// 	size = file.Size()
+						// }
+
+						// if fileExists(filenameWAV) && size >= wavSize {
+						if fileExists(filenameWAV) && ErrCheck(err) {
+							WAVPrepare(filenameWAV)
+							releases[index].WAVCached = true
+							log.Println("[CreateWAVFiles] " + filenameWAV + " cached")
+							WriteDb()
+						} else {
+							log.Println("[CreateWAVFiles] " + filenameWAV + " not cached")
+						}
+
+					case <-time.After(10 * time.Minute):
+						// timed out
+						log.Println("[CreateWAVFiles] Problem with sidplayfp and " + filenameWAV)
+						os.Remove(filenameWAV)
+						releases[index].Disabled = true
 						WriteDb()
-					} else {
-						log.Println("[CreateWAVFiles] " + filenameWAV + " not cached")
 					}
-				} else {
-					log.Println("[CreateWAVFiles] Problem with sidplayfp and " + filenameWAV)
-					os.Remove(filenameWAV)
 				}
-
 			} else {
 				// log.Println("Plik " + filenameWAV + " już istnieje")
 				releases[index].WAVCached = true
@@ -920,7 +932,6 @@ func CreateWAVFiles() {
 				WriteDb()
 			}
 		}
-
 	}
 
 }
