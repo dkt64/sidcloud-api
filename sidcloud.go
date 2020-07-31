@@ -922,6 +922,7 @@ func CreateWAVFiles() {
 						log.Println("[CreateWAVFiles] Problem with sidplayfp and " + filenameWAV)
 						os.Remove(filenameWAV)
 						releases[index].Disabled = true
+						cmd.Process.Kill()
 						WriteDb()
 					}
 				}
