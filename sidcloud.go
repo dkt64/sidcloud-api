@@ -1215,7 +1215,7 @@ func ReadLatestReleases() {
 		log.Println("[ReadLatestReleases] Found " + strconv.Itoa(foundNewReleases) + " new releases")
 
 		if foundNewReleases > 0 {
-			sort.Sort(byDateAndID(releases))
+			sort.Sort(byID(releases))
 		}
 		// sort.Sort(byID(releases))
 		// sort.Sort(byDate(releases))
@@ -1792,7 +1792,8 @@ func main() {
 	//
 	ReadCSDb()
 	ReadDb()
-	sort.Sort(byDateAndID(releases))
+	sort.Sort(byID(releases))
+	// log.Print(releases)
 
 	//
 	// Uruchomienie wątków
