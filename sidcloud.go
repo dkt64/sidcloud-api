@@ -537,61 +537,20 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 	// Rozkakowanie pliku ZIP
 	//
 	if strings.Contains(filepath, ".zip") {
-		zipReader, _ := zip.OpenReader(filepath)
+		zipReader, err := zip.OpenReader(filepath)
 
-		//
-		// Najpierw SIDy
-		//
-		for _, file := range zipReader.File {
+		if ErrCheck(err) {
+			//
+			// Najpierw SIDy
+			//
+			for _, file := range zipReader.File {
 
-			// log.Println(file.Name)
+				// log.Println(file.Name)
 
-			if strings.Contains(file.Name, ".sid") && !file.FileInfo().IsDir() {
+				if strings.Contains(file.Name, ".sid") && !file.FileInfo().IsDir() {
 
-				log.Println("[DownloadFile] Found SID file")
-				ext = ".sid"
-				log.Println("[DownloadFile] File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
-				outputFile, err := os.OpenFile(
-					cacheDir+strconv.Itoa(id)+ext,
-					os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
-					file.Mode(),
-				)
-				ErrCheck(err)
-				defer outputFile.Close()
-
-				zippedFile, err := file.Open()
-				ErrCheck(err)
-				defer zippedFile.Close()
-
-				_, err = io.Copy(outputFile, zippedFile)
-				ErrCheck(err)
-
-				return ext, err
-			}
-		}
-
-		//
-		// Potem PRG
-		//
-		for _, file := range zipReader.File {
-
-			// log.Println(file.Name)
-
-			if strings.Contains(file.Name, ".prg") && !file.FileInfo().IsDir() {
-
-				// Sprawdzamy czy PRG ładuje się pod $0801
-				zippedFile, err := file.Open()
-				ErrCheck(err)
-				defer zippedFile.Close()
-				p := make([]byte, 2)
-				zippedFile.Read(p)
-				zippedFile.Close()
-
-				if p[0] == 1 && p[1] == 8 {
-
-					// log.Println("[DownloadFile] Found PRG file")
-					ext = ".prg"
-
+					log.Println("[DownloadFile] Found SID file")
+					ext = ".sid"
 					log.Println("[DownloadFile] File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
 					outputFile, err := os.OpenFile(
 						cacheDir+strconv.Itoa(id)+ext,
@@ -602,63 +561,106 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 					defer outputFile.Close()
 
 					zippedFile, err := file.Open()
+					if ErrCheck(err) {
+						defer zippedFile.Close()
+
+						_, err = io.Copy(outputFile, zippedFile)
+						ErrCheck(err)
+					}
+					return ext, err
+				}
+			}
+
+			//
+			// Potem PRG
+			//
+			for _, file := range zipReader.File {
+
+				// log.Println(file.Name)
+
+				if strings.Contains(file.Name, ".prg") && !file.FileInfo().IsDir() {
+
+					// Sprawdzamy czy PRG ładuje się pod $0801
+					zippedFile, err := file.Open()
 					ErrCheck(err)
 					defer zippedFile.Close()
+					p := make([]byte, 2)
+					zippedFile.Read(p)
+					zippedFile.Close()
 
-					_, err = io.Copy(outputFile, zippedFile)
-					ErrCheck(err)
+					if p[0] == 1 && p[1] == 8 {
 
-					return ext, err
+						// log.Println("[DownloadFile] Found PRG file")
+						ext = ".prg"
 
+						log.Println("[DownloadFile] File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
+						outputFile, err := os.OpenFile(
+							cacheDir+strconv.Itoa(id)+ext,
+							os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
+							file.Mode(),
+						)
+						ErrCheck(err)
+						defer outputFile.Close()
+
+						zippedFile, err := file.Open()
+						if ErrCheck(err) {
+							defer zippedFile.Close()
+
+							_, err = io.Copy(outputFile, zippedFile)
+							ErrCheck(err)
+
+						}
+						return ext, err
+					}
+					// log.Println("[DownloadFile] PRG file load address != $0801")
 				}
-				// log.Println("[DownloadFile] PRG file load address != $0801")
 			}
-		}
 
-		//
-		// Potem D64
-		//
-		for _, file := range zipReader.File {
+			//
+			// Potem D64
+			//
+			for _, file := range zipReader.File {
 
-			// log.Println(file.Name)
+				// log.Println(file.Name)
 
-			if strings.Contains(file.Name, ".d64") && !file.FileInfo().IsDir() {
+				if strings.Contains(file.Name, ".d64") && !file.FileInfo().IsDir() {
 
-				// log.Println("[DownloadFile] Found D64 file")
-				log.Println("[DownloadFile] File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
-				outputFile, err := os.OpenFile(
-					cacheDir+strconv.Itoa(id)+".d64",
-					os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
-					file.Mode(),
-				)
-				ErrCheck(err)
-				defer outputFile.Close()
-
-				zippedFile, err := file.Open()
-				ErrCheck(err)
-				defer zippedFile.Close()
-
-				_, err = io.Copy(outputFile, zippedFile)
-				ErrCheck(err)
-
-				extractedPRG, found := ExtractD64(cacheDir + strconv.Itoa(id) + ".d64")
-				if found {
-
-					ext = ".prg"
-
-					// Create the file
-					out, err := os.Create(cacheDir + strconv.Itoa(id) + ext)
+					// log.Println("[DownloadFile] Found D64 file")
+					log.Println("[DownloadFile] File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
+					outputFile, err := os.OpenFile(
+						cacheDir+strconv.Itoa(id)+".d64",
+						os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
+						file.Mode(),
+					)
 					ErrCheck(err)
-					defer out.Close()
+					defer outputFile.Close()
 
-					// Write the body to file
-					_, err = out.Write(extractedPRG)
-					ErrCheck(err)
-					out.Close()
+					zippedFile, err := file.Open()
+					if ErrCheck(err) {
+						defer zippedFile.Close()
 
-					return ext, err
+						_, err = io.Copy(outputFile, zippedFile)
+						ErrCheck(err)
+
+						extractedPRG, found := ExtractD64(cacheDir + strconv.Itoa(id) + ".d64")
+						if found {
+
+							ext = ".prg"
+
+							// Create the file
+							out, err := os.Create(cacheDir + strconv.Itoa(id) + ext)
+							ErrCheck(err)
+							defer out.Close()
+
+							// Write the body to file
+							_, err = out.Write(extractedPRG)
+							ErrCheck(err)
+							out.Close()
+
+							return ext, err
+						}
+					}
 				}
-
 			}
 		}
 	}
@@ -1558,6 +1560,38 @@ func CSDBGetLatestReleases(c *gin.Context) {
 	c.JSON(http.StatusOK, releasesTemp)
 }
 
+// AudioGetNew - granie utworu po nowemu
+// https://stackoverflow.com/questions/61453199/html-audio-stream-dont-play-on-apples-ios-safari-and-iphone-https-sidclo
+// ================================================================================================
+func AudioGetNew(c *gin.Context) {
+	id := c.Param("id")
+	filenameWAV := cacheDir + id + ".wav"
+
+	var size int64
+
+	if fileExists(filenameWAV) {
+		var err error
+		size, err = fileSize(filenameWAV)
+		if ErrCheck(err) {
+			log.Println("[GIN:AudioGet] Size of file " + filenameWAV + " = " + strconv.Itoa(int(size)))
+		} else {
+			log.Println("[GIN:AudioGet] Can't read size of file " + filenameWAV)
+			c.JSON(http.StatusInternalServerError, "Can't read size of file")
+			return
+		}
+	} else {
+		log.Println("[GIN:AudioGet] No WAV file " + filenameWAV)
+		c.JSON(http.StatusInternalServerError, "No WAV file")
+		return
+	}
+
+	if size > 0 {
+		log.Println("[GIN:AudioGet] Sending " + id + " ...")
+		http.ServeFile(c.Writer, c.Request, filenameWAV) // assuming filenameWAV is the location
+		log.Println("[GIN:AudioGet] Sending " + id + " end.")
+	}
+}
+
 // AudioGet - granie utworu
 // ================================================================================================
 func AudioGet(c *gin.Context) {
@@ -1824,7 +1858,7 @@ func main() {
 	r.StaticFile("favicon.ico", "./dist/favicon.ico")
 	r.StaticFile("sign.png", "./dist/sign.png")
 
-	r.GET("/api/v1/audio/:id", AudioGet)
+	r.GET("/api/v1/audio/:id", AudioGetNew)
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
 	r.GET("/api/v1/hvsc_filter/:id", GetHVSCFilter)
 

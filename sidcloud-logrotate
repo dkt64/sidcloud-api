@@ -1,0 +1,13 @@
+/root/go/src/github.com/dkt64/sidcloud-api/app.log
+{
+	rotate 6
+	monthly
+	compress
+}
+
+/root/go/src/github.com/dkt64/sidcloud-api/gin.log
+{
+	rotate 6
+	monthly
+	compress
+}
