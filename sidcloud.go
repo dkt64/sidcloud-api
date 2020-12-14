@@ -1555,6 +1555,7 @@ func CSDBGetLatestReleases(c *gin.Context) {
 	// Info o wejściu do GET
 	log.Println("[GIN:CSDBGetLatestReleases]")
 
+	ReadDb()
 	releasesTemp := releases
 
 	c.JSON(http.StatusOK, releasesTemp)
