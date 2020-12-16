@@ -1184,6 +1184,7 @@ func ReadLatestReleases() {
 				if rel2.ReleaseID == rel1.ReleaseID {
 					found = true
 					updateReleaseInfo(index, rel1)
+					log.Println("[ReadLatestReleases] Update of", rel1.ReleaseID)
 					break
 				}
 			}
@@ -1202,6 +1203,7 @@ func ReadLatestReleases() {
 					if rel2.ReleaseID == rel1.ReleaseID {
 						found = true
 						updateReleaseInfo(index, rel1)
+						log.Println("[ReadLatestReleases] Update of", rel1.ReleaseID)
 						break
 					}
 				}
