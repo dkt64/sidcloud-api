@@ -1037,7 +1037,7 @@ func ReadLatestReleases() {
 
 				id, _ := strconv.Atoi(entry.ReleaseID)
 
-				var relTypesAllowed = [...]string{"C64 Music", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo"}
+				var relTypesAllowed = [...]string{"C64 Music", "C64 Graphics", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo"}
 				found := false
 				for _, rel := range releasesTemp {
 					if rel.ReleaseID == id {
@@ -1164,7 +1164,7 @@ func ReadLatestReleases() {
 					//
 					// Dodajemy
 					//
-					if len(newRelease.DownloadLinks) > 0 {
+					if len(newRelease.DownloadLinks) > 0 && len(newRelease.Credits) > 0 {
 						releasesTemp = append(releasesTemp, newRelease)
 					}
 				}
@@ -1304,7 +1304,7 @@ func CSDBPrepareData() {
 						// Szukamy takiego release w naszej bazie
 						//
 
-						var relTypesAllowed = [...]string{"C64 Music", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo"}
+						var relTypesAllowed = [...]string{"C64 Music", "C64 Graphics", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo"}
 						typeOK := false
 						for _, relType := range relTypesAllowed {
 							if relType == entry.ReleaseType {
@@ -1430,7 +1430,7 @@ func CSDBPrepareData() {
 							//
 							// Dodajemy
 							//
-							if len(newRelease.DownloadLinks) > 0 {
+							if len(newRelease.DownloadLinks) > 0 && len(newRelease.Credits) > 0 {
 								csdbTemp = append(csdbTemp, newRelease)
 								foundNewReleases++
 								log.Println("[CSDBPrepareData] " + strconv.Itoa(foundNewReleases) + ") Entry name: " + entry.ReleaseName + ", Entry ID: " + entry.ReleaseID)
