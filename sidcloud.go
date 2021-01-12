@@ -27,6 +27,7 @@ import (
 
 	"github.com/gin-gonic/autotls"
 	"github.com/gin-gonic/gin"
+	"golang.org/x/crypto/acme/autocert"
 )
 
 var csdbDataReady bool = false
@@ -1779,6 +1780,14 @@ func Options(c *gin.Context) {
 	}
 }
 
+// redirect - Przekierowanie http na https
+// ================================================================================================
+func redirect(w http.ResponseWriter, req *http.Request) {
+	target := "https://" + req.Host + req.RequestURI
+
+	http.Redirect(w, req, target, http.StatusTemporaryRedirect)
+}
+
 // ================================================================================================
 // MAIN()
 // ================================================================================================
@@ -1869,7 +1878,17 @@ func main() {
 	// Start serwera
 	//
 	if args[0] == "https" {
-		log.Fatal(autotls.Run(r, "sidcloud.net", "www.sidcloud.net"))
+
+		// log.Fatal(autotls.Run(r, "sidcloud.net", "www.sidcloud.net"))
+
+		m := autocert.Manager{
+			Prompt:     autocert.AcceptTOS,
+			HostPolicy: autocert.HostWhitelist("sidcloud.net"),
+			Cache:      autocert.DirCache("./" + cacheDir),
+		}
+
+		log.Fatal(autotls.RunWithManager(r, &m))
+
 	}
 	if args[0] == "http" {
 		if len(args) > 1 {
