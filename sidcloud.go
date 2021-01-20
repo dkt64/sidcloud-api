@@ -321,12 +321,16 @@ func ExtractD64(filename string) ([]byte, bool) {
 	var dirSector byte = 1
 	var outfile []byte
 	loop := true
+	foundPRG := false
+	found0801 := false
 
 	for loop {
 		log.Println("[ExtractD64] Dir track " + strconv.Itoa(int(dirTrack)) + " and sector " + strconv.Itoa(int(dirSector)))
 		sector := D64GetSector(file, dirTrack, dirSector)
 		for ptr := 0; ptr < 8*0x20; ptr += 0x20 {
 			if (sector[ptr+2] & 7) == 2 {
+
+				foundPRG = true
 				name := string(sector[ptr+5 : ptr+14])
 				var fileTrack byte = sector[ptr+3]
 				var fileSector byte = sector[ptr+4]
@@ -337,6 +341,7 @@ func ExtractD64(filename string) ([]byte, bool) {
 
 				if (prg[2] == 1 || prg[2] == 0) && prg[3] == 8 {
 					log.Println("[ExtractD64] Loading address is OK")
+					found0801 = true
 					// log.Println("[ExtractD64] First PRG file in D64: " + name + " T:" + strconv.Itoa(int(fileTrack)) + " S:" + strconv.Itoa(int(fileSector)))
 
 					fileTrack = prg[0]
@@ -358,6 +363,49 @@ func ExtractD64(filename string) ([]byte, bool) {
 					// break
 				}
 				log.Println("[ExtractD64] Loading address is NOK")
+			}
+		}
+		dirTrack = sector[0]
+		if dirTrack == 0 {
+			break
+		}
+		dirSector = sector[1]
+	}
+
+	log.Println("[ExtractD64] Trying without load address check...", loop, foundPRG)
+	dirTrack = 18
+	dirSector = 1
+
+	// druga pętla bez restrykcji, pierwszy lepszy PRG bez $0801
+	for loop && foundPRG && !found0801 {
+		log.Println("[ExtractD64] Dir track " + strconv.Itoa(int(dirTrack)) + " and sector " + strconv.Itoa(int(dirSector)))
+		sector := D64GetSector(file, dirTrack, dirSector)
+		for ptr := 0; ptr < 8*0x20; ptr += 0x20 {
+			if (sector[ptr+2] & 7) == 2 {
+				name := string(sector[ptr+5 : ptr+14])
+				var fileTrack byte = sector[ptr+3]
+				var fileSector byte = sector[ptr+4]
+
+				// Najpierw sprawdzimy czy load address == $0801
+				log.Println("[ExtractD64] Reading " + name + " TRACK:" + strconv.Itoa(int(fileTrack)) + " SECTOR:" + strconv.Itoa(int(fileSector)))
+				prg := D64GetSector(file, fileTrack, fileSector)
+
+				log.Println("[ExtractD64] Loading address different, but OK")
+				// log.Println("[ExtractD64] First PRG file in D64: " + name + " T:" + strconv.Itoa(int(fileTrack)) + " S:" + strconv.Itoa(int(fileSector)))
+
+				fileTrack = prg[0]
+				fileSector = prg[1]
+				fileloop := true
+				outfile = append(outfile, prg[2:]...)
+
+				for fileloop && fileTrack != 0 {
+					prg = D64GetSector(file, fileTrack, fileSector)
+					fileTrack = prg[0]
+					fileSector = prg[1]
+					outfile = append(outfile, prg[2:]...)
+				}
+				// log.Println("Koniec pliku")
+				return outfile, true
 			}
 		}
 		dirTrack = sector[0]
