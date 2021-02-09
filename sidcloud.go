@@ -726,17 +726,41 @@ func DownloadFiles() {
 	for index, newRelease := range releases {
 		if len(newRelease.DownloadLinks) > 0 {
 			filename := cacheDir
-			if strings.Contains(newRelease.DownloadLinks[0], ".sid") || strings.Contains(newRelease.DownloadLinks[0], ".SID") {
-				filename += strconv.Itoa(newRelease.ReleaseID) + ".sid"
+			foundSID := false
+
+			for _, dl := range newRelease.DownloadLinks {
+				if strings.Contains(dl, ".sid") || strings.Contains(dl, ".SID") {
+					filename += strconv.Itoa(newRelease.ReleaseID) + ".sid"
+					foundSID = true
+					break
+				}
 			}
-			if strings.Contains(newRelease.DownloadLinks[0], ".prg") || strings.Contains(newRelease.DownloadLinks[0], ".PRG") {
-				filename += strconv.Itoa(newRelease.ReleaseID) + ".prg"
+			if !foundSID {
+				for _, dl := range newRelease.DownloadLinks {
+					if strings.Contains(dl, ".prg") || strings.Contains(dl, ".PRG") {
+						filename += strconv.Itoa(newRelease.ReleaseID) + ".prg"
+						foundSID = true
+						break
+					}
+				}
 			}
-			if strings.Contains(newRelease.DownloadLinks[0], ".zip") || strings.Contains(newRelease.DownloadLinks[0], ".ZIP") {
-				filename += strconv.Itoa(newRelease.ReleaseID) + ".zip"
+			if !foundSID {
+				for _, dl := range newRelease.DownloadLinks {
+					if strings.Contains(dl, ".zip") || strings.Contains(dl, ".ZIP") {
+						filename += strconv.Itoa(newRelease.ReleaseID) + ".zip"
+						foundSID = true
+						break
+					}
+				}
 			}
-			if strings.Contains(newRelease.DownloadLinks[0], ".d64") || strings.Contains(newRelease.DownloadLinks[0], ".D64") {
-				filename += strconv.Itoa(newRelease.ReleaseID) + ".d64"
+			if !foundSID {
+				for _, dl := range newRelease.DownloadLinks {
+					if strings.Contains(dl, ".d64") || strings.Contains(dl, ".D64") {
+						filename += strconv.Itoa(newRelease.ReleaseID) + ".d64"
+						foundSID = true
+						break
+					}
+				}
 			}
 
 			// Dodajemy new release
@@ -1006,7 +1030,8 @@ func updateReleaseInfo(index int, newRelease Release) {
 			for _, link := range newRelease.DownloadLinks {
 				releases[index].DownloadLinks = append(releases[index].DownloadLinks, link)
 			}
-		} else if len(releases[index].DownloadLinks) < len(newRelease.DownloadLinks) && releases[index].DownloadLinks[0] != ".sid" && newRelease.DownloadLinks[0] == ".sid" {
+			// } else if len(releases[index].DownloadLinks) < len(newRelease.DownloadLinks) && releases[index].DownloadLinks[0] != ".sid" && newRelease.DownloadLinks[0] == ".sid" {
+		} else if len(releases[index].DownloadLinks) < len(newRelease.DownloadLinks) {
 			releases[index].DownloadLinks = newRelease.DownloadLinks
 			releases[index].SrcCached = false
 			releases[index].WAVCached = false

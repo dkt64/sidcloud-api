@@ -1,5 +1,883 @@
 [
  {
+  "ReleaseID": 199768,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 8,
+  "ReleaseName": "AOD King of the Mountain Intro",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199768.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/L/Laxity/Echo_Beat.sid",
+  "Rating": 9.56,
+  "ReleasedBy": [
+   "Army of Darkness"
+  ],
+  "Credits": [
+   "Laxity"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208463/AoD-King_Of_The_Mountain.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199761,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 7,
+  "ReleaseName": "Hexaflower",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199761.png",
+  "ReleasedAt": "Intro Creation Competition 2020",
+  "SIDPath": "",
+  "Rating": 9.4,
+  "ReleasedBy": [
+   "Genesis Project"
+  ],
+  "Credits": [
+   "Xiny6581"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208456/gp_hexaflower.prg",
+   "https://c64.ch/data/productionfiles/Hexaflower%20_2021-02-07__Genesis%20Project_.zip"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199745,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 7,
+  "ReleaseName": "Aaargh! Commondor",
+  "ReleaseType": "C64 Graphics",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199745.png",
+  "ReleasedAt": "AAARGH! CONDOR Title Screen GFX Compo",
+  "SIDPath": "/MUSICIANS/H/HeatWave/youtH/EA-Instructions.sid",
+  "Rating": 7.3,
+  "ReleasedBy": [
+   "Fantastic 4 Cracking Group"
+  ],
+  "Credits": [
+   "Youth"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208454/commondor.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199694,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 7,
+  "ReleaseName": "Die Funker 2021",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199694.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 8.38,
+  "ReleasedBy": [
+   "Delysid"
+  ],
+  "Credits": [
+   "Mythus"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208388/Mythus die funker.sid",
+   "http://csdb.dk/getinternalfile.php/208387/Mythus Die Funker.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199690,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 7,
+  "ReleaseName": "Boolean",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199690.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/H/Hartwig_Stefan/Space_Bubbles.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Second Dimension"
+  ],
+  "Credits": [
+   "Stefan Hartwig"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208383/boolean %5B2d%5D.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199676,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 5,
+  "ReleaseName": "Godzilla",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199676.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Eric Dobek"
+  ],
+  "Credits": [
+   "Eric Dobek"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208361/Godzilla.sid",
+   "http://csdb.dk/getinternalfile.php/208363/Godzilla.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199674,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 6,
+  "ReleaseName": "Checkertro 2021",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199674.png",
+  "ReleasedAt": "Intro Creation Competition 2020",
+  "SIDPath": "",
+  "Rating": 9.2,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Mythus"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208388/Mythus die funker.sid",
+   "http://csdb.dk/getinternalfile.php/208358/checkertro %5Bex%5D.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199673,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 6,
+  "ReleaseName": "Usa4ktro",
+  "ReleaseType": "C64 4K Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199673.png",
+  "ReleasedAt": "Intro Creation Competition 2020",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "CSixx"
+  ],
+  "Credits": [
+   "CSixx"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208357/c64k.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199655,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 6,
+  "ReleaseName": "BCC#15 Online Invitro",
+  "ReleaseType": "C64 4K Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199655.png",
+  "ReleasedAt": "Intro Creation Competition 2020",
+  "SIDPath": "/MUSICIANS/B/Blues_Muz/Gallefoss_Glenn/Hysteria_Pimped.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "C64 Club Berlin"
+  ],
+  "Credits": [
+   "6R6"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208339/bcc15onlinvitro.prg",
+   "http://csdb.dk/getinternalfile.php/208338/BCC15OnlineInvitro.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199648,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 5,
+  "ReleaseName": "Recycled Xmas Intro",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199648.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/R/Rock/Funkyhips.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Rock"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208330/recycledXmasIntro %5Bex%5D.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199647,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 5,
+  "ReleaseName": "Kolorflip",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199647.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/M/Mythus/Summer_is_Coming.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Mythus"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208329/kolorflip_palntsc %5Bex%5D.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199611,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 4,
+  "ReleaseName": "On the Move",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199611.png",
+  "ReleasedAt": "Intro Creation Competition 2020",
+  "SIDPath": "/MUSICIANS/D/DaFunk/On_the_Move.sid",
+  "Rating": 9.7,
+  "ReleasedBy": [
+   "TempesT"
+  ],
+  "Credits": [
+   "DaFunk"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208293/on_the_move.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199603,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 4,
+  "ReleaseName": "Uncle Ervil",
+  "ReleaseType": "C64 Graphics",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199603.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/Y/Yoko/Get_Away_Naked_Eye_Version.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Suicyco Industries"
+  ],
+  "Credits": [
+   "Yoko"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208285/Uncle Ervil.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199602,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 4,
+  "ReleaseName": "Timon",
+  "ReleaseType": "C64 Graphics",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199602.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/C/Compod/Oh_Carol.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Suicyco Industries"
+  ],
+  "Credits": [
+   "Compod"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208284/Timon.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199506,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 2,
+  "ReleaseDay": 2,
+  "ReleaseName": "22nd",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199506.gif",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Raiders of the Lost Empire"
+  ],
+  "Credits": [
+   "Metal",
+   "psych858o"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208188/22ND.D64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199464,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 31,
+  "ReleaseName": "Citywaves Soundscapes",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199464.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.19,
+  "ReleasedBy": [
+   "Focus"
+  ],
+  "Credits": [
+   "Jammer"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208148/ThinLines.sid",
+   "http://csdb.dk/getinternalfile.php/208141/citywavessoundscapes.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199430,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 31,
+  "ReleaseName": "Vision Z",
+  "ReleaseType": "C64 Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199430.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/Z/Zyron/Sex-Lunatic.sid",
+  "Rating": 8,
+  "ReleasedBy": [
+   "Steven K"
+  ],
+  "Credits": [
+   "Zyron"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208104/VISIONZ.D64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199428,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 31,
+  "ReleaseName": "Anosognosia",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199428.png",
+  "ReleasedAt": "The C64 Grand Tour Challenge - January 2021",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "NecroPolo"
+  ],
+  "Credits": [
+   "NecroPolo"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208099/Anosognosia.sid",
+   "http://csdb.dk/getinternalfile.php/208098/The_C64_Grand_Tour_Challenge_Jan_2021.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199427,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 31,
+  "ReleaseName": "Improvatorus Maximus",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199427.png",
+  "ReleasedAt": "The C64 Grand Tour Challenge - January 2021",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Singular",
+   "Lethargy"
+  ],
+  "Credits": [
+   "Vincenzo"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208100/Improvatorus_Maximus.sid",
+   "http://csdb.dk/getinternalfile.php/208098/The_C64_Grand_Tour_Challenge_Jan_2021.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199381,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 29,
+  "ReleaseName": "Rebirth 100%",
+  "ReleaseType": "C64 Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199381.gif",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.15,
+  "ReleasedBy": [
+   "Finnish Gold"
+  ],
+  "Credits": [
+   "Proton",
+   "Rock"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208059/MoodyZoo.sid",
+   "http://csdb.dk/getinternalfile.php/208056/rebirth_loader.sid",
+   "http://csdb.dk/getinternalfile.php/208058/Tubescroller.sid",
+   "http://csdb.dk/getinternalfile.php/208057/mtn_breeze_rebirth_edit.sid",
+   "http://csdb.dk/getinternalfile.php/208060/rebirth.sid",
+   "http://csdb.dk/getinternalfile.php/208036/rebirth_fig.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199349,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 28,
+  "ReleaseName": "Plain Paper Plane Intro",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199349.png",
+  "ReleasedAt": "Intro Creation Competition 2020",
+  "SIDPath": "",
+  "Rating": 8.43,
+  "ReleasedBy": [
+   "Fatzone"
+  ],
+  "Credits": [
+   "Maze"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/208009/fatzone-plain_paper_plane_intro.prg",
+   "https://c64.ch/data/productionfiles/Plain%20Paper%20Plane%20Intro%20_2021-01-28__Fatzone_.zip"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199324,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 27,
+  "ReleaseName": "Intro for Bonzai",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199324.png",
+  "ReleasedAt": "Intro Creation Competition 2020",
+  "SIDPath": "/MUSICIANS/S/Stainless_Steel/Smashed.sid",
+  "Rating": 8.79,
+  "ReleasedBy": [
+   "Fantastic 4 Cracking Group"
+  ],
+  "Credits": [
+   "Stainless Steel"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207979/intro4bonzai.prg",
+   "https://c64.ch/data/productionfiles/Intro%20for%20Bonzai%20_2021-01-27__Bonzai_.zip"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199322,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 27,
+  "ReleaseName": "Wedding Peach 2.0",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199322.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "Nordischsound"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207974/wedding_peach_2.0.sid",
+   "http://csdb.dk/getinternalfile.php/207973/wedding_peach_2.0.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199293,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 24,
+  "ReleaseName": "Kindertotensid",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199293.png",
+  "ReleasedAt": "Saunasolmu 2021",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Fairlight",
+   "Finnish Gold"
+  ],
+  "Credits": [
+   "Danko",
+   "Proton"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207942/KindertotenSID.sid",
+   "http://csdb.dk/getinternalfile.php/207941/kindertotensid.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199275,
+  "ReleaseYear": 2020,
+  "ReleaseMonth": 12,
+  "ReleaseDay": 6,
+  "ReleaseName": "Wonderful 64days (Hard Edit)",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199275.gif",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Chris-Do"
+  ],
+  "Credits": [
+   "Chris-Do"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207921/wonderful 64days.sid",
+   "http://csdb.dk/getinternalfile.php/207922/wonderful64days.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199261,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 25,
+  "ReleaseName": "AOD Bloody Hand Intro",
+  "ReleaseType": "C64 Crack intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199261.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/N/Ne7/Kampfbereit.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Army of Darkness"
+  ],
+  "Credits": [
+   "ne7"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207905/Bloody_Hand_Intro-AoD.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199246,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 24,
+  "ReleaseName": "Wedding Peach",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199246.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.16,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "Nordischsound"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207890/wedding_peach.sid",
+   "http://csdb.dk/getinternalfile.php/207888/wedding_peach.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199245,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 24,
+  "ReleaseName": "Berniemania",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199245.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/D/Deenen_Charles/Mantalos.sid",
+  "Rating": 9.27,
+  "ReleasedBy": [
+   "Pretzel Logic"
+  ],
+  "Credits": [
+   "Charles Deenen"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207885/berniemania.prg",
+   "https://c64.ch/data/productionfiles/Berniemania%20_2021-01-24__Pretzel%20Logic_.zip"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199238,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 23,
+  "ReleaseName": "Padua Is Growing",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199238.gif",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/T/Toggle/Redshift_Infinite.sid",
+  "Rating": 8,
+  "ReleasedBy": [
+   "Padua"
+  ],
+  "Credits": [
+   "Toggle"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207878/Toggle_-_Welc0me_Aboard_%5B8580%5D.sid",
+   "https://c64.ch/data/productionfiles/Padua%20Is%20Growing%20_2021-01-23__Padua_.zip",
+   "http://csdb.dk/getinternalfile.php/207877/padua_is_growing.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199223,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 23,
+  "ReleaseName": "F-Zero Big Blue",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199223.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Chris-Do"
+  ],
+  "Credits": [
+   "Chris-Do"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207861/F-Zero.sid",
+   "http://csdb.dk/getinternalfile.php/207864/F-Zero_Big_Blue.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199204,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 22,
+  "ReleaseName": "Promofiepen",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199204.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Warp 8"
+  ],
+  "Credits": [
+   "Warp 8"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207841/promofiepen.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199156,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 21,
+  "ReleaseName": "Big Angry Sprite",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199156.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 8.25,
+  "ReleasedBy": [
+   "Youth"
+  ],
+  "Credits": [
+   "Youth"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207789/yth-big_angry_sprite.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199136,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 20,
+  "ReleaseName": "Lee",
+  "ReleaseType": "C64 Graphics",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199136.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.79,
+  "ReleasedBy": [
+   "Fairlight"
+  ],
+  "Credits": [
+   "Qdor"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207765/LEE -TheSargeFLT.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 199135,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 1,
+  "ReleaseDay": 20,
+  "ReleaseName": "Color Barf",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199135.png",
+  "ReleasedAt": "Borderline 2021 Compo",
+  "SIDPath": "",
+  "Rating": 8.36,
+  "ReleasedBy": [
+   "Software of Sweden"
+  ],
+  "Credits": [
+   "Wolk"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/207764/color_barf.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
   "ReleaseID": 199049,
   "ReleaseYear": 2021,
   "ReleaseMonth": 1,
@@ -9,7 +887,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199049.png",
   "ReleasedAt": "",
   "SIDPath": "/MUSICIANS/B/Behdad_Arman/Forgiving.sid",
-  "Rating": 9.78,
+  "Rating": 9.33,
   "ReleasedBy": [
    "Artstate"
   ],
@@ -34,7 +912,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199042.png",
   "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 9.87,
+  "Rating": 9.88,
   "ReleasedBy": [
    "Soundstorm"
   ],
@@ -60,7 +938,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/199000/199018.png",
   "ReleasedAt": "",
   "SIDPath": "/DEMOS/G-L/GULBdata.sid",
-  "Rating": 9.75,
+  "Rating": 9.44,
   "ReleasedBy": [
    "Bonzai"
   ],
@@ -112,7 +990,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198994.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "/MUSICIANS/J/Jeff/Fiskeaande.sid",
-  "Rating": 8,
+  "Rating": 7.95,
   "ReleasedBy": [
    "Camelot"
   ],
@@ -163,7 +1041,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198987.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "",
-  "Rating": 9.25,
+  "Rating": 9.32,
   "ReleasedBy": [
    "Arsenic"
   ],
@@ -188,7 +1066,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198974.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "/DEMOS/S-Z/Ultimate_Intro_12.sid",
-  "Rating": 8.17,
+  "Rating": 7.77,
   "ReleasedBy": [
    "Tristar \u0026 Red Sector Inc."
   ],
@@ -213,7 +1091,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198971.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "",
-  "Rating": 9.56,
+  "Rating": 9.45,
   "ReleasedBy": [
    "Booze Design"
   ],
@@ -238,7 +1116,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198969.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "/MUSICIANS/D/DRAX/Clarence.sid",
-  "Rating": 9.16,
+  "Rating": 9.1,
   "ReleasedBy": [
    "Bonzai"
   ],
@@ -263,7 +1141,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198967.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "/MUSICIANS/J/Jammer/Stomp.sid",
-  "Rating": 7.72,
+  "Rating": 7.75,
   "ReleasedBy": [
    "Bonzai"
   ],
@@ -288,7 +1166,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198966.gif",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "",
-  "Rating": 9.42,
+  "Rating": 9.4,
   "ReleasedBy": [
    "Bonzai"
   ],
@@ -313,7 +1191,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198960.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "",
-  "Rating": 8.67,
+  "Rating": 8.68,
   "ReleasedBy": [
    "Geir Straume"
   ],
@@ -416,7 +1294,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198901.gif",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "/MUSICIANS/Z/Zardax/No_Conocida.sid",
-  "Rating": 8.65,
+  "Rating": 8.59,
   "ReleasedBy": [
    "Onslaught"
   ],
@@ -492,7 +1370,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198886.png",
   "ReleasedAt": "Borderline 2021 Compo",
   "SIDPath": "/MUSICIANS/S/Stainless_Steel/Beautiful.sid",
-  "Rating": 9.08,
+  "Rating": 9.06,
   "ReleasedBy": [
    "Fantastic 4 Cracking Group"
   ],
@@ -568,7 +1446,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198868.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "",
-  "Rating": 9.34,
+  "Rating": 9.25,
   "ReleasedBy": [
    "Finnish Gold"
   ],
@@ -645,7 +1523,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198862.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "/MUSICIANS/P/Psycho/Rust.sid",
-  "Rating": 8.58,
+  "Rating": 8.55,
   "ReleasedBy": [
    "TRS"
   ],
@@ -670,7 +1548,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198857.gif",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "",
-  "Rating": 9.13,
+  "Rating": 9.03,
   "ReleasedBy": [
    "Onslaught"
   ],
@@ -696,7 +1574,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198849.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "/MUSICIANS/B/Blues_Muz/Gallefoss_Glenn/DMC_Remix.sid",
-  "Rating": 8.25,
+  "Rating": 8.34,
   "ReleasedBy": [
    "Hitmen"
   ],
@@ -721,7 +1599,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198833.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "",
-  "Rating": 9.31,
+  "Rating": 9.19,
   "ReleasedBy": [
    "Bonzai"
   ],
@@ -824,7 +1702,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198768.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "/MUSICIANS/S/Shapie/No_Future.sid",
-  "Rating": 8.29,
+  "Rating": 8.15,
   "ReleasedBy": [
    "Cascade"
   ],
@@ -899,7 +1777,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198744.png",
   "ReleasedAt": "Intro Creation Competition 2020",
   "SIDPath": "/MUSICIANS/0-9/4-Mat/Empty_512_bytes.sid",
-  "Rating": 0,
+  "Rating": 7.83,
   "ReleasedBy": [
    "Laxity"
   ],
@@ -924,7 +1802,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198677.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "",
-  "Rating": 8.28,
+  "Rating": 8.21,
   "ReleasedBy": [
    "Atlantis"
   ],
@@ -949,7 +1827,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198673.png",
   "ReleasedAt": "Filterless Single Channel Compo 2020",
   "SIDPath": "",
-  "Rating": 9.5,
+  "Rating": 9.48,
   "ReleasedBy": [
    "Triad"
   ],
@@ -975,7 +1853,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198672.png",
   "ReleasedAt": "Only Sprites Compo",
   "SIDPath": "",
-  "Rating": 8.28,
+  "Rating": 8.23,
   "ReleasedBy": [
    "Genesis Project"
   ],
@@ -1153,7 +2031,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198628.png",
   "ReleasedAt": "Filterless Single Channel Compo 2020",
   "SIDPath": "",
-  "Rating": 9.7,
+  "Rating": 9.73,
   "ReleasedBy": [
    "MultiStyle Labs"
   ],
@@ -1163,887 +2041,6 @@
   "DownloadLinks": [
    "http://csdb.dk/getinternalfile.php/207215/Dude With Attitude.sid",
    "http://csdb.dk/getinternalfile.php/207213/Dude With Attitude.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198627,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 3,
-  "ReleaseName": "Happy New Year 2021",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198627.gif",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/B/Batsman/Santa_Claus_is_Coming_to_Town.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Hokuto Force"
-  ],
-  "Credits": [
-   "Båtsman"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207212/happynewyear2021sid-kimono-hf.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198626,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 31,
-  "ReleaseName": "Hogmanay Blues",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198626.png",
-  "ReleasedAt": "Hogmanay.party",
-  "SIDPath": "/MUSICIANS/B/Bayliss_Richard/Online.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Royal Belgian Beer Squadron"
-  ],
-  "Credits": [
-   "Richard"
-  ],
-  "DownloadLinks": [
-   "https://www.rbbs.be/files/rbbs-hogmanayblues.prg",
-   "http://csdb.dk/getinternalfile.php/207211/rbbs-hogmanayblues.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198615,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 3,
-  "ReleaseName": "Inspector Ironbeard and the Snowblind Case",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198615.png",
-  "ReleasedAt": "Filterless Single Channel Compo 2020",
-  "SIDPath": "",
-  "Rating": 10,
-  "ReleasedBy": [
-   "MultiStyle Labs"
-  ],
-  "Credits": [
-   "Linus"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207193/inspector-ironbeard-and-the-snowblind-case.sid",
-   "http://csdb.dk/getinternalfile.php/207194/inspector-ironbeard-and-the-snowblind-case.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198611,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 3,
-  "ReleaseName": "Druid Too",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198611.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.42,
-  "ReleasedBy": [
-   "Atlantis",
-   "Fairlight"
-  ],
-  "Credits": [
-   "Ald"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207189/druid_too.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198604,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 3,
-  "ReleaseName": "New 30 Years Low Resolution",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198604.gif",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.47,
-  "ReleasedBy": [
-   "Camelot"
-  ],
-  "Credits": [
-   "Linus"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207187/do-it-again.sid",
-   "http://csdb.dk/getinternalfile.php/207182/new_30_years_low_resolution.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198592,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 2,
-  "ReleaseName": "Another Year",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198592.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/D/DRAX/Mother.sid",
-  "Rating": 8.57,
-  "ReleasedBy": [
-   "Hitmen"
-  ],
-  "Credits": [
-   "Drax"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207169/another_year-HiT.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198582,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 1,
-  "ReleaseName": "Grandpa Only Went to Topless Beaches",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198582.png",
-  "ReleasedAt": "Filterless Single Channel Compo 2020",
-  "SIDPath": "",
-  "Rating": 9.82,
-  "ReleasedBy": [
-   "MultiStyle Labs"
-  ],
-  "Credits": [
-   "Linus"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207157/grandpa-only-went-to-topless-beaches.sid",
-   "http://csdb.dk/getinternalfile.php/207156/grandpa-only-went-to-topless-beaches.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198581,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 24,
-  "ReleaseName": "PETSCII WORLD #3",
-  "ReleaseType": "C64 Graphics",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198581.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/H/HIC/Merry_Xmas.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "XTRO"
-  ],
-  "Credits": [
-   "Hic"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207155/petscii world %233.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198580,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 24,
-  "ReleaseName": "PETSCII WORLD #2",
-  "ReleaseType": "C64 Graphics",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198580.png",
-  "ReleasedAt": "",
-  "SIDPath": "/DEMOS/0-9/2_Hours_NOT_Enough.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "XTRO"
-  ],
-  "Credits": [
-   "PhasedBased"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207153/petscii world %232.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198578,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 1,
-  "ReleaseName": "Carl Lewis Challenge Music",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198578.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Cosine"
-  ],
-  "Credits": [
-   "Odie"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207152/Carl_Lewis_Challenge.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198575,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 1,
-  "ReleaseName": "TND - Wet Paint Intro",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198575.png",
-  "ReleasedAt": "Intro Creation Competition 2020",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "The New Dimension"
-  ],
-  "Credits": [
-   "Richard"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207148/TND_Intro-Wet_Paint.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198571,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 1,
-  "ReleaseName": "Happy 2021",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198571.png",
-  "ReleasedAt": "Borderline 2021 Compo",
-  "SIDPath": "/MUSICIANS/D/Dlx/86400.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Rastah Bar"
-  ],
-  "Credits": [
-   "dLx"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207144/happy2021.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198565,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 1,
-  "ReleaseName": "Colored Intro V2",
-  "ReleaseType": "C64 Crack intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198565.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/L/Linus/Cruzer_on_Chocolate_Islands.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Excess"
-  ],
-  "Credits": [
-   "Linus"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207136/Colored Intro v2 %5Bex%5Dpalntsc  .prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198560,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 31,
-  "ReleaseName": "Unprecedented",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198560.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.23,
-  "ReleasedBy": [
-   "Dual Crew"
-  ],
-  "Credits": [
-   "Proton",
-   "Danko"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207131/unprecedented.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198558,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 31,
-  "ReleaseName": "Lovecats",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198558.png",
-  "ReleasedAt": "Hogmanay.party",
-  "SIDPath": "",
-  "Rating": 9.69,
-  "ReleasedBy": [
-   "Atlantis"
-  ],
-  "Credits": [
-   "DivertigO"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207166/atl-lovecats.prg",
-   "http://csdb.dk/getinternalfile.php/207127/atl-lovecats.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198555,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 1,
-  "ReleaseName": "Decade Blues",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198555.gif",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/S/SMC/Whipped_Cream.sid",
-  "Rating": 9.22,
-  "ReleasedBy": [
-   "Pretzel Logic"
-  ],
-  "Credits": [
-   "SMC"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207121/decade-blues.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198554,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 1,
-  "ReleaseName": "1981",
-  "ReleaseType": "C64 Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198554.png",
-  "ReleasedAt": "Hogmanay.party",
-  "SIDPath": "",
-  "Rating": 9.3,
-  "ReleasedBy": [
-   "Desire",
-   "Proxima"
-  ],
-  "Credits": [
-   "mAZE"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207123/mAZE - 1981_End%28Happy New Year%29.sid",
-   "http://csdb.dk/getinternalfile.php/207122/mAZE - 1981_Main%28Moskau%29.sid",
-   "http://csdb.dk/getinternalfile.php/207120/1981.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198551,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 1,
-  "ReleaseName": "Godt Nytår",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198551.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/K/Kasmo/Peace/Lets_Groove.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Arsenic"
-  ],
-  "Credits": [
-   "Peace"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207113/godt-nytar-release.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198550,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 1,
-  "ReleaseDay": 1,
-  "ReleaseName": "Tomb Dancer",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198550.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.63,
-  "ReleasedBy": [
-   "The Solution"
-  ],
-  "Credits": [
-   "DAM"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207126/Tomb_Dancer.sid",
-   "http://csdb.dk/getinternalfile.php/207112/tombdancer-tsn.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198549,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 31,
-  "ReleaseName": "Obscure Alcopops",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198549.png",
-  "ReleasedAt": "Hogmanay.party",
-  "SIDPath": "",
-  "Rating": 9.58,
-  "ReleasedBy": [
-   "Proxima",
-   "MultiStyle Labs",
-   "Atlantis"
-  ],
-  "Credits": [
-   "Mibri"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207111/Obscure_Alcopops.sid",
-   "http://csdb.dk/getinternalfile.php/207110/Obscure_Alcopops.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198547,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 31,
-  "ReleaseName": "Protogeo 100%",
-  "ReleaseType": "C64 Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198547.gif",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.49,
-  "ReleasedBy": [
-   "Glance"
-  ],
-  "Credits": [
-   "Hydrogen",
-   "Nightlord"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207108/protogeo100_glance.zip",
-   "http://csdb.dk/getinternalfile.php/207383/protogeo100_glance_w_note.zip"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198544,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 31,
-  "ReleaseName": "Hot Style #10 [polish]",
-  "ReleaseType": "C64 Diskmag",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198544.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Draco",
-   "Tropyx"
-  ],
-  "Credits": [
-   "Longhair",
-   "Dune",
-   "Eye",
-   "Praiser",
-   "MHD",
-   "Compod",
-   "Surgeon",
-   "Aki"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207105/Hot_Style_issue_10_TX_DRC.zip"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198534,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 31,
-  "ReleaseName": "Broken Calendar",
-  "ReleaseType": "C64 Graphics",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198534.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/B/Brian/Rick_Astley.sid",
-  "Rating": 7.79,
-  "ReleasedBy": [
-   "Genesis Project"
-  ],
-  "Credits": [
-   "Brian"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207094/BrokenCalendar.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198532,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 31,
-  "ReleaseName": "Salty Lemon",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198532.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Cosine"
-  ],
-  "Credits": [
-   "Odie"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207092/Salty Lemon.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198531,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 31,
-  "ReleaseName": "Cordis Monophonous",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198531.png",
-  "ReleasedAt": "Filterless Single Channel Compo 2020",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Offence"
-  ],
-  "Credits": [
-   "freQvibez"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207091/Cordis_Monophonous.sid",
-   "http://csdb.dk/getinternalfile.php/207090/cordis_monophonous.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198527,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 30,
-  "ReleaseName": "Inhale V2",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198527.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.71,
-  "ReleasedBy": [
-   "MultiStyle Labs"
-  ],
-  "Credits": [
-   "psych858o"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207085/Inhale-v2.sid",
-   "http://csdb.dk/getinternalfile.php/207086/Inhale v2_psych858o.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198517,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 30,
-  "ReleaseName": "Smooth and Wonders",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198517.png",
-  "ReleasedAt": "Only Sprites Compo",
-  "SIDPath": "",
-  "Rating": 9.03,
-  "ReleasedBy": [
-   "Singular"
-  ],
-  "Credits": [
-   "Vincenzo"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207074/Smooth_And_Wonders.sid",
-   "http://csdb.dk/getinternalfile.php/207073/Smooth_And_Wonders.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198516,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 30,
-  "ReleaseName": "PlasmaToy Version 2",
-  "ReleaseType": "C64 Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198516.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 8.67,
-  "ReleasedBy": [
-   "Defame"
-  ],
-  "Credits": [
-   "Kristian Røstøen",
-   "Coax"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207072/plasmatoy-v2-defame.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198492,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 29,
-  "ReleaseName": "Modwheel Pitch Symphony",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198492.png",
-  "ReleasedAt": "Filterless Single Channel Compo 2020",
-  "SIDPath": "",
-  "Rating": 5,
-  "ReleasedBy": [
-   "Stabile Altbauten"
-  ],
-  "Credits": [
-   "Stabile Altbauten"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207046/Modwheelpitchsym_Ein_Kanal.sid",
-   "http://csdb.dk/getinternalfile.php/207045/Modwheelpitchsym_Ein_Kanal.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198488,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 28,
-  "ReleaseName": "5 Years Without",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198488.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 8.4,
-  "ReleasedBy": [
-   "Rabenauge"
-  ],
-  "Credits": [
-   "dEViLOCk"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207040/5years-without.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198487,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 2,
-  "ReleaseName": "Corndogs Intro #7",
-  "ReleaseType": "C64 Crack intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198487.png",
-  "ReleasedAt": "",
-  "SIDPath": "/DEMOS/M-R/New_Dawn_Fades.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Corndogs"
-  ],
-  "Credits": [
-   "Mr. Phiz"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207039/corndogs-07.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198469,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 27,
-  "ReleaseName": "25 Years",
-  "ReleaseType": "C64 Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198469.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/C/Crowther_Antony/R1-D1_Unit_Attack.sid",
-  "Rating": 6.77,
-  "ReleasedBy": [
-   "Tropyx"
-  ],
-  "Credits": [
-   "Antony Crowther",
-   "Aki"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207030/25-years-tropyx.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198468,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 27,
-  "ReleaseName": "4k Intro for ICC 2020",
-  "ReleaseType": "C64 4K Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198468.png",
-  "ReleasedAt": "Intro Creation Competition 2020",
-  "SIDPath": "/MUSICIANS/B/Blues_Muz/Gallefoss_Glenn/Starlifter_3.sid",
-  "Rating": 8.82,
-  "ReleasedBy": [
-   "Excess"
-  ],
-  "Credits": [
-   "6R6"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207029/4kintro_icc2020 %5Bex%5D.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 198461,
-  "ReleaseYear": 2020,
-  "ReleaseMonth": 12,
-  "ReleaseDay": 27,
-  "ReleaseName": "Fantastic New Year!",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/198000/198461.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Fantastic 4 Cracking Group"
-  ],
-  "Credits": [
-   "Goerp"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/207021/hells_jingle.sid",
-   "http://csdb.dk/getinternalfile.php/207020/Fantastic 2021.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
