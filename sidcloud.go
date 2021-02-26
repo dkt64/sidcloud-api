@@ -1111,7 +1111,7 @@ func ReadLatestReleases() {
 
 				id, _ := strconv.Atoi(entry.ReleaseID)
 
-				var relTypesAllowed = [...]string{"C64 Music", "C64 Graphics", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo"}
+				var relTypesAllowed = [...]string{"C64 Music", "C64 Graphics", "C64 Demo", "C64 One-File Demo", "C64 Intro", "C64 4K Intro", "C64 Crack Intro", "C64 Music Collection", "C64 Graphics Collection", "C64 Diskmag", "C64 Charts", "C64 Invitation", "C64 1K Intro", "C64 Fake Demo"}
 				found := false
 				for _, rel := range releasesTemp {
 					if rel.ReleaseID == id {
