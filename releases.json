@@ -86,7 +86,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203672.png",
   "ReleasedAt": "Like It's '83 Music Compo 2021",
   "SIDPath": "",
-  "Rating": 9.31,
+  "Rating": 9.36,
   "ReleasedBy": [
    "MultiStyle Labs"
   ],
@@ -778,7 +778,7 @@
    "https://www.rbbs.be/files/transmission4k.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -804,7 +804,7 @@
    "http://csdb.dk/getinternalfile.php/212569/mutetus_only299.99.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -830,7 +830,7 @@
    "http://csdb.dk/getinternalfile.php/212565/last_call-tsn.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -856,7 +856,7 @@
    "https://c64.ch/data/productionfiles/Cosowi%20Avantgarde%20_2021-04-24__Plush_.zip"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -886,7 +886,7 @@
    "http://csdb.dk/getinternalfile.php/212559/unity_by_atlantis_and_padua.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
