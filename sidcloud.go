@@ -1632,9 +1632,48 @@ func CSDBGetLatestReleases(c *gin.Context) {
 	log.Println("[GIN:CSDBGetLatestReleases]")
 
 	ReadDb()
+
 	releasesTemp := releases
 
 	c.JSON(http.StatusOK, releasesTemp)
+}
+
+// CSDBGetRelease - jeden release
+// ================================================================================================
+func CSDBGetRelease(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+
+	// Info o wejściu do GET
+	log.Println("[GIN:CSDBGetRelease]")
+
+	ReadDb()
+
+	id := c.Param("id")
+
+	nr, err := strconv.Atoi(id)
+	if ErrCheck(err) {
+		found := false
+		if nr > 0 {
+			for _, rel := range releases {
+				if nr == rel.ReleaseID {
+					var releasesTemp []Release
+					releasesTemp = append(releasesTemp, rel)
+					c.JSON(http.StatusOK, releasesTemp)
+					found = true
+					break
+				}
+			}
+		}
+		if !found {
+			releasesTemp := releases
+			c.JSON(http.StatusOK, releasesTemp)
+
+		}
+	} else {
+		releasesTemp := releases
+		c.JSON(http.StatusOK, releasesTemp)
+	}
+
 }
 
 // AudioGetNew - granie utworu po nowemu
@@ -1945,6 +1984,7 @@ func main() {
 
 	r.GET("/api/v1/audio/:id", AudioGetNew)
 	r.GET("/api/v1/csdb_releases", CSDBGetLatestReleases)
+	r.GET("/api/v1/csdb_release/:id", CSDBGetRelease)
 	r.GET("/api/v1/hvsc_filter/:id", GetHVSCFilter)
 
 	//
