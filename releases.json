@@ -1,5 +1,134 @@
 [
  {
+  "ReleaseID": 203855,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 5,
+  "ReleaseDay": 5,
+  "ReleaseName": "Stardust Intro",
+  "ReleaseType": "C64 Crack Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203855.png",
+  "ReleasedAt": "CSDB C64 Fun Compo 2021",
+  "SIDPath": "/MUSICIANS/J/Jammer/Last_Crack.sid",
+  "Rating": 9.5,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Jammer"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/213079/Stardust_Intro%5BEX%5D.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".prg",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 203845,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 5,
+  "ReleaseDay": 5,
+  "ReleaseName": "Cachapaya",
+  "ReleaseType": "C64 4K Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203845.png",
+  "ReleasedAt": "CSDB C64 Fun Compo 2021",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Mayday!"
+  ],
+  "Credits": [
+   "Antony Crowther",
+   "Ben Daglish"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/213066/cachanewrip.sid",
+   "http://csdb.dk/getinternalfile.php/213065/Cachapaya2021.d64"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".sid",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 203774,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 5,
+  "ReleaseDay": 3,
+  "ReleaseName": "Deus Ex  - Hell's Kitchen",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203774.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.82,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "Nordischsound"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/212992/deus-ex_hells_kitchen.sid",
+   "http://csdb.dk/getinternalfile.php/212991/deus-ex_hells_kitchen.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".sid",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 203756,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 5,
+  "ReleaseDay": 2,
+  "ReleaseName": "The Cheetahmen Demo",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203756.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The Weekenders Demo Group"
+  ],
+  "Credits": [
+   "Waz"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/212969/The Cheetahmen Demo.d64"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".prg",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 203752,
+  "ReleaseYear": 2021,
+  "ReleaseMonth": 5,
+  "ReleaseDay": 2,
+  "ReleaseName": "Deus Ex  - Hong Kong",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203752.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.31,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "Nordischsound"
+  ],
+  "DownloadLinks": [
+   "http://csdb.dk/getinternalfile.php/212965/deus-ex_hong_kong.sid",
+   "http://csdb.dk/getinternalfile.php/212964/deus-ex_hong_kong.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": false,
+  "SrcExt": ".sid",
+  "Disabled": false
+ },
+ {
   "ReleaseID": 203704,
   "ReleaseYear": 2021,
   "ReleaseMonth": 5,
@@ -60,7 +189,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203675.png",
   "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 0,
+  "Rating": 9.26,
   "ReleasedBy": [
    "Alpha Flight"
   ],
@@ -86,7 +215,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203672.png",
   "ReleasedAt": "Like It's '83 Music Compo 2021",
   "SIDPath": "",
-  "Rating": 9.36,
+  "Rating": 9.38,
   "ReleasedBy": [
    "MultiStyle Labs"
   ],
@@ -112,7 +241,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203670.png",
   "ReleasedAt": "Like It's '83 Music Compo 2021",
   "SIDPath": "",
-  "Rating": 9.56,
+  "Rating": 9.45,
   "ReleasedBy": [
    "MultiStyle Labs"
   ],
@@ -193,7 +322,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203662.png",
   "ReleasedAt": "Like It's '83 Music Compo 2021",
   "SIDPath": "",
-  "Rating": 9.8,
+  "Rating": 9.58,
   "ReleasedBy": [
    "Padua"
   ],
@@ -246,7 +375,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203624.png",
   "ReleasedAt": "Like It's '83 Music Compo 2021",
   "SIDPath": "",
-  "Rating": 9.4,
+  "Rating": 9.46,
   "ReleasedBy": [
    "Hokuto Force"
   ],
@@ -298,7 +427,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203592.png",
   "ReleasedAt": "Like It's '83 Music Compo 2021",
   "SIDPath": "",
-  "Rating": 0,
+  "Rating": 8.71,
   "ReleasedBy": [
    "Saul Cross"
   ],
@@ -350,7 +479,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203554.png",
   "ReleasedAt": "Like It's '83 Music Compo 2021",
   "SIDPath": "",
-  "Rating": 9.79,
+  "Rating": 9.73,
   "ReleasedBy": [
    "MultiStyle Labs",
    "Elysium"
@@ -402,7 +531,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203536.png",
   "ReleasedAt": "Like It's '83 Music Compo 2021",
   "SIDPath": "",
-  "Rating": 0,
+  "Rating": 8.11,
   "ReleasedBy": [
    "Genesis Project"
   ],
@@ -428,7 +557,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203520.png",
   "ReleasedAt": "Like It's '83 Music Compo 2021",
   "SIDPath": "",
-  "Rating": 9.82,
+  "Rating": 9.79,
   "ReleasedBy": [
    "MultiStyle Labs"
   ],
@@ -454,7 +583,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203485.png",
   "ReleasedAt": "Like It's '83 Music Compo 2021",
   "SIDPath": "",
-  "Rating": 0,
+  "Rating": 8.17,
   "ReleasedBy": [
    "Lethargy",
    "Singular"
@@ -870,7 +999,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203390.gif",
   "ReleasedAt": "Transmission64",
   "SIDPath": "",
-  "Rating": 9.43,
+  "Rating": 9.41,
   "ReleasedBy": [
    "Padua",
    "Atlantis"
@@ -912,7 +1041,7 @@
    "https://c64.ch/data/productionfiles/Pandemoniac%20Part%201%20of%205%20Framed%20_2021-04-24__Panoramic%20Designs_.zip"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -938,7 +1067,7 @@
    "https://c64.ch/data/productionfiles/Is%20That%20All%20_2021-04-24__Genesis%20Project_.zip"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -964,7 +1093,7 @@
    "http://csdb.dk/getinternalfile.php/212553/lost_in_t.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -978,7 +1107,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203384.gif",
   "ReleasedAt": "Transmission64",
   "SIDPath": "",
-  "Rating": 9.1,
+  "Rating": 8.91,
   "ReleasedBy": [
    "Xenon"
   ],
@@ -991,7 +1120,7 @@
    "http://csdb.dk/getinternalfile.php/212551/Dutch_Blue_by_Xenon.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1017,7 +1146,7 @@
    "http://csdb.dk/getinternalfile.php/212549/ftz-balls_might_touch.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1043,7 +1172,7 @@
    "https://c64.ch/data/productionfiles/Guns%20Freak%20Me%20Out%20_2021-04-24__4gentE_.zip"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1068,7 +1197,7 @@
    "http://csdb.dk/getinternalfile.php/212547/Momentum.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1094,7 +1223,7 @@
    "https://c64.ch/data/productionfiles/Free%20Hasel%20_2021-04-24__The%20Codeblasters_.zip"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1108,7 +1237,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203376.gif",
   "ReleasedAt": "Transmission64",
   "SIDPath": "/MUSICIANS/P/Psycho/Boosted.sid",
-  "Rating": 8.64,
+  "Rating": 8.8,
   "ReleasedBy": [
    "Lepsi De"
   ],
@@ -1120,7 +1249,7 @@
    "https://c64.ch/data/productionfiles/T64%20_2021-04-24__Lepsi%20De_.zip"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1149,7 +1278,7 @@
    "http://csdb.dk/getinternalfile.php/212542/party-animals-pl.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1176,7 +1305,7 @@
    "http://csdb.dk/getinternalfile.php/212540/Call_Boar%27s_Head%21.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1204,7 +1333,7 @@
    "http://csdb.dk/getinternalfile.php/212538/shadetro%5Bex%5D.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1230,7 +1359,7 @@
    "http://csdb.dk/getinternalfile.php/212536/rollersc.zip"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1255,7 +1384,7 @@
    "http://csdb.dk/getinternalfile.php/212535/anon-ons.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1280,7 +1409,7 @@
    "http://csdb.dk/getinternalfile.php/212533/dentifrice_daah_those_berliner_pilsner%21.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1305,7 +1434,7 @@
    "http://csdb.dk/getinternalfile.php/212532/outsider.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1331,7 +1460,7 @@
    "http://csdb.dk/getinternalfile.php/212531/4ktransmission%5Bex%5D.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1357,7 +1486,7 @@
    "http://csdb.dk/getinternalfile.php/212528/ALD_The_Spark_in_Me.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1383,7 +1512,7 @@
    "http://csdb.dk/getinternalfile.php/212503/roly-they_cant_stop_the_signal.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1409,7 +1538,7 @@
    "http://csdb.dk/getinternalfile.php/212497/Jammer_Drummage.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1434,7 +1563,7 @@
    "http://csdb.dk/getinternalfile.php/212494/jamnflute.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1460,7 +1589,7 @@
    "http://csdb.dk/getinternalfile.php/212493/dalezy_-_verszagra-gyul-az-eji-vad.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1486,7 +1615,7 @@
    "http://csdb.dk/getinternalfile.php/212489/Inside My Rotten Soul.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1512,7 +1641,7 @@
    "http://csdb.dk/getinternalfile.php/212490/RROTF.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1539,7 +1668,7 @@
    "http://csdb.dk/getinternalfile.php/212484/Inverse_Mirror_Fragments.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1565,7 +1694,7 @@
    "http://csdb.dk/getinternalfile.php/212486/wave-sst.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1591,7 +1720,7 @@
    "http://csdb.dk/getinternalfile.php/212482/a waste of space by chuinho.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1617,7 +1746,7 @@
    "http://csdb.dk/getinternalfile.php/212480/we_are_pretzels.D64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1642,7 +1771,7 @@
    "http://csdb.dk/getinternalfile.php/212475/heidi_picture.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1668,7 +1797,7 @@
    "http://csdb.dk/getinternalfile.php/212467/bb.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1682,7 +1811,7 @@
   "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203310.png",
   "ReleasedAt": "Kids TV Show Music Compo",
   "SIDPath": "",
-  "Rating": 9.38,
+  "Rating": 9.29,
   "ReleasedBy": [
    "Hoaxers"
   ],
@@ -1694,7 +1823,7 @@
    "http://csdb.dk/getinternalfile.php/212462/hoax-man.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1720,7 +1849,7 @@
    "http://csdb.dk/getinternalfile.php/212460/Catweazle-GP.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1746,7 +1875,7 @@
    "http://csdb.dk/getinternalfile.php/212455/RapidNews %2317 by Excess.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1772,7 +1901,7 @@
    "http://csdb.dk/getinternalfile.php/212441/s3rl.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1798,7 +1927,7 @@
    "http://csdb.dk/getinternalfile.php/212439/tom_and_jerry.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1824,7 +1953,7 @@
    "http://csdb.dk/getinternalfile.php/212437/pippi.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1850,7 +1979,7 @@
    "http://csdb.dk/getinternalfile.php/212434/heidi.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1876,7 +2005,7 @@
    "http://csdb.dk/getinternalfile.php/212334/the-tripods.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1902,7 +2031,7 @@
    "http://csdb.dk/getinternalfile.php/212305/quidlington.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -1927,7 +2056,7 @@
    "http://csdb.dk/getinternalfile.php/212303/w.and gromit-ons.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -1952,111 +2081,7 @@
    "http://csdb.dk/getinternalfile.php/212302/back to 1983-ons.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
-  "SrcExt": ".prg",
-  "Disabled": false
- },
- {
-  "ReleaseID": 203136,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 19,
-  "ReleaseName": "The Ren \u0026 Stimpy Show Theme",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203136.png",
-  "ReleasedAt": "Kids TV Show Music Compo",
-  "SIDPath": "",
-  "Rating": 9.4,
-  "ReleasedBy": [
-   "Wrenchotron"
-  ],
-  "Credits": [
-   "jab"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/212261/the_ren_and_stimpy_show_theme.sid",
-   "http://csdb.dk/getinternalfile.php/212260/the_ren_and_stimpy_show_theme.prg"
-  ],
-  "SrcCached": true,
-  "WAVCached": false,
-  "SrcExt": ".sid",
-  "Disabled": false
- },
- {
-  "ReleaseID": 203135,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 18,
-  "ReleaseName": "Eight C64 Games in Six Minutes",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203135.png",
-  "ReleasedAt": "Like It's '83 Music Compo 2021",
-  "SIDPath": "",
-  "Rating": 8.9,
-  "ReleasedBy": [
-   "MultiStyle Labs"
-  ],
-  "Credits": [
-   "chuinho"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/212259/eight c64 games in six minutes %28music box%29.sid",
-   "http://csdb.dk/getinternalfile.php/212258/eight c64 games in six minutes %28compo entry%29.sid",
-   "http://csdb.dk/getinternalfile.php/212257/eight c64 games in six minutes.prg"
-  ],
-  "SrcCached": true,
-  "WAVCached": false,
-  "SrcExt": ".sid",
-  "Disabled": false
- },
- {
-  "ReleaseID": 203132,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 18,
-  "ReleaseName": "Rat Catcher",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203132.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Lula"
-  ],
-  "Credits": [
-   "Lula"
-  ],
-  "DownloadLinks": [
-   "http://csdb.dk/getinternalfile.php/212254/ratcatcher.d64"
-  ],
-  "SrcCached": true,
-  "WAVCached": false,
-  "SrcExt": ".prg",
-  "Disabled": false
- },
- {
-  "ReleaseID": 203081,
-  "ReleaseYear": 2021,
-  "ReleaseMonth": 4,
-  "ReleaseDay": 17,
-  "ReleaseName": "Seaworld",
-  "ReleaseType": "C64 Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/203000/203081.png",
-  "ReleasedAt": "Vintage Computing Carinthia $0F",
-  "SIDPath": "",
-  "Rating": 8.67,
-  "ReleasedBy": [
-   "Blazon"
-  ],
-  "Credits": [
-   "SigmaZeven"
-  ],
-  "DownloadLinks": [
-   "https://c64.ch/data/productionfiles/seaworld.zip",
-   "http://csdb.dk/getinternalfile.php/212201/blazon-seaworld.d64"
-  ],
-  "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  }
