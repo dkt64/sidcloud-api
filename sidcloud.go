@@ -782,11 +782,11 @@ func DownloadFiles() {
 						// SendEmail("Nowa produkcja na CSDB.DK: " + newRelease.ReleaseName + " by " + newRelease.ReleasedBy[0])
 					}
 
-					if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".sid") {
-						newRelease.SrcExt = ".sid"
-					}
 					if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".prg") {
 						newRelease.SrcExt = ".prg"
+					}
+					if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".sid") {
+						newRelease.SrcExt = ".sid"
 					}
 
 					releases[index] = newRelease
