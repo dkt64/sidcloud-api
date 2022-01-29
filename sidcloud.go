@@ -723,41 +723,47 @@ func DownloadFiles() {
 
 	log.Println("[DownloadFiles] LOOP")
 
-	for index, newRelease := range releases {
-		if len(newRelease.DownloadLinks) > 0 {
+	for index, rel := range releases {
+		if len(rel.DownloadLinks) > 0 {
 			filename := cacheDir
 			foundSID := false
 
-			for _, dl := range newRelease.DownloadLinks {
+			var downloadLinkIndex int
+
+			for i, dl := range rel.DownloadLinks {
 				if strings.Contains(dl, ".sid") || strings.Contains(dl, ".SID") {
-					filename += strconv.Itoa(newRelease.ReleaseID) + ".sid"
+					filename += strconv.Itoa(rel.ReleaseID) + ".sid"
 					foundSID = true
+					downloadLinkIndex = i
 					break
 				}
 			}
 			if !foundSID {
-				for _, dl := range newRelease.DownloadLinks {
+				for i, dl := range rel.DownloadLinks {
 					if strings.Contains(dl, ".prg") || strings.Contains(dl, ".PRG") {
-						filename += strconv.Itoa(newRelease.ReleaseID) + ".prg"
+						filename += strconv.Itoa(rel.ReleaseID) + ".prg"
 						foundSID = true
+						downloadLinkIndex = i
 						break
 					}
 				}
 			}
 			if !foundSID {
-				for _, dl := range newRelease.DownloadLinks {
+				for i, dl := range rel.DownloadLinks {
 					if strings.Contains(dl, ".zip") || strings.Contains(dl, ".ZIP") {
-						filename += strconv.Itoa(newRelease.ReleaseID) + ".zip"
+						filename += strconv.Itoa(rel.ReleaseID) + ".zip"
 						foundSID = true
+						downloadLinkIndex = i
 						break
 					}
 				}
 			}
 			if !foundSID {
-				for _, dl := range newRelease.DownloadLinks {
+				for i, dl := range rel.DownloadLinks {
 					if strings.Contains(dl, ".d64") || strings.Contains(dl, ".D64") {
-						filename += strconv.Itoa(newRelease.ReleaseID) + ".d64"
+						filename += strconv.Itoa(rel.ReleaseID) + ".d64"
 						foundSID = true
+						downloadLinkIndex = i
 						break
 					}
 				}
@@ -766,30 +772,31 @@ func DownloadFiles() {
 			// Dodajemy new release
 			// ale tylko jeżeli mamy niezbędne info o produkcji
 			if filename != "" {
-				if !newRelease.SrcCached || !(fileExists(cacheDir+strconv.Itoa(newRelease.ReleaseID)+".sid") || fileExists(cacheDir+strconv.Itoa(newRelease.ReleaseID)+".prg")) {
-					_, err := DownloadFile(filename, newRelease.DownloadLinks[0], newRelease.ReleaseID)
+				// if !rel.SrcCached || !(fileExists(cacheDir+strconv.Itoa(rel.ReleaseID)+".sid") || fileExists(cacheDir+strconv.Itoa(rel.ReleaseID)+".prg")) {
+				if !rel.SrcCached {
+					_, err := DownloadFile(filename, rel.DownloadLinks[downloadLinkIndex], rel.ReleaseID)
 
 					if ErrCheck(err) {
 						// Sprawdzay czy istnieje SID lub PRG
-						if fileExists(cacheDir+strconv.Itoa(newRelease.ReleaseID)+".sid") || fileExists(cacheDir+strconv.Itoa(newRelease.ReleaseID)+".prg") {
-							newRelease.SrcCached = true
+						if fileExists(cacheDir+strconv.Itoa(rel.ReleaseID)+".sid") || fileExists(cacheDir+strconv.Itoa(rel.ReleaseID)+".prg") {
+							rel.SrcCached = true
 							log.Println("[DownloadFiles] File cached")
 						} else {
 							log.Println("[DownloadFiles] File not cached")
-							newRelease.SrcCached = false
-							newRelease.WAVCached = false
+							rel.SrcCached = false
+							rel.WAVCached = false
 						}
-						// SendEmail("Nowa produkcja na CSDB.DK: " + newRelease.ReleaseName + " by " + newRelease.ReleasedBy[0])
+						// SendEmail("Nowa produkcja na CSDB.DK: " + rel.ReleaseName + " by " + rel.ReleasedBy[0])
 					}
 
-					if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".prg") {
-						newRelease.SrcExt = ".prg"
+					if fileExists(cacheDir + strconv.Itoa(rel.ReleaseID) + ".prg") {
+						rel.SrcExt = ".prg"
 					}
-					if fileExists(cacheDir + strconv.Itoa(newRelease.ReleaseID) + ".sid") {
-						newRelease.SrcExt = ".sid"
+					if fileExists(cacheDir + strconv.Itoa(rel.ReleaseID) + ".sid") {
+						rel.SrcExt = ".sid"
 					}
 
-					releases[index] = newRelease
+					releases[index] = rel
 
 					WriteDb()
 				}
@@ -1039,6 +1046,22 @@ func updateReleaseInfo(index int, newRelease Release) {
 	}
 	if !fileExists(cacheDir + strconv.Itoa(releases[index].ReleaseID) + ".wav") {
 		releases[index].WAVCached = false
+	}
+
+	// Jeżeli pojawił się SID a wcześniej był PRG to trzeba to przetworzyć
+	var sidFilePresent bool
+	sidFilePresent = false
+	for _, link := range newRelease.DownloadLinks {
+		if strings.Contains(link, ".sid") || strings.Contains(link, ".SID") {
+			sidFilePresent = true
+			break
+		}
+	}
+
+	if (releases[index].SrcExt == ".prg" || releases[index].SrcExt == ".PRG") && sidFilePresent {
+		releases[index].SrcCached = false
+		releases[index].WAVCached = false
+		releases[index].SrcExt = ""
 	}
 }
 
