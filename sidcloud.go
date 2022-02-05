@@ -186,6 +186,10 @@ var releases []Release
 // ================================================================================================
 var csdb []Release
 
+// allReleases - glówna i globalna tablica ze wszystkimi produkcjami
+// ================================================================================================
+var allReleases []Release
+
 // sidplayExe - nazwa EXE dla siplayfp
 // ================================================================================================
 var sidplayExe string
@@ -968,7 +972,15 @@ func CreateWAVFiles() {
 					cmdName = sidplayExe // zakładamy że jest zainstalowany
 				}
 
-				log.Println("[CreateWAVFiles] Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + model + " " + paramName + " " + filenameSID + ")")
+				if rel.SrcExt == ".prg" {
+					// drugi i trzeci sid gdy mamy tylko PRG
+					cmdName += " -ds0xd420 -ts0xd440"
+				}
+
+				// stereo
+				stereo := "-s"
+
+				log.Println("[CreateWAVFiles] Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + stereo + " " + model + " " + paramName + " " + filenameSID + ")")
 				cmd := exec.Command(cmdName, czas, model, paramName, filenameSID)
 				errStart := cmd.Start()
 
