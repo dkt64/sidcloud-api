@@ -600,7 +600,7 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 
 				// log.Println(file.Name)
 
-				if strings.Contains(file.Name, ".sid") && !file.FileInfo().IsDir() {
+				if (strings.Contains(file.Name, ".sid") || strings.Contains(file.Name, ".SID")) && !file.FileInfo().IsDir() {
 
 					log.Println("[DownloadFile] Found SID file")
 					ext = ".sid"
@@ -631,7 +631,7 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 
 				// log.Println(file.Name)
 
-				if strings.Contains(file.Name, ".prg") && !file.FileInfo().IsDir() {
+				if (strings.Contains(file.Name, ".prg") || strings.Contains(file.Name, ".PRG")) && !file.FileInfo().IsDir() {
 
 					// Sprawdzamy czy PRG ładuje się pod $0801
 					zippedFile, err := file.Open()
@@ -676,7 +676,7 @@ func DownloadFile(filepath string, url string, id int) (string, error) {
 
 				// log.Println(file.Name)
 
-				if strings.Contains(file.Name, ".d64") && !file.FileInfo().IsDir() {
+				if (strings.Contains(file.Name, ".d64") || strings.Contains(file.Name, ".D64")) && !file.FileInfo().IsDir() {
 
 					// log.Println("[DownloadFile] Found D64 file")
 					log.Println("[DownloadFile] File extracted: " + file.Name + " with ID " + strconv.Itoa(id))
@@ -972,16 +972,17 @@ func CreateWAVFiles() {
 					cmdName = sidplayExe // zakładamy że jest zainstalowany
 				}
 
+				additionalSIDs := ""
 				if rel.SrcExt == ".prg" {
 					// drugi i trzeci sid gdy mamy tylko PRG
-					cmdName += " -ds0xd420 -ts0xd440"
+					additionalSIDs = "-ds0xd420 -ts0xd440"
 				}
 
 				// stereo
 				stereo := "-s"
 
-				log.Println("[CreateWAVFiles] Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + stereo + " " + model + " " + paramName + " " + filenameSID + ")")
-				cmd := exec.Command(cmdName, czas, model, paramName, filenameSID)
+				log.Println("[CreateWAVFiles] Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + additionalSIDs + " " + stereo + " " + model + " " + paramName + " " + filenameSID + ")")
+				cmd := exec.Command(cmdName, czas, additionalSIDs, stereo, model, paramName, filenameSID)
 				errStart := cmd.Start()
 
 				if ErrCheck(errStart) {

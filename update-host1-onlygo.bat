@@ -1,0 +1,2 @@
+c:\tools\pscp -P 22 -i "%USERPROFILE%\.ssh\host1.ppk" sidcloud.go root@185.157.81.123:/root/go/src/github.com/dkt64/sidcloud-api
+ssh -i "C:\Users\Bartosz Apanasewicz\.ssh\host1" root@185.157.81.123 /bin/bash -c 'systemctl restart sidcloud'
