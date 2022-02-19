@@ -811,7 +811,7 @@ func DownloadFiles() {
 
 // WAVPrepare - Usuwa puste miejsca w pliku WAV, wycisza, wzmacnia
 // ================================================================================================
-func WAVPrepare(filename string) error {
+func WAVPrepare(filename string, r Release) error {
 
 	var size int64
 	if fileExists(filename) {
@@ -838,38 +838,42 @@ func WAVPrepare(filename string) error {
 			// Wycinamy początkowe śmieci
 			p = append(p[:wavHeaderSize], p[0x2000+wavHeaderSize:]...)
 
-			var i int
-			for i = wavHeaderSize; i < (len(p) - 2); i = i + 2 {
-				if (p[i] < 0xFA && p[i] > 5) || p[i+1] != 0 {
-					// Wycinamy początkową ciszę
-					log.Println("[WAVPrepare] Wycinam początkową ciszę do " + strconv.Itoa(i))
-					p = append(p[:wavHeaderSize], p[i:]...)
-					break
-				}
-			}
-
-			const silTime5seconds = 44100 * 5 // = 5 sekund
-
 			sil := 0
-			for i = int(wavTime10seconds) + wavHeaderSize; i < (len(p) - 2); i = i + 2 {
-				if (p[i] >= 0xFA && p[i+1] == 0xFF) || (p[i] <= 5 && p[i+1] == 0) {
-					sil++
-					// log.Println("[WAVPrepare] Found zeroes at " + strconv.Itoa(i))
-					if sil > silTime5seconds {
-						// Wycinamy końcową ciszę
-						log.Println("[WAVPrepare] Wycinam końcową ciszę od " + strconv.Itoa(i))
-						p = append(p[:i], p[len(p):]...)
+
+			if r.SrcExt == ".prg" {
+				var i int
+				for i = wavHeaderSize; i < (len(p) - 2); i = i + 2 {
+					if (p[i] < 0xFA && p[i] > 5) || p[i+1] != 0 {
+						// Wycinamy początkową ciszę
+						log.Println("[WAVPrepare] Wycinam początkową ciszę do " + strconv.Itoa(i))
+						p = append(p[:wavHeaderSize], p[i:]...)
 						break
 					}
-				} else {
-					sil = 0
 				}
-			}
 
-			// Przycięcie do max 5 minut
+				const silTime5seconds = 44100 * 5 // = 5 sekund
 
-			if len(p) > int(wavTime5minutes+wavHeaderSize) {
-				p = append(p[:wavTime5minutes+wavHeaderSize], p[len(p):]...)
+				for i = int(wavTime10seconds) + wavHeaderSize; i < (len(p) - 2); i = i + 2 {
+					if (p[i] >= 0xFA && p[i+1] == 0xFF) || (p[i] <= 5 && p[i+1] == 0) {
+						sil++
+						// log.Println("[WAVPrepare] Found zeroes at " + strconv.Itoa(i))
+						if sil > silTime5seconds {
+							// Wycinamy końcową ciszę
+							log.Println("[WAVPrepare] Wycinam końcową ciszę od " + strconv.Itoa(i))
+							p = append(p[:i], p[len(p):]...)
+							break
+						}
+					} else {
+						sil = 0
+					}
+				}
+
+				// Przycięcie do max 5 minut
+
+				if len(p) > int(wavTime5minutes+wavHeaderSize) {
+					p = append(p[:wavTime5minutes+wavHeaderSize], p[len(p):]...)
+				}
+
 			}
 
 			// Wzmocnienie i wyciszenie
@@ -981,8 +985,16 @@ func CreateWAVFiles() {
 				// stereo
 				stereo := "-s"
 
-				log.Println("[CreateWAVFiles] Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + additionalSIDs + " " + stereo + " " + model + " " + paramName + " " + filenameSID + ")")
-				cmd := exec.Command(cmdName, czas, additionalSIDs, stereo, model, paramName, filenameSID)
+				var cmd exec.Cmd
+
+				if rel.SrcExt == ".prg" {
+					log.Println("[CreateWAVFiles PRG] Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + additionalSIDs + " " + stereo + " " + model + " " + paramName + " " + filenameSID + ")")
+					cmd = *exec.Command(cmdName, czas, additionalSIDs, stereo, model, paramName, filenameSID)
+				} else {
+					log.Println("[CreateWAVFiles SID] Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + stereo + " " + model + " " + paramName + " " + filenameSID + ")")
+					cmd = *exec.Command(cmdName, czas, stereo, model, paramName, filenameSID)
+				}
+
 				errStart := cmd.Start()
 
 				if ErrCheck(errStart) {
@@ -1004,7 +1016,7 @@ func CreateWAVFiles() {
 
 						// if fileExists(filenameWAV) && size >= wavSize {
 						if fileExists(filenameWAV) && ErrCheck(err) {
-							WAVPrepare(filenameWAV)
+							WAVPrepare(filenameWAV, rel)
 							releases[index].WAVCached = true
 							log.Println("[CreateWAVFiles] " + filenameWAV + " cached")
 							WriteDb()
