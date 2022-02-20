@@ -44,11 +44,11 @@ const defaultBufferSize = 1024 * 32
 
 const wavHeaderSize = 44 // rozmiar nagłówka WAV
 
-const wavTime5minutes int64 = 44100 * 2 * 300 // = 5 min
+const wavTime5minutes int64 = 44100 * 4 * 300 // = 5 min
 
-const wavTime10seconds int64 = 44100 * 2 * 10 // = 10 sekund
+const wavTime10seconds int64 = 44100 * 4 * 10 // = 10 sekund
 
-const wavTime5seconds int64 = 44100 * 2 * 5 // = 5 sekund
+const wavTime5seconds int64 = 44100 * 4 * 5 // = 5 sekund
 
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
@@ -840,40 +840,37 @@ func WAVPrepare(filename string, r Release) error {
 
 			sil := 0
 
-			if r.SrcExt == ".prg" {
-				var i int
-				for i = wavHeaderSize; i < (len(p) - 2); i = i + 2 {
-					if (p[i] < 0xFA && p[i] > 5) || p[i+1] != 0 {
-						// Wycinamy początkową ciszę
-						log.Println("[WAVPrepare] Wycinam początkową ciszę do " + strconv.Itoa(i))
-						p = append(p[:wavHeaderSize], p[i:]...)
+			var i int
+			for i = wavHeaderSize; i < (len(p) - 2); i = i + 2 {
+				if (p[i] < 0xFA && p[i] > 5) || p[i+1] != 0 {
+					// Wycinamy początkową ciszę
+					log.Println("[WAVPrepare] Wycinam początkową ciszę do " + strconv.Itoa(i))
+					p = append(p[:wavHeaderSize], p[i:]...)
+					break
+				}
+			}
+
+			const silTime5seconds = 44100 * 5 // = 5 sekund
+
+			for i = int(wavTime10seconds) + wavHeaderSize; i < (len(p) - 2); i = i + 2 {
+				if (p[i] >= 0xFA && p[i+1] == 0xFF) || (p[i] <= 5 && p[i+1] == 0) {
+					sil++
+					// log.Println("[WAVPrepare] Found zeroes at " + strconv.Itoa(i))
+					if sil > silTime5seconds {
+						// Wycinamy końcową ciszę
+						log.Println("[WAVPrepare] Wycinam końcową ciszę od " + strconv.Itoa(i))
+						p = append(p[:i], p[len(p):]...)
 						break
 					}
+				} else {
+					sil = 0
 				}
+			}
 
-				const silTime5seconds = 44100 * 5 // = 5 sekund
+			// Przycięcie do max 5 minut
 
-				for i = int(wavTime10seconds) + wavHeaderSize; i < (len(p) - 2); i = i + 2 {
-					if (p[i] >= 0xFA && p[i+1] == 0xFF) || (p[i] <= 5 && p[i+1] == 0) {
-						sil++
-						// log.Println("[WAVPrepare] Found zeroes at " + strconv.Itoa(i))
-						if sil > silTime5seconds {
-							// Wycinamy końcową ciszę
-							log.Println("[WAVPrepare] Wycinam końcową ciszę od " + strconv.Itoa(i))
-							p = append(p[:i], p[len(p):]...)
-							break
-						}
-					} else {
-						sil = 0
-					}
-				}
-
-				// Przycięcie do max 5 minut
-
-				if len(p) > int(wavTime5minutes+wavHeaderSize) {
-					p = append(p[:wavTime5minutes+wavHeaderSize], p[len(p):]...)
-				}
-
+			if len(p) > int(wavTime5minutes+wavHeaderSize) {
+				p = append(p[:wavTime5minutes+wavHeaderSize], p[len(p):]...)
 			}
 
 			// Wzmocnienie i wyciszenie
