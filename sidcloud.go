@@ -40,15 +40,19 @@ const historyMaxEntries = 80
 
 const historyMaxMonths = 3
 
-const defaultBufferSize = 1024 * 32
-
 const wavHeaderSize = 44 // rozmiar nagłówka WAV
 
-const wavTime5minutes int64 = 44100 * 4 * 300 // = 5 min
+const wavTime5minutesSID int64 = 44100 * 4 * 300 // = 5 min
 
-const wavTime10seconds int64 = 44100 * 4 * 10 // = 10 sekund
+const wavTime10secondsSID int64 = 44100 * 4 * 10 // = 10 sekund
 
-const wavTime5seconds int64 = 44100 * 4 * 5 // = 5 sekund
+const wavTime5secondsSID int64 = 44100 * 4 * 5 // = 5 sekund
+
+const wavTime5minutesPRG int64 = 44100 * 4 * 300 // = 5 min
+
+const wavTime10secondsPRG int64 = 44100 * 4 * 10 // = 10 sekund
+
+const wavTime5secondsPRG int64 = 44100 * 4 * 5 // = 5 sekund
 
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
@@ -186,10 +190,6 @@ var releases []Release
 // ================================================================================================
 var csdb []Release
 
-// allReleases - glówna i globalna tablica ze wszystkimi produkcjami
-// ================================================================================================
-var allReleases []Release
-
 // sidplayExe - nazwa EXE dla siplayfp
 // ================================================================================================
 var sidplayExe string
@@ -221,10 +221,7 @@ func ErrCheck(errNr error) bool {
 // ErrCheck2 - obsługa błedów bez komunikatu
 // ================================================================================================
 func ErrCheck2(errNr error) bool {
-	if errNr != nil {
-		return false
-	}
-	return true
+	return errNr == nil
 }
 
 // ReadDb - Odczyt bazy
@@ -271,9 +268,9 @@ func WriteHVSCJson() {
 
 // insertRelease - Wstawienie release'u do slice
 // ================================================================================================
-func insertRelease(array []Release, value Release, index int) []Release {
-	return append(array[:index], append([]Release{value}, array[index:]...)...)
-}
+// func insertRelease(array []Release, value Release, index int) []Release {
+// 	return append(array[:index], append([]Release{value}, array[index:]...)...)
+// }
 
 // Difference - Różnica pomiędzy dwoma slice
 // ================================================================================================
@@ -425,21 +422,21 @@ func ExtractD64(filename string) ([]byte, bool) {
 // Sortowanie datami
 // ================================================================================================
 
-type byDate []Release
+// type byDate []Release
 
-func (s byDate) Len() int {
-	return len(s)
-}
-func (s byDate) Swap(i, j int) {
-	s[i], s[j] = s[j], s[i]
-}
-func (s byDate) Less(i, j int) bool {
+// func (s byDate) Len() int {
+// 	return len(s)
+// }
+// func (s byDate) Swap(i, j int) {
+// 	s[i], s[j] = s[j], s[i]
+// }
+// func (s byDate) Less(i, j int) bool {
 
-	d1 := time.Date(s[i].ReleaseYear, time.Month(s[i].ReleaseMonth), s[i].ReleaseDay, 0, 0, 0, 0, time.Local)
-	d2 := time.Date(s[j].ReleaseYear, time.Month(s[j].ReleaseMonth), s[j].ReleaseDay, 0, 0, 0, 0, time.Local)
+// 	d1 := time.Date(s[i].ReleaseYear, time.Month(s[i].ReleaseMonth), s[i].ReleaseDay, 0, 0, 0, 0, time.Local)
+// 	d2 := time.Date(s[j].ReleaseYear, time.Month(s[j].ReleaseMonth), s[j].ReleaseDay, 0, 0, 0, 0, time.Local)
 
-	return d2.Before(d1)
-}
+// 	return d2.Before(d1)
+// }
 
 // Sortowanie byID
 // ================================================================================================
@@ -459,23 +456,23 @@ func (s byID) Less(i, j int) bool {
 // Sortowanie datami i ID
 // ================================================================================================
 
-type byDateAndID []Release
+// type byDateAndID []Release
 
-func (s byDateAndID) Len() int {
-	return len(s)
-}
-func (s byDateAndID) Swap(i, j int) {
-	s[i], s[j] = s[j], s[i]
-}
-func (s byDateAndID) Less(i, j int) bool {
+// func (s byDateAndID) Len() int {
+// 	return len(s)
+// }
+// func (s byDateAndID) Swap(i, j int) {
+// 	s[i], s[j] = s[j], s[i]
+// }
+// func (s byDateAndID) Less(i, j int) bool {
 
-	d1 := time.Date(s[i].ReleaseYear, time.Month(s[i].ReleaseMonth), s[i].ReleaseDay, 0, 0, 0, 0, time.Local)
-	d2 := time.Date(s[j].ReleaseYear, time.Month(s[j].ReleaseMonth), s[j].ReleaseDay, 0, 0, 0, 0, time.Local)
-	id1 := s[i].ReleaseID
-	id2 := s[j].ReleaseID
+// 	d1 := time.Date(s[i].ReleaseYear, time.Month(s[i].ReleaseMonth), s[i].ReleaseDay, 0, 0, 0, 0, time.Local)
+// 	d2 := time.Date(s[j].ReleaseYear, time.Month(s[j].ReleaseMonth), s[j].ReleaseDay, 0, 0, 0, 0, time.Local)
+// 	id1 := s[i].ReleaseID
+// 	id2 := s[j].ReleaseID
 
-	return d2.Before(d1) && id1 > id2
-}
+// 	return d2.Before(d1) && id1 > id2
+// }
 
 // fileExists - sprawdzenie czy plik istnieje
 // ================================================================================================
@@ -852,6 +849,20 @@ func WAVPrepare(filename string, r Release) error {
 
 			const silTime5seconds = 44100 * 5 // = 5 sekund
 
+			var wavTime10seconds int64 = 0
+			var wavTime5minutes int64 = 0
+			var wavTime5seconds int64 = 0
+
+			if r.SrcExt == ".prg" {
+				wavTime10seconds = wavTime10secondsPRG
+				wavTime5minutes = wavTime5minutesPRG
+				wavTime5seconds = wavTime5secondsPRG
+			} else {
+				wavTime10seconds = wavTime10secondsSID
+				wavTime5minutes = wavTime5minutesSID
+				wavTime5seconds = wavTime5secondsSID
+			}
+
 			for i = int(wavTime10seconds) + wavHeaderSize; i < (len(p) - 2); i = i + 2 {
 				if (p[i] >= 0xFA && p[i+1] == 0xFF) || (p[i] <= 5 && p[i+1] == 0) {
 					sil++
@@ -886,8 +897,7 @@ func WAVPrepare(filename string, r Release) error {
 				}
 
 				// Wzmocnienie głośności (domyślnie x 1.25)
-				var valInt1 int16
-				valInt1 = int16(p[ix]) + 256*int16(p[ix+1])
+				valInt1 := int16(p[ix]) + 256*int16(p[ix+1])
 
 				var valFloat float64
 				valFloat = float64(valInt1) * vol
@@ -897,10 +907,8 @@ func WAVPrepare(filename string, r Release) error {
 				if valFloat < -32766 {
 					valFloat = -32766
 				}
-				var valInt2 int16
-				valInt2 = int16(math.Round(valFloat))
-				var valInt3 uint16
-				valInt3 = uint16(valInt2)
+				valInt2 := int16(math.Round(valFloat))
+				valInt3 := uint16(valInt2)
 
 				p[ix] = byte(valInt3 & 0xff)
 				p[ix+1] = byte((valInt3 & 0xff00) >> 8)
@@ -915,7 +923,7 @@ func WAVPrepare(filename string, r Release) error {
 			binary.LittleEndian.PutUint32(p[4:], uint32(ChunkSize))
 			binary.LittleEndian.PutUint32(p[40:], uint32(DataSize))
 
-			file, err := os.OpenFile(filename, os.O_CREATE|os.O_WRONLY, 0666)
+			file, _ := os.OpenFile(filename, os.O_CREATE|os.O_WRONLY, 0666)
 			written, err := file.Write(p)
 			defer file.Close()
 
@@ -985,8 +993,8 @@ func CreateWAVFiles() {
 				var cmd exec.Cmd
 
 				if rel.SrcExt == ".prg" {
-					log.Println("[CreateWAVFiles PRG] Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + additionalSIDs + " " + stereo + " " + model + " " + paramName + " " + filenameSID + ")")
-					cmd = *exec.Command(cmdName, czas, additionalSIDs, stereo, model, paramName, filenameSID)
+					log.Println("[CreateWAVFiles PRG] Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + additionalSIDs + " " + model + " " + paramName + " " + filenameSID + ")")
+					cmd = *exec.Command(cmdName, czas, additionalSIDs, model, paramName, filenameSID)
 				} else {
 					log.Println("[CreateWAVFiles SID] Starting sidplayfp... cmdName(" + cmdName + " " + czas + " " + stereo + " " + model + " " + paramName + " " + filenameSID + ")")
 					cmd = *exec.Command(cmdName, czas, stereo, model, paramName, filenameSID)
@@ -1939,11 +1947,11 @@ func Options(c *gin.Context) {
 
 // redirect - Przekierowanie http na https
 // ================================================================================================
-func redirect(w http.ResponseWriter, req *http.Request) {
-	target := "https://" + req.Host + req.RequestURI
+// func redirect(w http.ResponseWriter, req *http.Request) {
+// 	target := "https://" + req.Host + req.RequestURI
 
-	http.Redirect(w, req, target, http.StatusTemporaryRedirect)
-}
+// 	http.Redirect(w, req, target, http.StatusTemporaryRedirect)
+// }
 
 // ================================================================================================
 // MAIN()
