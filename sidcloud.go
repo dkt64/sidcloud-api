@@ -42,17 +42,21 @@ const historyMaxMonths = 3
 
 const wavHeaderSize = 44 // rozmiar nagłówka WAV
 
+// stereo
+
 const wavTime5minutesSID int64 = 44100 * 4 * 300 // = 5 min
 
 const wavTime10secondsSID int64 = 44100 * 4 * 10 // = 10 sekund
 
 const wavTime5secondsSID int64 = 44100 * 4 * 5 // = 5 sekund
 
-const wavTime5minutesPRG int64 = 44100 * 4 * 300 // = 5 min
+// mono
 
-const wavTime10secondsPRG int64 = 44100 * 4 * 10 // = 10 sekund
+const wavTime5minutesPRG int64 = 44100 * 2 * 300 // = 5 min
 
-const wavTime5secondsPRG int64 = 44100 * 4 * 5 // = 5 sekund
+const wavTime10secondsPRG int64 = 44100 * 2 * 10 // = 10 sekund
+
+const wavTime5secondsPRG int64 = 44100 * 2 * 5 // = 5 sekund
 
 // RssItem - pojednyczy wpis w XML
 // ------------------------------------------------------------------------------------------------
