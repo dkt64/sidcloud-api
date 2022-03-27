@@ -1230,7 +1230,7 @@ func ReadLatestReleases() {
 					// log.Println("-----------------------------------")
 					for _, credit := range entry.Credits {
 
-						creditHandle := "???"
+						creditHandle := ""
 						if len(credit.XMLHandle.XMLHandle) > 0 {
 							// log.Println(credit.CreditType + ": " + credit.XMLHandle.XMLHandle + " [" + credit.XMLHandle.ID + "]")
 							if credit.CreditType == "Music" {
@@ -1268,9 +1268,12 @@ func ReadLatestReleases() {
 					// Linki dościągnięcia
 					// Najpierw SIDy
 
+					sidfile_found := false
+
 					for _, link := range entry.DownloadLinks {
 						if strings.Contains(link.Link, ".sid") || strings.Contains(link.Link, ".SID") {
 							newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+							sidfile_found = true
 						}
 					}
 					// Potem PRGs
@@ -1295,7 +1298,7 @@ func ReadLatestReleases() {
 					//
 					// Dodajemy
 					//
-					if len(newRelease.DownloadLinks) > 0 && len(newRelease.Credits) > 0 {
+					if len(newRelease.DownloadLinks) > 0 && (len(newRelease.Credits) > 0 || sidfile_found) {
 						releasesTemp = append(releasesTemp, newRelease)
 					}
 				}

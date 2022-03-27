@@ -1,5 +1,448 @@
 [
  {
+  "ReleaseID": 215914,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 26,
+  "ReleaseName": "GubbLIITCH [45 bytes]",
+  "ReleaseType": "C64 256b Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215914.png",
+  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
+  "SIDPath": "",
+  "Rating": 9.92,
+  "ReleasedBy": [
+   "MultiStyle Labs"
+  ],
+  "Credits": null,
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226810/GubbLIITCH.sid",
+   "https://csdb.dk/getinternalfile.php/226809/GubbLIITCH.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".sid",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215879,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 25,
+  "ReleaseName": "Gravity",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215879.png",
+  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Finnish Gold"
+  ],
+  "Credits": [
+   "Proton"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226772/gravity.sid",
+   "https://csdb.dk/getinternalfile.php/226771/gravity_fig.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".sid",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215878,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 25,
+  "ReleaseName": "Is It True - Yohanna",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215878.gif",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Atlantis"
+  ],
+  "Credits": [
+   "Chris Wemyss"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226770/Isittrue-Yohanna.sid",
+   "https://csdb.dk/getinternalfile.php/226769/Isittrue-Yohanna.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".sid",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215797,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 24,
+  "ReleaseName": "Immortality",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215797.png",
+  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
+  "SIDPath": "",
+  "Rating": 9.78,
+  "ReleasedBy": [
+   "Finnish Gold"
+  ],
+  "Credits": [
+   "Proton"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226679/immortality_fig.sid",
+   "https://csdb.dk/getinternalfile.php/226688/immortality_6581_fig.prg",
+   "https://csdb.dk/getinternalfile.php/226677/immortality_fig.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".sid",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215608,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 21,
+  "ReleaseName": "Vampire - World Spirit Map",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215608.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.73,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "Nordischsound"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226467/vampire_world_spirit_map.sid",
+   "https://csdb.dk/getinternalfile.php/226466/vampire_world_spirit_map.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".sid",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215607,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 20,
+  "ReleaseName": "Blazon Fist",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215607.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/B/Bayliss_Richard/Common_Vision.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Kraksnax",
+   "Blazon"
+  ],
+  "Credits": [
+   "Richard"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226464/The BLAZON Fist%21.d64"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".prg",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215591,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 20,
+  "ReleaseName": "ICC 2021 16K Intro Collection",
+  "ReleaseType": "C64 Intro Collection",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215591.gif",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The New Dimension"
+  ],
+  "Credits": [
+   "Richard"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226448/icc16k_disk.d64"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".prg",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215590,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 20,
+  "ReleaseName": "Megacity Highway",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215590.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Nordischsound"
+  ],
+  "Credits": [
+   "Nordischsound"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226447/Megacity_Highway.sid",
+   "https://csdb.dk/getinternalfile.php/226446/Megacity_Highway.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".sid",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215584,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 20,
+  "ReleaseName": "50 Years Stormfront",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215584.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/M/Mace/Cantina-Band.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Mace"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226437/50 Years Stormfront %5BEX%5D.d64"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".prg",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215561,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 20,
+  "ReleaseName": "HerMiniSID-252bytes",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215561.png",
+  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Hermit"
+  ],
+  "Credits": [
+   "Hermit"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226438/HerMiniSID-detunefix.sid",
+   "https://csdb.dk/getinternalfile.php/226413/HerMiniSID-252bytes.sid",
+   "https://csdb.dk/getinternalfile.php/226412/HerMiniSID-252bytes-exe.prg",
+   "https://csdb.dk/getinternalfile.php/226443/HerMiniSID-detunefix-exe.prg",
+   "https://csdb.dk/getinternalfile.php/226482/HerMiniSID-source.zip"
+  ],
+  "SrcCached": true,
+  "WAVCached": true,
+  "SrcExt": ".sid",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215519,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 19,
+  "ReleaseName": "Anonymous",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215519.gif",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/L/Linus/Incoherent_Nightmare_tune_1.sid",
+  "Rating": 9.13,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "Fanta",
+   "Linus"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226371/anonymous.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": false,
+  "SrcExt": ".prg",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215515,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 19,
+  "ReleaseName": "Congratulatheme",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215515.png",
+  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Laurikka"
+  ],
+  "Credits": [
+   "Laurikka"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226364/Congratulatheme.sid",
+   "https://csdb.dk/getinternalfile.php/226365/Congratulatheme.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": false,
+  "SrcExt": ".sid",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215497,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 18,
+  "ReleaseName": "Introridium",
+  "ReleaseType": "C64 Crack Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215497.gif",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Raiders of the Lost Empire"
+  ],
+  "Credits": [
+   "JCH"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226343/introridium.D64"
+  ],
+  "SrcCached": true,
+  "WAVCached": false,
+  "SrcExt": ".prg",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215490,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 18,
+  "ReleaseName": "Digital Talk #111 [german]",
+  "ReleaseType": "C64 Diskmag",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215490.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Digital Talk"
+  ],
+  "Credits": [
+   "dalezy",
+   "Q-Man",
+   "Vincenzo",
+   "Dr. TerrorZ",
+   "Manganoid",
+   "Nordischsound"
+  ],
+  "DownloadLinks": [
+   "https://github.com/Digital-Talk/issues/raw/main/DigitalTalk111.zip"
+  ],
+  "SrcCached": true,
+  "WAVCached": false,
+  "SrcExt": ".prg",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215463,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 17,
+  "ReleaseName": "Final Fantasy V - Harvest",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215463.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.58,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "Nordischsound"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226301/FF5_Harvest.sid",
+   "https://csdb.dk/getinternalfile.php/226300/FF5_Harvest.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": false,
+  "SrcExt": ".sid",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215441,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 17,
+  "ReleaseName": "UKRAINA 2022.+",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215441.gif",
+  "ReleasedAt": "Anti (Ukraine) War Demo Diskbox",
+  "SIDPath": "/MUSICIANS/B/Batsman/Sweet_Dreams.sid",
+  "Rating": 9.27,
+  "ReleasedBy": [
+   "4gentE"
+  ],
+  "Credits": [
+   "Båtsman"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226276/ukraina.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": false,
+  "SrcExt": ".prg",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 215374,
+  "ReleaseYear": 2022,
+  "ReleaseMonth": 3,
+  "ReleaseDay": 15,
+  "ReleaseName": "The Other PETSCII",
+  "ReleaseType": "C64 Graphics Collection",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215374.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.25,
+  "ReleasedBy": [
+   "Seven"
+  ],
+  "Credits": [
+   "dalezy"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/226204/The_Other_PETSCII.prg"
+  ],
+  "SrcCached": true,
+  "WAVCached": false,
+  "SrcExt": ".prg",
+  "Disabled": false
+ },
+ {
   "ReleaseID": 214607,
   "ReleaseYear": 2022,
   "ReleaseMonth": 2,
