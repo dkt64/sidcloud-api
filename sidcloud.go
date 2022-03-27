@@ -1537,9 +1537,12 @@ func CSDBPrepareData() {
 							// Linki dościągnięcia
 							// Najpierw SIDy
 
+							sidfile_found := false
+
 							for _, link := range entry.DownloadLinks {
 								if strings.Contains(link.Link, ".sid") || strings.Contains(link.Link, ".SID") {
 									newRelease.DownloadLinks = append(newRelease.DownloadLinks, link.Link)
+									sidfile_found = true
 								}
 							}
 							// Potem PRGs
@@ -1564,7 +1567,7 @@ func CSDBPrepareData() {
 							//
 							// Dodajemy
 							//
-							if len(newRelease.DownloadLinks) > 0 && len(newRelease.Credits) > 0 {
+							if len(newRelease.DownloadLinks) > 0 && (len(newRelease.Credits) > 0 || sidfile_found) {
 								csdbTemp = append(csdbTemp, newRelease)
 								foundNewReleases++
 								log.Println("[CSDBPrepareData] " + strconv.Itoa(foundNewReleases) + ") Entry name: " + entry.ReleaseName + ", Entry ID: " + entry.ReleaseID)
