@@ -71,7 +71,7 @@
    "https://csdb.dk/getinternalfile.php/250697/sir-epsilon-ed2f87f.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -96,7 +96,7 @@
    "https://csdb.dk/getinternalfile.php/250695/sproobz_dnp.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -121,7 +121,7 @@
    "https://csdb.dk/getinternalfile.php/250686/badpixels.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -146,7 +146,7 @@
    "https://csdb.dk/getinternalfile.php/250684/ronktunnel-med-ronk.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -171,7 +171,7 @@
    "https://csdb.dk/getinternalfile.php/250683/hmf-datajevel.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -196,7 +196,7 @@
    "https://csdb.dk/getinternalfile.php/250682/Swinging80s-GP.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -222,7 +222,7 @@
    "https://csdb.dk/getinternalfile.php/250681/absolved.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -247,7 +247,7 @@
    "https://csdb.dk/getinternalfile.php/250680/the-emergent-behavior-of-hydrogen-oxide-at-altitude-a-case-study-and-experimental-evaluation-f036321.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -272,7 +272,7 @@
    "https://csdb.dk/getinternalfile.php/250679/squaremove%5Bex%5D.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -298,7 +298,7 @@
    "https://csdb.dk/getinternalfile.php/250677/ThePit-Bonzai.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -323,7 +323,7 @@
    "https://csdb.dk/getinternalfile.php/250672/fegolhuzz-mys-817cb78.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -351,7 +351,7 @@
    "https://csdb.dk/getinternalfile.php/250667/Plastic_Fantastic_2023_s1.d64"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -377,7 +377,7 @@
    "https://csdb.dk/getinternalfile.php/250652/swallow.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".sid",
   "Disabled": false
  },
@@ -402,7 +402,7 @@
    "https://csdb.dk/getinternalfile.php/250651/lft-in-darkness-hope.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },
@@ -427,7 +427,7 @@
    "https://csdb.dk/getinternalfile.php/250650/droneflight_fig.prg"
   ],
   "SrcCached": true,
-  "WAVCached": false,
+  "WAVCached": true,
   "SrcExt": ".prg",
   "Disabled": false
  },

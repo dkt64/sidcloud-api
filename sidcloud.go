@@ -2005,7 +2005,7 @@ func main() {
 	// Info powitalne
 	//
 	log.Println("==========================================")
-	log.Println("=======          APP START        ========")
+	log.Println("=======       -# APP START #-     ========")
 	log.Println("==========================================")
 
 	//
