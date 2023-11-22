@@ -1,155 +1,24 @@
 [
  {
-  "ReleaseID": 215879,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 25,
-  "ReleaseName": "Gravity",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215879.png",
-  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Finnish Gold"
-  ],
-  "Credits": [
-   "Proton"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226772/gravity.sid",
-   "https://csdb.dk/getinternalfile.php/226771/gravity_fig.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215878,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 25,
-  "ReleaseName": "Is It True - Yohanna",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215878.gif",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Atlantis"
-  ],
-  "Credits": [
-   "Chris Wemyss"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226770/Isittrue-Yohanna.sid",
-   "https://csdb.dk/getinternalfile.php/226769/Isittrue-Yohanna.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215797,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 24,
-  "ReleaseName": "Immortality",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215797.png",
-  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
-  "SIDPath": "",
-  "Rating": 9.78,
-  "ReleasedBy": [
-   "Finnish Gold"
-  ],
-  "Credits": [
-   "Proton"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226679/immortality_fig.sid",
-   "https://csdb.dk/getinternalfile.php/226688/immortality_6581_fig.prg",
-   "https://csdb.dk/getinternalfile.php/226677/immortality_fig.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215608,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 21,
-  "ReleaseName": "Vampire - World Spirit Map",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215608.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.73,
-  "ReleasedBy": [
-   "Hokuto Force"
-  ],
-  "Credits": [
-   "Nordischsound"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226467/vampire_world_spirit_map.sid",
-   "https://csdb.dk/getinternalfile.php/226466/vampire_world_spirit_map.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215607,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
+  "ReleaseID": 237029,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
   "ReleaseDay": 20,
-  "ReleaseName": "Blazon Fist",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215607.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/B/Bayliss_Richard/Common_Vision.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Kraksnax",
-   "Blazon"
-  ],
-  "Credits": [
-   "Richard"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226464/The BLAZON Fist%21.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215590,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 20,
-  "ReleaseName": "Megacity Highway",
+  "ReleaseName": "LPBPHP-2CH",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215590.png",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/237000/237029.png",
   "ReleasedAt": "",
   "SIDPath": "",
   "Rating": 0,
   "ReleasedBy": [
-   "Nordischsound"
+   "Soundstorm"
   ],
   "Credits": [
-   "Nordischsound"
+   "Flotsam"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226447/Megacity_Highway.sid",
-   "https://csdb.dk/getinternalfile.php/226446/Megacity_Highway.prg"
+   "https://csdb.dk/getinternalfile.php/250715/LPBPHP_2CH.sid",
+   "https://csdb.dk/getinternalfile.php/250714/lpbphp.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -157,161 +26,24 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 215584,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 20,
-  "ReleaseName": "50 Years Stormfront",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215584.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/M/Mace/Cantina-Band.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Excess"
-  ],
-  "Credits": [
-   "Mace"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226437/50 Years Stormfront %5BEX%5D.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215561,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 20,
-  "ReleaseName": "HerMiniSID-252bytes",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215561.png",
-  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Hermit"
-  ],
-  "Credits": [
-   "Hermit"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226438/HerMiniSID-detunefix.sid",
-   "https://csdb.dk/getinternalfile.php/226413/HerMiniSID-252bytes.sid",
-   "https://csdb.dk/getinternalfile.php/226412/HerMiniSID-252bytes-exe.prg",
-   "https://csdb.dk/getinternalfile.php/226443/HerMiniSID-detunefix-exe.prg",
-   "https://csdb.dk/getinternalfile.php/226482/HerMiniSID-source.zip"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215519,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
+  "ReleaseID": 237012,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
   "ReleaseDay": 19,
-  "ReleaseName": "Anonymous",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215519.gif",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/L/Linus/Incoherent_Nightmare_tune_1.sid",
-  "Rating": 9.13,
-  "ReleasedBy": [
-   "Hokuto Force"
-  ],
-  "Credits": [
-   "Fanta",
-   "Linus"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226371/anonymous.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215515,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 19,
-  "ReleaseName": "Congratulatheme",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215515.png",
-  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Laurikka"
-  ],
-  "Credits": [
-   "Laurikka"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226364/Congratulatheme.sid",
-   "https://csdb.dk/getinternalfile.php/226365/Congratulatheme.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215490,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 18,
-  "ReleaseName": "Digital Talk #111 [german]",
-  "ReleaseType": "C64 Diskmag",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215490.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Digital Talk"
-  ],
-  "Credits": [
-   "dalezy",
-   "Q-Man",
-   "Vincenzo",
-   "Dr. TerrorZ",
-   "Manganoid",
-   "Nordischsound"
-  ],
-  "DownloadLinks": [
-   "https://github.com/Digital-Talk/issues/raw/main/DigitalTalk111.zip"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215463,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 17,
-  "ReleaseName": "Final Fantasy V - Harvest",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215463.png",
-  "ReleasedAt": "",
+  "ReleaseName": "Sir Epsilon",
+  "ReleaseType": "C64 Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/237000/237012.gif",
+  "ReleasedAt": "Only Sprites Compo 2023",
   "SIDPath": "",
   "Rating": 9.58,
   "ReleasedBy": [
-   "Hokuto Force"
+   "Fairlight"
   ],
   "Credits": [
-   "Nordischsound"
+   "Xiny6581"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226301/FF5_Harvest.sid",
-   "https://csdb.dk/getinternalfile.php/226300/FF5_Harvest.prg"
+   "https://csdb.dk/getinternalfile.php/250697/sir-epsilon-ed2f87f.d64"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -319,99 +51,24 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 215441,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 17,
-  "ReleaseName": "UKRAINA 2022.+",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215441.gif",
-  "ReleasedAt": "Anti (Ukraine) War Demo Diskbox",
-  "SIDPath": "/MUSICIANS/B/Batsman/Sweet_Dreams.sid",
-  "Rating": 9.27,
-  "ReleasedBy": [
-   "4gentE"
-  ],
-  "Credits": [
-   "Båtsman"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226276/ukraina.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215374,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 15,
-  "ReleaseName": "The Other PETSCII",
-  "ReleaseType": "C64 Graphics Collection",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215374.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.25,
-  "ReleasedBy": [
-   "Seven"
-  ],
-  "Credits": [
-   "dalezy"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226204/The_Other_PETSCII.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215246,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 11,
-  "ReleaseName": "Dare",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215246.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.67,
-  "ReleasedBy": [
-   "Warp 8"
-  ],
-  "Credits": [
-   "Warp 8"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226059/dare.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215245,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 11,
-  "ReleaseName": "New World Order!",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215245.gif",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/Z/Zardax/Missed_Call_final.sid",
+  "ReleaseID": 237011,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 19,
+  "ReleaseName": "SPRooBZ",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/237000/237011.gif",
+  "ReleasedAt": "Only Sprites Compo 2023",
+  "SIDPath": "/MUSICIANS/A/A-Man/Oregon_Power.sid",
   "Rating": 0,
   "ReleasedBy": [
-   "Raiders of the Lost Empire"
+   "DnP"
   ],
   "Credits": [
-   "Zardax"
+   "A-Man"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226057/nwo.D64"
+   "https://csdb.dk/getinternalfile.php/250695/sproobz_dnp.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -419,25 +76,99 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 215243,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 10,
-  "ReleaseName": "Mixed Up",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215243.png",
-  "ReleasedAt": "",
+  "ReleaseID": 237004,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Bad Pixels",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/237000/237004.png",
+  "ReleasedAt": "Mysdata 2023",
   "SIDPath": "",
-  "Rating": 9.67,
+  "Rating": 9.36,
+  "ReleasedBy": [
+   "New Generation Crew"
+  ],
+  "Credits": [
+   "Soundy"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250686/badpixels.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 237003,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Ronktunnel",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/237000/237003.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "/MUSICIANS/H/Hermit/Voyage_Voyage.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Judas"
+  ],
+  "Credits": [
+   "Hermit"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250684/ronktunnel-med-ronk.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 237002,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Datajävel",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/237000/237002.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Hardcore Mofokkahz"
+  ],
+  "Credits": [
+   "Slaze"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250683/hmf-datajevel.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 237001,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Swinging 80s",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/237000/237001.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 0,
   "ReleasedBy": [
    "Genesis Project"
   ],
   "Credits": [
-   "acrouzet"
+   "Xiny6581"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226055/Mixed_Up.sid",
-   "https://csdb.dk/getinternalfile.php/226056/Mixed_Up.prg"
+   "https://csdb.dk/getinternalfile.php/250682/Swinging80s-GP.d64"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -445,75 +176,75 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 215226,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 10,
-  "ReleaseName": "Pocket Universe",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215226.png",
-  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
-  "SIDPath": "",
-  "Rating": 9.89,
-  "ReleasedBy": [
-   "Orb"
-  ],
-  "Credits": [
-   "4-Mat"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226037/pocket_universe_8580.sid",
-   "https://csdb.dk/getinternalfile.php/226035/pocket_universe_8580.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215217,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 10,
-  "ReleaseName": "ReACtion - Revision Satellite Party 2022",
-  "ReleaseType": "C64 Invitation",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215217.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/D/DRAX/Axel_Mix.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Abyss Connection"
-  ],
-  "Credits": [
-   "Drax"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226026/reaction2022.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215204,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 9,
-  "ReleaseName": "Peace a Dream?",
+  "ReleaseID": 237000,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Absolved",
   "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215204.png",
-  "ReleasedAt": "Anti (Ukraine) War Demo Diskbox",
-  "SIDPath": "/MUSICIANS/T/Tichelmann_Kay/Peace_A_Dream.sid",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/237000/237000.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
   "Rating": 0,
+  "ReleasedBy": [
+   "Goerp"
+  ],
+  "Credits": [
+   "Goerp"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250734/st.martins.sid",
+   "https://csdb.dk/getinternalfile.php/250681/absolved.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236999,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "The Emergent Behavior of Hydrogen Oxide at Altitude: A Case Study and Experimental Evaluation",
+  "ReleaseType": "C64 Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236999.gif",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 8.5,
+  "ReleasedBy": [
+   "Fairlight"
+  ],
+  "Credits": [
+   "Fegolhuzz"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250680/the-emergent-behavior-of-hydrogen-oxide-at-altitude-a-case-study-and-experimental-evaluation-f036321.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236998,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Squaremove",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236998.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "/MUSICIANS/F/Flotsam/High-Speed_Chase.sid",
+  "Rating": 9,
   "ReleasedBy": [
    "Excess"
   ],
   "Credits": [
-   "Ragman"
+   "Flotsam"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226013/peace_a_dream%5Bex%5D.prg"
+   "https://csdb.dk/getinternalfile.php/250679/squaremove%5Bex%5D.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -521,24 +252,104 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 215195,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 9,
-  "ReleaseName": "Old Limits Intro",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215195.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/J/JCH/Duchesse.sid",
-  "Rating": 0,
+  "ReleaseID": 236996,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "The Pit",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236996.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 9.22,
   "ReleasedBy": [
-   "Motion"
+   "Artline Designs",
+   "Bonzai"
+  ],
+  "Credits": [
+   "Flex"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250677/ThePit-Bonzai.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236991,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Mys",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236991.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 8.71,
+  "ReleasedBy": [
+   "Fairlight"
+  ],
+  "Credits": [
+   "Fegolhuzz"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250672/fegolhuzz-mys-817cb78.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236986,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Plastic Fantastic",
+  "ReleaseType": "C64 Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236986.gif",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 9.59,
+  "ReleasedBy": [
+   "Censor Design"
+  ],
+  "Credits": [
+   "Magnar Harestad",
+   "psych858o"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250687/Plastic Fantastic.sid",
+   "https://csdb.dk/getinternalfile.php/250688/Booty Shorts.sid",
+   "https://csdb.dk/getinternalfile.php/250667/Plastic_Fantastic_2023_s1.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236976,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Swallow",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236976.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 9.83,
+  "ReleasedBy": [
+   "JCH"
   ],
   "Credits": [
    "JCH"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/226004/ol-intro.prg"
+   "https://csdb.dk/getinternalfile.php/250653/swallow.sid",
+   "https://csdb.dk/getinternalfile.php/250652/swallow.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -546,51 +357,24 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 215178,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 8,
-  "ReleaseName": "Streets of Kiev",
+  "ReleaseID": 236975,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "In Darkness Hope",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215178.png",
-  "ReleasedAt": "",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236975.png",
+  "ReleasedAt": "Mysdata 2023",
   "SIDPath": "",
-  "Rating": 9.85,
-  "ReleasedBy": [
-   "MultiStyle Labs",
-   "Elysium"
-  ],
-  "Credits": [
-   "Shogoon"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225986/Streets of Kiev.sid",
-   "https://csdb.dk/getinternalfile.php/225985/Streets of Kiev.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215087,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 6,
-  "ReleaseName": "Put In",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215087.png",
-  "ReleasedAt": "Anti (Ukraine) War Demo Diskbox",
-  "SIDPath": "/MUSICIANS/P/Praiser/Movie_World_part_3.sid",
   "Rating": 9.33,
   "ReleasedBy": [
-   "Faith Design"
+   "Lft"
   ],
   "Credits": [
-   "Praiser"
+   "Lft"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225887/put_in_faith_design.prg"
+   "https://csdb.dk/getinternalfile.php/250651/lft-in-darkness-hope.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -598,25 +382,24 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 215075,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 5,
-  "ReleaseName": "Humming a Cheesy Melody",
+  "ReleaseID": 236974,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Drone Flight",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215075.png",
-  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236974.png",
+  "ReleasedAt": "Mysdata 2023",
   "SIDPath": "",
-  "Rating": 9.75,
+  "Rating": 8.59,
   "ReleasedBy": [
-   "Vision"
+   "Finnish Gold"
   ],
   "Credits": [
-   "Hein"
+   "Proton"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225958/Humming_a_Cheesy_Melody.sid",
-   "https://csdb.dk/getinternalfile.php/225874/cheesy.prg"
+   "https://csdb.dk/getinternalfile.php/250650/droneflight_fig.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -624,77 +407,76 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 215045,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 4,
-  "ReleaseName": "EXAC September 2022 Invitation",
-  "ReleaseType": "C64 Invitation",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215045.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/S/Stinsen/Swing_It.sid",
+  "ReleaseID": 236973,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Mega Cool Tune Music (Butt Ambient)",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236973.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 9.26,
+  "ReleasedBy": [
+   "Dinasours"
+  ],
+  "Credits": [
+   "Skyffel"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250649/MegaCoolTuneMusicButtAmbient-DNS1338.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236972,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Shadows of Life",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236972.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 9.8,
+  "ReleasedBy": [
+   "Genesis Project"
+  ],
+  "Credits": [
+   "MCH",
+   "Steel"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250648/STEELfeatMCH-ShadowsOfLife-8580.sid",
+   "https://csdb.dk/getinternalfile.php/250647/STEELfeatMCH-ShadowsOfLife-8580.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236971,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Verkligheten",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236971.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
   "Rating": 0,
-  "ReleasedBy": [
-   "Excess",
-   "Abyss Connection"
-  ],
-  "Credits": [
-   "Stinsen"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225842/exac2022-autumn-invi.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215044,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 4,
-  "ReleaseName": "RapidNews #22",
-  "ReleaseType": "C64 Diskmag",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215044.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Excess"
-  ],
-  "Credits": [
-   "Signor",
-   "A-Man"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225839/RapidNews %2322 by %5BExcess%5D.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215043,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 4,
-  "ReleaseName": "The Disks Have Eyes",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215043.gif",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.15,
   "ReleasedBy": [
    "Onslaught"
   ],
   "Credits": [
-   "Narcisound"
+   "ZZAP69"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225841/narcisound_-_the_disks_have_eyes.sid",
-   "https://csdb.dk/getinternalfile.php/225840/the_disks_have_eyes-ons.prg"
+   "https://csdb.dk/getinternalfile.php/250645/verklighetenz69.d64"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -702,26 +484,25 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 215040,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 4,
-  "ReleaseName": "Young Poe",
+  "ReleaseID": 236970,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Sweet Scoundler",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215040.png",
-  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236970.png",
+  "ReleasedAt": "Mysdata 2023",
   "SIDPath": "",
-  "Rating": 9.85,
+  "Rating": 9.78,
   "ReleasedBy": [
-   "MultiStyle Labs",
-   "Elysium"
+   "Artline Designs"
   ],
   "Credits": [
-   "Shogoon"
+   "Flex"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225836/Shogoon - Young Poe.sid",
-   "https://csdb.dk/getinternalfile.php/225835/Shogoon - Young Poe.prg"
+   "https://csdb.dk/getinternalfile.php/250646/Sweet_Scoundrel.sid",
+   "https://csdb.dk/getinternalfile.php/250644/ALD_Sweet_Scoundler.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -729,28 +510,128 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 215035,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 3,
-  "ReleaseName": "The C64 Grand Tour Challenge Musicdisk - 1541U1 fix",
+  "ReleaseID": 236969,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Insanity Roams Free",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236969.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Genesis Project",
+   "Oxsid Planetary"
+  ],
+  "Credits": [
+   "Zyron"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250643/zrnmys23.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236968,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Turning the Page",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236968.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 9.25,
+  "ReleasedBy": [
+   "Pretzel Logic"
+  ],
+  "Credits": [
+   "The Syndrom"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250642/Turning the Page.sid",
+   "https://csdb.dk/getinternalfile.php/250641/turning the page.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236967,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Rise And Shine",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236967.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 9.2,
+  "ReleasedBy": [
+   "Artline Designs"
+  ],
+  "Credits": [
+   "Frostbyte"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250639/ALD_Frostbyte_Rise-And-Shine.sid",
+   "https://csdb.dk/getinternalfile.php/250638/ald_frostbyte_rise_and_shine.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236964,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 18,
+  "ReleaseName": "Miami Nights",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236964.png",
+  "ReleasedAt": "Mysdata 2023",
+  "SIDPath": "",
+  "Rating": 8.94,
+  "ReleasedBy": [
+   "Artline Designs"
+  ],
+  "Credits": [
+   "Apollyon"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250635/ald_miaminights.sid",
+   "https://csdb.dk/getinternalfile.php/250634/miaminights8580_ald.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236950,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 17,
+  "ReleaseName": "Toggle – Lovers Unite!",
   "ReleaseType": "C64 Music Collection",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215035.gif",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236950.png",
   "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 0,
+  "Rating": 9.91,
   "ReleasedBy": [
-   "Vincenzo"
+   "Mayday!"
   ],
   "Credits": [
-   "Vincenzo",
-   "Jammer",
-   "Spider Jerusalem",
-   "NecroPolo",
-   "da Blondie"
+   "Toggle"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225829/GTC2021_Ultimate1_fix.d64"
+   "https://csdb.dk/getinternalfile.php/250620/toggle_lovers_unite_myd.d64"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -758,126 +639,25 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 215024,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 3,
-  "ReleaseName": "Ukraine",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215024.png",
+  "ReleaseID": 236930,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 15,
+  "ReleaseName": "Electriqueue",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236930.png",
   "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 9,
-  "ReleasedBy": [
-   "The Codeblasters"
-  ],
-  "Credits": [
-   "MuZZaRania"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225817/Ukraine%5Bexo%5D.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215012,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 2,
-  "ReleaseName": "Formal Axiomatic Theories",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215012.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9,
-  "ReleasedBy": [
-   "YQN"
-  ],
-  "Credits": [
-   "YQN"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225799/YQN-formal_axiomatic_theories.sid",
-   "https://csdb.dk/getinternalfile.php/225801/formalexe.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 215011,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 2,
-  "ReleaseName": "Hours",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/215000/215011.png",
-  "ReleasedAt": "",
-  "SIDPath": "",
-  "Rating": 9.75,
-  "ReleasedBy": [
-   "YQN"
-  ],
-  "Credits": [
-   "YQN"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225798/YQN-hours.sid",
-   "https://csdb.dk/getinternalfile.php/225802/hoursexe.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214993,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 3,
-  "ReleaseDay": 2,
-  "ReleaseName": "Erich im Doberghain",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214993.png",
-  "ReleasedAt": "Some Silly Song Remake Compo",
-  "SIDPath": "",
-  "Rating": 8.71,
-  "ReleasedBy": [
-   "The Philishave Grew"
-  ],
-  "Credits": [
-   "Dr. Masterpiss"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225773/erich_im_doberghain.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214956,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 28,
-  "ReleaseName": "MAN WTF",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214956.png",
-  "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/N/NecroPolo/Fender_of_the_Crown.sid",
-  "Rating": 0,
+  "Rating": 9.79,
   "ReleasedBy": [
    "Onslaught"
   ],
   "Credits": [
-   "NecroPolo"
+   "Flotsam"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225731/manwtf.prg"
+   "https://csdb.dk/getinternalfile.php/250598/Electriqueue.sid",
+   "https://csdb.dk/getinternalfile.php/250597/Electriqueue.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -885,304 +665,25 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 214955,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Early Bird",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214955.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "/MUSICIANS/J/Jammer/I_Like_to_Move_It_Manually.sid",
-  "Rating": 0,
-  "ReleasedBy": [
-   "C64 Club Berlin"
-  ],
-  "Credits": [
-   "Jammer"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225729/bcc16everyonelovesthudner.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214932,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Bhagwan im Backwahn",
+  "ReleaseID": 236927,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 14,
+  "ReleaseName": "Wicked Game (Lo-Fi Love Remix)",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214932.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Stabile Altbauten"
-  ],
-  "Credits": [
-   "Stabile Altbauten"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225706/bhagwan_stabil.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214931,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "SYS4000@16",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214931.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "C64 Club Berlin"
-  ],
-  "Credits": [
-   "Sonki"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225705/sonki-sys4000-16.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214929,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Stacy Overlords At A Wavy Seaside",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214929.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Mayday!"
-  ],
-  "Credits": [
-   "TheRyk"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225703/stacyoverlords_myd.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214928,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Overlord Up-Tempo Rock Remix",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214928.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Mayday!"
-  ],
-  "Credits": [
-   "TheRyk"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225702/overlorduptmp_ryk.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214923,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "All The Wrong Places",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214923.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Hokuto Force"
-  ],
-  "Credits": [
-   "Manganoid"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225697/All The Wrong Places.sid",
-   "https://csdb.dk/getinternalfile.php/225696/All The Wrong Places.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214922,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Peraustrinia MMXXII",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214922.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Hokuto Force"
-  ],
-  "Credits": [
-   "Manganoid"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225695/Peraustrinia_MMXXII.sid",
-   "https://csdb.dk/getinternalfile.php/225694/Peraustrinia_MMXXII.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214915,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 27,
-  "ReleaseName": "Viralbox Logo",
-  "ReleaseType": "C64 Graphics",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214915.png",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236927.png",
   "ReleasedAt": "",
-  "SIDPath": "/MUSICIANS/T/That8BitChiptuneGuy/Heavy_Ones.sid",
-  "Rating": 1.67,
-  "ReleasedBy": [
-   "STARZ"
-  ],
-  "Credits": [
-   "DeMOSic"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225684/Viralbox_Logo.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214914,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Fairyland",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214914.gif",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 9,
-  "ReleasedBy": [
-   "Fairlight"
-  ],
-  "Credits": [
-   "Qdor"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225683/fairyland-flt.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214913,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Locked Up",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214913.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Xenon"
-  ],
-  "Credits": [
-   "Jack-Paw-Judi"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225681/Locked_Up.sid",
-   "https://csdb.dk/getinternalfile.php/225680/Locked_Up.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214907,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Random Access Memory",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214907.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 10,
-  "ReleasedBy": [
-   "Warp 8"
-  ],
-  "Credits": [
-   "Warp 8"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225733/ram_w4rp8.sid",
-   "https://csdb.dk/getinternalfile.php/225673/ram_w4rp8.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214906,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Deep in the Forest",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214906.gif",
-  "ReleasedAt": "BCC Party #16",
   "SIDPath": "",
   "Rating": 9.4,
   "ReleasedBy": [
    "Atlantis"
   ],
   "Credits": [
-   "Mibri"
+   "Warp 8"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225691/Deep_in_the_Forest.sid",
-   "https://csdb.dk/getinternalfile.php/225672/deep_in_the_forest_atl.prg"
+   "https://csdb.dk/getinternalfile.php/250600/wickedgame_lflrmx.sid",
+   "https://csdb.dk/getinternalfile.php/250594/wickedgame_8580.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -1190,51 +691,27 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 214905,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Cosmos",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214905.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Onosendai"
-  ],
-  "Credits": [
-   "Onosendai"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225671/Onosendai - Cosmos.sid",
-   "https://csdb.dk/getinternalfile.php/225670/Onosendai - Cosmos.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214904,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 27,
-  "ReleaseName": "Requiem for Vladimir MiniPeePee",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214904.png",
+  "ReleaseID": 236920,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 14,
+  "ReleaseName": "HBD50 to Proton!",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236920.png",
   "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 9.56,
+  "Rating": 9.46,
   "ReleasedBy": [
-   "Shitstorm"
+   "Offence",
+   "Padua",
+   "Genesis Project"
   ],
   "Credits": [
-   "Hopsan"
+   "T.L.F."
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225668/Requiem_for_Vladimir_MiniPeePee.sid",
-   "https://csdb.dk/getinternalfile.php/225669/vladpeepee.prg"
+   "https://csdb.dk/getinternalfile.php/250584/TLF-Protonic.sid",
+   "https://csdb.dk/getinternalfile.php/250585/hbd50.d64"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -1242,103 +719,22 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 214903,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Castlevania - Vampire Killer V2",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214903.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Hokuto Force"
-  ],
-  "Credits": [
-   "Nordischsound"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225667/Castlevania_Vampire_Killer_V2.sid",
-   "https://csdb.dk/getinternalfile.php/225666/Castlevania_Vampire_Killer_V2.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214901,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Base of Love",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214901.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Hokuto Force"
-  ],
-  "Credits": [
-   "Nordischsound"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225664/base_of_love.sid",
-   "https://csdb.dk/getinternalfile.php/225663/base_of_love.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214898,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "The Funeral",
-  "ReleaseType": "C64 Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214898.gif",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 8.67,
-  "ReleasedBy": [
-   "Dream"
-  ],
-  "Credits": [
-   "Hairdog",
-   "DJ Gruby"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225660/thefuneraldream.zip"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214896,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Lift Off",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214896.png",
-  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
-  "SIDPath": "",
-  "Rating": 9.9,
-  "ReleasedBy": [
-   "Vision"
-  ],
+  "ReleaseID": 236897,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 13,
+  "ReleaseName": "50 Years of Hein!",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236897.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/H/Holt_Hein/Same_Old_Same_Old.sid",
+  "Rating": 9.38,
+  "ReleasedBy": null,
   "Credits": [
    "Hein"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225657/Lift_Off.sid",
-   "https://csdb.dk/getinternalfile.php/225656/lift-off.prg"
+   "https://csdb.dk/getinternalfile.php/250552/50yearofHein.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -1346,75 +742,27 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 214889,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Tank à chat",
+  "ReleaseID": 236872,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 12,
+  "ReleaseName": "Happy 50th Birthday to Proton and Pål",
   "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214889.png",
-  "ReleasedAt": "BCC Party #16",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236872.png",
+  "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 9.52,
-  "ReleasedBy": [
-   "Dentifrice"
-  ],
-  "Credits": [
-   "Proton"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225646/dentifrice_tank_a_chat.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214888,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "PETSCII Aquarium",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214888.gif",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 9.44,
-  "ReleasedBy": [
-   "Vintage Computing Carinthia"
-  ],
-  "Credits": [
-   "fieserWolf"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225649/PETSCII Aquarium VCC.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214886,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Fractalyzed",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214886.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 0,
+  "Rating": 9.26,
   "ReleasedBy": [
    "Finnish Gold"
   ],
   "Credits": [
-   "Proton"
+   "Proton",
+   "Rock"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225652/fractal.sid",
-   "https://csdb.dk/getinternalfile.php/225644/fractalyzed_fig.prg"
+   "https://csdb.dk/getinternalfile.php/250526/Hbd_pal_proton.sid",
+   "https://csdb.dk/getinternalfile.php/250527/You_came_to_change_my_life.sid",
+   "https://csdb.dk/getinternalfile.php/250525/50novHB.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -1422,15 +770,864 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 214885,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Zombies SB 2022",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214885.png",
-  "ReleasedAt": "BCC Party #16",
+  "ReleaseID": 236865,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 12,
+  "ReleaseName": "Club Fifty",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236865.png",
+  "ReleasedAt": "",
   "SIDPath": "",
+  "Rating": 9.54,
+  "ReleasedBy": [
+   "Pretzel Logic"
+  ],
+  "Credits": [
+   "SMC",
+   "Xiny6581"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250528/HartClubbin.sid",
+   "https://csdb.dk/getinternalfile.php/250529/Xiny6581-Fifty_Shades_of_Syn-8580.sid",
+   "https://csdb.dk/getinternalfile.php/250519/club-fifty-pl.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236796,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 8,
+  "ReleaseName": "Petscii Nightmares",
+  "ReleaseType": "C64 Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236796.gif",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.29,
+  "ReleasedBy": [
+   "Judas"
+  ],
+  "Credits": [
+   "Ald",
+   "Michael Hendriks",
+   "Ass It",
+   "Josstintimberlake",
+   "Nebula",
+   "Dr. Zoom",
+   "Fredrik",
+   "Xiny6581",
+   "Flotsam",
+   "Zyron"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250492/PetsciiNightmares.zip"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236756,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 6,
+  "ReleaseName": "Despacito",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236756.png",
+  "ReleasedAt": "Complete This SID Tune Challenge",
+  "SIDPath": "",
+  "Rating": 9.16,
+  "ReleasedBy": [
+   "Deetsay"
+  ],
+  "Credits": [
+   "Deetsay"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250399/deet-spacito.sid",
+   "https://csdb.dk/getinternalfile.php/250398/deet-spacito.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236755,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 6,
+  "ReleaseName": "Snake Chamber",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236755.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.71,
+  "ReleasedBy": [
+   "Artline Designs"
+  ],
+  "Credits": [
+   "Apollyon"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250397/ald_snakechamber.sid",
+   "https://csdb.dk/getinternalfile.php/250396/snakechamber_ald.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236726,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 4,
+  "ReleaseName": "1er Encuentro Federal Cyberciruja",
+  "ReleaseType": "C64 Invitation",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236726.png",
+  "ReleasedAt": "Demosplash 2023",
+  "SIDPath": "/MUSICIANS/L/Los_Pat_Moritas/Liberacion_animal.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "PVM"
+  ],
+  "Credits": [
+   "Los Pat Moritas"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250360/Cybercirujas.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236725,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 5,
+  "ReleaseName": "Death... by Tomato!",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236725.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "MoonShine"
+  ],
+  "Credits": [
+   "FΛDE"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250358/Death... by Tomato.sid",
+   "https://csdb.dk/getinternalfile.php/250359/Death... by Tomato.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236720,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 5,
+  "ReleaseName": "SPRendulum",
+  "ReleaseType": "C64 4K Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236720.png",
+  "ReleasedAt": "Only Sprites Compo 2023",
+  "SIDPath": "/MUSICIANS/P/Parson/Meaning_of_Life.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "DnP"
+  ],
+  "Credits": [
+   "Parson"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250351/SPRendulum_DnP.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236716,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 4,
+  "ReleaseName": "The Bad Touch",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236716.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.1,
+  "ReleasedBy": [
+   "Quantum"
+  ],
+  "Credits": [
+   "Nordischsound"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250346/the_bad_touch.sid",
+   "https://csdb.dk/getinternalfile.php/250347/the_bad_touch.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236695,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 3,
+  "ReleaseName": "Out of Space",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236695.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 8.9,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "DJ Space"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250325/djspace_out_of_space.sid",
+   "https://csdb.dk/getinternalfile.php/250324/djspace_out_of_space.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236665,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 2,
+  "ReleaseName": "LuheCon³ Invitro",
+  "ReleaseType": "C64 Invitation",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236665.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/T/Toggle/64K_Memory_Lane.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Retroluzzer"
+  ],
+  "Credits": [
+   "Toggle"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250291/luhecon3-invitro-en.prg",
+   "https://csdb.dk/getinternalfile.php/250290/luhecon3-invitro-de.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236636,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 11,
+  "ReleaseDay": 1,
+  "ReleaseName": "Hairdog 50",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236636.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "BOOM!"
+  ],
+  "Credits": [
+   "MCH"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250254/hairdog50.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236635,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 31,
+  "ReleaseName": "Halloween 2023 HF",
+  "ReleaseType": "C64 Intro",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236635.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "Manganoid"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250252/halloween2023hf.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236634,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 31,
+  "ReleaseName": "Brix Turns 50",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236634.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/R/Rock/Hump.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Plush"
+  ],
+  "Credits": [
+   "Rock"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250251/Brix turns 50%5BPlush%5D.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236631,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 29,
+  "ReleaseName": "Raster Bars Blending With Plasma Addiction",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236631.gif",
+  "ReleasedAt": "Flashparty 2023",
+  "SIDPath": "/MUSICIANS/D/Dr_Coldcut/Cross_Intro.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "Dr.Coldcut"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250248/Raster_Bars_Blending_With_Plasma_Addiction_HF.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236629,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 31,
+  "ReleaseName": "Halloween Selfie",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236629.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 8.95,
+  "ReleasedBy": [
+   "Onslaught"
+  ],
+  "Credits": [
+   "Mutetus"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250246/Halloween Selfie.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236628,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 31,
+  "ReleaseName": "Brix Turns Into the 50ies",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236628.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/R/Red_Kimmel_Jeroen/Rhaa_Lovely_II_tune_2.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Red"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250245/Brix turns into 50ies %5BEX%5D.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236626,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 31,
+  "ReleaseName": "Star Wars 2024 C64 Calendar",
+  "ReleaseType": "C64 Graphics Collection",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236626.gif",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/P/Phobos/Star_Wars.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Arturo Dente"
+  ],
+  "Credits": [
+   "Phobos"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250242/starwarscal2024.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236609,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 29,
+  "ReleaseName": "Arte Poética Testicular",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236609.gif",
+  "ReleasedAt": "Flashparty 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The Codeblasters"
+  ],
+  "Credits": [
+   "Uctumi"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250223/2023_arte_poetica_the_codeblasters.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236607,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 29,
+  "ReleaseName": "Naturaleza",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236607.gif",
+  "ReleasedAt": "Flashparty 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Mirazulado"
+  ],
+  "Credits": [
+   "Mirazulado"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250221/natura.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236604,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 29,
+  "ReleaseName": "El 12",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236604.gif",
+  "ReleasedAt": "Flashparty 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Rico"
+  ],
+  "Credits": [
+   "Rico"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250217/el 12 - Rico.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236602,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 28,
+  "ReleaseName": "Anti Against",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236602.png",
+  "ReleasedAt": "Flashparty 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Homeless"
+  ],
+  "Credits": [
+   "Homeless"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250215/Anti Against.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236601,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 28,
+  "ReleaseName": "Kawaii",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236601.png",
+  "ReleasedAt": "Flashparty 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Madbit"
+  ],
+  "Credits": [
+   "Madbit"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250213/madbit-kawaii.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236600,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 28,
+  "ReleaseName": "3D Galax",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236600.png",
+  "ReleasedAt": "Flashparty 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "et1999cc"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250211/3D Galax.sid",
+   "https://csdb.dk/getinternalfile.php/250210/3D Galax.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236598,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 30,
+  "ReleaseName": "Outrun Radio",
+  "ReleaseType": "C64 Music Collection",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236598.gif",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.83,
+  "ReleasedBy": [
+   "Nordischsound"
+  ],
+  "Credits": [
+   "Nordischsound"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250209/Outrun_Radio.sid",
+   "https://csdb.dk/getinternalfile.php/250208/Risky_Ride.sid",
+   "https://csdb.dk/getinternalfile.php/250206/OutRun Radio.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236597,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 30,
+  "ReleaseName": "People Too",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236597.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/S/Spider_Jerusalem/Blues_Again.sid",
+  "Rating": 8.06,
+  "ReleasedBy": [
+   "Triad"
+  ],
+  "Credits": [
+   "Spider Jerusalem"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250204/people2.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236590,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 29,
+  "ReleaseName": "Mr. Bing",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236590.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/D/DRAX/Pubhorny.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Don Kichote"
+  ],
+  "Credits": [
+   "Drax"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250205/mr.bing.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236589,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 28,
+  "ReleaseName": "Zen Meditation",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236589.png",
+  "ReleasedAt": "Syntax Society Oktüberfest 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The Supply Team"
+  ],
+  "Credits": [
+   "SIDWAVE"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250196/zen meditation.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236588,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 28,
+  "ReleaseName": "Lightforce 2023",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236588.png",
+  "ReleasedAt": "Syntax Society Oktüberfest 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The Supply Team"
+  ],
+  "Credits": [
+   "SIDWAVE"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250195/lightforce 2023.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236587,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 28,
+  "ReleaseName": "Siddy Melodies",
+  "ReleaseType": "C64 Music Collection",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236587.png",
+  "ReleasedAt": "Syntax Society Oktüberfest 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The Supply Team"
+  ],
+  "Credits": [
+   "SIDWAVE"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250194/siddy_melodies.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236586,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 28,
+  "ReleaseName": "The Legend of Rambo Lee",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "",
+  "ReleasedAt": "Syntax Society Oktüberfest 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "The Supply Team"
+  ],
+  "Credits": [
+   "SIDWAVE"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250193/legend of rambo lee.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236582,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 29,
+  "ReleaseName": "Chatarreros",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236582.gif",
+  "ReleasedAt": "Flashparty 2023",
+  "SIDPath": "",
+  "Rating": 9.25,
+  "ReleasedBy": [
+   "PVM"
+  ],
+  "Credits": [
+   "Uctumi"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250188/Chatarreros_eng.prg",
+   "https://csdb.dk/getinternalfile.php/250187/Chatarreros.prg",
+   "https://csdb.dk/getinternalfile.php/250189/pvm-chata.zip"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236575,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 28,
+  "ReleaseName": "Mahadeva [2sid]",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236575.png",
+  "ReleasedAt": "Flashparty 2023",
+  "SIDPath": "",
+  "Rating": 9.89,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "Manganoid"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250179/mahadeva_%28d420%29.sid",
+   "https://csdb.dk/getinternalfile.php/250178/Mahadeva.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236574,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 29,
+  "ReleaseName": "Peek a Boo",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236574.gif",
+  "ReleasedAt": "Flashparty 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Pixelbrei"
+  ],
+  "Credits": [
+   "Nordischsound"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250177/PeekABoo.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236548,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 28,
+  "ReleaseName": "Trap Them Music",
+  "ReleaseType": "C64 Music Collection",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236548.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/S/Spider_Jerusalem/Trap_Them_64.sid",
   "Rating": 0,
   "ReleasedBy": [
    "Mayday!"
@@ -1439,7 +1636,8 @@
    "Spider Jerusalem"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225643/ZombiesSB2022_MYD.zip"
+   "https://csdb.dk/getinternalfile.php/250151/ttmusic-myd.prg",
+   "https://csdb.dk/getinternalfile.php/250152/ttmusic-myd-sids.zip"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -1447,563 +1645,93 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 214884,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Maniac Maniac",
-  "ReleaseType": "C64 Intro",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214884.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 8.63,
-  "ReleasedBy": [
-   "Lethargy"
-  ],
-  "Credits": [
-   "SquareWave"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225682/Maniac_Maniac.sid",
-   "https://csdb.dk/getinternalfile.php/225641/Maniac_Maniac_Lethargy.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214883,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Pulstar",
+  "ReleaseID": 236533,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 27,
+  "ReleaseName": "Distant Dissonance",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214883.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 9.78,
-  "ReleasedBy": [
-   "Finnish Gold"
-  ],
-  "Credits": [
-   "Proton"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225651/pulstar.sid",
-   "https://csdb.dk/getinternalfile.php/225642/pulstar_fig.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214882,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Six Trees on the Run",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214882.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 8.86,
-  "ReleasedBy": [
-   "Mayday!"
-  ],
-  "Credits": [
-   "Røly"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225640/roly-six_trees_on_the_run.sid",
-   "https://csdb.dk/getinternalfile.php/225639/roly-six_trees_on_the_run.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214881,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Psychic Carpet Bombing",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214881.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 9.73,
-  "ReleasedBy": [
-   "MultiStyle Labs",
-   "Atlantis"
-  ],
-  "Credits": [
-   "Mibri"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225637/Psychic_Carpet_Bombing_%5B8580%5D.sid",
-   "https://csdb.dk/getinternalfile.php/225636/Psychic_Carpet_Bombing_%5B8580%5D.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214880,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "BCC Party Digi Entry",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214880.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 6.9,
-  "ReleasedBy": [
-   "DeMOSic"
-  ],
-  "Credits": [
-   "DeMOSic"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225634/BCC_Party_Digi_Entry.sid",
-   "https://csdb.dk/getinternalfile.php/225633/BCC_Party_Digi_Entry.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214879,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Renaissance Intermezzo Fugaliuz",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214879.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 9.25,
-  "ReleasedBy": [
-   "Pretzel Logic"
-  ],
-  "Credits": [
-   "Xiny6581"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225631/Xiny6581_-_Renaissance_Intermezzo_Fugaliuz.sid",
-   "https://csdb.dk/getinternalfile.php/225630/Xiny6581_-_Renaissance_Intermezzo_Fugaliuz.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214878,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Az Én Leguánom Nem Viselhet Cipőt",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214878.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Triad"
-  ],
-  "Credits": [
-   "dalezy"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225629/dalezy_-_az-en-leguanom-nem-viselhet-cipot.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214877,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Destination: Groovetown",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214877.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 9.5,
-  "ReleasedBy": [
-   "Lethargy",
-   "Fairlight"
-  ],
-  "Credits": [
-   "Danko",
-   "Vincenzo"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225628/Destination_Groovetown.sid",
-   "https://csdb.dk/getinternalfile.php/225627/destination_groovetown.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214872,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "In The Morning",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214872.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 9.75,
-  "ReleasedBy": [
-   "Pretzel Logic"
-  ],
-  "Credits": [
-   "The Syndrom"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225623/inthemorning.sid",
-   "https://csdb.dk/getinternalfile.php/225621/morning-pl.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214870,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Obscena Vaselina",
-  "ReleaseType": "C64 Graphics",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214870.png",
-  "ReleasedAt": "BCC Party #16",
-  "SIDPath": "",
-  "Rating": 9.79,
-  "ReleasedBy": [
-   "Fairlight"
-  ],
-  "Credits": [
-   "Vincenzo"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225619/Obscena_Vaselina.sid",
-   "https://csdb.dk/getinternalfile.php/225618/Obscena Vaselina -TheSargeVincenzo.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214861,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Sprite Spirit",
-  "ReleaseType": "C64 Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214861.png",
-  "ReleasedAt": "Only Sprites Compo 2022",
-  "SIDPath": "",
-  "Rating": 9.53,
-  "ReleasedBy": [
-   "Lethargy"
-  ],
-  "Credits": [
-   "Vincenzo"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225612/Sprite_Spirit.sid",
-   "https://csdb.dk/getinternalfile.php/225611/Sprite Spirit %5BLethargy%5D.d64"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214860,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Spritemo",
-  "ReleaseType": "C64 Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214860.gif",
-  "ReleasedAt": "Only Sprites Compo 2022",
-  "SIDPath": "/MUSICIANS/J/Jammer/424.sid",
-  "Rating": 8.54,
-  "ReleasedBy": [
-   "Delysid"
-  ],
-  "Credits": [
-   "Jammer"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225606/spritemo.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214859,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Plasma Ninja",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214859.gif",
-  "ReleasedAt": "Only Sprites Compo 2022",
-  "SIDPath": "",
-  "Rating": 9.54,
-  "ReleasedBy": [
-   "Resource"
-  ],
-  "Credits": [
-   "Vincenzo"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225607/Plasma_Ninja.sid",
-   "https://csdb.dk/getinternalfile.php/225605/plasmaninja_rsc.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214850,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Icosprites",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214850.png",
-  "ReleasedAt": "Only Sprites Compo 2022",
-  "SIDPath": "/MUSICIANS/R/Rytone/Dazed.sid",
-  "Rating": 9.29,
-  "ReleasedBy": [
-   "Onslaught"
-  ],
-  "Credits": [
-   "Rastertail"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225596/icosprites.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214847,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Sprite Bukkake",
-  "ReleaseType": "C64 Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214847.gif",
-  "ReleasedAt": "Only Sprites Compo 2022",
-  "SIDPath": "",
-  "Rating": 9.45,
-  "ReleasedBy": [
-   "Bonzai"
-  ],
-  "Credits": [
-   "Laxity",
-   "Drax"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225592/Sprite Bukkake-Bonzai.zip"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214843,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Mini Blues",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214843.png",
-  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
-  "SIDPath": "",
-  "Rating": 0,
-  "ReleasedBy": [
-   "Offence"
-  ],
-  "Credits": [
-   "freQvibez"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225587/Mini_Blues.sid",
-   "https://csdb.dk/getinternalfile.php/225585/mini_blues.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214842,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Breaking Bad",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214842.png",
-  "ReleasedAt": "Only Sprites Compo 2022",
-  "SIDPath": "",
-  "Rating": 8.4,
-  "ReleasedBy": [
-   "Finnish Gold"
-  ],
-  "Credits": [
-   "Proton"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225584/freefall.sid",
-   "https://github.com/seratosteve/releases/raw/main/Only%20Sprites%20Compo%202022/Breaking%20Bad/breaking%20bad.prg",
-   "https://csdb.dk/getinternalfile.php/225582/breaking bad.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214835,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 26,
-  "ReleaseName": "Just Done for Fun!",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214835.png",
-  "ReleasedAt": "Only Sprites Compo 2022",
-  "SIDPath": "",
-  "Rating": 9.13,
-  "ReleasedBy": [
-   "Onslaught"
-  ],
-  "Credits": [
-   "Flotsam"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/224707/Luma.sid",
-   "https://csdb.dk/getinternalfile.php/225576/justdone-ons.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214830,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 25,
-  "ReleaseName": "Robomania",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214830.gif",
-  "ReleasedAt": "Only Sprites Compo 2022",
-  "SIDPath": "",
-  "Rating": 8.94,
-  "ReleasedBy": [
-   "Lazycow"
-  ],
-  "Credits": [
-   "Cyborgjeff"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225583/robomania.sid",
-   "https://csdb.dk/getinternalfile.php/225570/robomania.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214807,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 25,
-  "ReleaseName": "Tree of Peace",
-  "ReleaseType": "C64 One-File Demo",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214807.png",
-  "ReleasedAt": "Only Sprites Compo 2022",
-  "SIDPath": "",
-  "Rating": 9.35,
-  "ReleasedBy": [
-   "Genesis Project"
-  ],
-  "Credits": [
-   "Xiny6581"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225549/xiny-fltremix.sid",
-   "https://csdb.dk/getinternalfile.php/225541/treeofpeace.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214798,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 24,
-  "ReleaseName": "Quite Close",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214798.png",
-  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
-  "SIDPath": "",
-  "Rating": 9.77,
-  "ReleasedBy": [
-   "Chabee"
-  ],
-  "Credits": [
-   "Chabee"
-  ],
-  "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225530/Chabee-QuiteClose.sid",
-   "https://csdb.dk/getinternalfile.php/225529/QuiteClose.exe.prg"
-  ],
-  "SrcCached": false,
-  "WAVCached": false,
-  "SrcExt": "",
-  "Disabled": false
- },
- {
-  "ReleaseID": 214738,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 22,
-  "ReleaseName": "The Descent",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214738.png",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236533.png",
   "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 9.67,
+  "Rating": 10,
+  "ReleasedBy": [
+   "Vision"
+  ],
+  "Credits": [
+   "Hein"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250135/dissonance-8580.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236481,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 25,
+  "ReleaseName": "Raster Bars Blending",
+  "ReleaseType": "C64 Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236481.png",
+  "ReleasedAt": "Flashparty 2023",
+  "SIDPath": "/MUSICIANS/W/Wijnhoven_Joachim/Devil_Ronin.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "Roland Hermans",
+   "Joachim Wijnhoven"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250072/demo.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236477,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 25,
+  "ReleaseName": "SIDstorm (Sandstorm Remake)",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236477.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.2,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "DJ Space"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250066/djspace_sidstorm.sid",
+   "https://csdb.dk/getinternalfile.php/250065/djspace_sidstorm.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236469,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 24,
+  "ReleaseName": "Addiction",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236469.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.88,
   "ReleasedBy": [
    "Genesis Project"
   ],
@@ -2011,8 +1739,8 @@
    "acrouzet"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225457/The_Descent.sid",
-   "https://csdb.dk/getinternalfile.php/225456/acrouzet-thedescent.prg"
+   "https://csdb.dk/getinternalfile.php/250055/Addiction %288580 SID%29.sid",
+   "https://csdb.dk/getinternalfile.php/250054/Addiction.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -2020,26 +1748,24 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 214724,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 22,
-  "ReleaseName": "22 2 22",
-  "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214724.png",
+  "ReleaseID": 236459,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 23,
+  "ReleaseName": "Birth of a Flower",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236459.png",
   "ReleasedAt": "",
   "SIDPath": "",
-  "Rating": 9.33,
+  "Rating": 9.59,
   "ReleasedBy": [
-   "Toondichters"
+   "Vision"
   ],
   "Credits": [
-   "Elton de Hoog",
-   "GH"
+   "Hein"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225433/22-2-22.sid",
-   "https://csdb.dk/getinternalfile.php/225432/22-2-22.prg"
+   "https://csdb.dk/getinternalfile.php/250044/birth-of-a-flower.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,
@@ -2047,26 +1773,281 @@
   "Disabled": false
  },
  {
-  "ReleaseID": 214723,
-  "ReleaseYear": 2022,
-  "ReleaseMonth": 2,
-  "ReleaseDay": 22,
-  "ReleaseName": "Heavyweight",
+  "ReleaseID": 236458,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 21,
+  "ReleaseName": "Auf Wiedersehen TRSAC!",
   "ReleaseType": "C64 Music",
-  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/214000/214723.png",
-  "ReleasedAt": "Unofficial Tiny SID Compo 2022",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236458.png",
+  "ReleasedAt": "TRSAC 2023",
   "SIDPath": "",
-  "Rating": 9.55,
+  "Rating": 0,
   "ReleasedBy": [
-   "MultiStyle Labs",
-   "Elysium"
+   "Gnumpf-Posse",
+   "Moods Plateau"
   ],
   "Credits": [
-   "Shogoon"
+   "Novel"
   ],
   "DownloadLinks": [
-   "https://csdb.dk/getinternalfile.php/225430/Heavyweight.sid",
-   "https://csdb.dk/getinternalfile.php/225429/Heavyweight.prg"
+   "https://csdb.dk/getinternalfile.php/250043/AUF WIEDERSEHEN TRSAC%21.sid",
+   "https://csdb.dk/getinternalfile.php/250042/AUF WIEDERSEHEN TRSAC%21.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236438,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 22,
+  "ReleaseName": "TRSAC, Gabber \u0026 Pebersnaps 45%",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236438.gif",
+  "ReleasedAt": "TRSAC 2023",
+  "SIDPath": "",
+  "Rating": 9.56,
+  "ReleasedBy": [
+   "No Name"
+  ],
+  "Credits": [
+   "CyberBrain"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250018/TRSAC Gabber %26 Pebersnaps.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236436,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 21,
+  "ReleaseName": "Keelhauled [2sid]",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236436.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Excess"
+  ],
+  "Credits": [
+   "Slaxx"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250016/keelhauled.sid",
+   "https://csdb.dk/getinternalfile.php/250015/2sid-keelhauled.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236423,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 20,
+  "ReleaseName": "Ragtime Sandman",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236423.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "DJ Space"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/250002/djspace_ragtime_sandman.sid",
+   "https://csdb.dk/getinternalfile.php/250001/djspace_ragtime_sandman.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236396,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 19,
+  "ReleaseName": "Lincolnshire Poacher",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236396.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 8.11,
+  "ReleasedBy": [
+   "Triad"
+  ],
+  "Credits": [
+   "ne7"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/249966/lpoacher.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236359,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 17,
+  "ReleaseName": "Morph",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236359.png",
+  "ReleasedAt": "",
+  "SIDPath": "/MUSICIANS/T/Tracker/Song_4.sid",
+  "Rating": 9.54,
+  "ReleasedBy": [
+   "Mr Wegi"
+  ],
+  "Credits": [
+   "Tracker"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/249929/wegi-morph.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236299,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 15,
+  "ReleaseName": "Scooby 50",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236299.gif",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.43,
+  "ReleasedBy": [
+   "Genesis Project"
+  ],
+  "Credits": [
+   "Xiny6581"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/249871/Xiny6581-Scooby50yo%288580%29.sid",
+   "https://csdb.dk/getinternalfile.php/249865/Scooby50-GP.d64"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236257,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 7,
+  "ReleaseName": "Brown Bice",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236257.png",
+  "ReleasedAt": "Brown Birdie 2023",
+  "SIDPath": "",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Noice"
+  ],
+  "Credits": [
+   "Hyperunknown"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/249816/brown-bice-by-hyperunknown.sid",
+   "https://csdb.dk/getinternalfile.php/249821/Brown_Bice.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236179,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 11,
+  "ReleaseName": "Halloween 1984",
+  "ReleaseType": "C64 Music",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236179.png",
+  "ReleasedAt": "",
+  "SIDPath": "",
+  "Rating": 9.45,
+  "ReleasedBy": [
+   "Hokuto Force"
+  ],
+  "Credits": [
+   "DJ Space"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/249727/djspace_halloween_1984.sid",
+   "https://csdb.dk/getinternalfile.php/249726/djspace_halloween_1984.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236110,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 8,
+  "ReleaseName": "Cruising Through Rainbow With Zero Sight",
+  "ReleaseType": "C64 Fake Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236110.png",
+  "ReleasedAt": "Stupid Rainbows Compo",
+  "SIDPath": "/DEMOS/M-R/Rainbow_Racer.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Really Proud Lamers"
+  ],
+  "Credits": [
+   "Mark Vera"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/249648/CruisingThroughRainbowWithZeroSight.prg"
+  ],
+  "SrcCached": false,
+  "WAVCached": false,
+  "SrcExt": "",
+  "Disabled": false
+ },
+ {
+  "ReleaseID": 236108,
+  "ReleaseYear": 2023,
+  "ReleaseMonth": 10,
+  "ReleaseDay": 8,
+  "ReleaseName": "Rainbow Hill",
+  "ReleaseType": "C64 One-File Demo",
+  "ReleaseScreenShot": "https://csdb.dk/gfx/releases/236000/236108.png",
+  "ReleasedAt": "Stupid Rainbows Compo",
+  "SIDPath": "/MUSICIANS/A/Argon/Benny_Hill_Yakety_Sax.sid",
+  "Rating": 0,
+  "ReleasedBy": [
+   "Zzarko"
+  ],
+  "Credits": [
+   "Argon"
+  ],
+  "DownloadLinks": [
+   "https://csdb.dk/getinternalfile.php/249647/RainbowHill.prg"
   ],
   "SrcCached": false,
   "WAVCached": false,

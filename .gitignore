@@ -1,6 +1,7 @@
 /C64Music
 /cache
 /vendor
+/.idea
 
 *.wav
 *.au

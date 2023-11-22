@@ -19,7 +19,8 @@ RUN ldconfig
 
 RUN go get -d -v ./...
 RUN go install -v ./...
+RUN go build
 
-CMD ["sidcloud-api 80"]
+CMD ["sidcloud-api", "http", "8080"]
 
-EXPOSE 80
+EXPOSE 8080
